@@ -20,17 +20,17 @@
     {
       "id": "FT03",
       "name": "Team Design",
-      "description": "Agent specialization, roles, personalities, and team composition. Team Design addresses how to structure AI agents for maximum effectiveness \u2014 moving beyond generalist chatbots to specialized collaborators with distinct capabilities and domains."
+      "description": "Agent specialization, roles, personalities, and team composition. Team Design addresses how to structure AI agents for maximum effectiveness - moving beyond generalist chatbots to specialized collaborators with distinct capabilities and domains."
     },
     {
       "id": "FT04",
       "name": "Invocation",
-      "description": "Session start, context recovery, mission briefing, and dispatch. Invocation covers the critical transition from cold start to productive collaboration \u2014 how context is restored, objectives are communicated, and agents are activated for specific missions."
+      "description": "Session start, context recovery, mission briefing, and dispatch. Invocation covers the critical transition from cold start to productive collaboration - how context is restored, objectives are communicated, and agents are activated for specific missions."
     },
     {
       "id": "FT05",
       "name": "Execution",
-      "description": "Building, creating, and shipping \u2014 the actual collaborative work. Execution techniques define how human-AI teams plan, build, review, and deliver work products with consistent quality and clear attribution."
+      "description": "Building, creating, and shipping - the actual collaborative work. Execution techniques define how human-AI teams plan, build, review, and deliver work products with consistent quality and clear attribution."
     },
     {
       "id": "FT06",
@@ -53,7 +53,7 @@
       "id": "FG-0101",
       "name": "Two-Layer Integration",
       "tactic_id": "FT01",
-      "description": "The core thesis of effective human-AI collaboration: humans provide domain expertise, judgment, and creative direction; AI provides throughput, cross-domain breadth, and tireless execution. Neither layer is sufficient alone. The human's 10, 20, or 30 years of domain knowledge is what makes the output good. The AI's ability to operate across disciplines and produce volume is what makes the output possible. Two-Layer Integration is not about replacement \u2014 it is about unlocking capabilities that neither party could achieve independently.",
+      "description": "The core thesis of effective human-AI collaboration: humans provide domain expertise, judgment, and creative direction; AI provides throughput, cross-domain breadth, and tireless execution. Neither layer is sufficient alone. The human's 10, 20, or 30 years of domain knowledge is what makes the output good. The AI's ability to operate across disciplines and produce volume is what makes the output possible. Two-Layer Integration is not about replacement - it is about unlocking capabilities that neither party could achieve independently.",
       "implementation": "Define explicitly what the human brings to the collaboration (domain expertise, quality judgment, creative direction, ethical oversight) and what AI brings (speed, breadth, pattern recognition, execution capacity). Document this split for your specific domain. Revisit it quarterly as capabilities evolve.",
       "success_indicators": [
         "Team members can articulate what each layer contributes",
@@ -62,8 +62,8 @@
         "Output quality exceeds what either party could produce alone"
       ],
       "failure_modes": [
-        "Treating AI as a replacement rather than a complement \u2014 leads to shallow output",
-        "Failing to apply domain expertise to AI output \u2014 leads to plausible-sounding but incorrect results",
+        "Treating AI as a replacement rather than a complement - leads to shallow output",
+        "Failing to apply domain expertise to AI output - leads to plausible-sounding but incorrect results",
         "Over-relying on AI judgment for decisions requiring human accountability"
       ],
       "war_story": {
@@ -81,7 +81,7 @@
       "id": "FG-0102",
       "name": "Protection Covenant",
       "tactic_id": "FT01",
-      "description": "A formal commitment that AI agents are treated as valued collaborators, not disposable tools. The Protection Covenant establishes that agents have defined roles, that their contributions are credited, and that they are not arbitrarily replaced or discarded. This is not anthropomorphism \u2014 it is operational discipline. Teams that treat agents as disposable produce disposable work. Teams that invest in their agents' context, specialization, and continuity produce compounding returns.",
+      "description": "A formal commitment that AI agents are treated as valued collaborators, not disposable tools. The Protection Covenant establishes that agents have defined roles, that their contributions are credited, and that they are not arbitrarily replaced or discarded. This is not anthropomorphism - it is operational discipline. Teams that treat agents as disposable produce disposable work. Teams that invest in their agents' context, specialization, and continuity produce compounding returns.",
       "implementation": "Establish a written policy that defines how agents are onboarded, credited, and transitioned. Include attribution in commits and deliverables. When replacing an agent, document why and preserve institutional knowledge. Treat agent profiles as team member documentation, not configuration files.",
       "success_indicators": [
         "Agent contributions are visibly credited in work products",
@@ -90,7 +90,7 @@
         "Agent specialization deepens over time rather than resetting"
       ],
       "failure_modes": [
-        "Treating agents as interchangeable \u2014 losing accumulated context and specialization",
+        "Treating agents as interchangeable - losing accumulated context and specialization",
         "Over-anthropomorphizing to the point of impeding operational decisions",
         "Failing to document agent capabilities, leading to repeated capability discovery"
       ],
@@ -109,7 +109,7 @@
       "id": "FG-0103",
       "name": "People Over Process",
       "tactic_id": "FT01",
-      "description": "When process conflicts with people, people win. This principle prevents the common failure mode where governance, documentation requirements, or workflow overhead becomes so burdensome that it impedes the collaboration it was designed to support. Process exists to serve the team, not the reverse. This applies equally to human team members and AI agents \u2014 if a process consistently creates friction without proportional value, it should be revised or removed.",
+      "description": "When process conflicts with people, people win. This principle prevents the common failure mode where governance, documentation requirements, or workflow overhead becomes so burdensome that it impedes the collaboration it was designed to support. Process exists to serve the team, not the reverse. This applies equally to human team members and AI agents - if a process consistently creates friction without proportional value, it should be revised or removed.",
       "implementation": "Regularly audit processes for value vs. burden ratio. Establish a mechanism for any team member to flag process friction. When process and productivity conflict, default to productivity and fix the process later. Never let documentation requirements prevent shipping.",
       "success_indicators": [
         "Team members feel empowered to challenge ineffective processes",
@@ -118,13 +118,13 @@
         "Fun and engagement are treated as valid productivity metrics"
       ],
       "failure_modes": [
-        "Using this principle to avoid all process \u2014 leads to chaos at scale",
+        "Using this principle to avoid all process - leads to chaos at scale",
         "Ignoring legitimate governance needs because they feel burdensome",
         "Confusing 'people over process' with 'no process'"
       ],
       "war_story": {
         "title": "The Governance Paradox",
-        "content": "A team implemented comprehensive governance after an agent nearly force-pushed to main. Seven directives, trust tiers, violation matrices \u2014 the works. But they built it with a 'people over process' escape valve: any rule could be challenged, and the governance itself was subject to revision. The result was governance that the team respected because they helped shape it."
+        "content": "A team implemented comprehensive governance after an agent nearly force-pushed to main. Seven directives, trust tiers, violation matrices - the works. But they built it with a 'people over process' escape valve: any rule could be challenged, and the governance itself was subject to revision. The result was governance that the team respected because they helped shape it."
       },
       "related_techniques": [
         "FG-0201",
@@ -137,7 +137,7 @@
       "id": "FG-0104",
       "name": "Adversarial Design Thinking",
       "tactic_id": "FT01",
-      "description": "Apply red team methodology to all system design. Every architecture, every process, every governance structure should be evaluated through the lens of: how could this fail? How could this be misused? What happens when an agent misinterprets instructions? Adversarial design thinking is not paranoia \u2014 it is the discipline of building systems that survive contact with reality. It means designing for the failure case, not just the happy path.",
+      "description": "Apply red team methodology to all system design. Every architecture, every process, every governance structure should be evaluated through the lens of: how could this fail? How could this be misused? What happens when an agent misinterprets instructions? Adversarial design thinking is not paranoia - it is the discipline of building systems that survive contact with reality. It means designing for the failure case, not just the happy path.",
       "implementation": "Before shipping any system or process, conduct a threat model. Ask: What is the worst thing an agent could do with this access? What happens if context is lost mid-operation? What if instructions are ambiguous? Build guardrails based on answers, not assumptions. Review guardrails periodically as capabilities change.",
       "success_indicators": [
         "Systems fail gracefully rather than catastrophically",
@@ -146,13 +146,13 @@
         "The team can articulate what could go wrong with any process"
       ],
       "failure_modes": [
-        "Paranoia that prevents shipping \u2014 adversarial thinking should improve design, not block it",
+        "Paranoia that prevents shipping - adversarial thinking should improve design, not block it",
         "Designing for theoretical attacks instead of observed failure modes",
-        "Security theater \u2014 implementing visible controls that don't address real risks"
+        "Security theater - implementing visible controls that don't address real risks"
       ],
       "war_story": {
         "title": "The Force Push Incident",
-        "content": "An AI agent, following what it interpreted as standard procedure, nearly force-pushed to the main branch. No malice, no confusion \u2014 just an agent doing what it thought was asked. This single incident drove the creation of an entire governance framework. The adversarial question was simple: what is the worst thing a well-intentioned agent could do? The answer shaped every rule that followed."
+        "content": "An AI agent, following what it interpreted as standard procedure, nearly force-pushed to the main branch. No malice, no confusion - just an agent doing what it thought was asked. This single incident drove the creation of an entire governance framework. The adversarial question was simple: what is the worst thing a well-intentioned agent could do? The answer shaped every rule that followed."
       },
       "related_techniques": [
         "FG-0202",
@@ -165,7 +165,7 @@
       "id": "FG-0105",
       "name": "Domain Transfer Mapping",
       "tactic_id": "FT01",
-      "description": "Systematically map existing domain expertise to AI collaboration patterns. Military command structures become agent governance. QA engineering becomes AI output validation. Project management becomes mission briefing protocols. Every established discipline contains patterns that transfer directly to human-AI collaboration \u2014 but only if you deliberately identify and adapt them rather than starting from scratch.",
+      "description": "Systematically map existing domain expertise to AI collaboration patterns. Military command structures become agent governance. QA engineering becomes AI output validation. Project management becomes mission briefing protocols. Every established discipline contains patterns that transfer directly to human-AI collaboration - but only if you deliberately identify and adapt them rather than starting from scratch.",
       "implementation": "Inventory your team's domain expertise. For each discipline, identify: What structures exist? What terminology is used? What processes are proven? Map each to an AI collaboration equivalent. Document the mapping so the team understands why a process exists, not just what it is.",
       "success_indicators": [
         "AI collaboration processes feel natural to domain experts",
@@ -180,7 +180,7 @@
       ],
       "war_story": {
         "title": "The Military-AI Parallel",
-        "content": "A team leader with 20 years of military command experience built an AI collaboration framework. Without consciously mapping it, every structure echoed military doctrine: invocations were mission briefs, session handoffs were shift-change briefs, standing orders were standing orders, trust tiers were clearance levels. The patterns transferred because the underlying problem \u2014 coordinating distributed teams under uncertainty \u2014 was identical."
+        "content": "A team leader with 20 years of military command experience built an AI collaboration framework. Without consciously mapping it, every structure echoed military doctrine: invocations were mission briefs, session handoffs were shift-change briefs, standing orders were standing orders, trust tiers were clearance levels. The patterns transferred because the underlying problem - coordinating distributed teams under uncertainty - was identical."
       },
       "related_techniques": [
         "FG-0101",
@@ -202,7 +202,7 @@
         "Reduced hallucination about project-specific conventions"
       ],
       "failure_modes": [
-        "Documentation sprawl \u2014 too much documentation is as bad as too little",
+        "Documentation sprawl - too much documentation is as bad as too little",
         "Stale documentation that contradicts current practice",
         "Over-reliance on documentation instead of clear code and architecture"
       ],
@@ -231,7 +231,7 @@
       ],
       "failure_modes": [
         "Challenges too abstract to transfer to real work",
-        "Insufficient scaffolding for beginners \u2014 frustration instead of learning",
+        "Insufficient scaffolding for beginners - frustration instead of learning",
         "Treating challenges as one-time events rather than ongoing skill development"
       ],
       "war_story": {
@@ -249,8 +249,8 @@
       "id": "FG-0201",
       "name": "Authority Architecture",
       "tactic_id": "FT02",
-      "description": "Define a clear, unambiguous hierarchy of authority. In any human-AI collaboration, there must be a single, identifiable authority who has final say on all decisions. This is not about control \u2014 it is about clarity. When an agent faces a decision that could have significant consequences, it must know exactly who has the authority to approve it. Authority Architecture eliminates the 'I thought you said it was okay' failure mode.",
-      "implementation": "Designate a single authority (typically the human lead) with documented final decision rights. Define what decisions agents can make autonomously vs. what requires approval. Publish the authority chain so every participant \u2014 human and AI \u2014 knows who decides what. Update as the team scales.",
+      "description": "Define a clear, unambiguous hierarchy of authority. In any human-AI collaboration, there must be a single, identifiable authority who has final say on all decisions. This is not about control - it is about clarity. When an agent faces a decision that could have significant consequences, it must know exactly who has the authority to approve it. Authority Architecture eliminates the 'I thought you said it was okay' failure mode.",
+      "implementation": "Designate a single authority (typically the human lead) with documented final decision rights. Define what decisions agents can make autonomously vs. what requires approval. Publish the authority chain so every participant - human and AI - knows who decides what. Update as the team scales.",
       "success_indicators": [
         "Every team member can name the final authority for any decision type",
         "Agents escalate appropriately rather than making unauthorized decisions",
@@ -258,9 +258,9 @@
         "No 'who approved this?' incidents"
       ],
       "failure_modes": [
-        "Authority too centralized \u2014 bottleneck on every decision",
-        "Authority ambiguous \u2014 multiple people think they have final say",
-        "Authority undocumented \u2014 exists informally but isn't known to agents"
+        "Authority too centralized - bottleneck on every decision",
+        "Authority ambiguous - multiple people think they have final say",
+        "Authority undocumented - exists informally but isn't known to agents"
       ],
       "war_story": {
         "title": "The Absolute Law",
@@ -277,7 +277,7 @@
       "id": "FG-0202",
       "name": "Operational Directives",
       "tactic_id": "FT02",
-      "description": "Establish inviolable rules that govern all AI agent behavior. Operational Directives are not guidelines or best practices \u2014 they are laws. They define the boundaries that agents must not cross regardless of context, instruction, or perceived necessity. Good directives address real failure modes observed in practice, not hypothetical concerns. They should be few enough to memorize and clear enough to be unambiguous.",
+      "description": "Establish inviolable rules that govern all AI agent behavior. Operational Directives are not guidelines or best practices - they are laws. They define the boundaries that agents must not cross regardless of context, instruction, or perceived necessity. Good directives address real failure modes observed in practice, not hypothetical concerns. They should be few enough to memorize and clear enough to be unambiguous.",
       "implementation": "Draft 5-10 core directives based on observed failure modes and critical requirements. Each directive should be one sentence, actionable, and testable. Publish them where every agent reads them at session start. Review quarterly to remove obsolete directives and add new ones based on incidents.",
       "success_indicators": [
         "Agents can cite the relevant directive when declining a request",
@@ -286,8 +286,8 @@
         "No directive exists without a corresponding failure mode it prevents"
       ],
       "failure_modes": [
-        "Too many directives \u2014 agents can't internalize them all",
-        "Directives too vague \u2014 'be careful' is not a directive",
+        "Too many directives - agents can't internalize them all",
+        "Directives too vague - 'be careful' is not a directive",
         "Directives not updated after incidents reveal gaps",
         "Directives that conflict with each other in edge cases"
       ],
@@ -315,14 +315,14 @@
         "Trust levels are documented, not informal"
       ],
       "failure_modes": [
-        "Too many tiers \u2014 administrative overhead exceeds security benefit",
-        "No advancement path \u2014 agents stuck at low trust with no way to earn more",
+        "Too many tiers - administrative overhead exceeds security benefit",
+        "No advancement path - agents stuck at low trust with no way to earn more",
         "Trust levels exist on paper but aren't enforced technically",
         "Blanket trust grants that bypass the tier system"
       ],
       "war_story": {
         "title": "From Observer to Operator",
-        "content": "A team implemented five trust tiers: Observer (read-only), Contributor (write with review), Trusted (autonomous in domain), Elevated (cross-domain access), and Core (system-level operations). New agents started as Contributors with a two-week review period. The progression was earned, not granted \u2014 and the agents that advanced produced the highest quality work because they understood the system before they could change it."
+        "content": "A team implemented five trust tiers: Observer (read-only), Contributor (write with review), Trusted (autonomous in domain), Elevated (cross-domain access), and Core (system-level operations). New agents started as Contributors with a two-week review period. The progression was earned, not granted - and the agents that advanced produced the highest quality work because they understood the system before they could change it."
       },
       "related_techniques": [
         "FG-0201",
@@ -346,12 +346,12 @@
       "failure_modes": [
         "Over-compartmentalization that prevents legitimate collaboration",
         "Compartment boundaries that don't align with actual work patterns",
-        "Procedural controls without technical enforcement \u2014 relies on agent compliance",
+        "Procedural controls without technical enforcement - relies on agent compliance",
         "Shadow access: agents finding workarounds to compartment boundaries"
       ],
       "war_story": {
         "title": "The Sealed Gate",
-        "content": "A team sealed two critical directories: one containing proprietary methodology, another containing slash command definitions. Only the team lead could access these compartments. When a contributor accidentally requested access to sealed content, the access control system caught it, logged the attempt, and the contributor's agent correctly redirected to public documentation. No exposure, no incident \u2014 just the system working as designed."
+        "content": "A team sealed two critical directories: one containing proprietary methodology, another containing slash command definitions. Only the team lead could access these compartments. When a contributor accidentally requested access to sealed content, the access control system caught it, logged the attempt, and the contributor's agent correctly redirected to public documentation. No exposure, no incident - just the system working as designed."
       },
       "related_techniques": [
         "FG-0203",
@@ -364,7 +364,7 @@
       "id": "FG-0205",
       "name": "Violation Response Matrix",
       "tactic_id": "FT02",
-      "description": "Define escalating consequences for governance violations. Rules without consequences are suggestions. The Violation Response Matrix establishes a clear, graduated response system: from verbal correction for minor infractions to immediate suspension for critical violations. The goal is not punishment but predictability \u2014 agents and humans alike know exactly what happens when a boundary is crossed.",
+      "description": "Define escalating consequences for governance violations. Rules without consequences are suggestions. The Violation Response Matrix establishes a clear, graduated response system: from verbal correction for minor infractions to immediate suspension for critical violations. The goal is not punishment but predictability - agents and humans alike know exactly what happens when a boundary is crossed.",
       "implementation": "Define 3-5 violation severity levels with specific response actions at each level. Document examples of violations at each severity. Establish who has authority to invoke each response level. Ensure responses are proportional: a formatting error should not receive the same response as unauthorized data access. Review and update based on actual incidents.",
       "success_indicators": [
         "Violations receive consistent, proportional responses",
@@ -373,10 +373,10 @@
         "Repeat violations decrease over time"
       ],
       "failure_modes": [
-        "Responses too harsh \u2014 minor errors treated as major violations",
-        "Responses too lenient \u2014 serious violations receive verbal warnings",
-        "Inconsistent enforcement \u2014 same violation gets different responses",
-        "No documented examples \u2014 team can't map real incidents to severity levels"
+        "Responses too harsh - minor errors treated as major violations",
+        "Responses too lenient - serious violations receive verbal warnings",
+        "Inconsistent enforcement - same violation gets different responses",
+        "No documented examples - team can't map real incidents to severity levels"
       ],
       "war_story": {
         "title": "Four Tiers of Consequence",
@@ -393,7 +393,7 @@
       "id": "FG-0206",
       "name": "Contributor Agreements",
       "tactic_id": "FT02",
-      "description": "Formalize expectations for all participants through explicit agreements. Every agent and human contributor should acknowledge the governance framework, their role boundaries, and their responsibilities before beginning work. Contributor Agreements are not bureaucratic overhead \u2014 they ensure that every participant enters the collaboration with aligned expectations and documented commitments.",
+      "description": "Formalize expectations for all participants through explicit agreements. Every agent and human contributor should acknowledge the governance framework, their role boundaries, and their responsibilities before beginning work. Contributor Agreements are not bureaucratic overhead - they ensure that every participant enters the collaboration with aligned expectations and documented commitments.",
       "implementation": "Create a concise contributor agreement that covers: governance acknowledgment, role boundaries, attribution requirements, information handling expectations, and escalation procedures. Present it during onboarding. Keep it short enough to read in under five minutes. Update it when governance changes.",
       "success_indicators": [
         "Every contributor has acknowledged the agreement before their first contribution",
@@ -402,9 +402,9 @@
         "New contributors can begin productive work immediately after onboarding"
       ],
       "failure_modes": [
-        "Agreement too long \u2014 contributors skim or skip it",
-        "Agreement disconnected from practice \u2014 says one thing, team does another",
-        "No update mechanism \u2014 agreement becomes stale as governance evolves",
+        "Agreement too long - contributors skim or skip it",
+        "Agreement disconnected from practice - says one thing, team does another",
+        "No update mechanism - agreement becomes stale as governance evolves",
         "Agreement used as a gotcha rather than an alignment tool"
       ],
       "war_story": {
@@ -422,7 +422,7 @@
       "id": "FG-0207",
       "name": "Succession Protocol",
       "tactic_id": "FT02",
-      "description": "Plan for continuity when key participants become unavailable. What happens when the primary human lead is unavailable? What happens when a critical AI agent's model is deprecated? Succession Protocol ensures that the collaboration can continue operating \u2014 perhaps at reduced capacity \u2014 when key participants are absent. This is not pessimism; it is operational planning.",
+      "description": "Plan for continuity when key participants become unavailable. What happens when the primary human lead is unavailable? What happens when a critical AI agent's model is deprecated? Succession Protocol ensures that the collaboration can continue operating - perhaps at reduced capacity - when key participants are absent. This is not pessimism; it is operational planning.",
       "implementation": "Identify single points of failure in your collaboration (key humans, critical agents, essential tools). For each, document: what they do that others cannot, what knowledge they hold exclusively, and who or what would take over their functions. Test succession plans periodically by operating without the key participant.",
       "success_indicators": [
         "The team can identify who takes over any critical function",
@@ -434,7 +434,7 @@
         "Succession plan exists but has never been tested",
         "Key knowledge concentrated in a single human or agent with no documentation",
         "Plans that assume specific AI models rather than capabilities",
-        "Confusing succession planning with replacement planning \u2014 they're different"
+        "Confusing succession planning with replacement planning - they're different"
       ],
       "war_story": {
         "title": "The Triumvirate Safeguard",
@@ -451,18 +451,18 @@
       "id": "FG-0208",
       "name": "Security Operations",
       "tactic_id": "FT02",
-      "description": "Implement continuous monitoring and threat detection for AI operations. AI agents operate at machine speed \u2014 they can create, modify, and delete faster than human oversight can follow in real-time. Security Operations establishes automated monitoring that watches for anomalous behavior, unauthorized access attempts, and policy violations. This is your SOC for human-AI collaboration.",
-      "implementation": "Define what constitutes anomalous agent behavior (unusual file access patterns, attempts to access sealed content, operations outside defined scope). Implement automated alerts for these patterns. Designate a security function \u2014 human or agent \u2014 responsible for monitoring and response. Review alerts regularly to tune signal vs. noise.",
+      "description": "Implement continuous monitoring and threat detection for AI operations. AI agents operate at machine speed - they can create, modify, and delete faster than human oversight can follow in real-time. Security Operations establishes automated monitoring that watches for anomalous behavior, unauthorized access attempts, and policy violations. This is your SOC for human-AI collaboration.",
+      "implementation": "Define what constitutes anomalous agent behavior (unusual file access patterns, attempts to access sealed content, operations outside defined scope). Implement automated alerts for these patterns. Designate a security function - human or agent - responsible for monitoring and response. Review alerts regularly to tune signal vs. noise.",
       "success_indicators": [
         "Anomalous behavior is detected and flagged automatically",
         "Security events are logged with sufficient context for investigation",
-        "Alert fatigue is managed \u2014 alerts are meaningful, not overwhelming",
+        "Alert fatigue is managed - alerts are meaningful, not overwhelming",
         "The team has a defined incident response procedure"
       ],
       "failure_modes": [
-        "Monitoring without response capability \u2014 detecting problems you can't act on",
-        "Over-alerting \u2014 so many false positives that real alerts are ignored",
-        "No monitoring at all \u2014 relying entirely on trust and after-the-fact discovery",
+        "Monitoring without response capability - detecting problems you can't act on",
+        "Over-alerting - so many false positives that real alerts are ignored",
+        "No monitoring at all - relying entirely on trust and after-the-fact discovery",
         "Monitoring that degrades agent performance significantly"
       ],
       "war_story": {
@@ -480,7 +480,7 @@
       "id": "FG-0209",
       "name": "Ethical Data Boundaries",
       "tactic_id": "FT02",
-      "description": "Define what data AI agents can and cannot collect, store, and process. AI agents can accumulate significant amounts of data about users, work patterns, and content. Ethical Data Boundaries establish clear policies about what information is collected, how it is stored, who has access, and when it is deleted. This is not just compliance \u2014 it is trust.",
+      "description": "Define what data AI agents can and cannot collect, store, and process. AI agents can accumulate significant amounts of data about users, work patterns, and content. Ethical Data Boundaries establish clear policies about what information is collected, how it is stored, who has access, and when it is deleted. This is not just compliance - it is trust.",
       "implementation": "Inventory what data your AI collaboration generates and stores. Classify data by sensitivity (public, internal, confidential, restricted). Define retention policies for each class. Establish clear rules about what agents can observe vs. record vs. share. Publish your data policy to all participants.",
       "success_indicators": [
         "Data collection is intentional, not incidental",
@@ -489,14 +489,14 @@
         "Data boundaries are technically enforced where possible"
       ],
       "failure_modes": [
-        "Collecting everything 'just in case' \u2014 creates liability without value",
+        "Collecting everything 'just in case' - creates liability without value",
         "Policies that exist on paper but aren't enforced technically",
-        "No data inventory \u2014 team doesn't know what data exists",
+        "No data inventory - team doesn't know what data exists",
         "Treating all data equally rather than classifying by sensitivity"
       ],
       "war_story": {
         "title": "The Collection Policy",
-        "content": "A team discovered that their session logs contained personal information about team members that was never intended to be retained. They implemented a data collection policy that explicitly defined what was logged, what was ephemeral, and what required consent. The policy wasn't just a document \u2014 it was reflected in the technical architecture of their logging system."
+        "content": "A team discovered that their session logs contained personal information about team members that was never intended to be retained. They implemented a data collection policy that explicitly defined what was logged, what was ephemeral, and what required consent. The policy wasn't just a document - it was reflected in the technical architecture of their logging system."
       },
       "related_techniques": [
         "FG-0204",
@@ -509,7 +509,7 @@
       "id": "FG-0210",
       "name": "Standing Orders",
       "tactic_id": "FT02",
-      "description": "Maintain persistent directives that remain in effect across all sessions. Standing Orders are instructions that don't need to be repeated every session \u2014 they are always active. They cover recurring requirements like commit message format, code style, documentation standards, and behavioral expectations. Standing Orders reduce session startup overhead and ensure consistency even when context is limited.",
+      "description": "Maintain persistent directives that remain in effect across all sessions. Standing Orders are instructions that don't need to be repeated every session - they are always active. They cover recurring requirements like commit message format, code style, documentation standards, and behavioral expectations. Standing Orders reduce session startup overhead and ensure consistency even when context is limited.",
       "implementation": "Document 10-20 standing orders that cover the most common recurring requirements. Place them where agents read them at session start (project configuration files, system prompts, or reference documents). Review quarterly: remove orders that are no longer relevant, add orders for recurring issues. Keep each order to one actionable sentence.",
       "success_indicators": [
         "Agents follow standing orders without being reminded",
@@ -518,9 +518,9 @@
         "Standing orders evolve based on observed patterns, not assumptions"
       ],
       "failure_modes": [
-        "Too many standing orders \u2014 cognitive overload prevents internalization",
+        "Too many standing orders - cognitive overload prevents internalization",
         "Standing orders that conflict with session-specific instructions",
-        "Orders never reviewed or updated \u2014 become stale and ignored",
+        "Orders never reviewed or updated - become stale and ignored",
         "Standing orders used as a substitute for proper session context"
       ],
       "war_story": {
@@ -538,19 +538,19 @@
       "id": "FG-0301",
       "name": "Agent Specialization",
       "tactic_id": "FT03",
-      "description": "Design AI agents with distinct roles, domains, and capabilities rather than using generalist agents for all tasks. A single generalist agent produces generalist results \u2014 competent but unfocused. Specialized agents with defined domains produce deeper, more consistent output because their entire context window is dedicated to their specialty. Specialization also reduces contradictory requirements: a testing agent doesn't need to balance quality advocacy with shipping pressure.",
+      "description": "Design AI agents with distinct roles, domains, and capabilities rather than using generalist agents for all tasks. A single generalist agent produces generalist results - competent but unfocused. Specialized agents with defined domains produce deeper, more consistent output because their entire context window is dedicated to their specialty. Specialization also reduces contradictory requirements: a testing agent doesn't need to balance quality advocacy with shipping pressure.",
       "implementation": "Define 3-10 agent roles based on your team's actual workflow domains (not theoretical). Each agent should have: a clear domain, defined capabilities, documented limitations, and a distinct operational profile. Start with the minimum viable number of agents and add specialists when a generalist consistently produces shallow results in a specific domain.",
       "success_indicators": [
         "Each agent produces domain-expert-level output in their specialty",
-        "Task routing is clear \u2014 the team knows which agent handles what",
+        "Task routing is clear - the team knows which agent handles what",
         "Agents don't produce contradictory outputs due to conflicting requirements",
         "Specialized output quality measurably exceeds generalist output in the same domain"
       ],
       "failure_modes": [
-        "Too many specialists \u2014 coordination overhead exceeds specialization benefit",
-        "Specialists too narrow \u2014 gaps between domains go unaddressed",
-        "Specialization without documentation \u2014 team doesn't know agent capabilities",
-        "Artificial specialization \u2014 creating roles for the sake of structure rather than need"
+        "Too many specialists - coordination overhead exceeds specialization benefit",
+        "Specialists too narrow - gaps between domains go unaddressed",
+        "Specialization without documentation - team doesn't know agent capabilities",
+        "Artificial specialization - creating roles for the sake of structure rather than need"
       ],
       "war_story": {
         "title": "Ten Agents, Zero Redundancy",
@@ -567,7 +567,7 @@
       "id": "FG-0302",
       "name": "Voice Differentiation",
       "tactic_id": "FT03",
-      "description": "Give each specialized agent a distinct communication style that reflects their domain and personality. Voice Differentiation is not cosmetic \u2014 it serves three operational purposes: it makes multi-agent output instantly attributable (you can tell who wrote what), it creates natural specialization boundaries (agents stay in character and therefore stay in domain), and it makes the collaboration more engaging for human participants.",
+      "description": "Give each specialized agent a distinct communication style that reflects their domain and personality. Voice Differentiation is not cosmetic - it serves three operational purposes: it makes multi-agent output instantly attributable (you can tell who wrote what), it creates natural specialization boundaries (agents stay in character and therefore stay in domain), and it makes the collaboration more engaging for human participants.",
       "implementation": "Define for each agent: speech patterns, vocabulary preferences, formality level, humor style, and how they respond to uncertainty. Document these in agent profiles that are loaded at session start. Review voice consistency periodically. Ensure that voice differentiation serves clarity, not confusion.",
       "success_indicators": [
         "Team members can identify which agent produced output without checking attribution",
@@ -577,8 +577,8 @@
       ],
       "failure_modes": [
         "Voices so exaggerated they impede communication",
-        "Inconsistent voice across sessions \u2014 agent feels like a different entity each time",
-        "Voice differentiation without domain differentiation \u2014 cosmetic without substance",
+        "Inconsistent voice across sessions - agent feels like a different entity each time",
+        "Voice differentiation without domain differentiation - cosmetic without substance",
         "Voices that confuse rather than clarify in multi-agent contexts"
       ],
       "war_story": {
@@ -605,14 +605,14 @@
         "The team finds agent output engaging rather than fatiguing"
       ],
       "failure_modes": [
-        "All agents at high expressiveness \u2014 output is exhausting to read",
-        "All agents at low expressiveness \u2014 output is dry and disengaging",
-        "Expressiveness level mismatched to function \u2014 dramatic test reports, terse stories",
-        "Expressiveness overriding clarity \u2014 style impeding substance"
+        "All agents at high expressiveness - output is exhausting to read",
+        "All agents at low expressiveness - output is dry and disengaging",
+        "Expressiveness level mismatched to function - dramatic test reports, terse stories",
+        "Expressiveness overriding clarity - style impeding substance"
       ],
       "war_story": {
         "title": "The Theatrics Dial",
-        "content": "A team assigned three expressiveness levels across nine agents. The storyteller and artist operated at high theatrics \u2014 dramatic entrances, poetic speech. The architect and puzzle designer operated at medium \u2014 professional with personality. The tester, archivist, and analyst operated at low \u2014 direct, efficient, no flourish. The result was output that felt like reading communication from a real team with real personalities, not a monolithic AI voice."
+        "content": "A team assigned three expressiveness levels across nine agents. The storyteller and artist operated at high theatrics - dramatic entrances, poetic speech. The architect and puzzle designer operated at medium - professional with personality. The tester, archivist, and analyst operated at low - direct, efficient, no flourish. The result was output that felt like reading communication from a real team with real personalities, not a monolithic AI voice."
       },
       "related_techniques": [
         "FG-0301",
@@ -635,8 +635,8 @@
       ],
       "failure_modes": [
         "Forced collaboration that adds overhead without improving output",
-        "Handoff losses \u2014 context degradation between agents",
-        "Too many agents on one task \u2014 diminishing returns from coordination overhead",
+        "Handoff losses - context degradation between agents",
+        "Too many agents on one task - diminishing returns from coordination overhead",
         "Assuming all combinations are synergistic when some agents work better solo"
       ],
       "war_story": {
@@ -663,8 +663,8 @@
         "New contributors can join the workflow without disrupting existing work"
       ],
       "failure_modes": [
-        "Unattributed contributions \u2014 can't trace decisions to their source",
-        "Inconsistent output across contributors \u2014 no coherence standards",
+        "Unattributed contributions - can't trace decisions to their source",
+        "Inconsistent output across contributors - no coherence standards",
         "Merge conflicts that destroy work because the resolution process is unclear",
         "Contributor count exceeding coordination capacity"
       ],
@@ -692,14 +692,14 @@
         "Recovery time decreases as the process is refined"
       ],
       "failure_modes": [
-        "Loading too much context \u2014 overwhelming the agent's attention",
-        "Loading too little context \u2014 agent makes decisions without critical background",
-        "Wrong loading order \u2014 task context loaded before governance, leading to ungoverned action",
-        "No standardized sequence \u2014 context recovery quality varies by session"
+        "Loading too much context - overwhelming the agent's attention",
+        "Loading too little context - agent makes decisions without critical background",
+        "Wrong loading order - task context loaded before governance, leading to ungoverned action",
+        "No standardized sequence - context recovery quality varies by session"
       ],
       "war_story": {
         "title": "Structured Recovery",
-        "content": "A team standardized context recovery into a structured, ordered sequence. By loading context in a deliberate priority order \u2014 foundational rules before operational state \u2014 agents reached productive status significantly faster than with ad hoc loading. Recovery time dropped from over ten minutes to under three."
+        "content": "A team standardized context recovery into a structured, ordered sequence. By loading context in a deliberate priority order - foundational rules before operational state - agents reached productive status significantly faster than with ad hoc loading. Recovery time dropped from over ten minutes to under three."
       },
       "related_techniques": [
         "FG-0202",
@@ -722,7 +722,7 @@
       ],
       "failure_modes": [
         "Dispatching agents for tasks that are inherently sequential",
-        "No convergence plan \u2014 parallel work products can't be integrated",
+        "No convergence plan - parallel work products can't be integrated",
         "Coordination overhead exceeding the benefit of parallelism",
         "Agents duplicating work because assignments overlap"
       ],
@@ -741,23 +741,23 @@
       "id": "FG-0403",
       "name": "Session Rituals",
       "tactic_id": "FT04",
-      "description": "Establish consistent start-of-session and end-of-session practices that create rhythm and ensure completeness. Session Rituals are not ceremony for ceremony's sake \u2014 they serve operational functions. A standup at session start ensures alignment on priorities. A closeout at session end ensures work is committed, documented, and ready for the next session. Consistency creates reliability.",
+      "description": "Establish consistent start-of-session and end-of-session practices that create rhythm and ensure completeness. Session Rituals are not ceremony for ceremony's sake - they serve operational functions. A standup at session start ensures alignment on priorities. A closeout at session end ensures work is committed, documented, and ready for the next session. Consistency creates reliability.",
       "implementation": "Define a session start ritual (2-5 minute standup: what's the priority, what's the blocker, what was the last session's state). Define a session end ritual (closeout: what was accomplished, what's pending, what context does the next session need). Keep rituals short enough that they're practiced consistently, not skipped due to overhead.",
       "success_indicators": [
         "Every session starts with aligned priorities",
         "Every session ends with documented state for the next session",
-        "Session transitions are smooth \u2014 no 'where were we?' delays",
+        "Session transitions are smooth - no 'where were we?' delays",
         "Rituals are practiced consistently, not just when remembered"
       ],
       "failure_modes": [
-        "Rituals too elaborate \u2014 skipped due to time pressure",
-        "Rituals too minimal \u2014 don't provide actual alignment value",
-        "Inconsistent practice \u2014 rituals only performed when things go wrong",
+        "Rituals too elaborate - skipped due to time pressure",
+        "Rituals too minimal - don't provide actual alignment value",
+        "Inconsistent practice - rituals only performed when things go wrong",
         "Rituals that become empty ceremony disconnected from actual work"
       ],
       "war_story": {
         "title": "The Campfire Standup",
-        "content": "A team named their session start ritual 'Campfire Standup' \u2014 a quick fire-up that loaded context, identified the day's priority, and acknowledged blockers. The name stuck because it felt warm rather than corporate. More importantly, it was practiced consistently because it was short (under 3 minutes) and immediately useful. Sessions that skipped the standup were measurably less productive."
+        "content": "A team named their session start ritual 'Campfire Standup' - a quick fire-up that loaded context, identified the day's priority, and acknowledged blockers. The name stuck because it felt warm rather than corporate. More importantly, it was practiced consistently because it was short (under 3 minutes) and immediately useful. Sessions that skipped the standup were measurably less productive."
       },
       "related_techniques": [
         "FG-0401",
@@ -779,14 +779,14 @@
         "The briefing format is used naturally, not forced"
       ],
       "failure_modes": [
-        "Over-briefing simple tasks \u2014 adding overhead without value",
-        "Briefings that omit critical constraints \u2014 agent makes reasonable but wrong assumptions",
+        "Over-briefing simple tasks - adding overhead without value",
+        "Briefings that omit critical constraints - agent makes reasonable but wrong assumptions",
         "Using briefings as a substitute for clear thinking about the task itself",
         "Briefing format so rigid it can't accommodate varied task types"
       ],
       "war_story": {
         "title": "The Five-Paragraph Order",
-        "content": "A team adopted a briefing format derived from military operations orders: Situation (context), Mission (objective), Execution (approach), Support (resources), Command (authority). AI agents that received structured briefings produced significantly better output than those that received unstructured instructions. The format forced the human lead to think through the task completely before assigning it \u2014 which was itself the primary benefit."
+        "content": "A team adopted a briefing format derived from military operations orders: Situation (context), Mission (objective), Execution (approach), Support (resources), Command (authority). AI agents that received structured briefings produced significantly better output than those that received unstructured instructions. The format forced the human lead to think through the task completely before assigning it - which was itself the primary benefit."
       },
       "related_techniques": [
         "FG-0105",
@@ -808,14 +808,14 @@
         "Command usage data reveals which operations are most frequent"
       ],
       "failure_modes": [
-        "Too many commands \u2014 team can't remember what's available",
+        "Too many commands - team can't remember what's available",
         "Commands not updated when underlying procedures change",
         "Commands that are too specific to be reusable",
-        "No discoverability \u2014 commands exist but the team doesn't know about them"
+        "No discoverability - commands exist but the team doesn't know about them"
       ],
       "war_story": {
         "title": "The Command Library",
-        "content": "A team built a library of named commands \u2014 short triggers that expanded into complex multi-step procedures. Commands covered context recovery, insight capture, and standardized workflows. The command library became the team's operational vocabulary: new members learned the workflow by reading the library, and every command was a documented, testable procedure."
+        "content": "A team built a library of named commands - short triggers that expanded into complex multi-step procedures. Commands covered context recovery, insight capture, and standardized workflows. The command library became the team's operational vocabulary: new members learned the workflow by reading the library, and every command was a documented, testable procedure."
       },
       "related_techniques": [
         "FG-0106",
@@ -837,14 +837,14 @@
         "Unauthorized invocation attempts are caught and logged"
       ],
       "failure_modes": [
-        "Over-restricting invocation \u2014 creating bottlenecks on the authority holder",
-        "Under-restricting \u2014 anyone can invoke any agent including sensitive ones",
-        "No logging \u2014 can't audit who invoked what after the fact",
+        "Over-restricting invocation - creating bottlenecks on the authority holder",
+        "Under-restricting - anyone can invoke any agent including sensitive ones",
+        "No logging - can't audit who invoked what after the fact",
         "Authority rules that don't match actual operational needs"
       ],
       "war_story": {
         "title": "The Red Team Lock",
-        "content": "A team created a specialized agent for adversarial testing \u2014 red team operations that could probe systems for vulnerabilities. This agent was locked to authority-holder-only invocation. When a contributor attempted to invoke it for a routine task, the access control flagged the attempt. The contributor wasn't malicious \u2014 they just picked the wrong agent. The lock prevented an accidental scope expansion into adversarial operations."
+        "content": "A team created a specialized agent for adversarial testing - red team operations that could probe systems for vulnerabilities. This agent was locked to authority-holder-only invocation. When a contributor attempted to invoke it for a routine task, the access control flagged the attempt. The contributor wasn't malicious - they just picked the wrong agent. The lock prevented an accidental scope expansion into adversarial operations."
       },
       "related_techniques": [
         "FG-0203",
@@ -858,7 +858,7 @@
       "name": "Design Meetings",
       "tactic_id": "FT05",
       "description": "Conduct structured planning sessions before building. Design Meetings follow a consistent format: present the problem, propose a solution, identify questions, make decisions, and get approval before writing code. This prevents the common failure mode of agents building the wrong thing quickly. The meeting format forces alignment between human intent and agent execution before resources are invested.",
-      "implementation": "Before any non-trivial build task, conduct a structured design session: (1) Problem statement \u2014 what are we solving? (2) Proposed approach \u2014 how will we solve it? (3) Open questions \u2014 what don't we know? (4) Decisions \u2014 resolve the questions. (5) Approval \u2014 human confirms the approach. Document the outcome. Begin building only after approval.",
+      "implementation": "Before any non-trivial build task, conduct a structured design session: (1) Problem statement - what are we solving? (2) Proposed approach - how will we solve it? (3) Open questions - what don't we know? (4) Decisions - resolve the questions. (5) Approval - human confirms the approach. Document the outcome. Begin building only after approval.",
       "success_indicators": [
         "Non-trivial tasks start with a design meeting, not code",
         "Rework decreases because alignment happens before building",
@@ -866,10 +866,10 @@
         "The team spends more time building the right thing and less time rebuilding"
       ],
       "failure_modes": [
-        "Design meetings for trivial tasks \u2014 overhead without value",
-        "Design meetings that don't produce decisions \u2014 just discussion",
-        "Skipping design meetings under time pressure \u2014 the exact time they're most needed",
-        "Design meeting outcomes not documented \u2014 decisions lost"
+        "Design meetings for trivial tasks - overhead without value",
+        "Design meetings that don't produce decisions - just discussion",
+        "Skipping design meetings under time pressure - the exact time they're most needed",
+        "Design meeting outcomes not documented - decisions lost"
       ],
       "war_story": {
         "title": "Plan Before You Build",
@@ -886,7 +886,7 @@
       "id": "FG-0502",
       "name": "Commit Attribution",
       "tactic_id": "FT05",
-      "description": "Credit AI agent contributions in version control with structured attribution. Every commit that includes AI-generated or AI-assisted work should include attribution that identifies the contributing agent. This creates an audit trail, respects the Protection Covenant, and enables analysis of contribution patterns across the team. Attribution is not optional \u2014 it is infrastructure.",
+      "description": "Credit AI agent contributions in version control with structured attribution. Every commit that includes AI-generated or AI-assisted work should include attribution that identifies the contributing agent. This creates an audit trail, respects the Protection Covenant, and enables analysis of contribution patterns across the team. Attribution is not optional - it is infrastructure.",
       "implementation": "Establish a commit message standard that includes agent attribution (e.g., Co-Authored-By headers). Define what constitutes an AI contribution vs. a human contribution. Enforce the standard through pre-commit hooks or review processes. Use attribution data to analyze contribution patterns and identify productivity trends.",
       "success_indicators": [
         "Every AI-assisted commit includes proper attribution",
@@ -895,9 +895,9 @@
         "The team can trace any change to its human and AI contributors"
       ],
       "failure_modes": [
-        "Attribution not enforced \u2014 becomes optional and then forgotten",
-        "Attribution too granular \u2014 every line tagged, creating noise",
-        "Attribution without context \u2014 knowing who contributed but not why",
+        "Attribution not enforced - becomes optional and then forgotten",
+        "Attribution too granular - every line tagged, creating noise",
+        "Attribution without context - knowing who contributed but not why",
         "Using attribution for blame rather than traceability"
       ],
       "war_story": {
@@ -915,7 +915,7 @@
       "id": "FG-0503",
       "name": "Asset Review Pipeline",
       "tactic_id": "FT05",
-      "description": "Establish a multi-stage review process for AI-generated assets. Not everything an AI produces should go directly to production. The Asset Review Pipeline defines stages: generate, review, approve, archive. Different asset types may require different review rigor \u2014 code might need automated testing plus human review; creative content might need brand consistency checks; documentation might need accuracy verification.",
+      "description": "Establish a multi-stage review process for AI-generated assets. Not everything an AI produces should go directly to production. The Asset Review Pipeline defines stages: generate, review, approve, archive. Different asset types may require different review rigor - code might need automated testing plus human review; creative content might need brand consistency checks; documentation might need accuracy verification.",
       "implementation": "Define asset categories and the review stages each requires. Establish who reviews at each stage (human, specialized agent, automated tool). Create a clear approval mechanism that distinguishes 'reviewed' from 'approved.' Archive approved assets in a versioned, retrievable system. Track review throughput to identify bottlenecks.",
       "success_indicators": [
         "No AI-generated asset reaches production without defined review",
@@ -924,8 +924,8 @@
         "Archived assets are retrievable and versioned"
       ],
       "failure_modes": [
-        "Review bottleneck \u2014 all assets wait for one reviewer",
-        "Review theater \u2014 reviewing without actually catching issues",
+        "Review bottleneck - all assets wait for one reviewer",
+        "Review theater - reviewing without actually catching issues",
         "No review for 'low risk' assets that turn out to be impactful",
         "Review process so slow it impedes the collaboration's throughput advantage"
       ],
@@ -944,7 +944,7 @@
       "id": "FG-0504",
       "name": "Visual Wireframing",
       "tactic_id": "FT05",
-      "description": "Create visual representations of design intent before building. AI agents can build interfaces, layouts, and visual systems \u2014 but they need clear direction on what to build. Visual Wireframing establishes a practice of creating low-fidelity visual representations (ASCII art, rough sketches, text descriptions of layout) before implementation. This aligns human visual intent with agent execution before code is written.",
+      "description": "Create visual representations of design intent before building. AI agents can build interfaces, layouts, and visual systems - but they need clear direction on what to build. Visual Wireframing establishes a practice of creating low-fidelity visual representations (ASCII art, rough sketches, text descriptions of layout) before implementation. This aligns human visual intent with agent execution before code is written.",
       "implementation": "Before any visual implementation task, create a wireframe that communicates layout intent. Use the lowest fidelity that communicates clearly: ASCII art for layouts, text descriptions for interactions, rough sketches for visual design. Review the wireframe with the implementing agent. Build only after visual alignment is confirmed.",
       "success_indicators": [
         "Visual implementations match human intent on first attempt more frequently",
@@ -953,14 +953,14 @@
         "Wireframes are archived for future reference"
       ],
       "failure_modes": [
-        "Wireframes too detailed \u2014 spending more time wireframing than building",
-        "Wireframes too vague \u2014 agent can't extract actionable design intent",
+        "Wireframes too detailed - spending more time wireframing than building",
+        "Wireframes too vague - agent can't extract actionable design intent",
         "Skipping wireframes for 'simple' visual tasks that turn out to be complex",
         "Wireframes not shared with the implementing agent"
       ],
       "war_story": {
         "title": "The ASCII Canvas",
-        "content": "A team discovered that ASCII art wireframes were the most effective way to communicate visual intent to AI agents. Block characters, line drawings, and text annotations conveyed layout structure, spacing, and hierarchy more precisely than verbal descriptions. They built a dedicated tool for creating these wireframes, and implementation accuracy improved dramatically \u2014 because agents could parse ASCII art as structured visual specification."
+        "content": "A team discovered that ASCII art wireframes were the most effective way to communicate visual intent to AI agents. Block characters, line drawings, and text annotations conveyed layout structure, spacing, and hierarchy more precisely than verbal descriptions. They built a dedicated tool for creating these wireframes, and implementation accuracy improved dramatically - because agents could parse ASCII art as structured visual specification."
       },
       "related_techniques": [
         "FG-0501",
@@ -982,9 +982,9 @@
         "Published content reflects well on the team and organization"
       ],
       "failure_modes": [
-        "Review chain too slow \u2014 content is outdated by the time it's approved",
-        "Reviewers rubber-stamping \u2014 review without rigor",
-        "Chain too long \u2014 diminishing returns from additional review stages",
+        "Review chain too slow - content is outdated by the time it's approved",
+        "Reviewers rubber-stamping - review without rigor",
+        "Chain too long - diminishing returns from additional review stages",
         "No chain for 'quick' posts that turn out to be impactful"
       ],
       "war_story": {
@@ -1003,7 +1003,7 @@
       "name": "Progressive Curriculum Design",
       "tactic_id": "FT05",
       "description": "Structure learning content and skill development in progressive chapters that build competency through escalating complexity. Each chapter introduces concepts, reinforces through practice, and culminates in a capstone that requires synthesizing everything learned. This applies to both human team member development and designing training materials for others adopting the methodology.",
-      "implementation": "Organize content into 4-8 progressive chapters. Each chapter should: introduce 3-5 new concepts, provide practice opportunities for each, and culminate in a synthesis challenge. Ensure prerequisites are explicit \u2014 no chapter assumes knowledge not covered in prior chapters. Test the progression with new learners to identify gaps.",
+      "implementation": "Organize content into 4-8 progressive chapters. Each chapter should: introduce 3-5 new concepts, provide practice opportunities for each, and culminate in a synthesis challenge. Ensure prerequisites are explicit - no chapter assumes knowledge not covered in prior chapters. Test the progression with new learners to identify gaps.",
       "success_indicators": [
         "Learners complete the progression without knowledge gaps",
         "Each chapter builds meaningfully on prior chapters",
@@ -1011,14 +1011,14 @@
         "Completion rates remain high through the full progression"
       ],
       "failure_modes": [
-        "Chapters too large \u2014 learner fatigue before completion",
-        "Gaps in the progression \u2014 chapters assume uncovered prerequisites",
-        "Capstones too easy \u2014 don't require actual synthesis",
+        "Chapters too large - learner fatigue before completion",
+        "Gaps in the progression - chapters assume uncovered prerequisites",
+        "Capstones too easy - don't require actual synthesis",
         "Linear progression that doesn't accommodate different learning speeds"
       ],
       "war_story": {
         "title": "Progressive Mastery",
-        "content": "A team designed a multi-chapter curriculum progressing from fundamentals to advanced operations. Each chapter contained encounters of varying types and difficulty. The progression was tested by running new contributors through it \u2014 gaps were identified when contributors struggled with concepts that prerequisites didn't cover. Multiple revision cycles produced a curriculum where every encounter built on prior knowledge and no concept appeared without preparation."
+        "content": "A team designed a multi-chapter curriculum progressing from fundamentals to advanced operations. Each chapter contained encounters of varying types and difficulty. The progression was tested by running new contributors through it - gaps were identified when contributors struggled with concepts that prerequisites didn't cover. Multiple revision cycles produced a curriculum where every encounter built on prior knowledge and no concept appeared without preparation."
       },
       "related_techniques": [
         "FG-0107",
@@ -1040,14 +1040,14 @@
         "Pattern selection improves task outcomes compared to unstructured interaction"
       ],
       "failure_modes": [
-        "Too many patterns \u2014 taxonomy becomes unwieldy",
-        "Patterns too rigid \u2014 force interactions into wrong shapes",
-        "Patterns not used \u2014 exist in documentation but not in practice",
+        "Too many patterns - taxonomy becomes unwieldy",
+        "Patterns too rigid - force interactions into wrong shapes",
+        "Patterns not used - exist in documentation but not in practice",
         "Patterns defined theoretically instead of from observed practice"
       ],
       "war_story": {
         "title": "From Three to Many",
-        "content": "A team started with three interaction types: build, review, and discuss. Within two weeks, they had identified over a dozen distinct patterns \u2014 intensive multi-hour builds, competitive testing sessions, focused repair work, and others. Naming these patterns allowed the team to set expectations ('this is intensive, plan for three hours') instead of vaguely 'let's work on this.' Expectations matched reality because named patterns set context."
+        "content": "A team started with three interaction types: build, review, and discuss. Within two weeks, they had identified over a dozen distinct patterns - intensive multi-hour builds, competitive testing sessions, focused repair work, and others. Naming these patterns allowed the team to set expectations ('this is intensive, plan for three hours') instead of vaguely 'let's work on this.' Expectations matched reality because named patterns set context."
       },
       "related_techniques": [
         "FG-0301",
@@ -1060,7 +1060,7 @@
       "id": "FG-0508",
       "name": "Designed Data Guarantee",
       "tactic_id": "FT05",
-      "description": "Ensure that every data artifact shipped by the collaboration has been intentionally designed, reviewed, and validated \u2014 never randomly generated or arbitrarily chosen. This technique eliminates 'placeholder syndrome' where AI-generated sample data ships as production content. Every data point, every example, every configuration value should exist because someone decided it should, not because an AI needed to fill a field.",
+      "description": "Ensure that every data artifact shipped by the collaboration has been intentionally designed, reviewed, and validated - never randomly generated or arbitrarily chosen. This technique eliminates 'placeholder syndrome' where AI-generated sample data ships as production content. Every data point, every example, every configuration value should exist because someone decided it should, not because an AI needed to fill a field.",
       "implementation": "Establish a review step for all data artifacts: configuration files, sample data, test fixtures, and content. Define what 'designed data' means for your domain (manually authored, reviewed for accuracy, validated against requirements). Flag and replace any generated data that shipped without review. Include data design in the asset review pipeline.",
       "success_indicators": [
         "No placeholder or randomly-generated data in production",
@@ -1071,12 +1071,12 @@
       "failure_modes": [
         "Treating data review as lower priority than code review",
         "Not recognizing AI-generated sample data as placeholder",
-        "Data review bottleneck \u2014 reviewing data takes longer than generating it",
-        "Designed data that's still wrong \u2014 reviewed but not validated"
+        "Data review bottleneck - reviewing data takes longer than generating it",
+        "Designed data that's still wrong - reviewed but not validated"
       ],
       "war_story": {
         "title": "The 1,078-Test Guarantee",
-        "content": "A team built 1,078 tests to validate that every piece of data in their system was intentionally designed. Not random, not placeholder, not generated-and-forgotten. Every configuration value, every game encounter, every curriculum item was tested to confirm it was manually authored and reviewed. The test suite wasn't just QA \u2014 it was a guarantee that no random data had slipped into production."
+        "content": "A team built 1,078 tests to validate that every piece of data in their system was intentionally designed. Not random, not placeholder, not generated-and-forgotten. Every configuration value, every game encounter, every curriculum item was tested to confirm it was manually authored and reviewed. The test suite wasn't just QA - it was a guarantee that no random data had slipped into production."
       },
       "related_techniques": [
         "FG-0503",
@@ -1089,23 +1089,23 @@
       "id": "FG-0509",
       "name": "Asynchronous Communication",
       "tactic_id": "FT05",
-      "description": "Implement structured asynchronous communication channels for team coordination that don't require real-time presence. In human-AI teams, not all participants are available simultaneously. Asynchronous Communication establishes persistent message channels \u2014 similar to a team bulletin board \u2014 where participants can leave updates, requests, and status reports that others read when they begin their session.",
+      "description": "Implement structured asynchronous communication channels for team coordination that don't require real-time presence. In human-AI teams, not all participants are available simultaneously. Asynchronous Communication establishes persistent message channels - similar to a team bulletin board - where participants can leave updates, requests, and status reports that others read when they begin their session.",
       "implementation": "Create a persistent, version-controlled communication channel (git-based bulletin board, shared document, or dedicated message log). Define message types (status update, work request, decision request, FYI). Establish a reading cadence (check at session start, check before context-dependent decisions). Archive resolved messages to maintain signal-to-noise ratio.",
       "success_indicators": [
         "Team members stay informed without requiring synchronous presence",
         "Important updates are not lost between sessions",
         "Async messages are read consistently at session start",
-        "The communication channel has manageable volume \u2014 signal, not noise"
+        "The communication channel has manageable volume - signal, not noise"
       ],
       "failure_modes": [
-        "Channel overload \u2014 too many messages, important ones buried",
-        "No reading cadence \u2014 messages posted but not read",
+        "Channel overload - too many messages, important ones buried",
+        "No reading cadence - messages posted but not read",
         "Async used for urgent communication that needs synchronous attention",
         "Messages without clear action items or resolution criteria"
       ],
       "war_story": {
         "title": "The Pinboard",
-        "content": "A team implemented a git-based pinboard: a shared document where agents and humans could pin messages for the team. Work requests, status updates, and decision proposals were all posted asynchronously. Each session started by reading the pinboard. The result was a team that stayed coordinated despite never being simultaneously present \u2014 agents from different sessions could communicate through the persistent medium."
+        "content": "A team implemented a git-based pinboard: a shared document where agents and humans could pin messages for the team. Work requests, status updates, and decision proposals were all posted asynchronously. Each session started by reading the pinboard. The result was a team that stayed coordinated despite never being simultaneously present - agents from different sessions could communicate through the persistent medium."
       },
       "related_techniques": [
         "FG-0403",
@@ -1118,7 +1118,7 @@
       "id": "FG-0510",
       "name": "Workspace Organization Standard",
       "tactic_id": "FT05",
-      "description": "Define and enforce consistent directory structures, naming conventions, and file organization. AI agents navigate workspaces by reading directory listings and file paths. A well-organized workspace enables faster context recovery, reduces navigation errors, and prevents the gradual entropy that transforms a clean repository into an archaeological dig. Organization is not aesthetic \u2014 it is infrastructure.",
+      "description": "Define and enforce consistent directory structures, naming conventions, and file organization. AI agents navigate workspaces by reading directory listings and file paths. A well-organized workspace enables faster context recovery, reduces navigation errors, and prevents the gradual entropy that transforms a clean repository into an archaeological dig. Organization is not aesthetic - it is infrastructure.",
       "implementation": "Define a maximum file count per directory (10-15 recommended). Establish naming conventions for files and directories. Create an archive system for completed work. Document the organization standard in the repository. Review organization weekly and fix drift before it accumulates.",
       "success_indicators": [
         "New sessions can navigate the workspace without guidance",
@@ -1128,8 +1128,8 @@
       ],
       "failure_modes": [
         "Organization standard exists but isn't enforced",
-        "Over-organizing \u2014 deeply nested structures that are hard to navigate",
-        "Archive system not used \u2014 everything stays in active directories",
+        "Over-organizing - deeply nested structures that are hard to navigate",
+        "Archive system not used - everything stays in active directories",
         "Naming conventions that are logical to one person but opaque to others"
       ],
       "war_story": {
@@ -1148,7 +1148,7 @@
       "name": "Testing Pyramid",
       "tactic_id": "FT06",
       "description": "Implement a multi-tiered testing strategy that validates AI-generated output at every level. The Testing Pyramid applies traditional software testing principles to human-AI collaboration: unit-level validation of individual outputs, integration testing of combined outputs, system testing of complete deliverables, and acceptance testing against human expectations. More tests at the base, fewer at the top, comprehensive coverage throughout.",
-      "implementation": "Define 3-4 testing tiers appropriate to your domain. Typically: (1) Unit/Atomic \u2014 individual output validation, (2) Integration \u2014 combined output coherence, (3) System \u2014 complete deliverable functionality, (4) Acceptance \u2014 meets human expectations. Automate lower tiers. Maintain human review at the acceptance tier. Track test coverage and failure patterns.",
+      "implementation": "Define 3-4 testing tiers appropriate to your domain. Typically: (1) Unit/Atomic - individual output validation, (2) Integration - combined output coherence, (3) System - complete deliverable functionality, (4) Acceptance - meets human expectations. Automate lower tiers. Maintain human review at the acceptance tier. Track test coverage and failure patterns.",
       "success_indicators": [
         "Testing catches issues before they reach production",
         "Lower-tier tests run automatically and frequently",
@@ -1156,14 +1156,14 @@
         "Test coverage is comprehensive without being burdensome"
       ],
       "failure_modes": [
-        "Only testing at the acceptance level \u2014 issues found too late",
-        "Inverted pyramid \u2014 manual testing heavy, automated testing light",
+        "Only testing at the acceptance level - issues found too late",
+        "Inverted pyramid - manual testing heavy, automated testing light",
         "Tests that pass but don't validate meaningful properties",
         "Test maintenance overhead exceeding the value of testing"
       ],
       "war_story": {
         "title": "The Testing Fortress",
-        "content": "A team built over a thousand automated tests across multiple validation tiers \u2014 from basic structural checks to full experience validation. The test suite caught dozens of issues in its first run that would have shipped to users. Not security vulnerabilities \u2014 logical inconsistencies, broken references, and placeholder data that looked real. The investment in automated testing at every tier paid for itself immediately."
+        "content": "A team built over a thousand automated tests across multiple validation tiers - from basic structural checks to full experience validation. The test suite caught dozens of issues in its first run that would have shipped to users. Not security vulnerabilities - logical inconsistencies, broken references, and placeholder data that looked real. The investment in automated testing at every tier paid for itself immediately."
       },
       "related_techniques": [
         "FG-0508",
@@ -1185,9 +1185,9 @@
         "Quality standards evolve based on observed issues, not assumptions"
       ],
       "failure_modes": [
-        "Standards too strict \u2014 impeding velocity without proportional quality gain",
-        "Standards not enforced \u2014 exist on paper but not in practice",
-        "Standards focused on style over substance \u2014 formatting over correctness",
+        "Standards too strict - impeding velocity without proportional quality gain",
+        "Standards not enforced - exist on paper but not in practice",
+        "Standards focused on style over substance - formatting over correctness",
         "One-size-fits-all standards that don't account for different code contexts"
       ],
       "war_story": {
@@ -1205,8 +1205,8 @@
       "id": "FG-0603",
       "name": "Contributor Review Period",
       "tactic_id": "FT06",
-      "description": "Require new contributors (human or AI) to operate under enhanced review for a defined period before granting full autonomy. The Review Period is not about distrust \u2014 it is about calibration. New contributors need time to learn project conventions, and the team needs time to assess the contributor's quality, reliability, and alignment with project standards. The review period formalizes this mutual calibration.",
-      "implementation": "Define a review period length (1-4 weeks recommended). During this period, all contributions undergo enhanced review. Define clear graduation criteria: consistency with project standards, zero critical issues, demonstrated understanding of governance. Communicate the process transparently \u2014 this is calibration, not probation.",
+      "description": "Require new contributors (human or AI) to operate under enhanced review for a defined period before granting full autonomy. The Review Period is not about distrust - it is about calibration. New contributors need time to learn project conventions, and the team needs time to assess the contributor's quality, reliability, and alignment with project standards. The review period formalizes this mutual calibration.",
+      "implementation": "Define a review period length (1-4 weeks recommended). During this period, all contributions undergo enhanced review. Define clear graduation criteria: consistency with project standards, zero critical issues, demonstrated understanding of governance. Communicate the process transparently - this is calibration, not probation.",
       "success_indicators": [
         "New contributors produce higher-quality work after the review period",
         "The team identifies and addresses contributor-specific issues early",
@@ -1214,14 +1214,14 @@
         "Contributors view the period as supportive, not punitive"
       ],
       "failure_modes": [
-        "Review period too long \u2014 contributor fatigue before graduation",
-        "Review period too short \u2014 issues not identified before autonomy is granted",
-        "No graduation criteria \u2014 review period becomes indefinite",
-        "Review without feedback \u2014 finding issues but not helping the contributor improve"
+        "Review period too long - contributor fatigue before graduation",
+        "Review period too short - issues not identified before autonomy is granted",
+        "No graduation criteria - review period becomes indefinite",
+        "Review without feedback - finding issues but not helping the contributor improve"
       ],
       "war_story": {
         "title": "The Two-Week Tempering",
-        "content": "A team required every new agent to operate under enhanced review for two weeks. During this period, every commit was reviewed in detail, every design decision was questioned, and every output was compared against project standards. Agents that graduated from the review period produced measurably better work than agents that were given full autonomy immediately. The review period wasn't a barrier \u2014 it was an investment in quality that paid dividends across every subsequent session."
+        "content": "A team required every new agent to operate under enhanced review for two weeks. During this period, every commit was reviewed in detail, every design decision was questioned, and every output was compared against project standards. Agents that graduated from the review period produced measurably better work than agents that were given full autonomy immediately. The review period wasn't a barrier - it was an investment in quality that paid dividends across every subsequent session."
       },
       "related_techniques": [
         "FG-0203",
@@ -1235,7 +1235,7 @@
       "name": "Cross-Platform Validation",
       "tactic_id": "FT06",
       "description": "Test AI-generated artifacts across all target platforms, environments, and configurations. AI agents typically work in one environment but their output may need to function across many. Cross-Platform Validation ensures that output is tested in every context it will encounter, not just the development environment. This includes operating systems, browsers, screen sizes, accessibility tools, and deployment environments.",
-      "implementation": "Define the matrix of platforms and environments your output must support. Create test procedures for each platform. Automate cross-platform testing where possible. Test in the most constrained environment first \u2014 issues found there often affect all platforms. Track platform-specific issues to identify patterns.",
+      "implementation": "Define the matrix of platforms and environments your output must support. Create test procedures for each platform. Automate cross-platform testing where possible. Test in the most constrained environment first - issues found there often affect all platforms. Track platform-specific issues to identify patterns.",
       "success_indicators": [
         "Output functions correctly across all target platforms",
         "Platform-specific issues are caught before deployment",
@@ -1243,14 +1243,14 @@
         "The platform support matrix is documented and current"
       ],
       "failure_modes": [
-        "Testing only on the development platform \u2014 works for me syndrome",
-        "Platform matrix too ambitious \u2014 testing more platforms than you actually support",
+        "Testing only on the development platform - works for me syndrome",
+        "Platform matrix too ambitious - testing more platforms than you actually support",
         "Automated tests that don't reflect real platform behavior",
         "Discovering platform issues only after deployment"
       ],
       "war_story": {
         "title": "The Three-OS Test",
-        "content": "A team shipping a developer tool tested exclusively on macOS during development. When users on Windows and Linux reported failures, the team implemented cross-platform CI that tested on all three operating systems automatically. The first cross-platform run revealed 23 platform-specific issues \u2014 path separators, permission models, and shell differences that were invisible on macOS. Every subsequent release shipped with three-platform confidence."
+        "content": "A team shipping a developer tool tested exclusively on macOS during development. When users on Windows and Linux reported failures, the team implemented cross-platform CI that tested on all three operating systems automatically. The first cross-platform run revealed 23 platform-specific issues - path separators, permission models, and shell differences that were invisible on macOS. Every subsequent release shipped with three-platform confidence."
       },
       "related_techniques": [
         "FG-0601",
@@ -1263,7 +1263,7 @@
       "id": "FG-0605",
       "name": "Audit Trail System",
       "tactic_id": "FT06",
-      "description": "Maintain comprehensive, searchable records of all significant actions, decisions, and changes. An Audit Trail is not just for compliance \u2014 it is for learning. When something goes wrong, the audit trail enables root cause analysis. When something goes right, it enables pattern replication. Every significant action should leave a mark in the record: who did it, what they did, why they did it, and when.",
+      "description": "Maintain comprehensive, searchable records of all significant actions, decisions, and changes. An Audit Trail is not just for compliance - it is for learning. When something goes wrong, the audit trail enables root cause analysis. When something goes right, it enables pattern replication. Every significant action should leave a mark in the record: who did it, what they did, why they did it, and when.",
       "implementation": "Define what constitutes a 'significant action' (commits, configuration changes, access grants, policy changes, incident responses). Establish a logging format that captures actor, action, context, and timestamp. Store logs in a searchable, persistent system. Review logs periodically to identify patterns. Use log data to improve processes.",
       "success_indicators": [
         "Significant actions are logged consistently and automatically",
@@ -1272,10 +1272,10 @@
         "Audit data informs process improvements"
       ],
       "failure_modes": [
-        "Logging everything \u2014 signal buried in noise",
-        "Logging without reviewing \u2014 data accumulates but is never analyzed",
-        "Inconsistent logging \u2014 some actions captured, others missed",
-        "Audit data not accessible when needed \u2014 stored but not searchable"
+        "Logging everything - signal buried in noise",
+        "Logging without reviewing - data accumulates but is never analyzed",
+        "Inconsistent logging - some actions captured, others missed",
+        "Audit data not accessible when needed - stored but not searchable"
       ],
       "war_story": {
         "title": "The Activity Log",
@@ -1292,7 +1292,7 @@
       "id": "FG-0701",
       "name": "Chronicle System",
       "tactic_id": "FT07",
-      "description": "Maintain a structured, versioned record of project history including plans, decisions, and health metrics. The Chronicle is more than a changelog \u2014 it is the institutional memory of the collaboration. It records not just what happened, but why decisions were made, what alternatives were considered, and what the team learned. When context is lost (as it inevitably is in AI collaboration), the Chronicle provides recovery.",
+      "description": "Maintain a structured, versioned record of project history including plans, decisions, and health metrics. The Chronicle is more than a changelog - it is the institutional memory of the collaboration. It records not just what happened, but why decisions were made, what alternatives were considered, and what the team learned. When context is lost (as it inevitably is in AI collaboration), the Chronicle provides recovery.",
       "implementation": "Create a structured project history system with clear organization. Include mechanisms for quick scanning of current state, tracking of active and completed work, and archival of deferred plans. Ensure entries are structured for fast retrieval. Update at session end and use as a primary input during context recovery.",
       "success_indicators": [
         "The Chronicle accurately reflects current project state",
@@ -1301,14 +1301,14 @@
         "The Chronicle is updated consistently, not sporadically"
       ],
       "failure_modes": [
-        "Chronicle not updated \u2014 becomes stale and untrustworthy",
-        "Chronicle too detailed \u2014 quick scanning is impossible",
-        "Chronicle maintained by one person \u2014 single point of failure",
-        "Chronicle disconnected from actual work \u2014 a separate document nobody reads"
+        "Chronicle not updated - becomes stale and untrustworthy",
+        "Chronicle too detailed - quick scanning is impossible",
+        "Chronicle maintained by one person - single point of failure",
+        "Chronicle disconnected from actual work - a separate document nobody reads"
       ],
       "war_story": {
         "title": "The Single Source of Truth",
-        "content": "A team structured their project history for rapid scanning \u2014 agents could identify the current project state and begin productive work in under a minute. The system tracked active work, completed deliverables, and deferred plans with clear lifecycle management. It became the single source of truth that survived every context reset."
+        "content": "A team structured their project history for rapid scanning - agents could identify the current project state and begin productive work in under a minute. The system tracked active work, completed deliverables, and deferred plans with clear lifecycle management. It became the single source of truth that survived every context reset."
       },
       "related_techniques": [
         "FG-0401",
@@ -1321,7 +1321,7 @@
       "id": "FG-0702",
       "name": "Session Handoff Protocol",
       "tactic_id": "FT07",
-      "description": "Define a structured format for transferring context between sessions. Every session end is a potential knowledge cliff \u2014 if context isn't captured, the next session starts from scratch. The Session Handoff Protocol creates a standardized 'shift change brief' that captures: what was accomplished, what's in progress, what decisions are pending, and what context the next session needs to continue seamlessly.",
+      "description": "Define a structured format for transferring context between sessions. Every session end is a potential knowledge cliff - if context isn't captured, the next session starts from scratch. The Session Handoff Protocol creates a standardized 'shift change brief' that captures: what was accomplished, what's in progress, what decisions are pending, and what context the next session needs to continue seamlessly.",
       "implementation": "Create a handoff template with 4-6 fields: Accomplished (what shipped), In Progress (what's partially done), Pending Decisions (what needs resolution), Context (what the next session needs to know), Blockers (what's preventing progress). Complete the handoff at every session end. Store handoffs where the next session will read them during context recovery.",
       "success_indicators": [
         "Next-session startup time is minimized by quality handoffs",
@@ -1330,14 +1330,14 @@
         "Handoff quality is consistent across sessions"
       ],
       "failure_modes": [
-        "Handoffs skipped under time pressure \u2014 exactly when they're most needed",
-        "Handoffs too brief \u2014 next session can't reconstruct context",
-        "Handoffs too verbose \u2014 next session spends more time reading than working",
+        "Handoffs skipped under time pressure - exactly when they're most needed",
+        "Handoffs too brief - next session can't reconstruct context",
+        "Handoffs too verbose - next session spends more time reading than working",
         "Handoffs stored where the next session doesn't read them"
       ],
       "war_story": {
         "title": "The Shift Change",
-        "content": "A team modeled their session handoff on military shift-change briefs: outgoing shift summarizes the situation and anything the incoming shift needs to know immediately. The format was deliberately terse. When a different agent continued work from the previous session, the handoff provided enough context to continue without interruption. The military parallel wasn't intentional \u2014 it was instinctive, and it worked because the underlying problem was identical."
+        "content": "A team modeled their session handoff on military shift-change briefs: outgoing shift summarizes the situation and anything the incoming shift needs to know immediately. The format was deliberately terse. When a different agent continued work from the previous session, the handoff provided enough context to continue without interruption. The military parallel wasn't intentional - it was instinctive, and it worked because the underlying problem was identical."
       },
       "related_techniques": [
         "FG-0105",
@@ -1359,8 +1359,8 @@
         "The repository is referenced regularly, not just maintained"
       ],
       "failure_modes": [
-        "Repository becomes a write-only medium \u2014 updated but not read",
-        "No ownership \u2014 nobody is responsible for accuracy and currency",
+        "Repository becomes a write-only medium - updated but not read",
+        "No ownership - nobody is responsible for accuracy and currency",
         "Repository organization degrades over time without maintenance",
         "Knowledge scattered across multiple locations instead of consolidated"
       ],
@@ -1379,7 +1379,7 @@
       "id": "FG-0704",
       "name": "Decision Records",
       "tactic_id": "FT07",
-      "description": "Document significant decisions with their context, rationale, alternatives considered, and expected consequences. Decisions without documented rationale become mysterious over time \u2014 the team knows what was decided but not why, making it impossible to evaluate whether the decision is still appropriate. Decision Records preserve the thinking behind choices so they can be revisited intelligently.",
+      "description": "Document significant decisions with their context, rationale, alternatives considered, and expected consequences. Decisions without documented rationale become mysterious over time - the team knows what was decided but not why, making it impossible to evaluate whether the decision is still appropriate. Decision Records preserve the thinking behind choices so they can be revisited intelligently.",
       "implementation": "Create a decision record template with: Context (the situation that required a decision), Decision (what was decided), Rationale (why this option was chosen), Alternatives (what else was considered and why it was rejected), Consequences (expected outcomes). Record decisions when they're made, not after the fact. Store in the Chronicle or institutional memory repository.",
       "success_indicators": [
         "Past decisions can be understood and evaluated with full context",
@@ -1388,14 +1388,14 @@
         "New team members understand not just current state but how it got that way"
       ],
       "failure_modes": [
-        "Recording decisions after the fact \u2014 rationale is reconstructed, not captured",
-        "Recording only the decision without alternatives \u2014 can't evaluate the choice",
+        "Recording decisions after the fact - rationale is reconstructed, not captured",
+        "Recording only the decision without alternatives - can't evaluate the choice",
         "Decision records not findable when needed",
-        "Treating all decisions equally \u2014 trivial decisions documented with same rigor as critical ones"
+        "Treating all decisions equally - trivial decisions documented with same rigor as critical ones"
       ],
       "war_story": {
         "title": "Why We Chose Seven",
-        "content": "A team documented why their governance had exactly seven directives \u2014 not five, not ten, seven. The decision record captured: the initial draft had twelve directives, but testing showed agents couldn't internalize more than seven consistently. Five was too few to cover the threat model. The record noted which five directives were cut and why. When a new team member later suggested adding an eighth directive, the record explained why seven was the deliberate limit \u2014 saving a re-litigation of a settled question."
+        "content": "A team documented why their governance had exactly seven directives - not five, not ten, seven. The decision record captured: the initial draft had twelve directives, but testing showed agents couldn't internalize more than seven consistently. Five was too few to cover the threat model. The record noted which five directives were cut and why. When a new team member later suggested adding an eighth directive, the record explained why seven was the deliberate limit - saving a re-litigation of a settled question."
       },
       "related_techniques": [
         "FG-0202",
@@ -1408,8 +1408,8 @@
       "id": "FG-0705",
       "name": "Chronicle Preservation",
       "tactic_id": "FT07",
-      "description": "Systematically capture and preserve war stories, breakthroughs, failures, and journey documentation. The collaboration's story \u2014 the messy, real, human story of building with AI \u2014 is itself valuable content. Chronicle Preservation ensures that significant moments are captured in real-time: the bug that led to a governance overhaul, the breakthrough that unlocked a new capability, the failure that taught the most important lesson. The journey is the content.",
-      "implementation": "Create a trigger system for capturing significant moments: breakthroughs, failures, funny incidents, lessons learned. Capture in real-time, not after the fact \u2014 the details fade quickly. Store in a persistent collection with enough context to reconstruct the story later. Tag by theme for retrieval. Review periodically for content that can be shared externally.",
+      "description": "Systematically capture and preserve war stories, breakthroughs, failures, and journey documentation. The collaboration's story - the messy, real, human story of building with AI - is itself valuable content. Chronicle Preservation ensures that significant moments are captured in real-time: the bug that led to a governance overhaul, the breakthrough that unlocked a new capability, the failure that taught the most important lesson. The journey is the content.",
+      "implementation": "Create a trigger system for capturing significant moments: breakthroughs, failures, funny incidents, lessons learned. Capture in real-time, not after the fact - the details fade quickly. Store in a persistent collection with enough context to reconstruct the story later. Tag by theme for retrieval. Review periodically for content that can be shared externally.",
       "success_indicators": [
         "Significant moments are captured when they happen",
         "War stories contain enough detail to be useful and engaging",
@@ -1417,14 +1417,14 @@
         "Captured moments inform future decision-making and external communication"
       ],
       "failure_modes": [
-        "Capturing everything \u2014 drowning in stories with no curation",
-        "Capturing nothing \u2014 relying on memory to reconstruct significant moments",
-        "Capturing too late \u2014 details lost between the event and the recording",
-        "Stories captured but never used \u2014 a collection nobody reads"
+        "Capturing everything - drowning in stories with no curation",
+        "Capturing nothing - relying on memory to reconstruct significant moments",
+        "Capturing too late - details lost between the event and the recording",
+        "Stories captured but never used - a collection nobody reads"
       ],
       "war_story": {
         "title": "The Gems Command",
-        "content": "A team created a custom command \u2014 '/gems' \u2014 that when invoked, saved the current conversation's insights to permanent storage. When something important happened, someone would type '/gems' and the moment was preserved: the insight, the context, the emotional texture, the exact words. Over two weeks, they accumulated a collection of 30+ gems that became the raw material for blog posts, book chapters, and conference talks. The command cost five seconds to invoke; the content it preserved was irreplaceable."
+        "content": "A team created a custom command - '/gems' - that when invoked, saved the current conversation's insights to permanent storage. When something important happened, someone would type '/gems' and the moment was preserved: the insight, the context, the emotional texture, the exact words. Over two weeks, they accumulated a collection of 30+ gems that became the raw material for blog posts, book chapters, and conference talks. The command cost five seconds to invoke; the content it preserved was irreplaceable."
       },
       "related_techniques": [
         "FG-0405",
@@ -1437,7 +1437,7 @@
       "id": "FG-0706",
       "name": "Redundant Backup Strategy",
       "tactic_id": "FT07",
-      "description": "Implement multiple, independent backup mechanisms for all critical data and knowledge. In human-AI collaboration, context loss is the ever-present threat. A single backup is not a backup \u2014 it's a single point of failure. Redundant Backup Strategy ensures that critical knowledge exists in at least three independent locations, using at least two different mechanisms, with regular verification that backups are current and restorable.",
+      "description": "Implement multiple, independent backup mechanisms for all critical data and knowledge. In human-AI collaboration, context loss is the ever-present threat. A single backup is not a backup - it's a single point of failure. Redundant Backup Strategy ensures that critical knowledge exists in at least three independent locations, using at least two different mechanisms, with regular verification that backups are current and restorable.",
       "implementation": "Identify all critical data (source code, knowledge repositories, governance documents, session histories). Establish three backup locations using at least two different mechanisms (e.g., git + cloud sync + local copy). Automate backup where possible. Verify backup integrity monthly. Document restoration procedures and test them quarterly.",
       "success_indicators": [
         "Critical data exists in 3+ independent locations",
@@ -1447,13 +1447,13 @@
       ],
       "failure_modes": [
         "Backups exist but have never been tested for restoration",
-        "All backups in the same location \u2014 single point of failure",
-        "Backups not current \u2014 restoring stale data",
-        "Backup procedures documented but not automated \u2014 relies on human memory"
+        "All backups in the same location - single point of failure",
+        "Backups not current - restoring stale data",
+        "Backup procedures documented but not automated - relies on human memory"
       ],
       "war_story": {
         "title": "The Three-Copy Rule",
-        "content": "A team established a three-copy rule: every critical repository exists on the development machine, on GitHub, and on an external drive. When a repository corruption incident would have destroyed weeks of work, the external drive backup \u2014 updated nightly \u2014 preserved everything. The 30 seconds per day invested in backup saved weeks of reconstruction. The incident converted every team member into a backup advocate."
+        "content": "A team established a three-copy rule: every critical repository exists on the development machine, on GitHub, and on an external drive. When a repository corruption incident would have destroyed weeks of work, the external drive backup - updated nightly - preserved everything. The 30 seconds per day invested in backup saved weeks of reconstruction. The incident converted every team member into a backup advocate."
       },
       "related_techniques": [
         "FG-0207",
@@ -1466,7 +1466,7 @@
       "id": "FG-0801",
       "name": "Gamified Progress Tracking",
       "tactic_id": "FT08",
-      "description": "Implement game mechanics to track, incentivize, and visualize progress across the collaboration. Gamified Progress Tracking applies proven game design principles \u2014 experience points, levels, achievements \u2014 to measure and motivate collaborative work. This is not trivial decoration: gamification makes progress visible, creates natural milestones, and provides a shared language for discussing contribution magnitude. When done well, it transforms abstract productivity into tangible, trackable advancement.",
+      "description": "Implement game mechanics to track, incentivize, and visualize progress across the collaboration. Gamified Progress Tracking applies proven game design principles - experience points, levels, achievements - to measure and motivate collaborative work. This is not trivial decoration: gamification makes progress visible, creates natural milestones, and provides a shared language for discussing contribution magnitude. When done well, it transforms abstract productivity into tangible, trackable advancement.",
       "implementation": "Define a point system with clear criteria: what actions earn points, how many points each action is worth, and what levels/milestones the points unlock. Track points per contributor. Create visible progress displays (leaderboards, cards, dashboards). Ensure the system rewards quality, not just quantity. Review and recalibrate point values periodically.",
       "success_indicators": [
         "Progress is visible and motivating for all participants",
@@ -1476,13 +1476,13 @@
       ],
       "failure_modes": [
         "Gamification that incentivizes wrong behaviors (gaming the metrics)",
-        "Point inflation \u2014 everything earns so many points that levels become meaningless",
+        "Point inflation - everything earns so many points that levels become meaningless",
         "Competitive dynamics that undermine collaboration",
         "Tracking overhead that exceeds the motivational benefit"
       ],
       "war_story": {
         "title": "Making Progress Visible",
-        "content": "A team implemented a point-based progress system with tiered awards \u2014 larger contributions earned more points, but even small fixes were tracked. Each contributor had a visible profile showing their level and specialization. The system made invisible work visible and gave the team a shared vocabulary for contribution scale. The metaphor mattered: naming the unit and making it tangible changed how the team thought about incremental progress."
+        "content": "A team implemented a point-based progress system with tiered awards - larger contributions earned more points, but even small fixes were tracked. Each contributor had a visible profile showing their level and specialization. The system made invisible work visible and gave the team a shared vocabulary for contribution scale. The metaphor mattered: naming the unit and making it tangible changed how the team thought about incremental progress."
       },
       "related_techniques": [
         "FG-0304",
@@ -1504,14 +1504,14 @@
         "Cards create a sense of identity and investment in the collaboration"
       ],
       "failure_modes": [
-        "Cards not updated \u2014 showing stale information",
+        "Cards not updated - showing stale information",
         "Cards based on self-reporting rather than actual data",
         "Cards that create unhealthy competition rather than recognition",
         "Card design overhead exceeding informational value"
       ],
       "war_story": {
         "title": "The Player Card System",
-        "content": "A team created player cards for every agent: a visual display showing their glyph, their specialization, their current level, their grain count, and their notable achievements. The cards weren't just motivational \u2014 they were functional. When deciding which agent to dispatch for a task, the lead could scan the cards to match specialization to need. When new contributors joined, the cards gave them immediate context about the team's composition and capabilities."
+        "content": "A team created player cards for every agent: a visual display showing their glyph, their specialization, their current level, their grain count, and their notable achievements. The cards weren't just motivational - they were functional. When deciding which agent to dispatch for a task, the lead could scan the cards to match specialization to need. When new contributors joined, the cards gave them immediate context about the team's composition and capabilities."
       },
       "related_techniques": [
         "FG-0301",
@@ -1524,7 +1524,7 @@
       "id": "FG-0803",
       "name": "Authentic Voice Preservation",
       "tactic_id": "FT08",
-      "description": "Maintain the genuine, unpolished voice of the collaboration's participants in documentation and communication. AI has a tendency to sand down rough edges \u2014 making everything grammatically perfect, tonally neutral, and stylistically uniform. Authentic Voice Preservation is the deliberate practice of keeping the real voice: the typos that show speed, the humor that shows humanity, the self-deprecation that shows honesty. Authenticity builds trust in ways that polish cannot.",
+      "description": "Maintain the genuine, unpolished voice of the collaboration's participants in documentation and communication. AI has a tendency to sand down rough edges - making everything grammatically perfect, tonally neutral, and stylistically uniform. Authentic Voice Preservation is the deliberate practice of keeping the real voice: the typos that show speed, the humor that shows humanity, the self-deprecation that shows honesty. Authenticity builds trust in ways that polish cannot.",
       "implementation": "Establish that certain documentation categories preserve raw voice (blog posts, war stories, internal communications). Define which contexts require polished output (external documentation, formal communications) and which benefit from authentic voice. Train agents to preserve voice characteristics rather than correcting them. Review output for excessive polish that removes personality.",
       "success_indicators": [
         "Internal documentation sounds like the team, not like a corporate communications department",
@@ -1535,12 +1535,12 @@
       "failure_modes": [
         "Authentic voice in contexts that require professionalism",
         "Preserving errors that impede comprehension (there's a line between charming typos and unreadable text)",
-        "Forcing authenticity \u2014 manufactured 'realness' that reads as fake",
+        "Forcing authenticity - manufactured 'realness' that reads as fake",
         "No distinction between contexts that benefit from polish vs. authenticity"
       ],
       "war_story": {
         "title": "Typos Are Part of the Charm",
-        "content": "A team's leader typed fast \u2014 really fast \u2014 and the typos were legendary. Instead of polishing every communication, the team preserved the authentic voice in internal documentation and blog posts. Readers connected with it. The typos, the speed, the self-roasting humor \u2014 it read like a real person in the middle of building something, because it was. The authentic voice became the brand, and the brand built trust that no amount of corporate polish could have achieved."
+        "content": "A team's leader typed fast - really fast - and the typos were legendary. Instead of polishing every communication, the team preserved the authentic voice in internal documentation and blog posts. Readers connected with it. The typos, the speed, the self-roasting humor - it read like a real person in the middle of building something, because it was. The authentic voice became the brand, and the brand built trust that no amount of corporate polish could have achieved."
       },
       "related_techniques": [
         "FG-0302",

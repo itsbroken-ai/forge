@@ -49,7 +49,7 @@
 
         <section class="technique-implementation">
             <h2>Implementation</h2>
-            <p>Define the matrix of platforms and environments your output must support. Create test procedures for each platform. Automate cross-platform testing where possible. Test in the most constrained environment first — issues found there often affect all platforms. Track platform-specific issues to identify patterns.</p>
+            <p>Define the matrix of platforms and environments your output must support. Create test procedures for each platform. Automate cross-platform testing where possible. Test in the most constrained environment first - issues found there often affect all platforms. Track platform-specific issues to identify patterns.</p>
         </section>
 
         <div class="technique-grid">
@@ -67,8 +67,8 @@
             <section class="technique-failures">
                 <h2>Failure Modes</h2>
                 <ul class="failure-list">
-                    <li>Testing only on the development platform — works for me syndrome</li>
-<li>Platform matrix too ambitious — testing more platforms than you actually support</li>
+                    <li>Testing only on the development platform - works for me syndrome</li>
+<li>Platform matrix too ambitious - testing more platforms than you actually support</li>
 <li>Automated tests that don't reflect real platform behavior</li>
 <li>Discovering platform issues only after deployment</li>
 
@@ -79,7 +79,7 @@
         
             <section class="war-story">
                 <h2>Field Report: The Three-OS Test</h2>
-                <div class="war-story-content">A team shipping a developer tool tested exclusively on macOS during development. When users on Windows and Linux reported failures, the team implemented cross-platform CI that tested on all three operating systems automatically. The first cross-platform run revealed 23 platform-specific issues — path separators, permission models, and shell differences that were invisible on macOS. Every subsequent release shipped with three-platform confidence.</div>
+                <div class="war-story-content">A team shipping a developer tool tested exclusively on macOS during development. When users on Windows and Linux reported failures, the team implemented cross-platform CI that tested on all three operating systems automatically. The first cross-platform run revealed 23 platform-specific issues - path separators, permission models, and shell differences that were invisible on macOS. Every subsequent release shipped with three-platform confidence.</div>
             </section>
 
         <section class="technique-related">
