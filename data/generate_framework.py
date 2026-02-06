@@ -227,8 +227,8 @@ techniques = [
             "Treating challenges as one-time events rather than ongoing skill development"
         ],
         "war_story": {
-            "title": "The Six-Chapter Mastery Path",
-            "content": "A team designed a curriculum with 54 encounters across 6 chapters, progressing from basic pattern recognition to adversarial operations. Each encounter type — craft, siege, puzzle, pipeline, duel — exercised different collaboration muscles. Graduates could coordinate multi-agent operations because they had practiced it, not because they had read about it."
+            "title": "Learning by Doing",
+            "content": "A team designed a progressive curriculum with multiple chapters of escalating difficulty. Each chapter used different interaction types to exercise different collaboration skills. Graduates could coordinate complex multi-agent operations because they had practiced it in structured challenges, not because they had read about it in documentation."
         },
         "related_techniques": ["FG-0506", "FG-0507", "FG-0801"],
         "added_version": "1.0"
@@ -624,7 +624,7 @@ techniques = [
         "name": "Context Recovery Protocol",
         "tactic_id": "FT04",
         "description": "Define a structured sequence for restoring agent context at the start of every session. AI agents start each session with no memory of previous work. Context Recovery Protocol establishes a systematic loading sequence that brings agents up to speed efficiently: read governance first, then project state, then current priorities, then specific task context. The order matters because each layer informs the interpretation of the next.",
-        "implementation": "Define a context loading sequence with 3-5 steps in priority order. Typically: (1) Laws and governance, (2) Project state and recent history, (3) Current priorities and active tasks, (4) Task-specific context. Automate the loading sequence where possible. Measure context recovery time and optimize for speed without sacrificing completeness.",
+        "implementation": "Define a context loading sequence with a consistent priority order. Load foundational context (governance, rules) before operational context (current tasks, recent history). Ensure the sequence is documented and repeatable. Measure context recovery time and optimize for speed without sacrificing completeness.",
         "success_indicators": [
             "Agents reach productive state within the first few minutes of a session",
             "Context loading is consistent and reproducible across sessions",
@@ -638,8 +638,8 @@ techniques = [
             "No standardized sequence — context recovery quality varies by session"
         ],
         "war_story": {
-            "title": "The Five-Layer Recovery",
-            "content": "A team standardized context recovery into five sequential reads: Chronicle (project history) → Laws (governance) → Rites (protocols) → Roster (team status) → Profiles (agent identities). This ordering was deliberate: agents understood the project, then the rules, then the procedures, then the team state, then their own role. Recovery time dropped from 10 minutes of ad hoc loading to 3 minutes of structured reading."
+            "title": "Structured Recovery",
+            "content": "A team standardized context recovery into a structured, ordered sequence. By loading context in a deliberate priority order — foundational rules before operational state — agents reached productive status significantly faster than with ad hoc loading. Recovery time dropped from over ten minutes to under three."
         },
         "related_techniques": ["FG-0202", "FG-0210", "FG-0701"],
         "added_version": "1.0"
@@ -738,8 +738,8 @@ techniques = [
             "No discoverability — commands exist but the team doesn't know about them"
         ],
         "war_story": {
-            "title": "The Spellbook",
-            "content": "A team built a library of slash commands — short triggers that expanded into complex procedures. '/respawn' loaded full context recovery. '/gems' saved conversation insights to permanent storage. '/commit' executed a standardized commit procedure. The command library became the team's operational vocabulary: new members learned the workflow by reading the spellbook, and every command was a documented, testable procedure."
+            "title": "The Command Library",
+            "content": "A team built a library of named commands — short triggers that expanded into complex multi-step procedures. Commands covered context recovery, insight capture, and standardized workflows. The command library became the team's operational vocabulary: new members learned the workflow by reading the library, and every command was a documented, testable procedure."
         },
         "related_techniques": ["FG-0106", "FG-0210", "FG-0401"],
         "added_version": "1.0"
@@ -917,8 +917,8 @@ techniques = [
             "Linear progression that doesn't accommodate different learning speeds"
         ],
         "war_story": {
-            "title": "The Six-Chapter Mastery Path",
-            "content": "A team designed a curriculum with six chapters progressing from fundamentals to adversarial operations. Each chapter contained 8-10 encounters of varying types and difficulty. The progression was tested by running new contributors through it — gaps were identified when contributors struggled with concepts that prerequisites didn't cover. Three revision cycles produced a curriculum where every encounter built on prior knowledge and no concept appeared without preparation."
+            "title": "Progressive Mastery",
+            "content": "A team designed a multi-chapter curriculum progressing from fundamentals to advanced operations. Each chapter contained encounters of varying types and difficulty. The progression was tested by running new contributors through it — gaps were identified when contributors struggled with concepts that prerequisites didn't cover. Multiple revision cycles produced a curriculum where every encounter built on prior knowledge and no concept appeared without preparation."
         },
         "related_techniques": ["FG-0107", "FG-0507", "FG-0801"],
         "added_version": "1.0"
@@ -942,8 +942,8 @@ techniques = [
             "Patterns defined theoretically instead of from observed practice"
         ],
         "war_story": {
-            "title": "From Three to Fifteen",
-            "content": "A team started with three interaction types: build, review, and discuss. Within two weeks, they had identified fifteen distinct patterns including craft sessions, siege operations (intensive multi-hour builds), puzzle solving, pipeline construction, duels (competitive testing), and repair sessions. Naming these patterns allowed the team to say 'this is a siege, plan for three hours' instead of vaguely 'let's work on this.' Expectations matched reality because patterns set context."
+            "title": "From Three to Many",
+            "content": "A team started with three interaction types: build, review, and discuss. Within two weeks, they had identified over a dozen distinct patterns — intensive multi-hour builds, competitive testing sessions, focused repair work, and others. Naming these patterns allowed the team to set expectations ('this is intensive, plan for three hours') instead of vaguely 'let's work on this.' Expectations matched reality because named patterns set context."
         },
         "related_techniques": ["FG-0301", "FG-0404", "FG-0506"],
         "added_version": "1.0"
@@ -1046,8 +1046,8 @@ techniques = [
             "Test maintenance overhead exceeding the value of testing"
         ],
         "war_story": {
-            "title": "The Four-Tier Fortress",
-            "content": "A team built 1,078 tests across four tiers: schema validation (do outputs have the right structure?), content validation (do outputs contain designed data?), relationship validation (do outputs reference each other correctly?), and gameplay validation (do outputs create the intended experience?). The fortress caught 47 issues in its first run that would have shipped to users. Not security vulnerabilities — logical inconsistencies, broken references, and placeholder data that looked real."
+            "title": "The Testing Fortress",
+            "content": "A team built over a thousand automated tests across multiple validation tiers — from basic structural checks to full experience validation. The test suite caught dozens of issues in its first run that would have shipped to users. Not security vulnerabilities — logical inconsistencies, broken references, and placeholder data that looked real. The investment in automated testing at every tier paid for itself immediately."
         },
         "related_techniques": ["FG-0508", "FG-0602", "FG-0604"],
         "added_version": "1.0"
@@ -1161,7 +1161,7 @@ techniques = [
         "name": "Chronicle System",
         "tactic_id": "FT07",
         "description": "Maintain a structured, versioned record of project history including plans, decisions, and health metrics. The Chronicle is more than a changelog — it is the institutional memory of the collaboration. It records not just what happened, but why decisions were made, what alternatives were considered, and what the team learned. When context is lost (as it inevitably is in AI collaboration), the Chronicle provides recovery.",
-        "implementation": "Create a Chronicle structure with: an index (quick reference to all entries), active plans (current work), completed plans (shipped work with summaries), and an archive (deferred work). Each entry should include YAML frontmatter for quick scanning: plan name, status, owner, key decisions. Update the Chronicle at session end. Use it as the first read during context recovery.",
+        "implementation": "Create a structured project history system with clear organization. Include mechanisms for quick scanning of current state, tracking of active and completed work, and archival of deferred plans. Ensure entries are structured for fast retrieval. Update at session end and use as a primary input during context recovery.",
         "success_indicators": [
             "The Chronicle accurately reflects current project state",
             "Context recovery starts with Chronicle reading",
@@ -1175,8 +1175,8 @@ techniques = [
             "Chronicle disconnected from actual work — a separate document nobody reads"
         ],
         "war_story": {
-            "title": "The Fast-Scan Protocol",
-            "content": "A team's Chronicle used YAML frontmatter in every entry: plan name, status, owner, key decision — all scannable in under 20 tokens. An agent could scan the Chronicle index, identify the current state, and begin productive work in under a minute. When plans were completed, they moved to the 'Complete' directory with a summary. When plans were deferred, they moved to 'Archive' with the rationale. The Chronicle was the single source of truth that survived every context reset."
+            "title": "The Single Source of Truth",
+            "content": "A team structured their project history for rapid scanning — agents could identify the current project state and begin productive work in under a minute. The system tracked active work, completed deliverables, and deferred plans with clear lifecycle management. It became the single source of truth that survived every context reset."
         },
         "related_techniques": ["FG-0401", "FG-0703", "FG-0704"],
         "added_version": "1.0"
@@ -1200,8 +1200,8 @@ techniques = [
             "Handoffs stored where the next session doesn't read them"
         ],
         "war_story": {
-            "title": "The Shift Change Brief",
-            "content": "A team modeled their session handoff on military shift-change briefs: outgoing shift summarizes the situation, key events, pending actions, and anything the incoming shift needs to know immediately. The format was deliberately terse — five fields, no narratives. When an agent from a different model family picked up work from the previous session, the handoff brief provided enough context to continue without interruption. The military parallel wasn't intentional — it was instinctive, and it worked because the underlying problem was identical."
+            "title": "The Shift Change",
+            "content": "A team modeled their session handoff on military shift-change briefs: outgoing shift summarizes the situation and anything the incoming shift needs to know immediately. The format was deliberately terse. When a different agent continued work from the previous session, the handoff provided enough context to continue without interruption. The military parallel wasn't intentional — it was instinctive, and it worked because the underlying problem was identical."
         },
         "related_techniques": ["FG-0105", "FG-0401", "FG-0701"],
         "added_version": "1.0"
@@ -1225,8 +1225,8 @@ techniques = [
             "Knowledge scattered across multiple locations instead of consolidated"
         ],
         "war_story": {
-            "title": "The Well of Souls",
-            "content": "A team built a repository they called the Well of Souls: a structured collection of agent profiles, governance documents, operational procedures, and team history. When a new model version replaced the previous one, the entire team's institutional knowledge was preserved in the Well. The new model read the Well, internalized the team's practices, and continued working with minimal disruption. The knowledge survived the tool change because it was stored in the team's systems, not in the tool's memory."
+            "title": "Surviving the Model Change",
+            "content": "A team built a structured institutional memory repository containing agent profiles, governance documents, operational procedures, and team history. When a new model version replaced the previous one, the entire team's institutional knowledge was preserved. The new model read the repository, internalized the team's practices, and continued working with minimal disruption. The knowledge survived because it was stored in the team's systems, not in any single tool's memory."
         },
         "related_techniques": ["FG-0106", "FG-0701", "FG-0704"],
         "added_version": "1.0"
@@ -1329,8 +1329,8 @@ techniques = [
             "Tracking overhead that exceeds the motivational benefit"
         ],
         "war_story": {
-            "title": "Grains of Sand",
-            "content": "A team named their XP unit 'Grains of Sand' — small individually, but accumulating into something substantial. Features shipped earned 20-50 grains, bugs fixed earned 10, major milestones earned 100. Each agent had a player card showing their level, total grains, and specialization. The metaphor was deliberate: no single grain matters, but together they build dunes. The system made invisible work visible and gave the team a shared vocabulary for contribution scale."
+            "title": "Making Progress Visible",
+            "content": "A team implemented a point-based progress system with tiered awards — larger contributions earned more points, but even small fixes were tracked. Each contributor had a visible profile showing their level and specialization. The system made invisible work visible and gave the team a shared vocabulary for contribution scale. The metaphor mattered: naming the unit and making it tangible changed how the team thought about incremental progress."
         },
         "related_techniques": ["FG-0304", "FG-0802", "FG-0605"],
         "added_version": "1.0"
