@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F.O.R.G.E | Agentic AI Creation Framework</title>
+    <meta name="description" content="Agentic AI Creation Framework. 52 techniques across 8 tactical pillars for building, governing, and scaling AI agent systems.">
+    <meta property="og:title" content="F.O.R.G.E — Agentic AI Creation Framework">
+    <meta property="og:description" content="52 techniques across 8 tactical pillars for building, governing, and scaling AI agent systems at every level of application.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://forged.itsbroken.ai">
+    <meta property="og:image" content="https://forged.itsbroken.ai/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="F.O.R.G.E — Agentic AI Creation Framework">
+    <meta name="twitter:description" content="52 techniques. 8 pillars. The methodology for building with AI agents.">
+    <meta name="author" content="Pete McKernan / Cipher Circle">
+    <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="stylesheet" href="css/forged.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="https://itsbroken.ai" class="nav-brand" title="itsbroken.ai">
+                <img src="img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
+                <span class="nav-title">itsbroken.ai</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Matrix</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="getting-started.html" class="nav-link">Getting Started</a>
+                <a href="https://itsbroken.ai" class="nav-link">itsbroken.ai</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-inner">
+            <div class="hero-banner">
+                <pre id="forged-banner"></pre>
+                <div class="hero-scanlines"></div>
+            </div>
+            <h1 class="hero-title">F.O.R.G.E</h1>
+            <p class="hero-subtitle">Agentic AI Creation Framework</p>
+            <p class="hero-desc">{{FRAMEWORK_DESC}}</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">{{TOTAL_TACTICS}}</span>
+                    <span class="stat-label">Tactics</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">{{TOTAL_TECHNIQUES}}</span>
+                    <span class="stat-label">Techniques</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">v{{VERSION}}</span>
+                    <span class="stat-label">Version</span>
+                </div>
+            </div>
+            <p class="hero-attribution">A <a href="https://itsbroken.ai">Cipher Circle</a> project</p>
+        </div>
+    </header>
+
+    <main class="matrix-container">
+        <div class="matrix-controls">
+            <input type="text" id="search" class="search-input" placeholder="Search techniques... ( / )">
+        </div>
+
+        <div class="matrix">
+            {{COLUMNS}}
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>F.O.R.G.E v{{VERSION}} | Last updated {{LAST_UPDATED}}</p>
+            <p>&copy; 2026 Pete McKernan / <a href="https://itsbroken.ai">Cipher Circle</a>. All rights reserved. | <a href="terms.html">Terms</a></p>
+        </div>
+    </footer>
+
+    <script src="js/banner.js"></script>
+    <script src="js/matrix.js"></script>
+</body>
+</html>

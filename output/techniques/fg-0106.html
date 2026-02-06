@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FG-0106: Self-Contained Learning | F.O.R.G.E</title>
+    <meta name="author" content="Pete McKernan / Cipher Circle">
+    <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/forged.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand">
+                <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
+                <span class="nav-title">itsbroken.ai</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Matrix</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../getting-started.html" class="nav-link">Getting Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="technique-page">
+        <div class="breadcrumb">
+            <a href="../index.html">Matrix</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="../tactics/ft01.html" style="color: #D4A84B">Foundation</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>FG-0106</span>
+        </div>
+
+        <header class="technique-header" style="border-left: 4px solid #D4A84B">
+            <div class="technique-meta">
+                <span class="technique-badge" style="background: #2a1f0a; color: #D4A84B; border: 1px solid #D4A84B">Foundation</span>
+                <span class="technique-version">v1.0</span>
+            </div>
+            <h1><span class="tech-id-large">FG-0106</span> Self-Contained Learning</h1>
+        </header>
+
+        <section class="technique-description">
+            <h2>Description</h2>
+            <p>Design collaboration environments where all necessary knowledge exists within the ecosystem. Agents should not need to search external sources for project context, conventions, or standards. Documentation, examples, and reference materials should be accessible within the working environment. This reduces hallucination, ensures consistency, and creates a single source of truth.</p>
+        </section>
+
+        <section class="technique-implementation">
+            <h2>Implementation</h2>
+            <p>Maintain project documentation within the repository or working environment. Include architecture decisions, coding standards, and examples alongside the code. Create reference files that agents can read at session start. Avoid relying on agents' training data for project-specific knowledge.</p>
+        </section>
+
+        <div class="technique-grid">
+            <section class="technique-indicators">
+                <h2>Success Indicators</h2>
+                <ul class="indicator-list">
+                    <li>New agents can onboard by reading project documentation alone</li>
+<li>Answers to 'how do we do X here' exist in the ecosystem</li>
+<li>Agent output is consistent with documented project standards</li>
+<li>Reduced hallucination about project-specific conventions</li>
+
+                </ul>
+            </section>
+
+            <section class="technique-failures">
+                <h2>Failure Modes</h2>
+                <ul class="failure-list">
+                    <li>Documentation sprawl — too much documentation is as bad as too little</li>
+<li>Stale documentation that contradicts current practice</li>
+<li>Over-reliance on documentation instead of clear code and architecture</li>
+
+                </ul>
+            </section>
+        </div>
+
+        
+            <section class="war-story">
+                <h2>Field Report: All Answers Are Hidden Here</h2>
+                <div class="war-story-content">A team designed their curriculum platform with a CTF philosophy: all answers exist within the ecosystem, never requiring external lookups. When agents needed to understand conventions, they read the project's own documentation. When new contributors joined, they could onboard from the repository alone. The result was a self-reinforcing system where documentation quality directly correlated with agent output quality.</div>
+            </section>
+
+        <section class="technique-related">
+            <h2>Related Techniques</h2>
+            <div class="related-grid">
+                <a href="fg-0401.html" class="related-link">FG-0401: Context Recovery Protocol</a>
+<a href="fg-0701.html" class="related-link">FG-0701: Chronicle System</a>
+<a href="fg-0703.html" class="related-link">FG-0703: Institutional Memory Repository</a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Pete McKernan / <a href="https://itsbroken.ai">Cipher Circle</a>. All rights reserved. | <a href="../terms.html">Terms</a></p>
+            <p><a href="../index.html">Back to Matrix</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FG-0401: Context Recovery Protocol | F.O.R.G.E</title>
+    <meta name="author" content="Pete McKernan / Cipher Circle">
+    <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/forged.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand">
+                <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
+                <span class="nav-title">itsbroken.ai</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Matrix</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../getting-started.html" class="nav-link">Getting Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="technique-page">
+        <div class="breadcrumb">
+            <a href="../index.html">Matrix</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="../tactics/ft04.html" style="color: #ff6b35">Invocation</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>FG-0401</span>
+        </div>
+
+        <header class="technique-header" style="border-left: 4px solid #ff6b35">
+            <div class="technique-meta">
+                <span class="technique-badge" style="background: #2a100a; color: #ff6b35; border: 1px solid #ff6b35">Invocation</span>
+                <span class="technique-version">v1.0</span>
+            </div>
+            <h1><span class="tech-id-large">FG-0401</span> Context Recovery Protocol</h1>
+        </header>
+
+        <section class="technique-description">
+            <h2>Description</h2>
+            <p>Define a structured sequence for restoring agent context at the start of every session. AI agents start each session with no memory of previous work. Context Recovery Protocol establishes a systematic loading sequence that brings agents up to speed efficiently: read governance first, then project state, then current priorities, then specific task context. The order matters because each layer informs the interpretation of the next.</p>
+        </section>
+
+        <section class="technique-implementation">
+            <h2>Implementation</h2>
+            <p>Define a context loading sequence with 3-5 steps in priority order. Typically: (1) Laws and governance, (2) Project state and recent history, (3) Current priorities and active tasks, (4) Task-specific context. Automate the loading sequence where possible. Measure context recovery time and optimize for speed without sacrificing completeness.</p>
+        </section>
+
+        <div class="technique-grid">
+            <section class="technique-indicators">
+                <h2>Success Indicators</h2>
+                <ul class="indicator-list">
+                    <li>Agents reach productive state within the first few minutes of a session</li>
+<li>Context loading is consistent and reproducible across sessions</li>
+<li>Critical governance context is loaded before task context</li>
+<li>Recovery time decreases as the process is refined</li>
+
+                </ul>
+            </section>
+
+            <section class="technique-failures">
+                <h2>Failure Modes</h2>
+                <ul class="failure-list">
+                    <li>Loading too much context — overwhelming the agent's attention</li>
+<li>Loading too little context — agent makes decisions without critical background</li>
+<li>Wrong loading order — task context loaded before governance, leading to ungoverned action</li>
+<li>No standardized sequence — context recovery quality varies by session</li>
+
+                </ul>
+            </section>
+        </div>
+
+        
+            <section class="war-story">
+                <h2>Field Report: The Five-Layer Recovery</h2>
+                <div class="war-story-content">A team standardized context recovery into five sequential reads: Chronicle (project history) → Laws (governance) → Rites (protocols) → Roster (team status) → Profiles (agent identities). This ordering was deliberate: agents understood the project, then the rules, then the procedures, then the team state, then their own role. Recovery time dropped from 10 minutes of ad hoc loading to 3 minutes of structured reading.</div>
+            </section>
+
+        <section class="technique-related">
+            <h2>Related Techniques</h2>
+            <div class="related-grid">
+                <a href="fg-0202.html" class="related-link">FG-0202: Operational Directives</a>
+<a href="fg-0210.html" class="related-link">FG-0210: Standing Orders</a>
+<a href="fg-0701.html" class="related-link">FG-0701: Chronicle System</a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Pete McKernan / <a href="https://itsbroken.ai">Cipher Circle</a>. All rights reserved. | <a href="../terms.html">Terms</a></p>
+            <p><a href="../index.html">Back to Matrix</a></p>
+        </div>
+    </footer>
+</body>
+</html>

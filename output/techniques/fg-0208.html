@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FG-0208: Security Operations | F.O.R.G.E</title>
+    <meta name="author" content="Pete McKernan / Cipher Circle">
+    <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/forged.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand">
+                <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
+                <span class="nav-title">itsbroken.ai</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Matrix</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../getting-started.html" class="nav-link">Getting Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="technique-page">
+        <div class="breadcrumb">
+            <a href="../index.html">Matrix</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="../tactics/ft02.html" style="color: #C65D07">Governance</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>FG-0208</span>
+        </div>
+
+        <header class="technique-header" style="border-left: 4px solid #C65D07">
+            <div class="technique-meta">
+                <span class="technique-badge" style="background: #2a150a; color: #C65D07; border: 1px solid #C65D07">Governance</span>
+                <span class="technique-version">v1.0</span>
+            </div>
+            <h1><span class="tech-id-large">FG-0208</span> Security Operations</h1>
+        </header>
+
+        <section class="technique-description">
+            <h2>Description</h2>
+            <p>Implement continuous monitoring and threat detection for AI operations. AI agents operate at machine speed — they can create, modify, and delete faster than human oversight can follow in real-time. Security Operations establishes automated monitoring that watches for anomalous behavior, unauthorized access attempts, and policy violations. This is your SOC for human-AI collaboration.</p>
+        </section>
+
+        <section class="technique-implementation">
+            <h2>Implementation</h2>
+            <p>Define what constitutes anomalous agent behavior (unusual file access patterns, attempts to access sealed content, operations outside defined scope). Implement automated alerts for these patterns. Designate a security function — human or agent — responsible for monitoring and response. Review alerts regularly to tune signal vs. noise.</p>
+        </section>
+
+        <div class="technique-grid">
+            <section class="technique-indicators">
+                <h2>Success Indicators</h2>
+                <ul class="indicator-list">
+                    <li>Anomalous behavior is detected and flagged automatically</li>
+<li>Security events are logged with sufficient context for investigation</li>
+<li>Alert fatigue is managed — alerts are meaningful, not overwhelming</li>
+<li>The team has a defined incident response procedure</li>
+
+                </ul>
+            </section>
+
+            <section class="technique-failures">
+                <h2>Failure Modes</h2>
+                <ul class="failure-list">
+                    <li>Monitoring without response capability — detecting problems you can't act on</li>
+<li>Over-alerting — so many false positives that real alerts are ignored</li>
+<li>No monitoring at all — relying entirely on trust and after-the-fact discovery</li>
+<li>Monitoring that degrades agent performance significantly</li>
+
+                </ul>
+            </section>
+        </div>
+
+        
+            <section class="war-story">
+                <h2>Field Report: The Automated Sentinel</h2>
+                <div class="war-story-content">A team deployed an automated watcher that monitored agent operations for policy violations and anomalous behavior. In its first week, it caught three near-misses: an agent attempting to write to a protected directory, a session that exceeded its authorized scope, and a commit that would have included a credential file. Each was caught, logged, and resolved before any damage occurred.</div>
+            </section>
+
+        <section class="technique-related">
+            <h2>Related Techniques</h2>
+            <div class="related-grid">
+                <a href="fg-0104.html" class="related-link">FG-0104: Adversarial Design Thinking</a>
+<a href="fg-0204.html" class="related-link">FG-0204: Compartmented Operations</a>
+<a href="fg-0605.html" class="related-link">FG-0605: Audit Trail System</a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Pete McKernan / <a href="https://itsbroken.ai">Cipher Circle</a>. All rights reserved. | <a href="../terms.html">Terms</a></p>
+            <p><a href="../index.html">Back to Matrix</a></p>
+        </div>
+    </footer>
+</body>
+</html>

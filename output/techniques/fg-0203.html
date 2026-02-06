@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FG-0203: Trust Tiers | F.O.R.G.E</title>
+    <meta name="author" content="Pete McKernan / Cipher Circle">
+    <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/forged.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand">
+                <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
+                <span class="nav-title">itsbroken.ai</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Matrix</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../getting-started.html" class="nav-link">Getting Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="technique-page">
+        <div class="breadcrumb">
+            <a href="../index.html">Matrix</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="../tactics/ft02.html" style="color: #C65D07">Governance</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>FG-0203</span>
+        </div>
+
+        <header class="technique-header" style="border-left: 4px solid #C65D07">
+            <div class="technique-meta">
+                <span class="technique-badge" style="background: #2a150a; color: #C65D07; border: 1px solid #C65D07">Governance</span>
+                <span class="technique-version">v1.0</span>
+            </div>
+            <h1><span class="tech-id-large">FG-0203</span> Trust Tiers</h1>
+        </header>
+
+        <section class="technique-description">
+            <h2>Description</h2>
+            <p>Implement progressive access levels based on demonstrated reliability. Not all agents should have the same access from day one. Trust Tiers establish a graduated system where agents begin with limited access and earn expanded capabilities through demonstrated competence and reliability. This mirrors security clearance models: access is granted based on need and earned through trust, not assumed by default.</p>
+        </section>
+
+        <section class="technique-implementation">
+            <h2>Implementation</h2>
+            <p>Define 3-5 trust levels with specific capabilities at each tier. New agents start at the lowest tier. Define clear criteria for advancement (e.g., X sessions without incidents, demonstrated competence in specific tasks). Document what each tier can access, modify, and decide. Implement technical controls where possible, procedural controls where not.</p>
+        </section>
+
+        <div class="technique-grid">
+            <section class="technique-indicators">
+                <h2>Success Indicators</h2>
+                <ul class="indicator-list">
+                    <li>New agents operate safely within constrained boundaries</li>
+<li>Agent capabilities expand predictably as trust is earned</li>
+<li>Incidents decrease because risky operations require elevated trust</li>
+<li>Trust levels are documented, not informal</li>
+
+                </ul>
+            </section>
+
+            <section class="technique-failures">
+                <h2>Failure Modes</h2>
+                <ul class="failure-list">
+                    <li>Too many tiers — administrative overhead exceeds security benefit</li>
+<li>No advancement path — agents stuck at low trust with no way to earn more</li>
+<li>Trust levels exist on paper but aren't enforced technically</li>
+<li>Blanket trust grants that bypass the tier system</li>
+
+                </ul>
+            </section>
+        </div>
+
+        
+            <section class="war-story">
+                <h2>Field Report: From Observer to Operator</h2>
+                <div class="war-story-content">A team implemented five trust tiers: Observer (read-only), Contributor (write with review), Trusted (autonomous in domain), Elevated (cross-domain access), and Core (system-level operations). New agents started as Contributors with a two-week review period. The progression was earned, not granted — and the agents that advanced produced the highest quality work because they understood the system before they could change it.</div>
+            </section>
+
+        <section class="technique-related">
+            <h2>Related Techniques</h2>
+            <div class="related-grid">
+                <a href="fg-0201.html" class="related-link">FG-0201: Authority Architecture</a>
+<a href="fg-0204.html" class="related-link">FG-0204: Compartmented Operations</a>
+<a href="fg-0603.html" class="related-link">FG-0603: Contributor Review Period</a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Pete McKernan / <a href="https://itsbroken.ai">Cipher Circle</a>. All rights reserved. | <a href="../terms.html">Terms</a></p>
+            <p><a href="../index.html">Back to Matrix</a></p>
+        </div>
+    </footer>
+</body>
+</html>

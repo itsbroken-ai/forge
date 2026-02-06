@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- FORGED Favicon - Pixel anvil with forge fire -->
+  <rect width="32" height="32" fill="#0a0a0a"/>
+
+  <!-- Anvil top -->
+  <rect x="6" y="8" width="4" height="4" fill="#D4A84B"/>
+  <rect x="10" y="8" width="4" height="4" fill="#D4A84B"/>
+  <rect x="14" y="8" width="4" height="4" fill="#D4A84B"/>
+  <rect x="18" y="8" width="4" height="4" fill="#D4A84B"/>
+  <rect x="22" y="8" width="4" height="4" fill="#D4A84B"/>
+
+  <!-- Fire glow -->
+  <rect x="4" y="12" width="4" height="4" fill="#D4A84B"/>
+  <rect x="8" y="12" width="4" height="4" fill="#C65D07"/>
+  <rect x="12" y="12" width="4" height="4" fill="#ff6b35"/>
+  <rect x="16" y="12" width="4" height="4" fill="#C65D07"/>
+  <rect x="20" y="12" width="4" height="4" fill="#D4A84B"/>
+  <rect x="24" y="12" width="4" height="4" fill="#D4A84B"/>
+
+  <!-- Anvil body -->
+  <rect x="6" y="16" width="4" height="4" fill="#D4A84B"/>
+  <rect x="10" y="16" width="4" height="4" fill="#D4A84B"/>
+  <rect x="14" y="16" width="4" height="4" fill="#D4A84B"/>
+  <rect x="18" y="16" width="4" height="4" fill="#D4A84B"/>
+  <rect x="22" y="16" width="4" height="4" fill="#D4A84B"/>
+
+  <!-- Base -->
+  <rect x="10" y="20" width="4" height="4" fill="#8a6e30"/>
+  <rect x="14" y="20" width="4" height="4" fill="#D4A84B"/>
+  <rect x="18" y="20" width="4" height="4" fill="#8a6e30"/>
+
+  <!-- Wide base -->
+  <rect x="6" y="24" width="4" height="4" fill="#8a6e30"/>
+  <rect x="10" y="24" width="4" height="4" fill="#D4A84B"/>
+  <rect x="14" y="24" width="4" height="4" fill="#D4A84B"/>
+  <rect x="18" y="24" width="4" height="4" fill="#D4A84B"/>
+  <rect x="22" y="24" width="4" height="4" fill="#8a6e30"/>
+</svg>
