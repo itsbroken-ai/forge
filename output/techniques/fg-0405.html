@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FG-0405: Custom Command System | F.O.R.G.E</title>
+    <meta name="author" content="Pete McKernan / Cipher Circle">
+    <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/forged.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand">
+                <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
+                <span class="nav-title">itsbroken.ai</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Matrix</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../getting-started.html" class="nav-link">Getting Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="technique-page">
+        <div class="breadcrumb">
+            <a href="../index.html">Matrix</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="../tactics/ft04.html" style="color: #ff6b35">Invocation</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>FG-0405</span>
+        </div>
+
+        <header class="technique-header" style="border-left: 4px solid #ff6b35">
+            <div class="technique-meta">
+                <span class="technique-badge" style="background: #2a100a; color: #ff6b35; border: 1px solid #ff6b35">Invocation</span>
+                <span class="technique-version">v1.0</span>
+            </div>
+            <h1><span class="tech-id-large">FG-0405</span> Custom Command System</h1>
+        </header>
+
+        <section class="technique-description">
+            <h2>Description</h2>
+            <p>Build a library of reusable, parameterized commands that trigger complex agent behaviors with simple invocations. Custom Commands encode frequently-used multi-step operations into single triggers. Instead of explaining a complex procedure every session, the team invokes a named command that expands into the full procedure. This reduces errors, saves time, and creates a shared operational vocabulary.</p>
+        </section>
+
+        <section class="technique-implementation">
+            <h2>Implementation</h2>
+            <p>Identify operations that are performed repeatedly (3+ times). Encode each as a named command with: trigger name, parameters, expanded procedure, and expected output. Store commands in a shared, version-controlled location. Add new commands when patterns emerge. Retire commands that are no longer used.</p>
+        </section>
+
+        <div class="technique-grid">
+            <section class="technique-indicators">
+                <h2>Success Indicators</h2>
+                <ul class="indicator-list">
+                    <li>Common operations are invoked by name rather than explained each time</li>
+<li>Command definitions serve as documentation for standard procedures</li>
+<li>New team members learn operations by reading the command library</li>
+<li>Command usage data reveals which operations are most frequent</li>
+
+                </ul>
+            </section>
+
+            <section class="technique-failures">
+                <h2>Failure Modes</h2>
+                <ul class="failure-list">
+                    <li>Too many commands — team can't remember what's available</li>
+<li>Commands not updated when underlying procedures change</li>
+<li>Commands that are too specific to be reusable</li>
+<li>No discoverability — commands exist but the team doesn't know about them</li>
+
+                </ul>
+            </section>
+        </div>
+
+        
+            <section class="war-story">
+                <h2>Field Report: The Spellbook</h2>
+                <div class="war-story-content">A team built a library of slash commands — short triggers that expanded into complex procedures. '/respawn' loaded full context recovery. '/gems' saved conversation insights to permanent storage. '/commit' executed a standardized commit procedure. The command library became the team's operational vocabulary: new members learned the workflow by reading the spellbook, and every command was a documented, testable procedure.</div>
+            </section>
+
+        <section class="technique-related">
+            <h2>Related Techniques</h2>
+            <div class="related-grid">
+                <a href="fg-0106.html" class="related-link">FG-0106: Self-Contained Learning</a>
+<a href="fg-0210.html" class="related-link">FG-0210: Standing Orders</a>
+<a href="fg-0401.html" class="related-link">FG-0401: Context Recovery Protocol</a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Pete McKernan / <a href="https://itsbroken.ai">Cipher Circle</a>. All rights reserved. | <a href="../terms.html">Terms</a></p>
+            <p><a href="../index.html">Back to Matrix</a></p>
+        </div>
+    </footer>
+</body>
+</html>

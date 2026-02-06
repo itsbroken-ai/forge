@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FG-0701: Chronicle System | F.O.R.G.E</title>
+    <meta name="author" content="Pete McKernan / Cipher Circle">
+    <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/forged.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand">
+                <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
+                <span class="nav-title">itsbroken.ai</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Matrix</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../getting-started.html" class="nav-link">Getting Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="technique-page">
+        <div class="breadcrumb">
+            <a href="../index.html">Matrix</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="../tactics/ft07.html" style="color: #c9a044">Knowledge</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>FG-0701</span>
+        </div>
+
+        <header class="technique-header" style="border-left: 4px solid #c9a044">
+            <div class="technique-meta">
+                <span class="technique-badge" style="background: #2a1c0c; color: #c9a044; border: 1px solid #c9a044">Knowledge</span>
+                <span class="technique-version">v1.0</span>
+            </div>
+            <h1><span class="tech-id-large">FG-0701</span> Chronicle System</h1>
+        </header>
+
+        <section class="technique-description">
+            <h2>Description</h2>
+            <p>Maintain a structured, versioned record of project history including plans, decisions, and health metrics. The Chronicle is more than a changelog — it is the institutional memory of the collaboration. It records not just what happened, but why decisions were made, what alternatives were considered, and what the team learned. When context is lost (as it inevitably is in AI collaboration), the Chronicle provides recovery.</p>
+        </section>
+
+        <section class="technique-implementation">
+            <h2>Implementation</h2>
+            <p>Create a Chronicle structure with: an index (quick reference to all entries), active plans (current work), completed plans (shipped work with summaries), and an archive (deferred work). Each entry should include YAML frontmatter for quick scanning: plan name, status, owner, key decisions. Update the Chronicle at session end. Use it as the first read during context recovery.</p>
+        </section>
+
+        <div class="technique-grid">
+            <section class="technique-indicators">
+                <h2>Success Indicators</h2>
+                <ul class="indicator-list">
+                    <li>The Chronicle accurately reflects current project state</li>
+<li>Context recovery starts with Chronicle reading</li>
+<li>Decision rationale is preserved and accessible</li>
+<li>The Chronicle is updated consistently, not sporadically</li>
+
+                </ul>
+            </section>
+
+            <section class="technique-failures">
+                <h2>Failure Modes</h2>
+                <ul class="failure-list">
+                    <li>Chronicle not updated — becomes stale and untrustworthy</li>
+<li>Chronicle too detailed — quick scanning is impossible</li>
+<li>Chronicle maintained by one person — single point of failure</li>
+<li>Chronicle disconnected from actual work — a separate document nobody reads</li>
+
+                </ul>
+            </section>
+        </div>
+
+        
+            <section class="war-story">
+                <h2>Field Report: The Fast-Scan Protocol</h2>
+                <div class="war-story-content">A team's Chronicle used YAML frontmatter in every entry: plan name, status, owner, key decision — all scannable in under 20 tokens. An agent could scan the Chronicle index, identify the current state, and begin productive work in under a minute. When plans were completed, they moved to the 'Complete' directory with a summary. When plans were deferred, they moved to 'Archive' with the rationale. The Chronicle was the single source of truth that survived every context reset.</div>
+            </section>
+
+        <section class="technique-related">
+            <h2>Related Techniques</h2>
+            <div class="related-grid">
+                <a href="fg-0401.html" class="related-link">FG-0401: Context Recovery Protocol</a>
+<a href="fg-0703.html" class="related-link">FG-0703: Institutional Memory Repository</a>
+<a href="fg-0704.html" class="related-link">FG-0704: Decision Records</a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Pete McKernan / <a href="https://itsbroken.ai">Cipher Circle</a>. All rights reserved. | <a href="../terms.html">Terms</a></p>
+            <p><a href="../index.html">Back to Matrix</a></p>
+        </div>
+    </footer>
+</body>
+</html>

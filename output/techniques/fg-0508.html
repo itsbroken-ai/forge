@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FG-0508: Designed Data Guarantee | F.O.R.G.E</title>
+    <meta name="author" content="Pete McKernan / Cipher Circle">
+    <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/forged.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand">
+                <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
+                <span class="nav-title">itsbroken.ai</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Matrix</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../getting-started.html" class="nav-link">Getting Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="technique-page">
+        <div class="breadcrumb">
+            <a href="../index.html">Matrix</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="../tactics/ft05.html" style="color: #dbb95c">Execution</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>FG-0508</span>
+        </div>
+
+        <header class="technique-header" style="border-left: 4px solid #dbb95c">
+            <div class="technique-meta">
+                <span class="technique-badge" style="background: #2a1d0d; color: #dbb95c; border: 1px solid #dbb95c">Execution</span>
+                <span class="technique-version">v1.0</span>
+            </div>
+            <h1><span class="tech-id-large">FG-0508</span> Designed Data Guarantee</h1>
+        </header>
+
+        <section class="technique-description">
+            <h2>Description</h2>
+            <p>Ensure that every data artifact shipped by the collaboration has been intentionally designed, reviewed, and validated — never randomly generated or arbitrarily chosen. This technique eliminates 'placeholder syndrome' where AI-generated sample data ships as production content. Every data point, every example, every configuration value should exist because someone decided it should, not because an AI needed to fill a field.</p>
+        </section>
+
+        <section class="technique-implementation">
+            <h2>Implementation</h2>
+            <p>Establish a review step for all data artifacts: configuration files, sample data, test fixtures, and content. Define what 'designed data' means for your domain (manually authored, reviewed for accuracy, validated against requirements). Flag and replace any generated data that shipped without review. Include data design in the asset review pipeline.</p>
+        </section>
+
+        <div class="technique-grid">
+            <section class="technique-indicators">
+                <h2>Success Indicators</h2>
+                <ul class="indicator-list">
+                    <li>No placeholder or randomly-generated data in production</li>
+<li>Data artifacts are reviewed with the same rigor as code</li>
+<li>The team can explain why every data value was chosen</li>
+<li>Data quality issues decrease over time</li>
+
+                </ul>
+            </section>
+
+            <section class="technique-failures">
+                <h2>Failure Modes</h2>
+                <ul class="failure-list">
+                    <li>Treating data review as lower priority than code review</li>
+<li>Not recognizing AI-generated sample data as placeholder</li>
+<li>Data review bottleneck — reviewing data takes longer than generating it</li>
+<li>Designed data that's still wrong — reviewed but not validated</li>
+
+                </ul>
+            </section>
+        </div>
+
+        
+            <section class="war-story">
+                <h2>Field Report: The 1,078-Test Guarantee</h2>
+                <div class="war-story-content">A team built 1,078 tests to validate that every piece of data in their system was intentionally designed. Not random, not placeholder, not generated-and-forgotten. Every configuration value, every game encounter, every curriculum item was tested to confirm it was manually authored and reviewed. The test suite wasn't just QA — it was a guarantee that no random data had slipped into production.</div>
+            </section>
+
+        <section class="technique-related">
+            <h2>Related Techniques</h2>
+            <div class="related-grid">
+                <a href="fg-0503.html" class="related-link">FG-0503: Asset Review Pipeline</a>
+<a href="fg-0601.html" class="related-link">FG-0601: Testing Pyramid</a>
+<a href="fg-0602.html" class="related-link">FG-0602: Code Quality Standards</a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Pete McKernan / <a href="https://itsbroken.ai">Cipher Circle</a>. All rights reserved. | <a href="../terms.html">Terms</a></p>
+            <p><a href="../index.html">Back to Matrix</a></p>
+        </div>
+    </footer>
+</body>
+</html>

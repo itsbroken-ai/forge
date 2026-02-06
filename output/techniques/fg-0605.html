@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FG-0605: Audit Trail System | F.O.R.G.E</title>
+    <meta name="author" content="Pete McKernan / Cipher Circle">
+    <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/forged.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand">
+                <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
+                <span class="nav-title">itsbroken.ai</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Matrix</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../getting-started.html" class="nav-link">Getting Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="technique-page">
+        <div class="breadcrumb">
+            <a href="../index.html">Matrix</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="../tactics/ft06.html" style="color: #d48a3b">Quality</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>FG-0605</span>
+        </div>
+
+        <header class="technique-header" style="border-left: 4px solid #d48a3b">
+            <div class="technique-meta">
+                <span class="technique-badge" style="background: #2a1808; color: #d48a3b; border: 1px solid #d48a3b">Quality</span>
+                <span class="technique-version">v1.0</span>
+            </div>
+            <h1><span class="tech-id-large">FG-0605</span> Audit Trail System</h1>
+        </header>
+
+        <section class="technique-description">
+            <h2>Description</h2>
+            <p>Maintain comprehensive, searchable records of all significant actions, decisions, and changes. An Audit Trail is not just for compliance — it is for learning. When something goes wrong, the audit trail enables root cause analysis. When something goes right, it enables pattern replication. Every significant action should leave a mark in the record: who did it, what they did, why they did it, and when.</p>
+        </section>
+
+        <section class="technique-implementation">
+            <h2>Implementation</h2>
+            <p>Define what constitutes a 'significant action' (commits, configuration changes, access grants, policy changes, incident responses). Establish a logging format that captures actor, action, context, and timestamp. Store logs in a searchable, persistent system. Review logs periodically to identify patterns. Use log data to improve processes.</p>
+        </section>
+
+        <div class="technique-grid">
+            <section class="technique-indicators">
+                <h2>Success Indicators</h2>
+                <ul class="indicator-list">
+                    <li>Significant actions are logged consistently and automatically</li>
+<li>Audit data is searchable and accessible to authorized personnel</li>
+<li>Root cause analysis is possible for any incident</li>
+<li>Audit data informs process improvements</li>
+
+                </ul>
+            </section>
+
+            <section class="technique-failures">
+                <h2>Failure Modes</h2>
+                <ul class="failure-list">
+                    <li>Logging everything — signal buried in noise</li>
+<li>Logging without reviewing — data accumulates but is never analyzed</li>
+<li>Inconsistent logging — some actions captured, others missed</li>
+<li>Audit data not accessible when needed — stored but not searchable</li>
+
+                </ul>
+            </section>
+        </div>
+
+        
+            <section class="war-story">
+                <h2>Field Report: The Activity Log</h2>
+                <div class="war-story-content">A team maintained an activity log that recorded every session: who participated, what was accomplished, what decisions were made, and what was deferred. When a bug surfaced three weeks after introduction, the activity log allowed them to trace it to a specific session, a specific agent, and a specific decision. The fix took minutes because finding the cause took seconds. Without the log, they'd still be searching.</div>
+            </section>
+
+        <section class="technique-related">
+            <h2>Related Techniques</h2>
+            <div class="related-grid">
+                <a href="fg-0202.html" class="related-link">FG-0202: Operational Directives</a>
+<a href="fg-0502.html" class="related-link">FG-0502: Commit Attribution</a>
+<a href="fg-0701.html" class="related-link">FG-0701: Chronicle System</a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Pete McKernan / <a href="https://itsbroken.ai">Cipher Circle</a>. All rights reserved. | <a href="../terms.html">Terms</a></p>
+            <p><a href="../index.html">Back to Matrix</a></p>
+        </div>
+    </footer>
+</body>
+</html>

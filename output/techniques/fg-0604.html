@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FG-0604: Cross-Platform Validation | F.O.R.G.E</title>
+    <meta name="author" content="Pete McKernan / Cipher Circle">
+    <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/forged.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand">
+                <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
+                <span class="nav-title">itsbroken.ai</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Matrix</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../getting-started.html" class="nav-link">Getting Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="technique-page">
+        <div class="breadcrumb">
+            <a href="../index.html">Matrix</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="../tactics/ft06.html" style="color: #d48a3b">Quality</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>FG-0604</span>
+        </div>
+
+        <header class="technique-header" style="border-left: 4px solid #d48a3b">
+            <div class="technique-meta">
+                <span class="technique-badge" style="background: #2a1808; color: #d48a3b; border: 1px solid #d48a3b">Quality</span>
+                <span class="technique-version">v1.0</span>
+            </div>
+            <h1><span class="tech-id-large">FG-0604</span> Cross-Platform Validation</h1>
+        </header>
+
+        <section class="technique-description">
+            <h2>Description</h2>
+            <p>Test AI-generated artifacts across all target platforms, environments, and configurations. AI agents typically work in one environment but their output may need to function across many. Cross-Platform Validation ensures that output is tested in every context it will encounter, not just the development environment. This includes operating systems, browsers, screen sizes, accessibility tools, and deployment environments.</p>
+        </section>
+
+        <section class="technique-implementation">
+            <h2>Implementation</h2>
+            <p>Define the matrix of platforms and environments your output must support. Create test procedures for each platform. Automate cross-platform testing where possible. Test in the most constrained environment first — issues found there often affect all platforms. Track platform-specific issues to identify patterns.</p>
+        </section>
+
+        <div class="technique-grid">
+            <section class="technique-indicators">
+                <h2>Success Indicators</h2>
+                <ul class="indicator-list">
+                    <li>Output functions correctly across all target platforms</li>
+<li>Platform-specific issues are caught before deployment</li>
+<li>Cross-platform testing is integrated into the regular workflow, not an afterthought</li>
+<li>The platform support matrix is documented and current</li>
+
+                </ul>
+            </section>
+
+            <section class="technique-failures">
+                <h2>Failure Modes</h2>
+                <ul class="failure-list">
+                    <li>Testing only on the development platform — works for me syndrome</li>
+<li>Platform matrix too ambitious — testing more platforms than you actually support</li>
+<li>Automated tests that don't reflect real platform behavior</li>
+<li>Discovering platform issues only after deployment</li>
+
+                </ul>
+            </section>
+        </div>
+
+        
+            <section class="war-story">
+                <h2>Field Report: The Three-OS Test</h2>
+                <div class="war-story-content">A team shipping a developer tool tested exclusively on macOS during development. When users on Windows and Linux reported failures, the team implemented cross-platform CI that tested on all three operating systems automatically. The first cross-platform run revealed 23 platform-specific issues — path separators, permission models, and shell differences that were invisible on macOS. Every subsequent release shipped with three-platform confidence.</div>
+            </section>
+
+        <section class="technique-related">
+            <h2>Related Techniques</h2>
+            <div class="related-grid">
+                <a href="fg-0601.html" class="related-link">FG-0601: Testing Pyramid</a>
+<a href="fg-0602.html" class="related-link">FG-0602: Code Quality Standards</a>
+<a href="fg-0508.html" class="related-link">FG-0508: Designed Data Guarantee</a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Pete McKernan / <a href="https://itsbroken.ai">Cipher Circle</a>. All rights reserved. | <a href="../terms.html">Terms</a></p>
+            <p><a href="../index.html">Back to Matrix</a></p>
+        </div>
+    </footer>
+</body>
+</html>
