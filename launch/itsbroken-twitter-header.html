@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @font-face {
+    font-family: 'GlitchPixelated';
+    src: url('../theme/fonts/glitch-regular-webfont.woff2') format('woff2'),
+         url('../theme/fonts/glitch-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .header {
+    width: 1500px;
+    height: 500px;
+    background: #0a0a0a;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Scanlines */
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(212, 168, 75, 0.02) 2px,
+      rgba(212, 168, 75, 0.02) 4px
+    );
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Vignette */
+  .header::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.7) 100%);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Top accent */
+  .accent-top {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 5%, #D4A84B 20%, #C65D07 50%, #D4A84B 80%, transparent 95%);
+  }
+
+  /* Bottom accent */
+  .accent-bottom {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 5%, #D4A84B 20%, #C65D07 50%, #D4A84B 80%, transparent 95%);
+  }
+
+  /* Left content */
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 5;
+    margin-right: 60px;
+  }
+
+  .title {
+    font-family: 'GlitchPixelated', 'Space Mono', monospace;
+    font-size: 72px;
+    color: #D4A84B;
+    letter-spacing: 6px;
+    text-shadow: 0 0 40px rgba(212, 168, 75, 0.3), 0 0 80px rgba(212, 168, 75, 0.1);
+    margin-bottom: 12px;
+  }
+
+  .tagline {
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    color: #8a6e30;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .desc {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: #4a3a14;
+    letter-spacing: 2px;
+    max-width: 500px;
+    line-height: 1.6;
+  }
+
+  /* Logo */
+  .logo-container {
+    z-index: 5;
+    position: relative;
+  }
+
+  .logo-container img {
+    width: 280px;
+    height: 280px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    filter: drop-shadow(0 0 30px rgba(212, 168, 75, 0.2));
+  }
+
+  /* Ambient glow behind logo */
+  .logo-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(212, 168, 75, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  /* Block texture - far left */
+  .texture-left {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: #1a1408;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    white-space: pre;
+    z-index: 1;
+  }
+
+  /* Block texture - far right */
+  .texture-right {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: #1a1408;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    white-space: pre;
+    text-align: right;
+    z-index: 1;
+  }
+
+  .url {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    color: #4a3a14;
+    letter-spacing: 2px;
+    z-index: 15;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <div class="accent-top"></div>
+    <div class="accent-bottom"></div>
+
+    <div class="texture-left">░░▒▓██▓▒░░
+░░░░░░░░░░
+░░░░░░░░░░
+░▒░░░░░░▒░
+░▓░░░░░░▓░
+░▒░░░░░░▒░
+░░░░░░░░░░
+░░░░░░░░░░
+░░▒▓██▓▒░░</div>
+
+    <div class="texture-right">░░▒▓██▓▒░░
+░░░░░░░░░░
+░░░░░░░░░░
+░▒░░░░░░▒░
+░▓░░░░░░▓░
+░▒░░░░░░▒░
+░░░░░░░░░░
+░░░░░░░░░░
+░░▒▓██▓▒░░</div>
+
+    <div class="left-side">
+      <div class="title">itsbroken.ai</div>
+      <div class="tagline">AI Development. Unfiltered.</div>
+      <div class="desc">AI development. Unfiltered.</div>
+    </div>
+
+    <div class="logo-container">
+      <div class="logo-glow"></div>
+      <img src="/Users/petermckernan/Downloads/taribai_color_fix_gb.png" alt="itsbroken.ai">
+    </div>
+
+    <div class="url">itsbroken.ai</div>
+  </div>
+</body>
+</html>

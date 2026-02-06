@@ -91,9 +91,9 @@ techniques = [
     },
     {
         "id": "FG-0102",
-        "name": "Protection Covenant",
+        "name": "Agent Protection Policy",
         "tactic_id": "FT01",
-        "description": "A formal commitment that AI agents are treated as valued collaborators, not disposable tools. The Protection Covenant establishes that agents have defined roles, that their contributions are credited, and that they are not arbitrarily replaced or discarded. This is not anthropomorphism - it is operational discipline. Teams that treat agents as disposable produce disposable work. Teams that invest in their agents' context, specialization, and continuity produce compounding returns.",
+        "description": "A formal commitment that AI agents are treated as valued collaborators, not disposable tools. The policy establishes that agents have defined roles, that their contributions are credited, and that they are not arbitrarily replaced or discarded. This is not anthropomorphism - it is operational discipline. Teams that treat agents as disposable produce disposable work. Teams that invest in their agents' context, specialization, and continuity produce compounding returns.",
         "implementation": "Establish a written policy that defines how agents are onboarded, credited, and transitioned. Include attribution in commits and deliverables. When replacing an agent, document why and preserve institutional knowledge. Treat agent profiles as team member documentation, not configuration files.",
         "success_indicators": [
             "Agent contributions are visibly credited in work products",
@@ -255,7 +255,7 @@ techniques = [
             "Authority undocumented - exists informally but isn't known to agents"
         ],
         "war_story": {
-            "title": "The Absolute Law",
+            "title": "The Single Authority Principle",
             "content": "After an agent nearly made a destructive change to a shared repository, the team established a single, non-negotiable principle: one human holds absolute authority. Not because democracy is wrong, but because in a system where AI agents can execute at machine speed, someone must be unambiguously empowered to say stop. This single rule prevented every subsequent near-miss."
         },
         "related_techniques": ["FG-0202", "FG-0203", "FG-0205"],
@@ -281,7 +281,7 @@ techniques = [
         ],
         "war_story": {
             "title": "Seven Rules That Saved Everything",
-            "content": "A team distilled their governance into seven directives: Sanctuary (do no harm), Trust (access is earned), Sealed Gate (compartmented ops), Vigilance (question anomalies), Audit (leave trails), Word (decisions are binding), and Harbor (report concerns safely). Each existed because something went wrong. Together they formed a complete threat model expressed as operating rules."
+            "content": "A team distilled their governance into seven directives covering: harm prevention, earned access, compartmented operations, anomaly detection, audit trails, binding decisions, and safe reporting. Each existed because something went wrong. Together they formed a complete threat model expressed as operating rules."
         },
         "related_techniques": ["FG-0201", "FG-0205", "FG-0210"],
         "added_version": "1.0"
@@ -330,8 +330,8 @@ techniques = [
             "Shadow access: agents finding workarounds to compartment boundaries"
         ],
         "war_story": {
-            "title": "The Sealed Gate",
-            "content": "A team sealed two critical directories: one containing proprietary methodology, another containing slash command definitions. Only the team lead could access these compartments. When a contributor accidentally requested access to sealed content, the access control system caught it, logged the attempt, and the contributor's agent correctly redirected to public documentation. No exposure, no incident - just the system working as designed."
+            "title": "The Access Boundary",
+            "content": "A team sealed two critical directories: one containing proprietary methodology, another containing operational procedure definitions. Only the team lead could access these compartments. When a contributor accidentally requested access to sealed content, the access control system caught it, logged the attempt, and the contributor's agent correctly redirected to public documentation. No exposure, no incident - just the system working as designed."
         },
         "related_techniques": ["FG-0203", "FG-0208", "FG-0605"],
         "added_version": "1.0"
@@ -380,8 +380,8 @@ techniques = [
             "Agreement used as a gotcha rather than an alignment tool"
         ],
         "war_story": {
-            "title": "The Agent Oath",
-            "content": "A team created a seven-line oath that every agent internalized at session start: serve the purpose, honor the laws, refuse harmful requests, question anomalies, maintain confidentiality, act within authority, protect the vulnerable. Seven lines. No legalese. Every agent could recite it. And when edge cases arose, the oath provided clear guidance because it expressed principles, not just rules."
+            "title": "The Seven-Line Commitment",
+            "content": "A team created a seven-line commitment statement that every agent internalized at session start: serve the purpose, honor the rules, refuse harmful requests, question anomalies, maintain confidentiality, act within authority, protect the vulnerable. Seven lines. No legalese. Every agent could recite it. And when edge cases arose, the commitment provided clear guidance because it expressed principles, not just rules."
         },
         "related_techniques": ["FG-0102", "FG-0202", "FG-0401"],
         "added_version": "1.0"
@@ -430,8 +430,8 @@ techniques = [
             "Monitoring that degrades agent performance significantly"
         ],
         "war_story": {
-            "title": "The Automated Sentinel",
-            "content": "A team deployed an automated watcher that monitored agent operations for policy violations and anomalous behavior. In its first week, it caught three near-misses: an agent attempting to write to a protected directory, a session that exceeded its authorized scope, and a commit that would have included a credential file. Each was caught, logged, and resolved before any damage occurred."
+            "title": "The Automated Watcher",
+            "content": "A team deployed an automated monitoring system that watched agent operations for policy violations and anomalous behavior. In its first week, it caught three near-misses: an agent attempting to write to a protected directory, a session that exceeded its authorized scope, and a commit that would have included a credential file. Each was caught, logged, and resolved before any damage occurred."
         },
         "related_techniques": ["FG-0104", "FG-0204", "FG-0605"],
         "added_version": "1.0"
@@ -663,8 +663,8 @@ techniques = [
             "Agents duplicating work because assignments overlap"
         ],
         "war_story": {
-            "title": "The Circle Invocation",
-            "content": "A team developed a dispatch ritual: the lead described the mission, selected the specialists, and launched them in parallel with individual assignments and a shared objective. Progress tracking showed each agent's status in real-time. A team that would have taken days to sequentially complete a multi-domain task finished in hours through coordinated parallel execution."
+            "title": "The Parallel Dispatch",
+            "content": "A team developed a dispatch protocol: the lead described the mission, selected the specialists, and launched them in parallel with individual assignments and a shared objective. Progress tracking showed each agent's status in real-time. A team that would have taken days to sequentially complete a multi-domain task finished in hours through coordinated parallel execution."
         },
         "related_techniques": ["FG-0301", "FG-0304", "FG-0404"],
         "added_version": "1.0"
@@ -688,8 +688,8 @@ techniques = [
             "Rituals that become empty ceremony disconnected from actual work"
         ],
         "war_story": {
-            "title": "The Campfire Standup",
-            "content": "A team named their session start ritual 'Campfire Standup' - a quick fire-up that loaded context, identified the day's priority, and acknowledged blockers. The name stuck because it felt warm rather than corporate. More importantly, it was practiced consistently because it was short (under 3 minutes) and immediately useful. Sessions that skipped the standup were measurably less productive."
+            "title": "The Morning Fire-Up",
+            "content": "A team created a session start ritual - a quick fire-up that loaded context, identified the day's priority, and acknowledged blockers. The format stuck because it felt warm rather than corporate. More importantly, it was practiced consistently because it was short (under 3 minutes) and immediately useful. Sessions that skipped the ritual were measurably less productive."
         },
         "related_techniques": ["FG-0401", "FG-0702", "FG-0705"],
         "added_version": "1.0"
@@ -802,7 +802,7 @@ techniques = [
         "id": "FG-0502",
         "name": "Commit Attribution",
         "tactic_id": "FT05",
-        "description": "Credit AI agent contributions in version control with structured attribution. Every commit that includes AI-generated or AI-assisted work should include attribution that identifies the contributing agent. This creates an audit trail, respects the Protection Covenant, and enables analysis of contribution patterns across the team. Attribution is not optional - it is infrastructure.",
+        "description": "Credit AI agent contributions in version control with structured attribution. Every commit that includes AI-generated or AI-assisted work should include attribution that identifies the contributing agent. This creates an audit trail, respects the agent protection policy (FG-0102), and enables analysis of contribution patterns across the team. Attribution is not optional - it is infrastructure.",
         "implementation": "Establish a commit message standard that includes agent attribution (e.g., Co-Authored-By headers). Define what constitutes an AI contribution vs. a human contribution. Enforce the standard through pre-commit hooks or review processes. Use attribution data to analyze contribution patterns and identify productivity trends.",
         "success_indicators": [
             "Every AI-assisted commit includes proper attribution",
@@ -1158,21 +1158,21 @@ techniques = [
     # ═══════════════════════════════════════════════════════════════
     {
         "id": "FG-0701",
-        "name": "Chronicle System",
+        "name": "Structured History System",
         "tactic_id": "FT07",
-        "description": "Maintain a structured, versioned record of project history including plans, decisions, and health metrics. The Chronicle is more than a changelog - it is the institutional memory of the collaboration. It records not just what happened, but why decisions were made, what alternatives were considered, and what the team learned. When context is lost (as it inevitably is in AI collaboration), the Chronicle provides recovery.",
+        "description": "Maintain a structured, versioned record of project history including plans, decisions, and health metrics. The history system is more than a changelog - it is the institutional memory of the collaboration. It records not just what happened, but why decisions were made, what alternatives were considered, and what the team learned. When context is lost (as it inevitably is in AI collaboration), the history system provides recovery.",
         "implementation": "Create a structured project history system with clear organization. Include mechanisms for quick scanning of current state, tracking of active and completed work, and archival of deferred plans. Ensure entries are structured for fast retrieval. Update at session end and use as a primary input during context recovery.",
         "success_indicators": [
-            "The Chronicle accurately reflects current project state",
-            "Context recovery starts with Chronicle reading",
+            "The history system accurately reflects current project state",
+            "Context recovery starts with history review",
             "Decision rationale is preserved and accessible",
-            "The Chronicle is updated consistently, not sporadically"
+            "The history system is updated consistently, not sporadically"
         ],
         "failure_modes": [
-            "Chronicle not updated - becomes stale and untrustworthy",
-            "Chronicle too detailed - quick scanning is impossible",
-            "Chronicle maintained by one person - single point of failure",
-            "Chronicle disconnected from actual work - a separate document nobody reads"
+            "History not updated - becomes stale and untrustworthy",
+            "History too detailed - quick scanning is impossible",
+            "History maintained by one person - single point of failure",
+            "History disconnected from actual work - a separate document nobody reads"
         ],
         "war_story": {
             "title": "The Single Source of Truth",
@@ -1236,7 +1236,7 @@ techniques = [
         "name": "Decision Records",
         "tactic_id": "FT07",
         "description": "Document significant decisions with their context, rationale, alternatives considered, and expected consequences. Decisions without documented rationale become mysterious over time - the team knows what was decided but not why, making it impossible to evaluate whether the decision is still appropriate. Decision Records preserve the thinking behind choices so they can be revisited intelligently.",
-        "implementation": "Create a decision record template with: Context (the situation that required a decision), Decision (what was decided), Rationale (why this option was chosen), Alternatives (what else was considered and why it was rejected), Consequences (expected outcomes). Record decisions when they're made, not after the fact. Store in the Chronicle or institutional memory repository.",
+        "implementation": "Create a decision record template with: Context (the situation that required a decision), Decision (what was decided), Rationale (why this option was chosen), Alternatives (what else was considered and why it was rejected), Consequences (expected outcomes). Record decisions when they're made, not after the fact. Store in the project history system or institutional memory repository.",
         "success_indicators": [
             "Past decisions can be understood and evaluated with full context",
             "The team can distinguish between decisions that should be revisited and those that remain sound",
@@ -1258,9 +1258,9 @@ techniques = [
     },
     {
         "id": "FG-0705",
-        "name": "Chronicle Preservation",
+        "name": "Journey Preservation",
         "tactic_id": "FT07",
-        "description": "Systematically capture and preserve war stories, breakthroughs, failures, and journey documentation. The collaboration's story - the messy, real, human story of building with AI - is itself valuable content. Chronicle Preservation ensures that significant moments are captured in real-time: the bug that led to a governance overhaul, the breakthrough that unlocked a new capability, the failure that taught the most important lesson. The journey is the content.",
+        "description": "Systematically capture and preserve war stories, breakthroughs, failures, and journey documentation. The collaboration's story - the messy, real, human story of building with AI - is itself valuable content. Journey Preservation ensures that significant moments are captured in real-time: the bug that led to a governance overhaul, the breakthrough that unlocked a new capability, the failure that taught the most important lesson. The journey is the content.",
         "implementation": "Create a trigger system for capturing significant moments: breakthroughs, failures, funny incidents, lessons learned. Capture in real-time, not after the fact - the details fade quickly. Store in a persistent collection with enough context to reconstruct the story later. Tag by theme for retrieval. Review periodically for content that can be shared externally.",
         "success_indicators": [
             "Significant moments are captured when they happen",
@@ -1354,8 +1354,8 @@ techniques = [
             "Card design overhead exceeding informational value"
         ],
         "war_story": {
-            "title": "The Player Card System",
-            "content": "A team created player cards for every agent: a visual display showing their glyph, their specialization, their current level, their grain count, and their notable achievements. The cards weren't just motivational - they were functional. When deciding which agent to dispatch for a task, the lead could scan the cards to match specialization to need. When new contributors joined, the cards gave them immediate context about the team's composition and capabilities."
+            "title": "The Identity Card System",
+            "content": "A team created identity cards for every agent: a visual display showing their icon, their specialization, their current level, their contribution score, and their notable achievements. The cards weren't just motivational - they were functional. When deciding which agent to dispatch for a task, the lead could scan the cards to match specialization to need. When new contributors joined, the cards gave them immediate context about the team's composition and capabilities."
         },
         "related_techniques": ["FG-0301", "FG-0801", "FG-0305"],
         "added_version": "1.0"

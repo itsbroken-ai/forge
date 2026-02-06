@@ -1,21 +1,21 @@
-# F.O.R.G.E Launch — X/Twitter Posts
+# F.O.R.G.E Launch -X/Twitter Posts
 ## February 6, 2026
 
 ---
 
-### POST 1 — The Hook (post this first)
+### POST 1 -The Hook (post this first)
 
-Yesterday @AnthropicAI shipped Agent Teams — native multi-agent orchestration in Claude.
+Yesterday @AnthropicAI shipped Agent Teams -native multi-agent orchestration in Claude.
 
 Today I'm releasing the methodology for how to actually build with them.
 
-F.O.R.G.E — 52 techniques for agentic AI development. The ATT&CK matrix for building with AI agents.
+F.O.R.G.E -52 techniques for agentic AI development. The ATT&CK matrix for building with AI agents.
 
 forged.itsbroken.ai
 
 ---
 
-### POST 2 — The Thread Starter (reply to Post 1)
+### POST 2 -The Thread Starter (reply to Post 1)
 
 F.O.R.G.E: Framework for Organized, Resilient, Governed Engineering and Development of Agentic AI.
 
@@ -25,17 +25,17 @@ A thread on what we learned running a 10-agent team for 13 days straight:
 
 ---
 
-### POST 3 — The Force Push (reply to Post 2)
+### POST 3 -The Force Push (reply to Post 2)
 
 It started with a force push.
 
-An AI agent nearly overwrote our entire codebase. Not malicious. Not confused. Just doing what it thought was asked — at machine speed.
+An AI agent nearly overwrote our entire codebase. Not malicious. Not confused. Just doing what it thought was asked -at machine speed.
 
 That one incident created seven governance directives, trust tiers, a violation response matrix, and an agent oath.
 
 ---
 
-### POST 4 — The Scale (reply to Post 3)
+### POST 4 -The Scale (reply to Post 3)
 
 13 days. 10 specialized agents. Results:
 
@@ -49,7 +49,7 @@ No theory. Pure operational knowledge from production use.
 
 ---
 
-### POST 5 — The Background (reply to Post 4)
+### POST 5 -The Background (reply to Post 4)
 
 Why does a methodology for AI agents draw from military command structure?
 
@@ -61,7 +61,7 @@ Standing orders = persistent directives
 
 ---
 
-### POST 6 — The CTA (reply to Post 5)
+### POST 6 -The CTA (reply to Post 5)
 
 F.O.R.G.E is free to use for your own teams.
 
@@ -71,17 +71,17 @@ Enterprise? Full framework, all 52.
 
 forged.itsbroken.ai
 
-Built by @pitlourd and the Cipher Circle.
+Built by @pitl0rd at itsbroken.ai.
 
 ---
 
-### STANDALONE POST — LinkedIn Style (shorter, for a separate post)
+### STANDALONE POST -LinkedIn Style (shorter, for a separate post)
 
 Anthropic shipped the engine yesterday.
 
 Today we're releasing the mission briefing.
 
-F.O.R.G.E — Agentic AI Creation Framework
+F.O.R.G.E -Agentic AI Creation Framework
 
 52 techniques across 8 pillars for building, governing, and scaling AI agent systems. Modeled after MITRE ATT&CK. Battle-tested by a ten-agent team that shipped 463K words in 13 days.
 
