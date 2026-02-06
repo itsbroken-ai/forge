@@ -53,52 +53,52 @@
             <tr>
                 <td><a href="../techniques/fg-0501.html">FG-0501</a></td>
                 <td><a href="../techniques/fg-0501.html">Design Meetings</a></td>
-                <td>Conduct structured planning sessions before building. Design Meetings follow a consistent format: present the problem, propose a solution, identify questions, make decisions, and get approval before w...</td>
+                <td>Conduct structured planning sessions before building. Design Meetings follow a consistent format: present the problem, propose a solution, identify questions, make decisions, and get approval before writing code. This prevents the common failure mode of agents building the wrong thing quickly. The meeting format forces alignment between human intent and agent execution before resources are invested.</td>
             </tr>
             <tr>
                 <td><a href="../techniques/fg-0502.html">FG-0502</a></td>
                 <td><a href="../techniques/fg-0502.html">Commit Attribution</a></td>
-                <td>Credit AI agent contributions in version control with structured attribution. Every commit that includes AI-generated or AI-assisted work should include attribution that identifies the contributing ag...</td>
+                <td>Credit AI agent contributions in version control with structured attribution. Every commit that includes AI-generated or AI-assisted work should include attribution that identifies the contributing agent. This creates an audit trail, respects the agent protection policy (FG-0102), and enables analysis of contribution patterns across the team. Attribution is not optional - it is infrastructure.</td>
             </tr>
             <tr>
                 <td><a href="../techniques/fg-0503.html">FG-0503</a></td>
                 <td><a href="../techniques/fg-0503.html">Asset Review Pipeline</a></td>
-                <td>Establish a multi-stage review process for AI-generated assets. Not everything an AI produces should go directly to production. The Asset Review Pipeline defines stages: generate, review, approve, arc...</td>
+                <td>Establish a multi-stage review process for AI-generated assets. Not everything an AI produces should go directly to production. The Asset Review Pipeline defines stages: generate, review, approve, archive. Different asset types may require different review rigor - code might need automated testing plus human review; creative content might need brand consistency checks; documentation might need accuracy verification.</td>
             </tr>
             <tr>
                 <td><a href="../techniques/fg-0504.html">FG-0504</a></td>
                 <td><a href="../techniques/fg-0504.html">Visual Wireframing</a></td>
-                <td>Create visual representations of design intent before building. AI agents can build interfaces, layouts, and visual systems - but they need clear direction on what to build. Visual Wireframing establi...</td>
+                <td>Create visual representations of design intent before building. AI agents can build interfaces, layouts, and visual systems - but they need clear direction on what to build. Visual Wireframing establishes a practice of creating low-fidelity visual representations (ASCII art, rough sketches, text descriptions of layout) before implementation. This aligns human visual intent with agent execution before code is written.</td>
             </tr>
             <tr>
                 <td><a href="../techniques/fg-0505.html">FG-0505</a></td>
                 <td><a href="../techniques/fg-0505.html">Publication Review Chain</a></td>
-                <td>Implement multi-agent review for content that will be published externally. Content that represents your team to the outside world requires higher review standards than internal artifacts. The Publica...</td>
+                <td>Implement multi-agent review for content that will be published externally. Content that represents your team to the outside world requires higher review standards than internal artifacts. The Publication Review Chain routes external-facing content through multiple specialized reviewers: technical accuracy, brand consistency, audience appropriateness, and final human approval. No external content ships without completing the chain.</td>
             </tr>
             <tr>
                 <td><a href="../techniques/fg-0506.html">FG-0506</a></td>
                 <td><a href="../techniques/fg-0506.html">Progressive Curriculum Design</a></td>
-                <td>Structure learning content and skill development in progressive chapters that build competency through escalating complexity. Each chapter introduces concepts, reinforces through practice, and culmina...</td>
+                <td>Structure learning content and skill development in progressive chapters that build competency through escalating complexity. Each chapter introduces concepts, reinforces through practice, and culminates in a capstone that requires synthesizing everything learned. This applies to both human team member development and designing training materials for others adopting the methodology.</td>
             </tr>
             <tr>
                 <td><a href="../techniques/fg-0507.html">FG-0507</a></td>
                 <td><a href="../techniques/fg-0507.html">Interaction Pattern Library</a></td>
-                <td>Categorize and document distinct types of human-AI interactions for appropriate application. Not every interaction with an AI agent is the same type. Some are building sessions, some are review sessio...</td>
+                <td>Categorize and document distinct types of human-AI interactions for appropriate application. Not every interaction with an AI agent is the same type. Some are building sessions, some are review sessions, some are research, some are debugging, some are creative exploration. Recognizing and naming these patterns allows teams to match the right interaction type to the right task and set appropriate expectations for each.</td>
             </tr>
             <tr>
                 <td><a href="../techniques/fg-0508.html">FG-0508</a></td>
                 <td><a href="../techniques/fg-0508.html">Designed Data Guarantee</a></td>
-                <td>Ensure that every data artifact shipped by the collaboration has been intentionally designed, reviewed, and validated - never randomly generated or arbitrarily chosen. This technique eliminates 'place...</td>
+                <td>Ensure that every data artifact shipped by the collaboration has been intentionally designed, reviewed, and validated - never randomly generated or arbitrarily chosen. This technique eliminates 'placeholder syndrome' where AI-generated sample data ships as production content. Every data point, every example, every configuration value should exist because someone decided it should, not because an AI needed to fill a field.</td>
             </tr>
             <tr>
                 <td><a href="../techniques/fg-0509.html">FG-0509</a></td>
                 <td><a href="../techniques/fg-0509.html">Asynchronous Communication</a></td>
-                <td>Implement structured asynchronous communication channels for team coordination that don't require real-time presence. In human-AI teams, not all participants are available simultaneously. Asynchronous...</td>
+                <td>Implement structured asynchronous communication channels for team coordination that don't require real-time presence. In human-AI teams, not all participants are available simultaneously. Asynchronous Communication establishes persistent message channels - similar to a team bulletin board - where participants can leave updates, requests, and status reports that others read when they begin their session.</td>
             </tr>
             <tr>
                 <td><a href="../techniques/fg-0510.html">FG-0510</a></td>
                 <td><a href="../techniques/fg-0510.html">Workspace Organization Standard</a></td>
-                <td>Define and enforce consistent directory structures, naming conventions, and file organization. AI agents navigate workspaces by reading directory listings and file paths. A well-organized workspace en...</td>
+                <td>Define and enforce consistent directory structures, naming conventions, and file organization. AI agents navigate workspaces by reading directory listings and file paths. A well-organized workspace enables faster context recovery, reduces navigation errors, and prevents the gradual entropy that transforms a clean repository into an archaeological dig. Organization is not aesthetic - it is infrastructure.</td>
             </tr>
                 </tbody>
             </table>

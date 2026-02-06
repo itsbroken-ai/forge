@@ -239,7 +239,7 @@ def build_tactic_pages(data):
             <tr>
                 <td><a href="../techniques/{tech['id'].lower()}.html">{tech['id']}</a></td>
                 <td><a href="../techniques/{tech['id'].lower()}.html">{tech['name']}</a></td>
-                <td>{tech.get('description', '')[:200]}{'...' if len(tech.get('description', '')) > 200 else ''}</td>
+                <td>{tech.get('description', '')}</td>
             </tr>'''
 
         html = template.replace("{{TACTIC_ID}}", tactic["id"])
