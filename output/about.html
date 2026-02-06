@@ -29,31 +29,68 @@
         <h1>About F.O.R.G.E</h1>
 
         <section class="content-section">
-            <h2>What Is F.O.R.G.E?</h2>
-            <p>F.O.R.G.E (Framework for Organized, Resilient, Governed Engineering and Development of Agentic AI) is a structured methodology for building, governing, and scaling AI agent systems. It provides a taxonomy of 52 techniques organized across 8 tactical pillars, giving teams a common vocabulary and proven practices for agentic AI development at every level of application.</p>
-            <p>Modeled after frameworks like MITRE ATT&amp;CK, F.O.R.G.E organizes practitioner knowledge into an interactive matrix where each technique represents a specific, actionable practice that teams can adopt, adapt, and measure.</p>
+            <h2>The Problem</h2>
+            <p>Everyone is building with AI agents. Nobody agrees on how.</p>
+            <p>Vendors ship runtimes and APIs. Researchers publish theoretical frameworks. But practitioners - the people actually deploying agentic AI into production - have no shared vocabulary, no structured methodology, and no way to evaluate whether their approach will survive contact with reality.</p>
+            <p>When an AI agent nearly force-pushed to a production repository, there was no playbook for what governance should look like. When a ten-agent team needed to coordinate across domains, there was no established pattern for parallel dispatch. When sessions reset and context evaporated, there was no standard for knowledge persistence.</p>
+            <p>We built all of it from scratch. Then we organized what we learned so nobody else has to.</p>
         </section>
 
         <section class="content-section">
-            <h2>Why F.O.R.G.E Exists</h2>
-            <p>Agentic AI development is no longer experimental. Teams across every industry are deploying AI agents into production workflows. But there is no standardized framework for <em>how</em> to build, govern, and scale these systems effectively. Academic frameworks exist but are theoretical. Vendor documentation covers tools, not methodology.</p>
-            <p>F.O.R.G.E fills this gap. It captures operational knowledge from teams that have built production agentic AI systems, organized into a navigable, referenceable structure that any team can use - from solo practitioners to enterprise organizations.</p>
+            <h2>What F.O.R.G.E Is</h2>
+            <p><strong>F.O.R.G.E</strong> (Framework for Organized, Resilient, Governed Engineering and Development of Agentic AI) is an Agentic AI Creation Framework. It provides 52 techniques organized across 8 tactical pillars - a structured, navigable taxonomy for building, governing, and scaling AI agent systems at any level of application.</p>
+            <p>Modeled after <strong>MITRE ATT&amp;CK</strong> - the framework that gave cybersecurity a common language for adversary behavior - F.O.R.G.E gives agentic AI a common language for <em>building</em> behavior. Each technique is specific, actionable, and comes with implementation guidance, success indicators, failure modes, and a field report from real-world use.</p>
+            <p>This is not theory. Every technique exists because something went right - or more often, because something went wrong and we built the system to prevent it from happening again.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Who It's For</h2>
+            <p>F.O.R.G.E scales to any level of agentic AI application:</p>
+            <ul>
+                <li><strong>Solo practitioners</strong> running 1-3 AI agents: Start with Foundation and Knowledge (~10 core techniques)</li>
+                <li><strong>Teams</strong> of 2-5 humans with multiple agents: Add Governance and Team Design (~25 techniques)</li>
+                <li><strong>Organizations</strong> running scaled AI operations: Implement the full framework (all 52 techniques)</li>
+            </ul>
+            <p>If you are using AI agents in production - or planning to - F.O.R.G.E gives you the vocabulary and the playbook.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>The Eight Pillars</h2>
+            <table class="tier-table">
+                <thead>
+                    <tr>
+                        <th>Pillar</th>
+                        <th>What It Covers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Foundation</strong></td><td>Why you build with agents, what each party brings, how you treat them</td></tr>
+                    <tr><td><strong>Governance</strong></td><td>Laws, authority, trust levels, access control - preventing agents from scaling chaos faster than value</td></tr>
+                    <tr><td><strong>Team Design</strong></td><td>Agent specialization, roles, voice differentiation - focused collaborators, not generalist chatbots</td></tr>
+                    <tr><td><strong>Invocation</strong></td><td>Session start, context recovery, mission briefing - the cold-start-to-productive transition</td></tr>
+                    <tr><td><strong>Execution</strong></td><td>Building, reviewing, shipping - how human-agent teams deliver with consistent quality</td></tr>
+                    <tr><td><strong>Quality</strong></td><td>Testing, review periods, audit trails - earning trust in agent output through verification</td></tr>
+                    <tr><td><strong>Knowledge</strong></td><td>Memory systems, session handoffs, institutional repositories - solving the amnesia problem</td></tr>
+                    <tr><td><strong>Evolution</strong></td><td>Progress tracking, contributor identity, authentic voice - growing the methodology over time</td></tr>
+                </tbody>
+            </table>
         </section>
 
         <section class="content-section">
             <h2>Origin</h2>
-            <p>F.O.R.G.E was developed by Pete McKernan and his agentic AI development team, a collaboration that produced 463,000 words of documentation, a patent filing, multiple software products, and a comprehensive governance system in its first two weeks of operation. The methodology draws from 20 years of military command, red team operations, QA engineering, and game design.</p>
-            <p>The team's own operations serve as the reference implementation of F.O.R.G.E. The framework itself is designed to be universal - applicable to any agentic AI system at any scale.</p>
+            <p>F.O.R.G.E was developed by Pete McKernan, drawing from 20 years of operational experience: military command (92 Marines in combat operations), red team operations at the highest classification levels, QA engineering, adversarial security research, and game design.</p>
+            <p>The methodology was forged - literally - during the first two weeks of running a production agentic AI team: 10 specialized agents, 463,000 words of output, a patent filing, multiple software products, and a governance system built because an agent almost destroyed a repository.</p>
+            <p>Every structure in F.O.R.G.E maps to proven patterns from domains where getting it wrong has real consequences. Trust tiers are security clearances. Mission briefings are agent invocations. Standing orders are persistent directives. Session handoffs are shift-change briefs. The patterns transfer because the underlying problem - coordinating distributed teams under uncertainty - is identical.</p>
         </section>
 
         <section class="content-section">
             <h2>Framework Structure</h2>
             <p>F.O.R.G.E uses a matrix structure inspired by MITRE ATT&amp;CK:</p>
             <ul>
-                <li><strong>Tactics</strong> (columns) represent the strategic pillars of agentic AI development</li>
-                <li><strong>Techniques</strong> (cells) represent specific practices within each tactic</li>
-                <li>Each technique includes a description, implementation guide, success indicators, failure modes, and a field report from real-world use</li>
-                <li>Techniques are identified by ID (e.g., FG-0101) for precise reference</li>
+                <li><strong>Tactics</strong> (columns) represent the 8 strategic pillars of agentic AI development</li>
+                <li><strong>Techniques</strong> (cells) represent 52 specific practices within each tactic</li>
+                <li>Each technique includes a description, implementation guide, success indicators, failure modes, and a field report</li>
+                <li>Techniques are identified by ID (e.g., FG-0101) for precise cross-referencing</li>
             </ul>
         </section>
 
