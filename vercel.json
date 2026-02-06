@@ -1,9 +1,9 @@
 {
   "version": 2,
   "public": true,
-  "buildCommand": "python3 data/generate_framework.py && python3 generator/build.py",
+  "buildCommand": null,
   "outputDirectory": "output",
-  "installCommand": "echo 'No dependencies required'",
+  "installCommand": null,
   "headers": [
     {
       "source": "/(.*)",
