@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FG-0601: Testing Pyramid | F.O.R.G.E</title>
+    <meta name="description" content="Implement a multi-tiered testing strategy that validates AI-generated output at every level. The Testing Pyramid applies traditional software testing principles to human-AI collaboration: unit-level validation of individual outputs, integration testing of combined outputs, system testing of complete deliverables, and acceptance testing against human expectations. More tests at the base, fewer at the top, comprehensive coverage throughout.">
+    <meta property="og:title" content="FG-0601: Testing Pyramid | F.O.R.G.E">
+    <meta property="og:description" content="Implement a multi-tiered testing strategy that validates AI-generated output at every level. The Testing Pyramid applies traditional software testing principles to human-AI collaboration: unit-level validation of individual outputs, integration testing of combined outputs, system testing of complete deliverables, and acceptance testing against human expectations. More tests at the base, fewer at the top, comprehensive coverage throughout.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://forged.itsbroken.ai/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FG-0601: Testing Pyramid | F.O.R.G.E">
     <meta name="author" content="Pete McKernan / Cipher Circle">
     <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="canonical" href="https://forged.itsbroken.ai/techniques/fg-0601.html">
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
     <link rel="stylesheet" href="../css/forged.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
     <nav class="nav">
         <div class="nav-inner">
             <a href="../index.html" class="nav-brand">
                 <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
-                <span class="nav-title">itsbroken.ai</span>
+                <span class="nav-title">ItsBroken.ai</span>
             </a>
             <div class="nav-links">
                 <a href="../index.html" class="nav-link">Matrix</a>
@@ -25,7 +34,7 @@
         </div>
     </nav>
 
-    <main class="technique-page">
+    <main id="main-content" class="technique-page">
         <div class="breadcrumb">
             <a href="../index.html">Matrix</a>
             <span class="breadcrumb-sep">/</span>
@@ -77,13 +86,49 @@
         </div>
 
         
+            <section class="technique-sub-methods">
+                <h2>Sub-Methods <span class="sub-method-count">4</span></h2>
+                <div class="sub-method-grid">
+                    
+                <div class="sub-method-card" id="fg-0601-001" style="border-left: 3px solid #d48a3b">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0601.001</span>
+                        <span class="sub-method-card-name">Atomic Validation Layer</span>
+                    </div>
+                    <p class="sub-method-desc">The pyramid base: high-volume, fast, automated tests that validate individual outputs in isolation. Structural checks, type validation, constraint enforcement, and format verification. These tests run on every change and catch the majority of issues. Optimize for speed — if atomic tests are slow, they won't run frequently enough.</p>
+                </div>
+                <div class="sub-method-card" id="fg-0601-002" style="border-left: 3px solid #d48a3b">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0601.002</span>
+                        <span class="sub-method-card-name">Integration Coherence Testing</span>
+                    </div>
+                    <p class="sub-method-desc">The pyramid middle: tests that validate how individual outputs combine into larger deliverables. Cross-reference checks, consistency validation across related outputs, and interface contract verification. These catch issues that atomic tests miss — individually correct outputs that are collectively incoherent.</p>
+                </div>
+                <div class="sub-method-card" id="fg-0601-003" style="border-left: 3px solid #d48a3b">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0601.003</span>
+                        <span class="sub-method-card-name">System Experience Validation</span>
+                    </div>
+                    <p class="sub-method-desc">The pyramid upper tier: end-to-end tests that validate complete deliverables as a user would experience them. Navigate full workflows, verify user-facing behavior, and confirm that the assembled product works as intended. Fewer tests than lower tiers, but each validates a critical user path.</p>
+                </div>
+                <div class="sub-method-card" id="fg-0601-004" style="border-left: 3px solid #d48a3b">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0601.004</span>
+                        <span class="sub-method-card-name">Human Acceptance Review</span>
+                    </div>
+                    <p class="sub-method-desc">The pyramid apex: human judgment applied to deliverables that pass all automated tiers. Not everything can be automated — aesthetic quality, narrative coherence, strategic alignment, and user experience require human evaluation. This tier should focus human attention on what only humans can judge, not on what automation already verified.</p>
+                </div>
+                </div>
+            </section>
+
+        
             <section class="war-story">
                 <h2>Field Report: The Testing Fortress</h2>
                 <div class="war-story-content">A team built over a thousand automated tests across multiple validation tiers - from basic structural checks to full experience validation. The test suite caught dozens of issues in its first run that would have shipped to users. Not security vulnerabilities - logical inconsistencies, broken references, and placeholder data that looked real. The investment in automated testing at every tier paid for itself immediately.</div>
             </section>
 
         <section class="technique-related">
-            <h2>Related Techniques</h2>
+            <h2>Related Methods</h2>
             <div class="related-grid">
                 <a href="fg-0508.html" class="related-link">FG-0508: Designed Data Guarantee</a>
 <a href="fg-0602.html" class="related-link">FG-0602: Code Quality Standards</a>
@@ -99,5 +144,40 @@
             <p><a href="../index.html">Back to Matrix</a></p>
         </div>
     </footer>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "FG-0601: Testing Pyramid",
+        "description": "Implement a multi-tiered testing strategy that validates AI-generated output at every level. The Testing Pyramid applies traditional software testing principles to human-AI collaboration: unit-level validation of individual outputs, integration testing of combined outputs, system testing of complete deliverables, and acceptance testing against human expectations. More tests at the base, fewer at the top, comprehensive coverage throughout.",
+        "author": {
+            "@type": "Person",
+            "name": "Pete McKernan",
+            "url": "https://itsbroken.ai"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Cipher Circle",
+            "url": "https://itsbroken.ai"
+        },
+        "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0601.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "F.O.R.G.E",
+            "url": "https://forged.itsbroken.ai"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Matrix", "item": "https://forged.itsbroken.ai/"},
+            {"@type": "ListItem", "position": 2, "name": "Quality", "item": "https://forged.itsbroken.ai/tactics/ft06.html"},
+            {"@type": "ListItem", "position": 3, "name": "FG-0601"}
+        ]
+    }
+    </script>
 </body>
 </html>

@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FT06: Quality | F.O.R.G.E</title>
+    <meta name="description" content="Testing, validation, review processes, and quality assurance. Quality techniques ensure that AI-generated output meets defined standards, that regressions are caught, and that trust in the system's output is earned through verification.">
+    <meta property="og:title" content="Quality | F.O.R.G.E">
+    <meta property="og:description" content="Testing, validation, review processes, and quality assurance. Quality techniques ensure that AI-generated output meets defined standards, that regressions are caught, and that trust in the system's output is earned through verification.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://forged.itsbroken.ai/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Quality | F.O.R.G.E">
     <meta name="author" content="Pete McKernan / Cipher Circle">
     <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="canonical" href="https://forged.itsbroken.ai/tactics/ft06.html">
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
     <link rel="stylesheet" href="../css/forged.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
     <nav class="nav">
         <div class="nav-inner">
             <a href="../index.html" class="nav-brand">
                 <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
-                <span class="nav-title">itsbroken.ai</span>
+                <span class="nav-title">ItsBroken.ai</span>
             </a>
             <div class="nav-links">
                 <a href="../index.html" class="nav-link">Matrix</a>
@@ -25,7 +34,7 @@
         </div>
     </nav>
 
-    <main class="tactic-page">
+    <main id="main-content" class="tactic-page">
         <div class="breadcrumb">
             <a href="../index.html">Matrix</a>
             <span class="breadcrumb-sep">/</span>
@@ -36,7 +45,7 @@
             <span class="tactic-id-large" style="color: #d48a3b">FT06</span>
             <h1 style="color: #d48a3b">Quality</h1>
             <p class="tactic-desc">Testing, validation, review processes, and quality assurance. Quality techniques ensure that AI-generated output meets defined standards, that regressions are caught, and that trust in the system's output is earned through verification.</p>
-            <span class="tactic-stat">5 techniques</span>
+            <span class="tactic-stat">6 methods</span>
         </header>
 
         <section class="tactic-techniques">
@@ -44,7 +53,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Technique</th>
+                        <th>Method</th>
                         <th>Description</th>
                     </tr>
                 </thead>
@@ -52,7 +61,7 @@
                     
             <tr>
                 <td><a href="../techniques/fg-0601.html">FG-0601</a></td>
-                <td><a href="../techniques/fg-0601.html">Testing Pyramid</a></td>
+                <td><a href="../techniques/fg-0601.html">Testing Pyramid <span class="sub-method-badge-sm">4</span></a></td>
                 <td>Implement a multi-tiered testing strategy that validates AI-generated output at every level. The Testing Pyramid applies traditional software testing principles to human-AI collaboration: unit-level validation of individual outputs, integration testing of combined outputs, system testing of complete deliverables, and acceptance testing against human expectations. More tests at the base, fewer at the top, comprehensive coverage throughout.</td>
             </tr>
             <tr>
@@ -74,6 +83,11 @@
                 <td><a href="../techniques/fg-0605.html">FG-0605</a></td>
                 <td><a href="../techniques/fg-0605.html">Audit Trail System</a></td>
                 <td>Maintain comprehensive, searchable records of all significant actions, decisions, and changes. An Audit Trail is not just for compliance - it is for learning. When something goes wrong, the audit trail enables root cause analysis. When something goes right, it enables pattern replication. Every significant action should leave a mark in the record: who did it, what they did, why they did it, and when.</td>
+            </tr>
+            <tr>
+                <td><a href="../techniques/fg-0606.html">FG-0606</a></td>
+                <td><a href="../techniques/fg-0606.html">Output Verification</a></td>
+                <td>Systematic methods for detecting inaccurate, fabricated, or misleading content in AI-generated output. AI agents produce output with high confidence regardless of accuracy — hallucinated facts, invented citations, plausible-sounding but incorrect technical claims, and subtly wrong data are indistinguishable from correct output without explicit verification. Output verification is not optional quality enhancement; it is the minimum standard for using AI-generated content in any context where accuracy matters.</td>
             </tr>
                 </tbody>
             </table>

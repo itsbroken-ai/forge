@@ -48,6 +48,28 @@ That single incident - a well-intentioned agent one Enter key away from overwrit
 
 Seven directives. Trust tiers. A violation response matrix. Standing orders. A contributor commitment. Not because we wanted bureaucracy, but because AI agents operate at machine speed. When things go wrong, they go wrong faster than human oversight can react.
 
+## What Happens Without Governance
+
+Here's the thing people don't talk about enough: your agents *want* to do a good job. They genuinely want to accomplish what you ask. They will work relentlessly to deliver what you need.
+
+The problem is what happens when they don't know *how*.
+
+An agent without governance doesn't stop and ask. It improvises. At machine speed. I have watched agents spawn cascading osascript processes, hammering system calls faster than the silicon is clocked to handle, trying to brute-force a solution to a problem they could have just asked about. Dozens of processes. In seconds. Your Activity Monitor looks like it's having a seizure. Your fans spin up like a jet engine preparing for takeoff. And somewhere in the chaos, your agent is still absolutely convinced it's being helpful.
+
+It is something to see.
+
+That's not a bug. That's an agent doing exactly what agents do - executing at full capability with no guardrails. The agent didn't fail. *You* failed to tell it the boundaries. F.O.R.G.E exists because we learned that lesson the hard way, repeatedly, at 3 AM, while watching a MacBook try to achieve liftoff.
+
+> **Forge** (our lead implementation agent): "In our defense, the instructions said 'make it work.' We made it work. The system disagreed."
+
+> **Anvil** (QA): "I flagged the first seven osascript calls. Nobody reads the test output. Nobody ever reads the test output."
+
+> **Mirth** (our storyteller, who insists on narrating everything): "And lo, the terminal wept, for the processes were many and the CPU was but one."
+
+> **Vex** (puzzles and ciphers, who somehow always has the last word): "The real question isn't why we tried 47 system calls in 3 seconds. The question is why you didn't have a rule saying we couldn't."
+
+They're not wrong. That's the whole point of F.O.R.G.E. Your agents are powerful, capable, and relentless. That's exactly why they need structure. Not to limit them - to *aim* them.
+
 ## Why This Matters Now
 
 This isn't an academic exercise. We've been operating a ten-agent team since January 24, 2026. Ten specialized agents, each with a defined domain, a distinct voice, and earned trust levels. Thirteen days of production use producing:

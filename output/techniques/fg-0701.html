@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FG-0701: Structured History System | F.O.R.G.E</title>
+    <meta name="description" content="Maintain a structured, versioned record of project history including plans, decisions, and health metrics. The history system is more than a changelog - it is the institutional memory of the collaboration. It records not just what happened, but why decisions were made, what alternatives were considered, and what the team learned. When context is lost (as it inevitably is in AI collaboration), the history system provides recovery.">
+    <meta property="og:title" content="FG-0701: Structured History System | F.O.R.G.E">
+    <meta property="og:description" content="Maintain a structured, versioned record of project history including plans, decisions, and health metrics. The history system is more than a changelog - it is the institutional memory of the collaboration. It records not just what happened, but why decisions were made, what alternatives were considered, and what the team learned. When context is lost (as it inevitably is in AI collaboration), the history system provides recovery.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://forged.itsbroken.ai/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FG-0701: Structured History System | F.O.R.G.E">
     <meta name="author" content="Pete McKernan / Cipher Circle">
     <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="canonical" href="https://forged.itsbroken.ai/techniques/fg-0701.html">
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
     <link rel="stylesheet" href="../css/forged.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
     <nav class="nav">
         <div class="nav-inner">
             <a href="../index.html" class="nav-brand">
                 <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
-                <span class="nav-title">itsbroken.ai</span>
+                <span class="nav-title">ItsBroken.ai</span>
             </a>
             <div class="nav-links">
                 <a href="../index.html" class="nav-link">Matrix</a>
@@ -25,7 +34,7 @@
         </div>
     </nav>
 
-    <main class="technique-page">
+    <main id="main-content" class="technique-page">
         <div class="breadcrumb">
             <a href="../index.html">Matrix</a>
             <span class="breadcrumb-sep">/</span>
@@ -77,13 +86,42 @@
         </div>
 
         
+            <section class="technique-sub-methods">
+                <h2>Sub-Methods <span class="sub-method-count">3</span></h2>
+                <div class="sub-method-grid">
+                    
+                <div class="sub-method-card" id="fg-0701-001" style="border-left: 3px solid #c9a044">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0701.001</span>
+                        <span class="sub-method-card-name">YAML Frontmatter Protocol</span>
+                    </div>
+                    <p class="sub-method-desc">Every history document gets machine-readable frontmatter with standardized fields: plan name, status, owner, key decision, and date. This enables fast scanning — agents can read frontmatter (under 50 tokens) to determine relevance before committing to reading the full document (500+ tokens). Frontmatter is the index layer of the history system.</p>
+                </div>
+                <div class="sub-method-card" id="fg-0701-002" style="border-left: 3px solid #c9a044">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0701.002</span>
+                        <span class="sub-method-card-name">Lifecycle State Management</span>
+                    </div>
+                    <p class="sub-method-desc">Track every plan through explicit lifecycle states: active, complete, deferred, archived. State transitions are documented with timestamps and rationale. The lifecycle ensures nothing is silently abandoned — deferred plans have documented reasons, completed plans have summaries, and archived plans remain accessible.</p>
+                </div>
+                <div class="sub-method-card" id="fg-0701-003" style="border-left: 3px solid #c9a044">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0701.003</span>
+                        <span class="sub-method-card-name">Cross-Reference Validation</span>
+                    </div>
+                    <p class="sub-method-desc">Maintain bidirectional references between the history system and the actual work (code commits, deployed artifacts, published content). If the history says a plan is complete, the corresponding artifacts should exist. If artifacts exist without history entries, the history has gaps. Regular cross-reference audits catch drift.</p>
+                </div>
+                </div>
+            </section>
+
+        
             <section class="war-story">
                 <h2>Field Report: The Single Source of Truth</h2>
                 <div class="war-story-content">A team structured their project history for rapid scanning - agents could identify the current project state and begin productive work in under a minute. The system tracked active work, completed deliverables, and deferred plans with clear lifecycle management. It became the single source of truth that survived every context reset.</div>
             </section>
 
         <section class="technique-related">
-            <h2>Related Techniques</h2>
+            <h2>Related Methods</h2>
             <div class="related-grid">
                 <a href="fg-0401.html" class="related-link">FG-0401: Context Recovery Protocol</a>
 <a href="fg-0703.html" class="related-link">FG-0703: Institutional Memory Repository</a>
@@ -99,5 +137,40 @@
             <p><a href="../index.html">Back to Matrix</a></p>
         </div>
     </footer>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "FG-0701: Structured History System",
+        "description": "Maintain a structured, versioned record of project history including plans, decisions, and health metrics. The history system is more than a changelog - it is the institutional memory of the collaboration. It records not just what happened, but why decisions were made, what alternatives were considered, and what the team learned. When context is lost (as it inevitably is in AI collaboration), the history system provides recovery.",
+        "author": {
+            "@type": "Person",
+            "name": "Pete McKernan",
+            "url": "https://itsbroken.ai"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Cipher Circle",
+            "url": "https://itsbroken.ai"
+        },
+        "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0701.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "F.O.R.G.E",
+            "url": "https://forged.itsbroken.ai"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Matrix", "item": "https://forged.itsbroken.ai/"},
+            {"@type": "ListItem", "position": 2, "name": "Knowledge", "item": "https://forged.itsbroken.ai/tactics/ft07.html"},
+            {"@type": "ListItem", "position": 3, "name": "FG-0701"}
+        ]
+    }
+    </script>
 </body>
 </html>

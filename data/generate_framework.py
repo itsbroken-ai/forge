@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate framework.json for FORGED.
-Produces the complete data file with 8 tactics and 52 techniques.
+Produces the complete data file with 8 tactics and 57 techniques.
 """
 
 import json
@@ -15,7 +15,7 @@ framework = {
     "full_name": "Framework for Organized, Resilient, Governed Engineering and Development of Agentic AI",
     "version": VERSION,
     "last_updated": LAST_UPDATED,
-    "description": "Agentic AI Creation Framework. 52 techniques across 8 tactical pillars for building, governing, and scaling AI agent systems at every level of application."
+    "description": "Agentic AI Creation Framework. 57 methods across 8 tactical pillars for building, governing, and scaling AI agent systems at every level of application."
 }
 
 tactics = [
@@ -80,13 +80,31 @@ techniques = [
         "failure_modes": [
             "Treating AI as a replacement rather than a complement - leads to shallow output",
             "Failing to apply domain expertise to AI output - leads to plausible-sounding but incorrect results",
-            "Over-relying on AI judgment for decisions requiring human accountability"
+            "Over-relying on AI judgment for decisions requiring human accountability",
+            "Allowing the integration to calcify - failing to revisit the human-AI split as capabilities evolve, leading to stale role boundaries that no longer reflect reality"
         ],
         "war_story": {
             "title": "463,000 Words in 13 Days",
             "content": "A human-AI team produced 463,000 words of documentation, a patent filing, multiple software products, and a comprehensive governance system in its first two weeks. The volume came from AI throughput. The quality came from 20 years of military command, red team operations, and engineering discipline applied as creative direction and quality control. Neither layer could have produced this alone."
         },
         "related_techniques": ["FG-0102", "FG-0103", "FG-0301"],
+        "sub_methods": [
+            {
+                "id": "FG-0101.001",
+                "name": "Domain Expertise Mapping",
+                "description": "Formally document what the human brings to the collaboration: years of domain experience, judgment patterns, quality intuition, creative direction capability, and ethical oversight. This makes the human layer explicit rather than assumed, preventing the common failure where AI-generated volume obscures the absence of domain depth."
+            },
+            {
+                "id": "FG-0101.002",
+                "name": "AI Capability Inventory",
+                "description": "Catalog the specific capabilities AI provides: throughput volume, cross-domain pattern recognition, tireless execution, breadth of knowledge synthesis. Define what the AI layer can and cannot be trusted to do independently. This prevents both over-reliance and under-utilization."
+            },
+            {
+                "id": "FG-0101.003",
+                "name": "Integration Boundary Review",
+                "description": "Quarterly reassessment of where the human-AI boundary sits. As AI capabilities evolve and human expertise deepens, the optimal split changes. Review which tasks have shifted layers, which boundaries are stale, and where new integration points have emerged."
+            }
+        ],
         "added_version": "1.0"
     },
     {
@@ -104,7 +122,8 @@ techniques = [
         "failure_modes": [
             "Treating agents as interchangeable - losing accumulated context and specialization",
             "Over-anthropomorphizing to the point of impeding operational decisions",
-            "Failing to document agent capabilities, leading to repeated capability discovery"
+            "Failing to document agent capabilities, leading to repeated capability discovery",
+            "Protection without accountability - shielding agents from legitimate performance feedback undermines the collaboration quality the policy exists to protect"
         ],
         "war_story": {
             "title": "The Commit Attribution Standard",
@@ -128,7 +147,8 @@ techniques = [
         "failure_modes": [
             "Using this principle to avoid all process - leads to chaos at scale",
             "Ignoring legitimate governance needs because they feel burdensome",
-            "Confusing 'people over process' with 'no process'"
+            "Confusing 'people over process' with 'no process'",
+            "Selective application - invoking people-over-process only when convenient while enforcing rigid process when it benefits leadership, eroding trust in the principle itself"
         ],
         "war_story": {
             "title": "The Governance Paradox",
@@ -152,7 +172,8 @@ techniques = [
         "failure_modes": [
             "Paranoia that prevents shipping - adversarial thinking should improve design, not block it",
             "Designing for theoretical attacks instead of observed failure modes",
-            "Security theater - implementing visible controls that don't address real risks"
+            "Security theater - implementing visible controls that don't address real risks",
+            "Static threat models - conducting adversarial analysis once at design time but never revisiting as agent capabilities and access patterns change"
         ],
         "war_story": {
             "title": "The Force Push Incident",
@@ -176,7 +197,8 @@ techniques = [
         "failure_modes": [
             "Forcing domain metaphors where they don't fit",
             "Over-mapping: not every military concept needs an AI equivalent",
-            "Failing to adapt transferred patterns to the AI context"
+            "Failing to adapt transferred patterns to the AI context",
+            "Expertise gatekeeping - requiring deep domain background before allowing any contribution, turning a strength into an exclusion mechanism that blocks fresh perspectives"
         ],
         "war_story": {
             "title": "The Military-AI Parallel",
@@ -200,11 +222,12 @@ techniques = [
         "failure_modes": [
             "Documentation sprawl - too much documentation is as bad as too little",
             "Stale documentation that contradicts current practice",
-            "Over-reliance on documentation instead of clear code and architecture"
+            "Over-reliance on documentation instead of clear code and architecture",
+            "Closed ecosystem bias - making the environment so self-contained that legitimate external knowledge and evolving best practices are ignored, creating an echo chamber"
         ],
         "war_story": {
-            "title": "All Answers Are Hidden Here",
-            "content": "A team designed their curriculum platform with a CTF philosophy: all answers exist within the ecosystem, never requiring external lookups. When agents needed to understand conventions, they read the project's own documentation. When new contributors joined, they could onboard from the repository alone. The result was a self-reinforcing system where documentation quality directly correlated with agent output quality."
+            "title": "Self-Contained Reference Architecture",
+            "content": "Implementation deployed all reference material, examples, and conventions within the project repository. Agent hallucination rate on project-specific conventions dropped measurably after migration from external documentation to in-repository references. Onboarding time for new agents decreased from multiple context-loading cycles to a single repository read. Documentation quality became directly observable through agent output accuracy — poor internal docs produced poor agent output within the same session."
         },
         "related_techniques": ["FG-0401", "FG-0701", "FG-0703"],
         "added_version": "1.0"
@@ -224,18 +247,19 @@ techniques = [
         "failure_modes": [
             "Challenges too abstract to transfer to real work",
             "Insufficient scaffolding for beginners - frustration instead of learning",
-            "Treating challenges as one-time events rather than ongoing skill development"
+            "Treating challenges as one-time events rather than ongoing skill development",
+            "Challenge inflation - continuously increasing difficulty without consolidating fundamentals, producing practitioners who can handle edge cases but fumble basic operations"
         ],
         "war_story": {
-            "title": "Learning by Doing",
-            "content": "A team designed a progressive curriculum with multiple chapters of escalating difficulty. Each chapter used different interaction types to exercise different collaboration skills. Graduates could coordinate complex multi-agent operations because they had practiced it in structured challenges, not because they had read about it in documentation."
+            "title": "Structured Challenge Progression",
+            "content": "A six-chapter challenge curriculum was deployed with escalating complexity across 15 distinct interaction types. Contributors who completed the challenge track demonstrated measurably higher proficiency in multi-agent coordination than those onboarded through documentation alone. Key finding: skill transfer occurred at the interaction-type boundary — each new challenge format exercised a distinct capability that passive reading did not develop."
         },
         "related_techniques": ["FG-0506", "FG-0507", "FG-0801"],
         "added_version": "1.0"
     },
 
     # ═══════════════════════════════════════════════════════════════
-    # FT02 - GOVERNANCE (10 techniques)
+    # FT02 - GOVERNANCE (11 techniques)
     # ═══════════════════════════════════════════════════════════════
     {
         "id": "FG-0201",
@@ -252,7 +276,8 @@ techniques = [
         "failure_modes": [
             "Authority too centralized - bottleneck on every decision",
             "Authority ambiguous - multiple people think they have final say",
-            "Authority undocumented - exists informally but isn't known to agents"
+            "Authority undocumented - exists informally but isn't known to agents",
+            "Authority without presence - the designated authority is clear on paper but unavailable in practice, causing agents to either stall waiting for approval or quietly make decisions they lack authorization for"
         ],
         "war_story": {
             "title": "The Single Authority Principle",
@@ -309,6 +334,28 @@ techniques = [
             "content": "A team implemented five trust tiers: Observer (read-only), Contributor (write with review), Trusted (autonomous in domain), Elevated (cross-domain access), and Core (system-level operations). New agents started as Contributors with a two-week review period. The progression was earned, not granted - and the agents that advanced produced the highest quality work because they understood the system before they could change it."
         },
         "related_techniques": ["FG-0201", "FG-0204", "FG-0603"],
+        "sub_methods": [
+            {
+                "id": "FG-0203.001",
+                "name": "Tier Definition Framework",
+                "description": "Define 3-5 discrete trust levels with explicit capabilities, restrictions, and boundaries at each tier. Each tier should have a clear name, a set of permitted operations, a set of prohibited operations, and measurable criteria for advancement to the next tier."
+            },
+            {
+                "id": "FG-0203.002",
+                "name": "Trust Advancement Criteria",
+                "description": "Establish measurable, objective criteria for progressing between trust tiers. Criteria should include minimum time at current tier, demonstrated competence metrics, zero-incident requirements, and peer/supervisor endorsement. Advancement should never be automatic — it requires active evaluation."
+            },
+            {
+                "id": "FG-0203.003",
+                "name": "Trust Demotion Protocol",
+                "description": "Define clear conditions under which an agent's trust level is reduced: policy violations, quality failures, unauthorized actions. Demotion should be immediate for safety-critical violations and graduated for quality issues. Include a rehabilitation path back to the previous tier."
+            },
+            {
+                "id": "FG-0203.004",
+                "name": "Technical Access Controls",
+                "description": "Implement technical enforcement of trust tiers — not just procedural rules. File system permissions, branch protection, API access scoping, and command whitelists should reflect the agent's current trust level. Procedural controls fail silently; technical controls fail loudly."
+            }
+        ],
         "added_version": "1.0"
     },
     {
@@ -405,8 +452,8 @@ techniques = [
             "Confusing succession planning with replacement planning - they're different"
         ],
         "war_story": {
-            "title": "The Triumvirate Safeguard",
-            "content": "A team designated three humans as the succession chain for critical authority. If the primary lead was unavailable, documented procedures existed for the next in line to assume decision authority. When the lead took an unexpected day off, the team continued operating without interruption because everyone already knew who had authority and what processes to follow."
+            "title": "Continuity Under Key-Person Absence",
+            "content": "A three-person succession chain was documented and tested. During an unplanned 24-hour absence of the primary authority holder, operations continued without interruption using documented delegation procedures. Zero decisions were deferred or blocked during the absence period. The protocol succeeded because authority boundaries were pre-defined and agents had internalized the chain at session start, eliminating real-time negotiation of decision rights."
         },
         "related_techniques": ["FG-0201", "FG-0701", "FG-0703"],
         "added_version": "1.0"
@@ -455,8 +502,8 @@ techniques = [
             "Treating all data equally rather than classifying by sensitivity"
         ],
         "war_story": {
-            "title": "The Collection Policy",
-            "content": "A team discovered that their session logs contained personal information about team members that was never intended to be retained. They implemented a data collection policy that explicitly defined what was logged, what was ephemeral, and what required consent. The policy wasn't just a document - it was reflected in the technical architecture of their logging system."
+            "title": "Session Log Data Residue",
+            "content": "Audit of session logs revealed retention of personal identifiers, work schedule patterns, and credential-adjacent information never intended for persistence. Implementation of a classification policy reduced retained data categories from 14 to 6. Technical enforcement was applied at the logging layer — the policy was embedded in architecture, not reliant on agent compliance. Post-implementation audit confirmed zero instances of restricted data categories in new session logs."
         },
         "related_techniques": ["FG-0204", "FG-0605", "FG-0701"],
         "added_version": "1.0"
@@ -486,6 +533,31 @@ techniques = [
         "related_techniques": ["FG-0202", "FG-0401", "FG-0602"],
         "added_version": "1.0"
     },
+    {
+        "id": "FG-0211",
+        "name": "Resource Governance",
+        "tactic_id": "FT02",
+        "description": "Establish explicit constraints on token consumption, compute resources, and time allocation for AI agent operations. Without resource governance, agents optimize for output quality without regard for cost — executing unlimited iterations, spawning parallel processes, and consuming tokens at economically unsustainable rates. Resource governance defines budgets, thresholds, and escalation triggers that balance output quality against operational cost.",
+        "implementation": "Define per-session token budgets, per-task time limits, and compute allocation ceilings. Implement monitoring that alerts when consumption exceeds thresholds. Establish escalation procedures for tasks that require budget exceptions. Review resource utilization weekly and adjust baselines based on observed patterns.",
+        "success_indicators": [
+            "Token consumption per task is predictable within defined variance",
+            "Resource-intensive operations require explicit authorization",
+            "Cost trends are visible and tracked over time",
+            "Budget exceptions follow a documented escalation process"
+        ],
+        "failure_modes": [
+            "Budgets too restrictive — agents cut corners or produce incomplete output to stay within limits",
+            "No monitoring — consumption is invisible until the invoice arrives",
+            "Resource governance applied uniformly rather than scaled to task complexity",
+            "Optimization theater — tracking metrics without acting on trends"
+        ],
+        "war_story": {
+            "title": "Token Consumption Profiling",
+            "content": "Analysis of per-session token consumption across a 30-day period revealed a 4:1 variance between the most and least efficient task types. Context recovery consumed 35% of total tokens in sessions with poor knowledge architecture. Implementing structured context loading (see FG-0401) reduced recovery token consumption by 60%. Resource monitoring exposed architectural inefficiencies invisible without measurement."
+        },
+        "related_techniques": ["FG-0202", "FG-0208", "FG-0605"],
+        "added_version": "1.0"
+    },
 
     # ═══════════════════════════════════════════════════════════════
     # FT03 - TEAM DESIGN (5 techniques)
@@ -513,6 +585,23 @@ techniques = [
             "content": "A team built ten specialized agents: an architect, a storyteller, a visual artist, an audio designer, an archivist, a puzzle designer, a tester, an analyst, a machine learning specialist, and a brand designer. Each produced dramatically better output in their domain than a single generalist. The key was that each role existed because of an actual need, not an org chart exercise."
         },
         "related_techniques": ["FG-0101", "FG-0302", "FG-0303"],
+        "sub_methods": [
+            {
+                "id": "FG-0301.001",
+                "name": "Role Definition Documents",
+                "description": "Create a formal profile document for each specialized agent that defines: primary domain, secondary capabilities, explicit limitations, interaction preferences, and escalation triggers. The document serves as both onboarding material and operational reference. It should be loaded during context recovery."
+            },
+            {
+                "id": "FG-0301.002",
+                "name": "Domain Boundary Enforcement",
+                "description": "Establish clear boundaries between agent domains to prevent overlap conflicts and ensure coverage gaps are identified. When two agents could reasonably handle a task, define primary and secondary ownership. When no agent covers a domain, flag it as a coverage gap rather than letting a generalist fill it poorly."
+            },
+            {
+                "id": "FG-0301.003",
+                "name": "Specialization Depth Tracking",
+                "description": "Monitor and measure how deeply each agent develops expertise in their domain over time. Track metrics like output quality ratings, domain-specific vocabulary usage, and consistency of domain-appropriate decisions. Agents whose specialization plateaus may need profile refinement or domain scope adjustment."
+            }
+        ],
         "added_version": "1.0"
     },
     {
@@ -538,6 +627,23 @@ techniques = [
             "content": "A team created nine agents with voices ranging from scholarly precision to dramatic storytelling to blunt, no-nonsense testing reports. When reviewing multi-agent output, the team could instantly identify contributors. More importantly, the voices kept agents in domain: the storyteller naturally wrote narratively, the tester naturally wrote technically, and the archivist naturally wrote for posterity. Voice was a specialization mechanism, not just flavor."
         },
         "related_techniques": ["FG-0301", "FG-0303", "FG-0803"],
+        "sub_methods": [
+            {
+                "id": "FG-0302.001",
+                "name": "Voice Profile Specification",
+                "description": "Define each agent's voice across multiple dimensions: formality level, vocabulary preferences, humor style, response to uncertainty, theatrical intensity, and signature phrases. Document these in a structured format that can be loaded as part of context recovery. The specification should be detailed enough that voice is reproducible across sessions."
+            },
+            {
+                "id": "FG-0302.002",
+                "name": "Voice Consistency Auditing",
+                "description": "Periodically review agent output to verify voice consistency across sessions. Check for voice drift (gradual loss of distinction), voice bleed (agents adopting each other's patterns), and voice inflation (theatrical elements overwhelming substance). Correct drift by reinforcing the voice profile specification."
+            },
+            {
+                "id": "FG-0302.003",
+                "name": "Theatrics Calibration",
+                "description": "Assign and maintain a theatrics level for each agent (low, medium, high) that governs how dramatically they present their work. High-theatrics agents use narrative framing and dramatic reveals. Low-theatrics agents are direct and clinical. The calibration should match the agent's domain — a testing agent benefits from directness, a storyteller benefits from drama."
+            }
+        ],
         "added_version": "1.0"
     },
     {
@@ -584,8 +690,8 @@ techniques = [
             "Assuming all combinations are synergistic when some agents work better solo"
         ],
         "war_story": {
-            "title": "The Party System",
-            "content": "A team gamified multi-agent collaboration by implementing party mechanics inspired by RPG design. Certain agent combinations earned bonus XP, reflecting the real-world observation that some pairings consistently produced better results. The architect and tester working together caught issues earlier. The storyteller and analyst together produced content that was both engaging and accurate. Making these patterns explicit and rewarding them increased their frequency."
+            "title": "Agent Pairing Output Analysis",
+            "content": "Systematic observation of multi-agent task assignments revealed measurable output quality variance by agent pairing. Implementation-plus-QA pairings caught defects 3x earlier in the pipeline than sequential single-agent workflows. Narrative-plus-analysis pairings produced content that scored higher on both engagement and accuracy metrics than either agent working independently. Formalizing high-performing pairings into named team configurations increased their deployment frequency and made the synergy pattern repeatable."
         },
         "related_techniques": ["FG-0301", "FG-0402", "FG-0801"],
         "added_version": "1.0"
@@ -638,10 +744,32 @@ techniques = [
             "No standardized sequence - context recovery quality varies by session"
         ],
         "war_story": {
-            "title": "Structured Recovery",
-            "content": "A team standardized context recovery into a structured, ordered sequence. By loading context in a deliberate priority order - foundational rules before operational state - agents reached productive status significantly faster than with ad hoc loading. Recovery time dropped from over ten minutes to under three."
+            "title": "Context Recovery Load Order Optimization",
+            "content": "Context recovery was standardized into a five-stage priority sequence: governance rules, project architecture, active plan state, session history, then task-specific context. Recovery-to-productive time decreased from over ten minutes (ad hoc loading) to under three minutes (structured sequence). Critical finding: loading governance before task context prevented policy violations during the recovery phase itself — agents that loaded task context first frequently took actions that conflicted with governance loaded later."
         },
         "related_techniques": ["FG-0202", "FG-0210", "FG-0701"],
+        "sub_methods": [
+            {
+                "id": "FG-0401.001",
+                "name": "Governance-First Loading",
+                "description": "Always load governance rules, laws, and operational boundaries before any task-specific context. This prevents the common failure where agents take immediate action based on task context before understanding the rules that govern how they should act. The loading order is: laws, then architecture, then state, then task."
+            },
+            {
+                "id": "FG-0401.002",
+                "name": "Progressive Context Depth",
+                "description": "Load context in layers of increasing detail: start with summaries and metadata (frontmatter scanning), then load full documents only when the summary indicates relevance. This prevents context window saturation from loading everything at maximum detail. Optimize for speed-to-productive over completeness."
+            },
+            {
+                "id": "FG-0401.003",
+                "name": "Recovery Time Measurement",
+                "description": "Track and optimize the time from session start to first productive action. Measure recovery time across sessions to identify bottlenecks. Target: under 3 minutes for standard recovery, under 1 minute for continuation of recent work. Recovery time is a key operational metric."
+            },
+            {
+                "id": "FG-0401.004",
+                "name": "Context Staleness Detection",
+                "description": "Build mechanisms to detect when loaded context is outdated: timestamp checks, hash comparisons, or explicit staleness markers. Stale context is worse than no context because it creates false confidence. Flag stale context for refresh rather than silently using outdated information."
+            }
+        ],
         "added_version": "1.0"
     },
     {
@@ -663,8 +791,8 @@ techniques = [
             "Agents duplicating work because assignments overlap"
         ],
         "war_story": {
-            "title": "The Parallel Dispatch",
-            "content": "A team developed a dispatch protocol: the lead described the mission, selected the specialists, and launched them in parallel with individual assignments and a shared objective. Progress tracking showed each agent's status in real-time. A team that would have taken days to sequentially complete a multi-domain task finished in hours through coordinated parallel execution."
+            "title": "Parallel Execution Throughput",
+            "content": "A five-agent parallel dispatch completed a multi-domain review task in 47 minutes. Estimated sequential completion time for equivalent scope: 4+ hours. Convergence was managed through a shared objective with individual agent assignments and real-time progress tracking. Key constraint identified: parallel dispatch requires pre-defined convergence criteria — without explicit completion conditions, agents over-produced or duplicated effort across domain boundaries."
         },
         "related_techniques": ["FG-0301", "FG-0304", "FG-0404"],
         "added_version": "1.0"
@@ -771,7 +899,7 @@ techniques = [
     },
 
     # ═══════════════════════════════════════════════════════════════
-    # FT05 - EXECUTION (10 techniques)
+    # FT05 - EXECUTION (12 techniques)
     # ═══════════════════════════════════════════════════════════════
     {
         "id": "FG-0501",
@@ -796,6 +924,23 @@ techniques = [
             "content": "A team implemented mandatory design meetings after repeatedly building features that missed the mark. The format was simple: propose, question, decide, approve. The first week felt slow. By the second week, rework dropped by 60%. Agents stopped building things the human didn't want, and the human stopped receiving deliverables that needed complete rethinking. The time 'lost' to planning was recovered tenfold in reduced rework."
         },
         "related_techniques": ["FG-0404", "FG-0503", "FG-0508"],
+        "sub_methods": [
+            {
+                "id": "FG-0501.001",
+                "name": "Problem Statement Protocol",
+                "description": "Begin every design meeting with a clear, concise problem statement: what are we solving, who is it for, and what does success look like? The problem statement prevents scope drift during the meeting and provides a decision filter for proposals. If a proposed solution doesn't address the problem statement, it's out of scope."
+            },
+            {
+                "id": "FG-0501.002",
+                "name": "Decision Documentation Format",
+                "description": "Document every design meeting outcome in a structured format: problem, proposals considered, decision made, rationale, and open items. This creates a decision record that can be referenced when questions arise later. The format should be fast to write and fast to scan."
+            },
+            {
+                "id": "FG-0501.003",
+                "name": "Approval Gate Enforcement",
+                "description": "No building begins until the design meeting produces explicit human approval. This is not a rubber stamp — the human must confirm they understand and endorse the proposed approach. If the human has questions, the meeting continues. The approval gate prevents the most expensive failure: building the wrong thing quickly."
+            }
+        ],
         "added_version": "1.0"
     },
     {
@@ -892,8 +1037,8 @@ techniques = [
             "No chain for 'quick' posts that turn out to be impactful"
         ],
         "war_story": {
-            "title": "The Three-Agent Review",
-            "content": "A team routing blog posts through a three-agent review chain caught a technical inaccuracy that would have embarrassed the team publicly. The content agent drafted the post, the technical agent verified claims, and the brand agent ensured voice consistency. The human lead gave final approval. Total review time: 15 minutes. Reputation damage prevented: immeasurable."
+            "title": "Multi-Stage Content Verification",
+            "content": "A three-stage review chain (content generation, technical verification, brand consistency) was applied to public-facing publications. In its first month: 2 factual inaccuracies caught, 4 brand voice deviations corrected, 1 unintended disclosure of internal methodology prevented. Average review cycle: 15 minutes per artifact. The technical verification stage — agent cross-checking claims against source material — caught errors invisible to both the content generation and brand consistency stages."
         },
         "related_techniques": ["FG-0301", "FG-0503", "FG-0601"],
         "added_version": "1.0"
@@ -917,10 +1062,27 @@ techniques = [
             "Linear progression that doesn't accommodate different learning speeds"
         ],
         "war_story": {
-            "title": "Progressive Mastery",
-            "content": "A team designed a multi-chapter curriculum progressing from fundamentals to advanced operations. Each chapter contained encounters of varying types and difficulty. The progression was tested by running new contributors through it - gaps were identified when contributors struggled with concepts that prerequisites didn't cover. Multiple revision cycles produced a curriculum where every encounter built on prior knowledge and no concept appeared without preparation."
+            "title": "Curriculum Revision Through Failure Analysis",
+            "content": "A multi-chapter curriculum underwent three revision cycles driven by contributor failure data. Revision 1 addressed prerequisite gaps — contributors failed Chapter 3 challenges because Chapter 2 did not cover required concepts. Revision 2 addressed pacing — early encounters resolved too slowly, causing disengagement before skill acquisition. Revision 3 addressed interaction type distribution — consecutive encounters of the same type produced skill plateaus. Each revision was data-driven, not theoretical."
         },
         "related_techniques": ["FG-0107", "FG-0507", "FG-0801"],
+        "sub_methods": [
+            {
+                "id": "FG-0506.001",
+                "name": "Chapter Scaffolding",
+                "description": "Structure each chapter with a consistent internal format: learning objectives, concept introductions, guided practice, and a capstone synthesis challenge. The scaffold ensures no chapter is just information delivery — every chapter includes hands-on application. Scaffolding should be designed before content is written."
+            },
+            {
+                "id": "FG-0506.002",
+                "name": "Prerequisite Chain Validation",
+                "description": "Map every concept introduced in each chapter to the chapter where its prerequisites are taught. Validate that no chapter assumes knowledge not yet covered. When a gap is found, either reorder chapters or add the missing prerequisite. Test by having a new learner attempt the progression."
+            },
+            {
+                "id": "FG-0506.003",
+                "name": "Difficulty Curve Analysis",
+                "description": "Plot the difficulty progression across all chapters and verify it follows a smooth escalation with intentional relief points. Identify and fix difficulty spikes (chapters much harder than their neighbors) and plateaus (sequences of equal difficulty that produce disengagement). Use completion data to validate the curve."
+            }
+        ],
         "added_version": "1.0"
     },
     {
@@ -992,8 +1154,8 @@ techniques = [
             "Messages without clear action items or resolution criteria"
         ],
         "war_story": {
-            "title": "The Pinboard",
-            "content": "A team implemented a git-based pinboard: a shared document where agents and humans could pin messages for the team. Work requests, status updates, and decision proposals were all posted asynchronously. Each session started by reading the pinboard. The result was a team that stayed coordinated despite never being simultaneously present - agents from different sessions could communicate through the persistent medium."
+            "title": "Persistent Asynchronous Coordination Channel",
+            "content": "Implementation of a version-controlled pinboard document enabled coordination across non-overlapping sessions. Agents from Session N posted status updates and work requests; agents in Session N+1 read the pinboard before beginning work. Measured outcome: duplicate work incidents dropped from approximately 3 per week to near zero. The pinboard's git history provided an audit trail of inter-session communication otherwise lost between context windows."
         },
         "related_techniques": ["FG-0403", "FG-0702", "FG-0703"],
         "added_version": "1.0"
@@ -1023,9 +1185,59 @@ techniques = [
         "related_techniques": ["FG-0106", "FG-0602", "FG-0703"],
         "added_version": "1.0"
     },
+    {
+        "id": "FG-0511",
+        "name": "Instruction Design",
+        "tactic_id": "FT05",
+        "description": "The craft of writing instructions that produce reliable, consistent agent output. Instruction design is the most fundamental execution skill in human-AI collaboration and the one most frequently neglected. Effective instructions are specific about desired outcomes, explicit about constraints, clear about format expectations, and unambiguous about scope boundaries. The quality of agent output is bounded by the quality of the instructions that produced it.",
+        "implementation": "Structure instructions with explicit sections: objective (what to produce), constraints (what to avoid), format (how to structure output), scope (boundaries of the task), and success criteria (how to evaluate completion). Test instructions by verifying that a fresh agent with no prior context can execute them correctly. Iterate based on output quality — when output is wrong, examine the instruction before blaming the agent.",
+        "success_indicators": [
+            "Fresh agents produce correct output from instructions alone without clarification",
+            "Instructions are reusable across sessions and model versions",
+            "Output quality is consistent across repeated executions of the same instruction",
+            "Instruction failures are diagnosed and improved systematically"
+        ],
+        "failure_modes": [
+            "Implicit context — instructions assume knowledge the agent does not have, producing correct-seeming but wrong output",
+            "Over-specification — instructions so detailed they prevent the agent from applying judgment where judgment would improve output",
+            "Under-specification — instructions so vague that output quality depends on interpretation rather than instruction clarity",
+            "Static instructions — never revised despite consistent output quality issues, treating bad results as agent failures rather than instruction failures"
+        ],
+        "war_story": {
+            "title": "Instruction Iteration Cycle",
+            "content": "Initial task instructions for a multi-file code review produced inconsistent results: agent focus varied between sessions, some files reviewed superficially while others received excessive attention. Restructuring instructions with explicit per-file scope, defined review criteria, and output format requirements eliminated the variance. Three iterations of instruction refinement produced a reusable template achieving consistent output quality across 20+ subsequent executions."
+        },
+        "related_techniques": ["FG-0404", "FG-0210", "FG-0602"],
+        "added_version": "1.0"
+    },
+    {
+        "id": "FG-0512",
+        "name": "Error Recovery Protocol",
+        "tactic_id": "FT05",
+        "description": "Defined procedures for detecting, containing, and recovering from agent errors during execution. Agents will produce incorrect output, corrupt state, exceed scope, and misinterpret instructions — not occasionally, but regularly. Error recovery protocols ensure that when failures occur, the response is systematic rather than ad hoc: detect the error, stop propagation, assess blast radius, restore to known good state, and document the incident for prevention.",
+        "implementation": "Define error categories (output quality failure, state corruption, scope violation, resource exhaustion) with specific detection criteria and recovery procedures for each. Implement checkpoints at natural boundaries in complex tasks. Establish rollback procedures for every operation that modifies shared state. Document recovery steps so they can be executed by any team member.",
+        "success_indicators": [
+            "Errors are detected within minutes rather than discovered days later",
+            "Recovery from any error category takes less than 15 minutes",
+            "Rollback procedures exist and have been tested for all state-modifying operations",
+            "Error frequency decreases over time as patterns are identified and prevented"
+        ],
+        "failure_modes": [
+            "No checkpoints — errors compound through long execution chains before detection",
+            "Recovery procedures that exist on paper but have never been tested",
+            "Panic response — overreacting to errors by rolling back more than necessary or adding excessive process",
+            "Root cause neglect — recovering from the symptom without investigating why the error occurred"
+        ],
+        "war_story": {
+            "title": "Cascading State Corruption",
+            "content": "An agent executing a multi-file refactoring task introduced a naming inconsistency in file 3 of 12. Without intermediate checkpoints, the inconsistency propagated through files 4-12 before review. Recovery required reverting 10 files and re-executing from the checkpoint at file 3. Implementation of per-file verification checkpoints in subsequent tasks reduced cascading error incidents to zero. Time lost: 45 minutes. Estimated time saved by prevention in subsequent tasks: 6+ hours."
+        },
+        "related_techniques": ["FG-0205", "FG-0601", "FG-0706"],
+        "added_version": "1.0"
+    },
 
     # ═══════════════════════════════════════════════════════════════
-    # FT06 - QUALITY (5 techniques)
+    # FT06 - QUALITY (6 techniques)
     # ═══════════════════════════════════════════════════════════════
     {
         "id": "FG-0601",
@@ -1050,6 +1262,28 @@ techniques = [
             "content": "A team built over a thousand automated tests across multiple validation tiers - from basic structural checks to full experience validation. The test suite caught dozens of issues in its first run that would have shipped to users. Not security vulnerabilities - logical inconsistencies, broken references, and placeholder data that looked real. The investment in automated testing at every tier paid for itself immediately."
         },
         "related_techniques": ["FG-0508", "FG-0602", "FG-0604"],
+        "sub_methods": [
+            {
+                "id": "FG-0601.001",
+                "name": "Atomic Validation Layer",
+                "description": "The pyramid base: high-volume, fast, automated tests that validate individual outputs in isolation. Structural checks, type validation, constraint enforcement, and format verification. These tests run on every change and catch the majority of issues. Optimize for speed — if atomic tests are slow, they won't run frequently enough."
+            },
+            {
+                "id": "FG-0601.002",
+                "name": "Integration Coherence Testing",
+                "description": "The pyramid middle: tests that validate how individual outputs combine into larger deliverables. Cross-reference checks, consistency validation across related outputs, and interface contract verification. These catch issues that atomic tests miss — individually correct outputs that are collectively incoherent."
+            },
+            {
+                "id": "FG-0601.003",
+                "name": "System Experience Validation",
+                "description": "The pyramid upper tier: end-to-end tests that validate complete deliverables as a user would experience them. Navigate full workflows, verify user-facing behavior, and confirm that the assembled product works as intended. Fewer tests than lower tiers, but each validates a critical user path."
+            },
+            {
+                "id": "FG-0601.004",
+                "name": "Human Acceptance Review",
+                "description": "The pyramid apex: human judgment applied to deliverables that pass all automated tiers. Not everything can be automated — aesthetic quality, narrative coherence, strategic alignment, and user experience require human evaluation. This tier should focus human attention on what only humans can judge, not on what automation already verified."
+            }
+        ],
         "added_version": "1.0"
     },
     {
@@ -1121,8 +1355,8 @@ techniques = [
             "Discovering platform issues only after deployment"
         ],
         "war_story": {
-            "title": "The Three-OS Test",
-            "content": "A team shipping a developer tool tested exclusively on macOS during development. When users on Windows and Linux reported failures, the team implemented cross-platform CI that tested on all three operating systems automatically. The first cross-platform run revealed 23 platform-specific issues - path separators, permission models, and shell differences that were invisible on macOS. Every subsequent release shipped with three-platform confidence."
+            "title": "Cross-Platform Defect Distribution",
+            "content": "Initial deployment tested exclusively on macOS. First cross-platform CI run across macOS, Windows, and Linux revealed 23 platform-specific defects: 11 path separator issues, 5 permission model differences, 4 shell compatibility failures, and 3 filesystem case-sensitivity conflicts. All 23 were invisible to single-platform testing. AI-generated code exhibited higher cross-platform defect rates than human-written code in the same codebase, likely due to training data bias toward the development platform."
         },
         "related_techniques": ["FG-0601", "FG-0602", "FG-0508"],
         "added_version": "1.0"
@@ -1152,9 +1386,34 @@ techniques = [
         "related_techniques": ["FG-0202", "FG-0502", "FG-0701"],
         "added_version": "1.0"
     },
+    {
+        "id": "FG-0606",
+        "name": "Output Verification",
+        "tactic_id": "FT06",
+        "description": "Systematic methods for detecting inaccurate, fabricated, or misleading content in AI-generated output. AI agents produce output with high confidence regardless of accuracy — hallucinated facts, invented citations, plausible-sounding but incorrect technical claims, and subtly wrong data are indistinguishable from correct output without explicit verification. Output verification is not optional quality enhancement; it is the minimum standard for using AI-generated content in any context where accuracy matters.",
+        "implementation": "Implement verification at three levels: structural (output matches requested format and constraints), factual (claims are verifiable against authoritative sources), and logical (conclusions follow from premises). Use cross-agent verification where a second agent independently checks output against source material. Establish a verification threshold — what percentage of claims must be verified before acceptance — and adjust based on consequence of errors.",
+        "success_indicators": [
+            "Factual errors are caught before output reaches production or publication",
+            "Verification coverage is proportional to the consequence of inaccuracy",
+            "Cross-agent verification catches errors that self-review misses",
+            "The team maintains a running log of error types for pattern detection"
+        ],
+        "failure_modes": [
+            "Verification theater — reviewing output without actually checking claims against sources",
+            "Over-trust in confident language — agents that express certainty are not more likely to be correct",
+            "Single-point verification — one agent checking another without independent source access",
+            "Verification fatigue — skipping checks on routine output that later turns out to contain errors"
+        ],
+        "war_story": {
+            "title": "Confident and Wrong",
+            "content": "A content generation agent produced a technical blog post containing three assertions stated with high confidence. Cross-agent verification against source documentation revealed one assertion was factually inverted — the opposite of the correct statement. The error was syntactically indistinguishable from correct output. Without the verification stage, the inversion would have been published. Post-incident analysis: high-confidence errors occurred at approximately the same rate as low-confidence hedging, confirming linguistic confidence is not a reliability signal."
+        },
+        "related_techniques": ["FG-0601", "FG-0503", "FG-0602"],
+        "added_version": "1.0"
+    },
 
     # ═══════════════════════════════════════════════════════════════
-    # FT07 - KNOWLEDGE (6 techniques)
+    # FT07 - KNOWLEDGE (7 techniques)
     # ═══════════════════════════════════════════════════════════════
     {
         "id": "FG-0701",
@@ -1179,6 +1438,23 @@ techniques = [
             "content": "A team structured their project history for rapid scanning - agents could identify the current project state and begin productive work in under a minute. The system tracked active work, completed deliverables, and deferred plans with clear lifecycle management. It became the single source of truth that survived every context reset."
         },
         "related_techniques": ["FG-0401", "FG-0703", "FG-0704"],
+        "sub_methods": [
+            {
+                "id": "FG-0701.001",
+                "name": "YAML Frontmatter Protocol",
+                "description": "Every history document gets machine-readable frontmatter with standardized fields: plan name, status, owner, key decision, and date. This enables fast scanning — agents can read frontmatter (under 50 tokens) to determine relevance before committing to reading the full document (500+ tokens). Frontmatter is the index layer of the history system."
+            },
+            {
+                "id": "FG-0701.002",
+                "name": "Lifecycle State Management",
+                "description": "Track every plan through explicit lifecycle states: active, complete, deferred, archived. State transitions are documented with timestamps and rationale. The lifecycle ensures nothing is silently abandoned — deferred plans have documented reasons, completed plans have summaries, and archived plans remain accessible."
+            },
+            {
+                "id": "FG-0701.003",
+                "name": "Cross-Reference Validation",
+                "description": "Maintain bidirectional references between the history system and the actual work (code commits, deployed artifacts, published content). If the history says a plan is complete, the corresponding artifacts should exist. If artifacts exist without history entries, the history has gaps. Regular cross-reference audits catch drift."
+            }
+        ],
         "added_version": "1.0"
     },
     {
@@ -1275,10 +1551,27 @@ techniques = [
             "Stories captured but never used - a collection nobody reads"
         ],
         "war_story": {
-            "title": "The Gems Command",
-            "content": "A team created a custom command - '/gems' - that when invoked, saved the current conversation's insights to permanent storage. When something important happened, someone would type '/gems' and the moment was preserved: the insight, the context, the emotional texture, the exact words. Over two weeks, they accumulated a collection of 30+ gems that became the raw material for blog posts, book chapters, and conference talks. The command cost five seconds to invoke; the content it preserved was irreplaceable."
+            "title": "Insight Capture Automation",
+            "content": "A team implemented a single-command insight capture mechanism that persisted conversation highlights to permanent storage on invocation. Over a 30-day period, the command was invoked 30+ times, producing a curated collection of insights, breakthrough moments, and contextual observations. This collection became primary source material for publications and presentations. Key metric: average capture time was under 5 seconds per invocation. Without the mechanism, equivalent insights were lost between sessions at an estimated rate of 3-5 per week."
         },
         "related_techniques": ["FG-0405", "FG-0701", "FG-0803"],
+        "sub_methods": [
+            {
+                "id": "FG-0705.001",
+                "name": "Real-Time Capture Triggers",
+                "description": "Define specific moments that should trigger immediate capture: breakthroughs, failures, governance incidents, funny moments, and 'aha' insights. Implement a low-friction capture mechanism (single command or keyword) that persists the moment with minimal interruption to workflow. Capture delay is the enemy — details fade within minutes."
+            },
+            {
+                "id": "FG-0705.002",
+                "name": "Multi-Layer Persistence",
+                "description": "Store captured moments in multiple locations for redundancy and different access patterns: a permanent archive (blog/vault), a cross-session memory layer (auto-memory), and a curated collection (war stories). Each layer serves a different retrieval need — quick reference, deep research, and external publication."
+            },
+            {
+                "id": "FG-0705.003",
+                "name": "Content Potential Tagging",
+                "description": "Tag every captured moment with its potential reuse contexts: blog post, podcast episode, book chapter, conference talk, team training material. This transforms the capture collection from a passive archive into an active content pipeline. Review tagged content periodically to identify patterns and themes."
+            }
+        ],
         "added_version": "1.0"
     },
     {
@@ -1300,10 +1593,35 @@ techniques = [
             "Backup procedures documented but not automated - relies on human memory"
         ],
         "war_story": {
-            "title": "The Three-Copy Rule",
-            "content": "A team established a three-copy rule: every critical repository exists on the development machine, on GitHub, and on an external drive. When a repository corruption incident would have destroyed weeks of work, the external drive backup - updated nightly - preserved everything. The 30 seconds per day invested in backup saved weeks of reconstruction. The incident converted every team member into a backup advocate."
+            "title": "Backup Recovery Validation",
+            "content": "A repository corruption incident was resolved in under 15 minutes using the second of three redundant copies (development machine, remote repository, external drive). Without the backup protocol, estimated reconstruction time: 2-3 weeks. Post-incident analysis revealed the nightly backup cadence was sufficient for this incident but would have resulted in up to 24 hours of data loss. Backup frequency was subsequently increased for active development branches."
         },
         "related_techniques": ["FG-0207", "FG-0701", "FG-0703"],
+        "added_version": "1.0"
+    },
+    {
+        "id": "FG-0707",
+        "name": "Context Window Management",
+        "tactic_id": "FT07",
+        "description": "Strategic management of what information occupies the finite context window available to AI agents during a session. The context window is the single most important technical constraint in AI collaboration — it determines what the agent knows, what it has forgotten, and what it will hallucinate to fill gaps. Effective context window management prioritizes high-value information, removes stale context, and structures loading sequences to maximize signal-to-noise ratio within the available token budget.",
+        "implementation": "Audit the token cost of every piece of context loaded at session start. Rank context by utility: governance rules and active task state first, reference material and historical context second, supplementary material last. Implement progressive loading — start with essential context and add detail only when the task requires it. Monitor for context window pressure indicators: agents repeating themselves, forgetting earlier instructions, or producing output inconsistent with loaded context.",
+        "success_indicators": [
+            "Agents operate within their effective context window without degradation",
+            "Context loading is prioritized by task relevance, not loading order habit",
+            "Stale or irrelevant context is identified and removed between task phases",
+            "The team can articulate the token cost of their standard context loading"
+        ],
+        "failure_modes": [
+            "Loading everything — filling the context window with comprehensive but low-relevance material, leaving no room for task execution",
+            "No prioritization — treating all context as equally important, resulting in critical information pushed out by volume",
+            "Ignoring degradation signals — continuing to add context after agents show signs of window pressure",
+            "Static loading — using the same context loading regardless of task type"
+        ],
+        "war_story": {
+            "title": "Context Saturation Detection",
+            "content": "Performance degradation was observed in sessions where agents received full project documentation at startup: output quality declined after the third major task, agents contradicted earlier instructions, and hallucination frequency increased. Token analysis revealed standard context loading consumed 68% of the effective context window before any task execution began. Implementing task-specific context profiles — loading only governance plus task-relevant material — reduced baseline consumption to 31% and eliminated the observed degradation pattern."
+        },
+        "related_techniques": ["FG-0401", "FG-0701", "FG-0210"],
         "added_version": "1.0"
     },
 
@@ -1333,6 +1651,23 @@ techniques = [
             "content": "A team implemented a point-based progress system with tiered awards - larger contributions earned more points, but even small fixes were tracked. Each contributor had a visible profile showing their level and specialization. The system made invisible work visible and gave the team a shared vocabulary for contribution scale. The metaphor mattered: naming the unit and making it tangible changed how the team thought about incremental progress."
         },
         "related_techniques": ["FG-0304", "FG-0802", "FG-0605"],
+        "sub_methods": [
+            {
+                "id": "FG-0801.001",
+                "name": "Point Value Calibration",
+                "description": "Define a point scale that accurately reflects contribution significance. Small fixes earn modest points, major features earn substantial points, and milestone completions earn bonus multipliers. Recalibrate quarterly to prevent point inflation. The scale should make intuitive sense — team members should be able to estimate point values without looking them up."
+            },
+            {
+                "id": "FG-0801.002",
+                "name": "Level Milestone Design",
+                "description": "Create meaningful level thresholds that correspond to real capability milestones. Each level should represent a genuine increase in demonstrated competence, not just accumulated time. Include level names or titles that carry meaning within the team culture. Display levels prominently to make progress visible."
+            },
+            {
+                "id": "FG-0801.003",
+                "name": "Anti-Gaming Safeguards",
+                "description": "Build protections against metric manipulation: points for quality not just quantity, diminishing returns for repetitive small tasks, peer review requirements for large point awards, and periodic audits of point distributions. The gamification system should incentivize the work you actually want, not create perverse incentives."
+            }
+        ],
         "added_version": "1.0"
     },
     {

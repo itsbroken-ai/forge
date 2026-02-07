@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FT05: Execution | F.O.R.G.E</title>
+    <meta name="description" content="Building, creating, and shipping - the actual collaborative work. Execution techniques define how human-AI teams plan, build, review, and deliver work products with consistent quality and clear attribution.">
+    <meta property="og:title" content="Execution | F.O.R.G.E">
+    <meta property="og:description" content="Building, creating, and shipping - the actual collaborative work. Execution techniques define how human-AI teams plan, build, review, and deliver work products with consistent quality and clear attribution.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://forged.itsbroken.ai/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Execution | F.O.R.G.E">
     <meta name="author" content="Pete McKernan / Cipher Circle">
     <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="canonical" href="https://forged.itsbroken.ai/tactics/ft05.html">
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
     <link rel="stylesheet" href="../css/forged.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
     <nav class="nav">
         <div class="nav-inner">
             <a href="../index.html" class="nav-brand">
                 <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
-                <span class="nav-title">itsbroken.ai</span>
+                <span class="nav-title">ItsBroken.ai</span>
             </a>
             <div class="nav-links">
                 <a href="../index.html" class="nav-link">Matrix</a>
@@ -25,7 +34,7 @@
         </div>
     </nav>
 
-    <main class="tactic-page">
+    <main id="main-content" class="tactic-page">
         <div class="breadcrumb">
             <a href="../index.html">Matrix</a>
             <span class="breadcrumb-sep">/</span>
@@ -36,7 +45,7 @@
             <span class="tactic-id-large" style="color: #dbb95c">FT05</span>
             <h1 style="color: #dbb95c">Execution</h1>
             <p class="tactic-desc">Building, creating, and shipping - the actual collaborative work. Execution techniques define how human-AI teams plan, build, review, and deliver work products with consistent quality and clear attribution.</p>
-            <span class="tactic-stat">10 techniques</span>
+            <span class="tactic-stat">12 methods</span>
         </header>
 
         <section class="tactic-techniques">
@@ -44,7 +53,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Technique</th>
+                        <th>Method</th>
                         <th>Description</th>
                     </tr>
                 </thead>
@@ -52,7 +61,7 @@
                     
             <tr>
                 <td><a href="../techniques/fg-0501.html">FG-0501</a></td>
-                <td><a href="../techniques/fg-0501.html">Design Meetings</a></td>
+                <td><a href="../techniques/fg-0501.html">Design Meetings <span class="sub-method-badge-sm">3</span></a></td>
                 <td>Conduct structured planning sessions before building. Design Meetings follow a consistent format: present the problem, propose a solution, identify questions, make decisions, and get approval before writing code. This prevents the common failure mode of agents building the wrong thing quickly. The meeting format forces alignment between human intent and agent execution before resources are invested.</td>
             </tr>
             <tr>
@@ -77,7 +86,7 @@
             </tr>
             <tr>
                 <td><a href="../techniques/fg-0506.html">FG-0506</a></td>
-                <td><a href="../techniques/fg-0506.html">Progressive Curriculum Design</a></td>
+                <td><a href="../techniques/fg-0506.html">Progressive Curriculum Design <span class="sub-method-badge-sm">3</span></a></td>
                 <td>Structure learning content and skill development in progressive chapters that build competency through escalating complexity. Each chapter introduces concepts, reinforces through practice, and culminates in a capstone that requires synthesizing everything learned. This applies to both human team member development and designing training materials for others adopting the methodology.</td>
             </tr>
             <tr>
@@ -99,6 +108,16 @@
                 <td><a href="../techniques/fg-0510.html">FG-0510</a></td>
                 <td><a href="../techniques/fg-0510.html">Workspace Organization Standard</a></td>
                 <td>Define and enforce consistent directory structures, naming conventions, and file organization. AI agents navigate workspaces by reading directory listings and file paths. A well-organized workspace enables faster context recovery, reduces navigation errors, and prevents the gradual entropy that transforms a clean repository into an archaeological dig. Organization is not aesthetic - it is infrastructure.</td>
+            </tr>
+            <tr>
+                <td><a href="../techniques/fg-0511.html">FG-0511</a></td>
+                <td><a href="../techniques/fg-0511.html">Instruction Design</a></td>
+                <td>The craft of writing instructions that produce reliable, consistent agent output. Instruction design is the most fundamental execution skill in human-AI collaboration and the one most frequently neglected. Effective instructions are specific about desired outcomes, explicit about constraints, clear about format expectations, and unambiguous about scope boundaries. The quality of agent output is bounded by the quality of the instructions that produced it.</td>
+            </tr>
+            <tr>
+                <td><a href="../techniques/fg-0512.html">FG-0512</a></td>
+                <td><a href="../techniques/fg-0512.html">Error Recovery Protocol</a></td>
+                <td>Defined procedures for detecting, containing, and recovering from agent errors during execution. Agents will produce incorrect output, corrupt state, exceed scope, and misinterpret instructions — not occasionally, but regularly. Error recovery protocols ensure that when failures occur, the response is systematic rather than ad hoc: detect the error, stop propagation, assess blast radius, restore to known good state, and document the incident for prevention.</td>
             </tr>
                 </tbody>
             </table>

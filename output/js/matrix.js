@@ -41,6 +41,52 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Layout toggle
+    const layoutBtns = document.querySelectorAll('.layout-btn');
+    const matrix = document.querySelector('.matrix');
+
+    if (layoutBtns.length && matrix) {
+        const saved = localStorage.getItem('forged-layout');
+        if (saved === 'flat') {
+            matrix.classList.add('matrix--flat');
+            layoutBtns.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.layout === 'flat');
+            });
+        }
+
+        layoutBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const layout = this.dataset.layout;
+                layoutBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                if (layout === 'flat') {
+                    matrix.classList.add('matrix--flat');
+                } else {
+                    matrix.classList.remove('matrix--flat');
+                }
+                localStorage.setItem('forged-layout', layout);
+            });
+        });
+    }
+
+    // Sub-method expand/collapse
+    const subBadges = document.querySelectorAll('.sub-method-badge');
+    subBadges.forEach(badge => {
+        badge.style.cursor = 'pointer';
+        badge.title = 'Show sub-methods';
+        badge.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const wrapper = this.closest('.technique-cell-wrapper');
+            if (!wrapper) return;
+            const subList = wrapper.querySelector('.sub-method-list');
+            if (!subList) return;
+            subList.classList.toggle('expanded');
+            this.title = subList.classList.contains('expanded') ? 'Hide sub-methods' : 'Show sub-methods';
+        });
+    });
+
     // Keyboard shortcut: / to focus search
     document.addEventListener('keydown', function(e) {
         if (e.key === '/' && document.activeElement !== searchInput) {

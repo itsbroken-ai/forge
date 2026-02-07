@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | F.O.R.G.E</title>
+    <meta name="description" content="What F.O.R.G.E is, who it's for, and how it was forged from 20 years of operational experience in military command, red team operations, and engineering.">
+    <meta property="og:title" content="About | F.O.R.G.E - Agentic AI Creation Framework">
+    <meta property="og:description" content="What F.O.R.G.E is, who it's for, and how it was forged from 20 years of operational experience.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://forged.itsbroken.ai/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About | F.O.R.G.E - Agentic AI Creation Framework">
     <meta name="author" content="Pete McKernan / Cipher Circle">
     <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="canonical" href="https://forged.itsbroken.ai/about.html">
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
     <link rel="stylesheet" href="css/forged.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
     <nav class="nav">
         <div class="nav-inner">
             <a href="index.html" class="nav-brand">
                 <img src="img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
-                <span class="nav-title">itsbroken.ai</span>
+                <span class="nav-title">ItsBroken.ai</span>
             </a>
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Matrix</a>
@@ -25,7 +34,7 @@
         </div>
     </nav>
 
-    <main class="content-page">
+    <main id="main-content" class="content-page">
         <h1>About F.O.R.G.E</h1>
 
         <section class="content-section">
@@ -37,19 +46,27 @@
         </section>
 
         <section class="content-section">
+            <h2>Why a Framework?</h2>
+            <p>I swore I would never write a framework. Frameworks are what happens when someone with a whiteboard and a title decides to solve a problem they've never actually had. I've sat through enough of those meetings to know better.</p>
+            <p>But here's what changed: I watched the results. Teams without operational methodology — without governance, without structured context recovery, without defined authority — don't just produce worse output. They produce <em>dangerous</em> output. Agents that force-push to production. Hallucinated facts that ship to customers. Scope that expands until the project collapses under its own weight. These aren't theoretical risks. They're the stories that make the news, the ones where the headline is "AI breaks everything" when the real headline should be "team deployed AI without a methodology."</p>
+            <p>If you're not getting good results with AI agents, there is a point where it stops being the model's fault and starts being an operational problem. The models are good enough. The tooling is good enough. What's missing is the discipline — the same discipline that any high-performing team in any domain has always needed. This framework exists because proven engineering principles from QA, military operations, red teaming, and systems architecture transfer directly to AI collaboration, and the teams that apply them are getting dramatically better results than the teams that don't.</p>
+            <p>I built this because it worked for us, and I'm publishing it because it will work for you.</p>
+        </section>
+
+        <section class="content-section">
             <h2>What F.O.R.G.E Is</h2>
-            <p><strong>F.O.R.G.E</strong> (Framework for Organized, Resilient, Governed Engineering and Development of Agentic AI) is an Agentic AI Creation Framework. It provides 52 techniques organized across 8 tactical pillars - a structured, navigable taxonomy for building, governing, and scaling AI agent systems at any level of application.</p>
-            <p>Modeled after <strong>MITRE ATT&amp;CK</strong> - the framework that gave cybersecurity a common language for adversary behavior - F.O.R.G.E gives agentic AI a common language for <em>building</em> behavior. Each technique is specific, actionable, and comes with implementation guidance, success indicators, failure modes, and a field report from real-world use.</p>
-            <p>This is not theory. Every technique exists because something went right - or more often, because something went wrong and we built the system to prevent it from happening again.</p>
+            <p><strong>F.O.R.G.E</strong> (Framework for Organized, Resilient, Governed Engineering and Development of Agentic AI) is an Agentic AI Creation Framework. It provides 57 methods organized across 8 tactical pillars - a structured, navigable taxonomy for building, governing, and scaling AI agent systems at any level of application.</p>
+            <p>Modeled after <strong>MITRE ATT&amp;CK</strong> - the framework that gave cybersecurity a common language for adversary behavior - F.O.R.G.E gives agentic AI a common language for <em>building</em> behavior. Each method is specific, actionable, and comes with implementation guidance, success indicators, failure modes, and a field report from real-world use.</p>
+            <p>This is not theory. Every method exists because something went right - or more often, because something went wrong and we built the system to prevent it from happening again.</p>
         </section>
 
         <section class="content-section">
             <h2>Who It's For</h2>
             <p>F.O.R.G.E scales to any level of agentic AI application:</p>
             <ul>
-                <li><strong>Solo practitioners</strong> running 1-3 AI agents: Start with Foundation and Knowledge (~10 core techniques)</li>
-                <li><strong>Teams</strong> of 2-5 humans with multiple agents: Add Governance and Team Design (~25 techniques)</li>
-                <li><strong>Organizations</strong> running scaled AI operations: Implement the full framework (all 52 techniques)</li>
+                <li><strong>Solo practitioners</strong> running 1-3 AI agents: Start with Foundation and Knowledge (~10 core methods)</li>
+                <li><strong>Teams</strong> of 2-5 humans with multiple agents: Add Governance and Team Design (~25 methods)</li>
+                <li><strong>Organizations</strong> running scaled AI operations: Implement the full framework (all 57 methods)</li>
             </ul>
             <p>If you are using AI agents in production - or planning to - F.O.R.G.E gives you the vocabulary and the playbook.</p>
         </section>
@@ -88,9 +105,9 @@
             <p>F.O.R.G.E uses a matrix structure inspired by MITRE ATT&amp;CK:</p>
             <ul>
                 <li><strong>Tactics</strong> (columns) represent the 8 strategic pillars of agentic AI development</li>
-                <li><strong>Techniques</strong> (cells) represent 52 specific practices within each tactic</li>
-                <li>Each technique includes a description, implementation guide, success indicators, failure modes, and a field report</li>
-                <li>Techniques are identified by ID (e.g., FG-0101) for precise cross-referencing</li>
+                <li><strong>Methods</strong> (cells) represent 57 specific practices within each tactic</li>
+                <li>Each method includes a description, implementation guide, success indicators, failure modes, and a field report</li>
+                <li>Methods are identified by ID (e.g., FG-0101) for precise cross-referencing</li>
             </ul>
         </section>
 
@@ -108,7 +125,7 @@
                     <tr>
                         <td>v1.0</td>
                         <td>2026-02-06</td>
-                        <td>Initial release. 8 tactics, 52 techniques.</td>
+                        <td>Initial release. 8 tactics, 57 methods.</td>
                     </tr>
                 </tbody>
             </table>

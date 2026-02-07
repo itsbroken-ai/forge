@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Homepage -->
   <url>
     <loc>https://forged.itsbroken.ai/</loc>
     <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Core Pages -->
   <url>
     <loc>https://forged.itsbroken.ai/about.html</loc>
     <lastmod>2026-02-06</lastmod>
@@ -28,8 +24,6 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
-  <!-- Tactics: FT01 through FT08 -->
   <url>
     <loc>https://forged.itsbroken.ai/tactics/ft01.html</loc>
     <lastmod>2026-02-06</lastmod>
@@ -78,8 +72,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Techniques: Foundation (FG-0101 through FG-0107) -->
   <url>
     <loc>https://forged.itsbroken.ai/techniques/fg-0101.html</loc>
     <lastmod>2026-02-06</lastmod>
@@ -122,8 +114,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
-  <!-- Techniques: Governance (FG-0201 through FG-0210) -->
   <url>
     <loc>https://forged.itsbroken.ai/techniques/fg-0201.html</loc>
     <lastmod>2026-02-06</lastmod>
@@ -184,8 +174,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
-  <!-- Techniques: Team Design (FG-0301 through FG-0305) -->
+  <url>
+    <loc>https://forged.itsbroken.ai/techniques/fg-0211.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <url>
     <loc>https://forged.itsbroken.ai/techniques/fg-0301.html</loc>
     <lastmod>2026-02-06</lastmod>
@@ -216,8 +210,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
-  <!-- Techniques: Invocation (FG-0401 through FG-0406) -->
   <url>
     <loc>https://forged.itsbroken.ai/techniques/fg-0401.html</loc>
     <lastmod>2026-02-06</lastmod>
@@ -254,8 +246,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
-  <!-- Techniques: Execution (FG-0501 through FG-0510) -->
   <url>
     <loc>https://forged.itsbroken.ai/techniques/fg-0501.html</loc>
     <lastmod>2026-02-06</lastmod>
@@ -316,8 +306,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
-  <!-- Techniques: Quality (FG-0601 through FG-0605) -->
+  <url>
+    <loc>https://forged.itsbroken.ai/techniques/fg-0511.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://forged.itsbroken.ai/techniques/fg-0512.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <url>
     <loc>https://forged.itsbroken.ai/techniques/fg-0601.html</loc>
     <lastmod>2026-02-06</lastmod>
@@ -348,8 +348,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
-  <!-- Techniques: Knowledge (FG-0701 through FG-0706) -->
+  <url>
+    <loc>https://forged.itsbroken.ai/techniques/fg-0606.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <url>
     <loc>https://forged.itsbroken.ai/techniques/fg-0701.html</loc>
     <lastmod>2026-02-06</lastmod>
@@ -386,8 +390,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
-  <!-- Techniques: Evolution (FG-0801 through FG-0803) -->
+  <url>
+    <loc>https://forged.itsbroken.ai/techniques/fg-0707.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <url>
     <loc>https://forged.itsbroken.ai/techniques/fg-0801.html</loc>
     <lastmod>2026-02-06</lastmod>
@@ -406,5 +414,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
 </urlset>

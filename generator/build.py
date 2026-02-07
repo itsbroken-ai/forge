@@ -106,10 +106,33 @@ def slugify(text):
 
 def build_technique_card(tech, tactic_color):
     """Build HTML for a single technique card in the matrix."""
-    return f'''<a href="techniques/{tech['id'].lower()}.html" class="technique-cell" style="border-left: 3px solid {tactic_color['border']}">
-        <span class="technique-id">{tech['id']}</span>
-        <span class="technique-name">{tech['name']}</span>
-    </a>'''
+    sub_methods = tech.get("sub_methods", [])
+    sub_count = len(sub_methods)
+
+    # Sub-method indicator badge
+    sub_badge = ""
+    if sub_count > 0:
+        sub_badge = f'<span class="sub-method-badge">{sub_count}</span>'
+
+    # Sub-method expandable rows
+    sub_rows = ""
+    if sub_count > 0:
+        sub_items = ""
+        for sub in sub_methods:
+            sub_items += f'''<a href="techniques/{tech['id'].lower()}.html#{sub['id'].lower().replace('.', '-')}" class="sub-method-row" style="border-left: 3px solid {tactic_color['border']}">
+                <span class="sub-method-id">{sub['id']}</span>
+                <span class="sub-method-name">{sub['name']}</span>
+            </a>'''
+        sub_rows = f'''<div class="sub-method-list" data-parent="{tech['id']}">{sub_items}</div>'''
+
+    return f'''<div class="technique-cell-wrapper">
+        <a href="techniques/{tech['id'].lower()}.html" class="technique-cell" style="border-left: 3px solid {tactic_color['border']}" data-has-subs="{sub_count > 0}">
+            <span class="technique-id">{tech['id']}</span>
+            <span class="technique-name">{tech['name']}</span>
+            {sub_badge}
+        </a>
+        {sub_rows}
+    </div>'''
 
 
 def build_matrix_page(data):
@@ -139,7 +162,7 @@ def build_matrix_page(data):
             <a href="tactics/{tid.lower()}.html" class="tactic-header" style="background: {color['bg']}; border: 1px solid {color['border']}; color: {color['text']}">
                 <span class="tactic-id">{tid}</span>
                 <span class="tactic-name">{tactic['name']}</span>
-                <span class="tactic-count">{len(techs)} techniques</span>
+                <span class="tactic-count">{len(techs)} methods</span>
             </a>
             <div class="technique-list">
                 {tech_cards}
@@ -192,6 +215,29 @@ def build_technique_pages(data):
                 rel = tech_map[rel_id]
                 related_html += f'<a href="{rel_id.lower()}.html" class="related-link">{rel_id}: {rel["name"]}</a>\n'
 
+        # Sub-methods section
+        sub_methods = tech.get("sub_methods", [])
+        sub_methods_html = ""
+        if sub_methods:
+            sub_items = ""
+            for sub in sub_methods:
+                anchor = sub['id'].lower().replace('.', '-')
+                sub_items += f'''
+                <div class="sub-method-card" id="{anchor}" style="border-left: 3px solid {color['border']}">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">{sub['id']}</span>
+                        <span class="sub-method-card-name">{sub['name']}</span>
+                    </div>
+                    <p class="sub-method-desc">{sub['description']}</p>
+                </div>'''
+            sub_methods_html = f'''
+            <section class="technique-sub-methods">
+                <h2>Sub-Methods <span class="sub-method-count">{len(sub_methods)}</span></h2>
+                <div class="sub-method-grid">
+                    {sub_items}
+                </div>
+            </section>'''
+
         # War story
         war_story = tech.get("war_story", {})
         war_story_html = ""
@@ -203,6 +249,7 @@ def build_technique_pages(data):
             </section>'''
 
         html = template.replace("{{TECH_ID}}", tech["id"])
+        html = html.replace("{{TECH_ID_LOWER}}", tech["id"].lower())
         html = html.replace("{{TECH_NAME}}", tech["name"])
         html = html.replace("{{TACTIC_ID}}", tech["tactic_id"].lower())
         html = html.replace("{{TACTIC_NAME}}", tactic["name"])
@@ -213,6 +260,7 @@ def build_technique_pages(data):
         html = html.replace("{{INDICATORS}}", indicators_html)
         html = html.replace("{{FAILURES}}", failures_html)
         html = html.replace("{{RELATED}}", related_html)
+        html = html.replace("{{SUB_METHODS}}", sub_methods_html)
         html = html.replace("{{WAR_STORY}}", war_story_html)
         html = html.replace("{{VERSION}}", tech.get("added_version", "1.0"))
 
@@ -235,14 +283,17 @@ def build_tactic_pages(data):
         # Build technique table
         table_rows = ""
         for tech in tactic_techs:
+            sub_count = len(tech.get("sub_methods", []))
+            sub_indicator = f' <span class="sub-method-badge-sm">{sub_count}</span>' if sub_count > 0 else ""
             table_rows += f'''
             <tr>
                 <td><a href="../techniques/{tech['id'].lower()}.html">{tech['id']}</a></td>
-                <td><a href="../techniques/{tech['id'].lower()}.html">{tech['name']}</a></td>
+                <td><a href="../techniques/{tech['id'].lower()}.html">{tech['name']}{sub_indicator}</a></td>
                 <td>{tech.get('description', '')}</td>
             </tr>'''
 
         html = template.replace("{{TACTIC_ID}}", tactic["id"])
+        html = html.replace("{{TACTIC_ID_LOWER}}", tactic["id"].lower())
         html = html.replace("{{TACTIC_NAME}}", tactic["name"])
         html = html.replace("{{TACTIC_DESC}}", tactic["description"])
         html = html.replace("{{TACTIC_COLOR}}", color["border"])
@@ -292,6 +343,58 @@ def build_terms_page(data):
     print("  Terms page generated")
 
 
+def build_sitemap(data):
+    """Generate sitemap.xml dynamically from framework data."""
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    urls = []
+
+    # Homepage
+    urls.append(('https://forged.itsbroken.ai/', today, 'weekly', '1.0'))
+
+    # Static pages
+    for page, freq, pri in [
+        ('about.html', 'monthly', '0.7'),
+        ('getting-started.html', 'monthly', '0.7'),
+        ('terms.html', 'yearly', '0.3'),
+    ]:
+        urls.append((f'https://forged.itsbroken.ai/{page}', today, freq, pri))
+
+    # Tactic pages
+    for tactic in data["tactics"]:
+        urls.append((
+            f'https://forged.itsbroken.ai/tactics/{tactic["id"].lower()}.html',
+            today, 'monthly', '0.8'
+        ))
+
+    # Technique pages
+    for tech in data["techniques"]:
+        urls.append((
+            f'https://forged.itsbroken.ai/techniques/{tech["id"].lower()}.html',
+            today, 'monthly', '0.6'
+        ))
+
+    xml_entries = ""
+    for loc, lastmod, freq, pri in urls:
+        xml_entries += f"""  <url>
+    <loc>{loc}</loc>
+    <lastmod>{lastmod}</lastmod>
+    <changefreq>{freq}</changefreq>
+    <priority>{pri}</priority>
+  </url>
+"""
+
+    sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{xml_entries}</urlset>
+"""
+
+    with open(OUTPUT_DIR / "sitemap.xml", "w") as f:
+        f.write(sitemap)
+
+    print(f"  Sitemap: {len(urls)} URLs")
+
+
 def main():
     print("FORGED Static Site Generator")
     print("=" * 50)
@@ -316,6 +419,7 @@ def main():
     build_about_page(data)
     build_getting_started_page(data)
     build_terms_page(data)
+    build_sitemap(data)
 
     print("\n" + "=" * 50)
     print(f"Site generated at: {OUTPUT_DIR}")

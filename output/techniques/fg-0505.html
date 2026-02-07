@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FG-0505: Publication Review Chain | F.O.R.G.E</title>
+    <meta name="description" content="Implement multi-agent review for content that will be published externally. Content that represents your team to the outside world requires higher review standards than internal artifacts. The Publication Review Chain routes external-facing content through multiple specialized reviewers: technical accuracy, brand consistency, audience appropriateness, and final human approval. No external content ships without completing the chain.">
+    <meta property="og:title" content="FG-0505: Publication Review Chain | F.O.R.G.E">
+    <meta property="og:description" content="Implement multi-agent review for content that will be published externally. Content that represents your team to the outside world requires higher review standards than internal artifacts. The Publication Review Chain routes external-facing content through multiple specialized reviewers: technical accuracy, brand consistency, audience appropriateness, and final human approval. No external content ships without completing the chain.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://forged.itsbroken.ai/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FG-0505: Publication Review Chain | F.O.R.G.E">
     <meta name="author" content="Pete McKernan / Cipher Circle">
     <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="canonical" href="https://forged.itsbroken.ai/techniques/fg-0505.html">
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
     <link rel="stylesheet" href="../css/forged.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
     <nav class="nav">
         <div class="nav-inner">
             <a href="../index.html" class="nav-brand">
                 <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
-                <span class="nav-title">itsbroken.ai</span>
+                <span class="nav-title">ItsBroken.ai</span>
             </a>
             <div class="nav-links">
                 <a href="../index.html" class="nav-link">Matrix</a>
@@ -25,7 +34,7 @@
         </div>
     </nav>
 
-    <main class="technique-page">
+    <main id="main-content" class="technique-page">
         <div class="breadcrumb">
             <a href="../index.html">Matrix</a>
             <span class="breadcrumb-sep">/</span>
@@ -77,13 +86,15 @@
         </div>
 
         
+
+        
             <section class="war-story">
-                <h2>Field Report: The Three-Agent Review</h2>
-                <div class="war-story-content">A team routing blog posts through a three-agent review chain caught a technical inaccuracy that would have embarrassed the team publicly. The content agent drafted the post, the technical agent verified claims, and the brand agent ensured voice consistency. The human lead gave final approval. Total review time: 15 minutes. Reputation damage prevented: immeasurable.</div>
+                <h2>Field Report: Multi-Stage Content Verification</h2>
+                <div class="war-story-content">A three-stage review chain (content generation, technical verification, brand consistency) was applied to public-facing publications. In its first month: 2 factual inaccuracies caught, 4 brand voice deviations corrected, 1 unintended disclosure of internal methodology prevented. Average review cycle: 15 minutes per artifact. The technical verification stage — agent cross-checking claims against source material — caught errors invisible to both the content generation and brand consistency stages.</div>
             </section>
 
         <section class="technique-related">
-            <h2>Related Techniques</h2>
+            <h2>Related Methods</h2>
             <div class="related-grid">
                 <a href="fg-0301.html" class="related-link">FG-0301: Agent Specialization</a>
 <a href="fg-0503.html" class="related-link">FG-0503: Asset Review Pipeline</a>
@@ -99,5 +110,40 @@
             <p><a href="../index.html">Back to Matrix</a></p>
         </div>
     </footer>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "FG-0505: Publication Review Chain",
+        "description": "Implement multi-agent review for content that will be published externally. Content that represents your team to the outside world requires higher review standards than internal artifacts. The Publication Review Chain routes external-facing content through multiple specialized reviewers: technical accuracy, brand consistency, audience appropriateness, and final human approval. No external content ships without completing the chain.",
+        "author": {
+            "@type": "Person",
+            "name": "Pete McKernan",
+            "url": "https://itsbroken.ai"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Cipher Circle",
+            "url": "https://itsbroken.ai"
+        },
+        "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0505.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "F.O.R.G.E",
+            "url": "https://forged.itsbroken.ai"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Matrix", "item": "https://forged.itsbroken.ai/"},
+            {"@type": "ListItem", "position": 2, "name": "Execution", "item": "https://forged.itsbroken.ai/tactics/ft05.html"},
+            {"@type": "ListItem", "position": 3, "name": "FG-0505"}
+        ]
+    }
+    </script>
 </body>
 </html>
