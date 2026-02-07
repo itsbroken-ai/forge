@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FG-0208: Security Operations | F.O.R.G.E</title>
-    <meta name="description" content="Implement continuous monitoring and threat detection for AI operations. AI agents operate at machine speed - they can create, modify, and delete faster than human oversight can follow in real-time. Security Operations establishes automated monitoring that watches for anomalous behavior, unauthorized access attempts, and policy violations. This is your SOC for human-AI collaboration.">
-    <meta property="og:title" content="FG-0208: Security Operations | F.O.R.G.E">
-    <meta property="og:description" content="Implement continuous monitoring and threat detection for AI operations. AI agents operate at machine speed - they can create, modify, and delete faster than human oversight can follow in real-time. Security Operations establishes automated monitoring that watches for anomalous behavior, unauthorized access attempts, and policy violations. This is your SOC for human-AI collaboration.">
+    <title>FG-0211: Resource Governance | F.O.R.G.E</title>
+    <meta name="description" content="Establish explicit constraints on token consumption, compute resources, and time allocation for AI agent operations. Without resource governance, agents optimize for output quality without regard for cost — executing unlimited iterations, spawning parallel processes, and consuming tokens at economically unsustainable rates. Resource governance defines budgets, thresholds, and escalation triggers that balance output quality against operational cost.">
+    <meta property="og:title" content="FG-0211: Resource Governance | F.O.R.G.E">
+    <meta property="og:description" content="Establish explicit constraints on token consumption, compute resources, and time allocation for AI agent operations. Without resource governance, agents optimize for output quality without regard for cost — executing unlimited iterations, spawning parallel processes, and consuming tokens at economically unsustainable rates. Resource governance defines budgets, thresholds, and escalation triggers that balance output quality against operational cost.">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://forged.itsbroken.ai/img/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="FG-0208: Security Operations | F.O.R.G.E">
+    <meta name="twitter:title" content="FG-0211: Resource Governance | F.O.R.G.E">
     <meta name="author" content="Pete McKernan / Cipher Circle">
     <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
-    <link rel="canonical" href="https://forged.itsbroken.ai/techniques/fg-0208.html">
+    <link rel="canonical" href="https://forged.itsbroken.ai/techniques/fg-0211.html">
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
     <link rel="stylesheet" href="../css/forged.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
             <span class="breadcrumb-sep">/</span>
             <a href="../tactics/ft02.html" style="color: #C65D07">Governance</a>
             <span class="breadcrumb-sep">/</span>
-            <span>FG-0208</span>
+            <span>FG-0211</span>
         </div>
 
         <header class="technique-header" style="border-left: 4px solid #C65D07">
@@ -48,27 +48,27 @@
                 <span class="technique-badge" style="background: #2a150a; color: #C65D07; border: 1px solid #C65D07">Governance</span>
                 <span class="technique-version">v1.0</span>
             </div>
-            <h1><span class="tech-id-large">FG-0208</span> Security Operations</h1>
+            <h1><span class="tech-id-large">FG-0211</span> Resource Governance</h1>
         </header>
 
         <section class="technique-description">
             <h2>Description</h2>
-            <p>Implement continuous monitoring and threat detection for AI operations. AI agents operate at machine speed - they can create, modify, and delete faster than human oversight can follow in real-time. Security Operations establishes automated monitoring that watches for anomalous behavior, unauthorized access attempts, and policy violations. This is your SOC for human-AI collaboration.</p>
+            <p>Establish explicit constraints on token consumption, compute resources, and time allocation for AI agent operations. Without resource governance, agents optimize for output quality without regard for cost — executing unlimited iterations, spawning parallel processes, and consuming tokens at economically unsustainable rates. Resource governance defines budgets, thresholds, and escalation triggers that balance output quality against operational cost.</p>
         </section>
 
         <section class="technique-implementation">
             <h2>Implementation</h2>
-            <p>Define what constitutes anomalous agent behavior (unusual file access patterns, attempts to access sealed content, operations outside defined scope). Implement automated alerts for these patterns. Designate a security function - human or agent - responsible for monitoring and response. Review alerts regularly to tune signal vs. noise.</p>
+            <p>Define per-session token budgets, per-task time limits, and compute allocation ceilings. Implement monitoring that alerts when consumption exceeds thresholds. Establish escalation procedures for tasks that require budget exceptions. Review resource utilization weekly and adjust baselines based on observed patterns.</p>
         </section>
 
         <div class="technique-grid">
             <section class="technique-indicators">
                 <h2>Success Indicators</h2>
                 <ul class="indicator-list">
-                    <li>Anomalous behavior is detected and flagged automatically</li>
-<li>Security events are logged with sufficient context for investigation</li>
-<li>Alert fatigue is managed - alerts are meaningful, not overwhelming</li>
-<li>The team has a defined incident response procedure</li>
+                    <li>Token consumption per task is predictable within defined variance</li>
+<li>Resource-intensive operations require explicit authorization</li>
+<li>Cost trends are visible and tracked over time</li>
+<li>Budget exceptions follow a documented escalation process</li>
 
                 </ul>
             </section>
@@ -76,10 +76,10 @@
             <section class="technique-failures">
                 <h2>Failure Modes</h2>
                 <ul class="failure-list">
-                    <li>Monitoring without response capability - detecting problems you can't act on</li>
-<li>Over-alerting - so many false positives that real alerts are ignored</li>
-<li>No monitoring at all - relying entirely on trust and after-the-fact discovery</li>
-<li>Monitoring that degrades agent performance significantly</li>
+                    <li>Budgets too restrictive — agents cut corners or produce incomplete output to stay within limits</li>
+<li>No monitoring — consumption is invisible until the invoice arrives</li>
+<li>Resource governance applied uniformly rather than scaled to task complexity</li>
+<li>Optimization theater — tracking metrics without acting on trends</li>
 
                 </ul>
             </section>
@@ -89,15 +89,15 @@
 
         
             <section class="war-story">
-                <h2>Field Report: The Automated Watcher</h2>
-                <div class="war-story-content">A team deployed an automated monitoring system that watched agent operations for policy violations and anomalous behavior. In its first week, it caught three near-misses: an agent attempting to write to a protected directory, a session that exceeded its authorized scope, and a commit that would have included a credential file. Each was caught, logged, and resolved before any damage occurred.</div>
+                <h2>Field Report: Token Consumption Profiling</h2>
+                <div class="war-story-content">Analysis of per-session token consumption across a 30-day period revealed a 4:1 variance between the most and least efficient task types. Context recovery consumed 35% of total tokens in sessions with poor knowledge architecture. Implementing structured context loading (see FG-0401) reduced recovery token consumption by 60%. Resource monitoring exposed architectural inefficiencies invisible without measurement.</div>
             </section>
 
         <section class="technique-related">
             <h2>Related Methods</h2>
             <div class="related-grid">
-                <a href="fg-0104.html" class="related-link">FG-0104: Adversarial Design Thinking</a>
-<a href="fg-0204.html" class="related-link">FG-0204: Compartmented Operations</a>
+                <a href="fg-0202.html" class="related-link">FG-0202: Operational Directives</a>
+<a href="fg-0208.html" class="related-link">FG-0208: Security Operations</a>
 <a href="fg-0605.html" class="related-link">FG-0605: Audit Trail System</a>
 
             </div>
@@ -114,8 +114,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "FG-0208: Security Operations",
-        "description": "Implement continuous monitoring and threat detection for AI operations. AI agents operate at machine speed - they can create, modify, and delete faster than human oversight can follow in real-time. Security Operations establishes automated monitoring that watches for anomalous behavior, unauthorized access attempts, and policy violations. This is your SOC for human-AI collaboration.",
+        "headline": "FG-0211: Resource Governance",
+        "description": "Establish explicit constraints on token consumption, compute resources, and time allocation for AI agent operations. Without resource governance, agents optimize for output quality without regard for cost — executing unlimited iterations, spawning parallel processes, and consuming tokens at economically unsustainable rates. Resource governance defines budgets, thresholds, and escalation triggers that balance output quality against operational cost.",
         "author": {
             "@type": "Person",
             "name": "Pete McKernan",
@@ -126,7 +126,7 @@
             "name": "Cipher Circle",
             "url": "https://itsbroken.ai"
         },
-        "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0208.html",
+        "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0211.html",
         "isPartOf": {
             "@type": "WebSite",
             "name": "F.O.R.G.E",
@@ -141,7 +141,7 @@
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Matrix", "item": "https://forged.itsbroken.ai/"},
             {"@type": "ListItem", "position": 2, "name": "Governance", "item": "https://forged.itsbroken.ai/tactics/ft02.html"},
-            {"@type": "ListItem", "position": 3, "name": "FG-0208"}
+            {"@type": "ListItem", "position": 3, "name": "FG-0211"}
         ]
     }
     </script>

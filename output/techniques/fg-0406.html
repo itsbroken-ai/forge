@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FG-0406: Invocation Authority | F.O.R.G.E</title>
+    <meta name="description" content="Define who can invoke which agents and for what purposes. Not every participant should be able to dispatch every agent, especially in multi-human teams. Invocation Authority establishes which roles can activate which agents, preventing unauthorized use of specialized or sensitive capabilities. This is the access control layer for agent dispatch.">
+    <meta property="og:title" content="FG-0406: Invocation Authority | F.O.R.G.E">
+    <meta property="og:description" content="Define who can invoke which agents and for what purposes. Not every participant should be able to dispatch every agent, especially in multi-human teams. Invocation Authority establishes which roles can activate which agents, preventing unauthorized use of specialized or sensitive capabilities. This is the access control layer for agent dispatch.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://forged.itsbroken.ai/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FG-0406: Invocation Authority | F.O.R.G.E">
     <meta name="author" content="Pete McKernan / Cipher Circle">
     <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="canonical" href="https://forged.itsbroken.ai/techniques/fg-0406.html">
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
     <link rel="stylesheet" href="../css/forged.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
     <nav class="nav">
         <div class="nav-inner">
             <a href="../index.html" class="nav-brand">
                 <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
-                <span class="nav-title">itsbroken.ai</span>
+                <span class="nav-title">ItsBroken.ai</span>
             </a>
             <div class="nav-links">
                 <a href="../index.html" class="nav-link">Matrix</a>
@@ -25,7 +34,7 @@
         </div>
     </nav>
 
-    <main class="technique-page">
+    <main id="main-content" class="technique-page">
         <div class="breadcrumb">
             <a href="../index.html">Matrix</a>
             <span class="breadcrumb-sep">/</span>
@@ -77,13 +86,15 @@
         </div>
 
         
+
+        
             <section class="war-story">
                 <h2>Field Report: The Red Team Lock</h2>
                 <div class="war-story-content">A team created a specialized agent for adversarial testing - red team operations that could probe systems for vulnerabilities. This agent was locked to authority-holder-only invocation. When a contributor attempted to invoke it for a routine task, the access control flagged the attempt. The contributor wasn't malicious - they just picked the wrong agent. The lock prevented an accidental scope expansion into adversarial operations.</div>
             </section>
 
         <section class="technique-related">
-            <h2>Related Techniques</h2>
+            <h2>Related Methods</h2>
             <div class="related-grid">
                 <a href="fg-0203.html" class="related-link">FG-0203: Trust Tiers</a>
 <a href="fg-0204.html" class="related-link">FG-0204: Compartmented Operations</a>
@@ -99,5 +110,40 @@
             <p><a href="../index.html">Back to Matrix</a></p>
         </div>
     </footer>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "FG-0406: Invocation Authority",
+        "description": "Define who can invoke which agents and for what purposes. Not every participant should be able to dispatch every agent, especially in multi-human teams. Invocation Authority establishes which roles can activate which agents, preventing unauthorized use of specialized or sensitive capabilities. This is the access control layer for agent dispatch.",
+        "author": {
+            "@type": "Person",
+            "name": "Pete McKernan",
+            "url": "https://itsbroken.ai"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Cipher Circle",
+            "url": "https://itsbroken.ai"
+        },
+        "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0406.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "F.O.R.G.E",
+            "url": "https://forged.itsbroken.ai"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Matrix", "item": "https://forged.itsbroken.ai/"},
+            {"@type": "ListItem", "position": 2, "name": "Invocation", "item": "https://forged.itsbroken.ai/tactics/ft04.html"},
+            {"@type": "ListItem", "position": 3, "name": "FG-0406"}
+        ]
+    }
+    </script>
 </body>
 </html>

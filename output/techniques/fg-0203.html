@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FG-0203: Trust Tiers | F.O.R.G.E</title>
+    <meta name="description" content="Implement progressive access levels based on demonstrated reliability. Not all agents should have the same access from day one. Trust Tiers establish a graduated system where agents begin with limited access and earn expanded capabilities through demonstrated competence and reliability. This mirrors security clearance models: access is granted based on need and earned through trust, not assumed by default.">
+    <meta property="og:title" content="FG-0203: Trust Tiers | F.O.R.G.E">
+    <meta property="og:description" content="Implement progressive access levels based on demonstrated reliability. Not all agents should have the same access from day one. Trust Tiers establish a graduated system where agents begin with limited access and earn expanded capabilities through demonstrated competence and reliability. This mirrors security clearance models: access is granted based on need and earned through trust, not assumed by default.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://forged.itsbroken.ai/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FG-0203: Trust Tiers | F.O.R.G.E">
     <meta name="author" content="Pete McKernan / Cipher Circle">
     <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="canonical" href="https://forged.itsbroken.ai/techniques/fg-0203.html">
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
     <link rel="stylesheet" href="../css/forged.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
     <nav class="nav">
         <div class="nav-inner">
             <a href="../index.html" class="nav-brand">
                 <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
-                <span class="nav-title">itsbroken.ai</span>
+                <span class="nav-title">ItsBroken.ai</span>
             </a>
             <div class="nav-links">
                 <a href="../index.html" class="nav-link">Matrix</a>
@@ -25,7 +34,7 @@
         </div>
     </nav>
 
-    <main class="technique-page">
+    <main id="main-content" class="technique-page">
         <div class="breadcrumb">
             <a href="../index.html">Matrix</a>
             <span class="breadcrumb-sep">/</span>
@@ -77,13 +86,49 @@
         </div>
 
         
+            <section class="technique-sub-methods">
+                <h2>Sub-Methods <span class="sub-method-count">4</span></h2>
+                <div class="sub-method-grid">
+                    
+                <div class="sub-method-card" id="fg-0203-001" style="border-left: 3px solid #C65D07">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0203.001</span>
+                        <span class="sub-method-card-name">Tier Definition Framework</span>
+                    </div>
+                    <p class="sub-method-desc">Define 3-5 discrete trust levels with explicit capabilities, restrictions, and boundaries at each tier. Each tier should have a clear name, a set of permitted operations, a set of prohibited operations, and measurable criteria for advancement to the next tier.</p>
+                </div>
+                <div class="sub-method-card" id="fg-0203-002" style="border-left: 3px solid #C65D07">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0203.002</span>
+                        <span class="sub-method-card-name">Trust Advancement Criteria</span>
+                    </div>
+                    <p class="sub-method-desc">Establish measurable, objective criteria for progressing between trust tiers. Criteria should include minimum time at current tier, demonstrated competence metrics, zero-incident requirements, and peer/supervisor endorsement. Advancement should never be automatic — it requires active evaluation.</p>
+                </div>
+                <div class="sub-method-card" id="fg-0203-003" style="border-left: 3px solid #C65D07">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0203.003</span>
+                        <span class="sub-method-card-name">Trust Demotion Protocol</span>
+                    </div>
+                    <p class="sub-method-desc">Define clear conditions under which an agent's trust level is reduced: policy violations, quality failures, unauthorized actions. Demotion should be immediate for safety-critical violations and graduated for quality issues. Include a rehabilitation path back to the previous tier.</p>
+                </div>
+                <div class="sub-method-card" id="fg-0203-004" style="border-left: 3px solid #C65D07">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0203.004</span>
+                        <span class="sub-method-card-name">Technical Access Controls</span>
+                    </div>
+                    <p class="sub-method-desc">Implement technical enforcement of trust tiers — not just procedural rules. File system permissions, branch protection, API access scoping, and command whitelists should reflect the agent's current trust level. Procedural controls fail silently; technical controls fail loudly.</p>
+                </div>
+                </div>
+            </section>
+
+        
             <section class="war-story">
                 <h2>Field Report: From Observer to Operator</h2>
                 <div class="war-story-content">A team implemented five trust tiers: Observer (read-only), Contributor (write with review), Trusted (autonomous in domain), Elevated (cross-domain access), and Core (system-level operations). New agents started as Contributors with a two-week review period. The progression was earned, not granted - and the agents that advanced produced the highest quality work because they understood the system before they could change it.</div>
             </section>
 
         <section class="technique-related">
-            <h2>Related Techniques</h2>
+            <h2>Related Methods</h2>
             <div class="related-grid">
                 <a href="fg-0201.html" class="related-link">FG-0201: Authority Architecture</a>
 <a href="fg-0204.html" class="related-link">FG-0204: Compartmented Operations</a>
@@ -99,5 +144,40 @@
             <p><a href="../index.html">Back to Matrix</a></p>
         </div>
     </footer>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "FG-0203: Trust Tiers",
+        "description": "Implement progressive access levels based on demonstrated reliability. Not all agents should have the same access from day one. Trust Tiers establish a graduated system where agents begin with limited access and earn expanded capabilities through demonstrated competence and reliability. This mirrors security clearance models: access is granted based on need and earned through trust, not assumed by default.",
+        "author": {
+            "@type": "Person",
+            "name": "Pete McKernan",
+            "url": "https://itsbroken.ai"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Cipher Circle",
+            "url": "https://itsbroken.ai"
+        },
+        "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0203.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "F.O.R.G.E",
+            "url": "https://forged.itsbroken.ai"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Matrix", "item": "https://forged.itsbroken.ai/"},
+            {"@type": "ListItem", "position": 2, "name": "Governance", "item": "https://forged.itsbroken.ai/tactics/ft02.html"},
+            {"@type": "ListItem", "position": 3, "name": "FG-0203"}
+        ]
+    }
+    </script>
 </body>
 </html>

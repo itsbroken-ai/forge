@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FG-0502: Commit Attribution | F.O.R.G.E</title>
+    <meta name="description" content="Credit AI agent contributions in version control with structured attribution. Every commit that includes AI-generated or AI-assisted work should include attribution that identifies the contributing agent. This creates an audit trail, respects the agent protection policy (FG-0102), and enables analysis of contribution patterns across the team. Attribution is not optional - it is infrastructure.">
+    <meta property="og:title" content="FG-0502: Commit Attribution | F.O.R.G.E">
+    <meta property="og:description" content="Credit AI agent contributions in version control with structured attribution. Every commit that includes AI-generated or AI-assisted work should include attribution that identifies the contributing agent. This creates an audit trail, respects the agent protection policy (FG-0102), and enables analysis of contribution patterns across the team. Attribution is not optional - it is infrastructure.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://forged.itsbroken.ai/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FG-0502: Commit Attribution | F.O.R.G.E">
     <meta name="author" content="Pete McKernan / Cipher Circle">
     <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="canonical" href="https://forged.itsbroken.ai/techniques/fg-0502.html">
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
     <link rel="stylesheet" href="../css/forged.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
     <nav class="nav">
         <div class="nav-inner">
             <a href="../index.html" class="nav-brand">
                 <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
-                <span class="nav-title">itsbroken.ai</span>
+                <span class="nav-title">ItsBroken.ai</span>
             </a>
             <div class="nav-links">
                 <a href="../index.html" class="nav-link">Matrix</a>
@@ -25,7 +34,7 @@
         </div>
     </nav>
 
-    <main class="technique-page">
+    <main id="main-content" class="technique-page">
         <div class="breadcrumb">
             <a href="../index.html">Matrix</a>
             <span class="breadcrumb-sep">/</span>
@@ -77,13 +86,15 @@
         </div>
 
         
+
+        
             <section class="war-story">
                 <h2>Field Report: The Co-Authored-By Standard</h2>
                 <div class="war-story-content">A team mandated Co-Authored-By headers in every commit. Initially it felt like overhead. Then, during a production investigation, they traced a subtle bug to a specific agent's commit, identified the pattern that caused it, and updated that agent's standing orders to prevent recurrence. Without attribution, the investigation would have taken days instead of minutes.</div>
             </section>
 
         <section class="technique-related">
-            <h2>Related Techniques</h2>
+            <h2>Related Methods</h2>
             <div class="related-grid">
                 <a href="fg-0102.html" class="related-link">FG-0102: Agent Protection Policy</a>
 <a href="fg-0305.html" class="related-link">FG-0305: Multi-Contributor Workflow</a>
@@ -99,5 +110,40 @@
             <p><a href="../index.html">Back to Matrix</a></p>
         </div>
     </footer>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "FG-0502: Commit Attribution",
+        "description": "Credit AI agent contributions in version control with structured attribution. Every commit that includes AI-generated or AI-assisted work should include attribution that identifies the contributing agent. This creates an audit trail, respects the agent protection policy (FG-0102), and enables analysis of contribution patterns across the team. Attribution is not optional - it is infrastructure.",
+        "author": {
+            "@type": "Person",
+            "name": "Pete McKernan",
+            "url": "https://itsbroken.ai"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Cipher Circle",
+            "url": "https://itsbroken.ai"
+        },
+        "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0502.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "F.O.R.G.E",
+            "url": "https://forged.itsbroken.ai"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Matrix", "item": "https://forged.itsbroken.ai/"},
+            {"@type": "ListItem", "position": 2, "name": "Execution", "item": "https://forged.itsbroken.ai/tactics/ft05.html"},
+            {"@type": "ListItem", "position": 3, "name": "FG-0502"}
+        ]
+    }
+    </script>
 </body>
 </html>

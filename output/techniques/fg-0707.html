@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FG-0707: Context Window Management | F.O.R.G.E</title>
+    <meta name="description" content="Strategic management of what information occupies the finite context window available to AI agents during a session. The context window is the single most important technical constraint in AI collaboration — it determines what the agent knows, what it has forgotten, and what it will hallucinate to fill gaps. Effective context window management prioritizes high-value information, removes stale context, and structures loading sequences to maximize signal-to-noise ratio within the available token budget.">
+    <meta property="og:title" content="FG-0707: Context Window Management | F.O.R.G.E">
+    <meta property="og:description" content="Strategic management of what information occupies the finite context window available to AI agents during a session. The context window is the single most important technical constraint in AI collaboration — it determines what the agent knows, what it has forgotten, and what it will hallucinate to fill gaps. Effective context window management prioritizes high-value information, removes stale context, and structures loading sequences to maximize signal-to-noise ratio within the available token budget.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://forged.itsbroken.ai/img/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FG-0707: Context Window Management | F.O.R.G.E">
+    <meta name="author" content="Pete McKernan / Cipher Circle">
+    <meta name="copyright" content="Copyright 2026 Pete McKernan / Cipher Circle. All rights reserved.">
+    <link rel="canonical" href="https://forged.itsbroken.ai/techniques/fg-0707.html">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/forged.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-nav">Skip to content</a>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand">
+                <img src="../img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
+                <span class="nav-title">ItsBroken.ai</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Matrix</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../getting-started.html" class="nav-link">Getting Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content" class="technique-page">
+        <div class="breadcrumb">
+            <a href="../index.html">Matrix</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="../tactics/ft07.html" style="color: #c9a044">Knowledge</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>FG-0707</span>
+        </div>
+
+        <header class="technique-header" style="border-left: 4px solid #c9a044">
+            <div class="technique-meta">
+                <span class="technique-badge" style="background: #2a1c0c; color: #c9a044; border: 1px solid #c9a044">Knowledge</span>
+                <span class="technique-version">v1.0</span>
+            </div>
+            <h1><span class="tech-id-large">FG-0707</span> Context Window Management</h1>
+        </header>
+
+        <section class="technique-description">
+            <h2>Description</h2>
+            <p>Strategic management of what information occupies the finite context window available to AI agents during a session. The context window is the single most important technical constraint in AI collaboration — it determines what the agent knows, what it has forgotten, and what it will hallucinate to fill gaps. Effective context window management prioritizes high-value information, removes stale context, and structures loading sequences to maximize signal-to-noise ratio within the available token budget.</p>
+        </section>
+
+        <section class="technique-implementation">
+            <h2>Implementation</h2>
+            <p>Audit the token cost of every piece of context loaded at session start. Rank context by utility: governance rules and active task state first, reference material and historical context second, supplementary material last. Implement progressive loading — start with essential context and add detail only when the task requires it. Monitor for context window pressure indicators: agents repeating themselves, forgetting earlier instructions, or producing output inconsistent with loaded context.</p>
+        </section>
+
+        <div class="technique-grid">
+            <section class="technique-indicators">
+                <h2>Success Indicators</h2>
+                <ul class="indicator-list">
+                    <li>Agents operate within their effective context window without degradation</li>
+<li>Context loading is prioritized by task relevance, not loading order habit</li>
+<li>Stale or irrelevant context is identified and removed between task phases</li>
+<li>The team can articulate the token cost of their standard context loading</li>
+
+                </ul>
+            </section>
+
+            <section class="technique-failures">
+                <h2>Failure Modes</h2>
+                <ul class="failure-list">
+                    <li>Loading everything — filling the context window with comprehensive but low-relevance material, leaving no room for task execution</li>
+<li>No prioritization — treating all context as equally important, resulting in critical information pushed out by volume</li>
+<li>Ignoring degradation signals — continuing to add context after agents show signs of window pressure</li>
+<li>Static loading — using the same context loading regardless of task type</li>
+
+                </ul>
+            </section>
+        </div>
+
+        
+
+        
+            <section class="war-story">
+                <h2>Field Report: Context Saturation Detection</h2>
+                <div class="war-story-content">Performance degradation was observed in sessions where agents received full project documentation at startup: output quality declined after the third major task, agents contradicted earlier instructions, and hallucination frequency increased. Token analysis revealed standard context loading consumed 68% of the effective context window before any task execution began. Implementing task-specific context profiles — loading only governance plus task-relevant material — reduced baseline consumption to 31% and eliminated the observed degradation pattern.</div>
+            </section>
+
+        <section class="technique-related">
+            <h2>Related Methods</h2>
+            <div class="related-grid">
+                <a href="fg-0401.html" class="related-link">FG-0401: Context Recovery Protocol</a>
+<a href="fg-0701.html" class="related-link">FG-0701: Structured History System</a>
+<a href="fg-0210.html" class="related-link">FG-0210: Standing Orders</a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Pete McKernan / <a href="https://itsbroken.ai">Cipher Circle</a>. All rights reserved. | <a href="../terms.html">Terms</a></p>
+            <p><a href="../index.html">Back to Matrix</a></p>
+        </div>
+    </footer>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "FG-0707: Context Window Management",
+        "description": "Strategic management of what information occupies the finite context window available to AI agents during a session. The context window is the single most important technical constraint in AI collaboration — it determines what the agent knows, what it has forgotten, and what it will hallucinate to fill gaps. Effective context window management prioritizes high-value information, removes stale context, and structures loading sequences to maximize signal-to-noise ratio within the available token budget.",
+        "author": {
+            "@type": "Person",
+            "name": "Pete McKernan",
+            "url": "https://itsbroken.ai"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Cipher Circle",
+            "url": "https://itsbroken.ai"
+        },
+        "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0707.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "F.O.R.G.E",
+            "url": "https://forged.itsbroken.ai"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Matrix", "item": "https://forged.itsbroken.ai/"},
+            {"@type": "ListItem", "position": 2, "name": "Knowledge", "item": "https://forged.itsbroken.ai/tactics/ft07.html"},
+            {"@type": "ListItem", "position": 3, "name": "FG-0707"}
+        ]
+    }
+    </script>
+</body>
+</html>
