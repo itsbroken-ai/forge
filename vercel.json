@@ -4,6 +4,19 @@
   "buildCommand": null,
   "outputDirectory": "output",
   "installCommand": null,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?!forged\\.itsbroken\\.ai|localhost).*"
+        }
+      ],
+      "destination": "https://forged.itsbroken.ai/$1",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
