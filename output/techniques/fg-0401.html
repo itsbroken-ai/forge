@@ -76,7 +76,7 @@
             <section class="technique-failures">
                 <h2>Failure Modes</h2>
                 <ul class="failure-list">
-                    <li>Loading too much context - overwhelming the agent's attention</li>
+                    <li>Loading too much context - overwhelming the agent&#x27;s attention</li>
 <li>Loading too little context - agent makes decisions without critical background</li>
 <li>Wrong loading order - task context loaded before governance, leading to ungoverned action</li>
 <li>No standardized sequence - context recovery quality varies by session</li>
@@ -145,39 +145,53 @@
         </div>
     </footer>
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "FG-0401: Context Recovery Protocol",
-        "description": "Define a structured sequence for restoring agent context at the start of every session. AI agents start each session with no memory of previous work. Context Recovery Protocol establishes a systematic loading sequence that brings agents up to speed efficiently: read governance first, then project state, then current priorities, then specific task context. The order matters because each layer informs the interpretation of the next.",
-        "author": {
-            "@type": "Person",
-            "name": "Pete McKernan",
-            "url": "https://itsbroken.ai"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Cipher Circle",
-            "url": "https://itsbroken.ai"
-        },
-        "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0401.html",
-        "isPartOf": {
-            "@type": "WebSite",
-            "name": "F.O.R.G.E",
-            "url": "https://forged.itsbroken.ai"
-        }
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "FG-0401: Context Recovery Protocol",
+    "description": "Define a structured sequence for restoring agent context at the start of every session. AI agents start each session with no memory of previous work. Context Recovery Protocol establishes a systematic loading sequence that brings agents up to speed efficiently: read governance first, then project state, then current priorities, then specific task context. The order matters because each layer informs the interpretation of the next.",
+    "author": {
+        "@type": "Person",
+        "name": "Pete McKernan",
+        "url": "https://itsbroken.ai"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Cipher Circle",
+        "url": "https://itsbroken.ai"
+    },
+    "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0401.html",
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "F.O.R.G.E",
+        "url": "https://forged.itsbroken.ai"
     }
+}
     </script>
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Matrix", "item": "https://forged.itsbroken.ai/"},
-            {"@type": "ListItem", "position": 2, "name": "Invocation", "item": "https://forged.itsbroken.ai/tactics/ft04.html"},
-            {"@type": "ListItem", "position": 3, "name": "FG-0401"}
-        ]
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Matrix",
+            "item": "https://forged.itsbroken.ai/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Invocation",
+            "item": "https://forged.itsbroken.ai/tactics/ft04.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "FG-0401"
+        }
+    ]
+}
     </script>
 </body>
 </html>

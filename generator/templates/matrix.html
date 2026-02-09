@@ -72,6 +72,7 @@
                     <button class="layout-btn active" data-layout="side" aria-label="Side layout">layout: side</button>
                     <button class="layout-btn" data-layout="flat" aria-label="Flat layout">layout: flat</button>
                 </div>
+                <button class="layout-btn" id="select-mode-btn" aria-label="Selection mode">select: off</button>
             </div>
         </div>
 
@@ -80,6 +81,25 @@
         </div>
     </main>
 
+    <div id="export-bar" class="export-bar hidden">
+        <span id="export-count">0 methods selected</span>
+        <button id="export-generate" class="export-generate-btn">Generate Agent Config</button>
+    </div>
+
+    <div id="export-modal" class="export-modal hidden">
+        <div class="export-modal-inner">
+            <div class="export-modal-header">
+                <h2>Agent Configuration</h2>
+                <button id="export-close" class="export-close">&times;</button>
+            </div>
+            <pre id="export-output" class="export-output"></pre>
+            <div class="export-actions">
+                <button id="export-copy" class="export-btn">Copy to Clipboard</button>
+                <a id="export-download" class="export-btn" download="forge-methods.md">Download .md</a>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="footer-inner">
             <p>F.O.R.G.E v{{VERSION}} | Last updated {{LAST_UPDATED}}</p>
@@ -87,32 +107,8 @@
         </div>
     </footer>
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "F.O.R.G.E - Agentic AI Creation Framework",
-        "url": "https://forged.itsbroken.ai",
-        "description": "{{FRAMEWORK_DESC}}",
-        "author": {
-            "@type": "Person",
-            "name": "Pete McKernan",
-            "url": "https://itsbroken.ai"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Cipher Circle",
-            "url": "https://itsbroken.ai"
-        },
-        "copyrightYear": 2026,
-        "copyrightHolder": {
-            "@type": "Person",
-            "name": "Pete McKernan"
-        },
-        "inLanguage": "en",
-        "version": "{{VERSION}}"
-    }
-    </script>
+    {{LD_JSON}}
+    <script id="framework-data" type="application/json">{{FRAMEWORK_JSON}}</script>
     <script src="js/banner.js"></script>
     <script src="js/matrix.js"></script>
 </body>

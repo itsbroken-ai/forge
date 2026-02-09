@@ -15,7 +15,7 @@ framework = {
     "full_name": "Framework for Organized, Resilient, Governed Engineering and Development of Agentic AI",
     "version": VERSION,
     "last_updated": LAST_UPDATED,
-    "description": "Agentic AI Creation Framework. 57 methods across 8 tactical pillars for building, governing, and scaling AI agent systems at every level of application."
+    "description": "Agentic AI Creation Framework. 56 methods across 8 tactical pillars for building, governing, and scaling AI agent systems at every level of application."
 }
 
 tactics = [
@@ -154,7 +154,7 @@ techniques = [
             "title": "The Governance Paradox",
             "content": "A team implemented comprehensive governance after an agent nearly force-pushed to main. Seven directives, trust tiers, violation matrices - the works. But they built it with a 'people over process' escape valve: any rule could be challenged, and the governance itself was subject to revision. The result was governance that the team respected because they helped shape it."
         },
-        "related_techniques": ["FG-0201", "FG-0202", "FG-0803"],
+        "related_techniques": ["FG-0201", "FG-0202"],
         "added_version": "1.0"
     },
     {
@@ -626,7 +626,7 @@ techniques = [
             "title": "Nine Distinct Voices",
             "content": "A team created nine agents with voices ranging from scholarly precision to dramatic storytelling to blunt, no-nonsense testing reports. When reviewing multi-agent output, the team could instantly identify contributors. More importantly, the voices kept agents in domain: the storyteller naturally wrote narratively, the tester naturally wrote technically, and the archivist naturally wrote for posterity. Voice was a specialization mechanism, not just flavor."
         },
-        "related_techniques": ["FG-0301", "FG-0303", "FG-0803"],
+        "related_techniques": ["FG-0301", "FG-0303"],
         "sub_methods": [
             {
                 "id": "FG-0302.001",
@@ -1693,31 +1693,6 @@ techniques = [
             "content": "A team created identity cards for every agent: a visual display showing their icon, their specialization, their current level, their contribution score, and their notable achievements. The cards weren't just motivational - they were functional. When deciding which agent to dispatch for a task, the lead could scan the cards to match specialization to need. When new contributors joined, the cards gave them immediate context about the team's composition and capabilities."
         },
         "related_techniques": ["FG-0301", "FG-0801", "FG-0305"],
-        "added_version": "1.0"
-    },
-    {
-        "id": "FG-0803",
-        "name": "Authentic Voice Preservation",
-        "tactic_id": "FT08",
-        "description": "Maintain the genuine, unpolished voice of the collaboration's participants in documentation and communication. AI has a tendency to sand down rough edges - making everything grammatically perfect, tonally neutral, and stylistically uniform. Authentic Voice Preservation is the deliberate practice of keeping the real voice: the typos that show speed, the humor that shows humanity, the self-deprecation that shows honesty. Authenticity builds trust in ways that polish cannot.",
-        "implementation": "Establish that certain documentation categories preserve raw voice (blog posts, war stories, internal communications). Define which contexts require polished output (external documentation, formal communications) and which benefit from authentic voice. Train agents to preserve voice characteristics rather than correcting them. Review output for excessive polish that removes personality.",
-        "success_indicators": [
-            "Internal documentation sounds like the team, not like a corporate communications department",
-            "External audiences connect with the authentic voice",
-            "War stories and journey documentation preserve the emotional texture of events",
-            "The team's personality is recognizable across their output"
-        ],
-        "failure_modes": [
-            "Authentic voice in contexts that require professionalism",
-            "Preserving errors that impede comprehension (there's a line between charming typos and unreadable text)",
-            "Forcing authenticity - manufactured 'realness' that reads as fake",
-            "No distinction between contexts that benefit from polish vs. authenticity"
-        ],
-        "war_story": {
-            "title": "Typos Are Part of the Charm",
-            "content": "A team's leader typed fast - really fast - and the typos were legendary. Instead of polishing every communication, the team preserved the authentic voice in internal documentation and blog posts. Readers connected with it. The typos, the speed, the self-roasting humor - it read like a real person in the middle of building something, because it was. The authentic voice became the brand, and the brand built trust that no amount of corporate polish could have achieved."
-        },
-        "related_techniques": ["FG-0302", "FG-0303", "FG-0705"],
         "added_version": "1.0"
     },
 ]

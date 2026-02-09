@@ -78,8 +78,8 @@
                 <ul class="failure-list">
                     <li>Over-restricting invocation - creating bottlenecks on the authority holder</li>
 <li>Under-restricting - anyone can invoke any agent including sensitive ones</li>
-<li>No logging - can't audit who invoked what after the fact</li>
-<li>Authority rules that don't match actual operational needs</li>
+<li>No logging - can&#x27;t audit who invoked what after the fact</li>
+<li>Authority rules that don&#x27;t match actual operational needs</li>
 
                 </ul>
             </section>
@@ -90,7 +90,7 @@
         
             <section class="war-story">
                 <h2>Field Report: The Red Team Lock</h2>
-                <div class="war-story-content">A team created a specialized agent for adversarial testing - red team operations that could probe systems for vulnerabilities. This agent was locked to authority-holder-only invocation. When a contributor attempted to invoke it for a routine task, the access control flagged the attempt. The contributor wasn't malicious - they just picked the wrong agent. The lock prevented an accidental scope expansion into adversarial operations.</div>
+                <div class="war-story-content">A team created a specialized agent for adversarial testing - red team operations that could probe systems for vulnerabilities. This agent was locked to authority-holder-only invocation. When a contributor attempted to invoke it for a routine task, the access control flagged the attempt. The contributor wasn&#x27;t malicious - they just picked the wrong agent. The lock prevented an accidental scope expansion into adversarial operations.</div>
             </section>
 
         <section class="technique-related">
@@ -111,39 +111,53 @@
         </div>
     </footer>
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "FG-0406: Invocation Authority",
-        "description": "Define who can invoke which agents and for what purposes. Not every participant should be able to dispatch every agent, especially in multi-human teams. Invocation Authority establishes which roles can activate which agents, preventing unauthorized use of specialized or sensitive capabilities. This is the access control layer for agent dispatch.",
-        "author": {
-            "@type": "Person",
-            "name": "Pete McKernan",
-            "url": "https://itsbroken.ai"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Cipher Circle",
-            "url": "https://itsbroken.ai"
-        },
-        "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0406.html",
-        "isPartOf": {
-            "@type": "WebSite",
-            "name": "F.O.R.G.E",
-            "url": "https://forged.itsbroken.ai"
-        }
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "FG-0406: Invocation Authority",
+    "description": "Define who can invoke which agents and for what purposes. Not every participant should be able to dispatch every agent, especially in multi-human teams. Invocation Authority establishes which roles can activate which agents, preventing unauthorized use of specialized or sensitive capabilities. This is the access control layer for agent dispatch.",
+    "author": {
+        "@type": "Person",
+        "name": "Pete McKernan",
+        "url": "https://itsbroken.ai"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Cipher Circle",
+        "url": "https://itsbroken.ai"
+    },
+    "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0406.html",
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "F.O.R.G.E",
+        "url": "https://forged.itsbroken.ai"
     }
+}
     </script>
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Matrix", "item": "https://forged.itsbroken.ai/"},
-            {"@type": "ListItem", "position": 2, "name": "Invocation", "item": "https://forged.itsbroken.ai/tactics/ft04.html"},
-            {"@type": "ListItem", "position": 3, "name": "FG-0406"}
-        ]
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Matrix",
+            "item": "https://forged.itsbroken.ai/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Invocation",
+            "item": "https://forged.itsbroken.ai/tactics/ft04.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "FG-0406"
+        }
+    ]
+}
     </script>
 </body>
 </html>

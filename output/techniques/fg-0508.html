@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FG-0508: Designed Data Guarantee | F.O.R.G.E</title>
-    <meta name="description" content="Ensure that every data artifact shipped by the collaboration has been intentionally designed, reviewed, and validated - never randomly generated or arbitrarily chosen. This technique eliminates 'placeholder syndrome' where AI-generated sample data ships as production content. Every data point, every example, every configuration value should exist because someone decided it should, not because an AI needed to fill a field.">
+    <meta name="description" content="Ensure that every data artifact shipped by the collaboration has been intentionally designed, reviewed, and validated - never randomly generated or arbitrarily chosen. This technique eliminates &#x27;placeholder syndrome&#x27; where AI-generated sample data ships as production content. Every data point, every example, every configuration value should exist because someone decided it should, not because an AI needed to fill a field.">
     <meta property="og:title" content="FG-0508: Designed Data Guarantee | F.O.R.G.E">
-    <meta property="og:description" content="Ensure that every data artifact shipped by the collaboration has been intentionally designed, reviewed, and validated - never randomly generated or arbitrarily chosen. This technique eliminates 'placeholder syndrome' where AI-generated sample data ships as production content. Every data point, every example, every configuration value should exist because someone decided it should, not because an AI needed to fill a field.">
+    <meta property="og:description" content="Ensure that every data artifact shipped by the collaboration has been intentionally designed, reviewed, and validated - never randomly generated or arbitrarily chosen. This technique eliminates &#x27;placeholder syndrome&#x27; where AI-generated sample data ships as production content. Every data point, every example, every configuration value should exist because someone decided it should, not because an AI needed to fill a field.">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://forged.itsbroken.ai/img/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -53,12 +53,12 @@
 
         <section class="technique-description">
             <h2>Description</h2>
-            <p>Ensure that every data artifact shipped by the collaboration has been intentionally designed, reviewed, and validated - never randomly generated or arbitrarily chosen. This technique eliminates 'placeholder syndrome' where AI-generated sample data ships as production content. Every data point, every example, every configuration value should exist because someone decided it should, not because an AI needed to fill a field.</p>
+            <p>Ensure that every data artifact shipped by the collaboration has been intentionally designed, reviewed, and validated - never randomly generated or arbitrarily chosen. This technique eliminates &#x27;placeholder syndrome&#x27; where AI-generated sample data ships as production content. Every data point, every example, every configuration value should exist because someone decided it should, not because an AI needed to fill a field.</p>
         </section>
 
         <section class="technique-implementation">
             <h2>Implementation</h2>
-            <p>Establish a review step for all data artifacts: configuration files, sample data, test fixtures, and content. Define what 'designed data' means for your domain (manually authored, reviewed for accuracy, validated against requirements). Flag and replace any generated data that shipped without review. Include data design in the asset review pipeline.</p>
+            <p>Establish a review step for all data artifacts: configuration files, sample data, test fixtures, and content. Define what &#x27;designed data&#x27; means for your domain (manually authored, reviewed for accuracy, validated against requirements). Flag and replace any generated data that shipped without review. Include data design in the asset review pipeline.</p>
         </section>
 
         <div class="technique-grid">
@@ -79,7 +79,7 @@
                     <li>Treating data review as lower priority than code review</li>
 <li>Not recognizing AI-generated sample data as placeholder</li>
 <li>Data review bottleneck - reviewing data takes longer than generating it</li>
-<li>Designed data that's still wrong - reviewed but not validated</li>
+<li>Designed data that&#x27;s still wrong - reviewed but not validated</li>
 
                 </ul>
             </section>
@@ -90,7 +90,7 @@
         
             <section class="war-story">
                 <h2>Field Report: The 1,078-Test Guarantee</h2>
-                <div class="war-story-content">A team built 1,078 tests to validate that every piece of data in their system was intentionally designed. Not random, not placeholder, not generated-and-forgotten. Every configuration value, every game encounter, every curriculum item was tested to confirm it was manually authored and reviewed. The test suite wasn't just QA - it was a guarantee that no random data had slipped into production.</div>
+                <div class="war-story-content">A team built 1,078 tests to validate that every piece of data in their system was intentionally designed. Not random, not placeholder, not generated-and-forgotten. Every configuration value, every game encounter, every curriculum item was tested to confirm it was manually authored and reviewed. The test suite wasn&#x27;t just QA - it was a guarantee that no random data had slipped into production.</div>
             </section>
 
         <section class="technique-related">
@@ -111,39 +111,53 @@
         </div>
     </footer>
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "FG-0508: Designed Data Guarantee",
-        "description": "Ensure that every data artifact shipped by the collaboration has been intentionally designed, reviewed, and validated - never randomly generated or arbitrarily chosen. This technique eliminates 'placeholder syndrome' where AI-generated sample data ships as production content. Every data point, every example, every configuration value should exist because someone decided it should, not because an AI needed to fill a field.",
-        "author": {
-            "@type": "Person",
-            "name": "Pete McKernan",
-            "url": "https://itsbroken.ai"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Cipher Circle",
-            "url": "https://itsbroken.ai"
-        },
-        "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0508.html",
-        "isPartOf": {
-            "@type": "WebSite",
-            "name": "F.O.R.G.E",
-            "url": "https://forged.itsbroken.ai"
-        }
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "FG-0508: Designed Data Guarantee",
+    "description": "Ensure that every data artifact shipped by the collaboration has been intentionally designed, reviewed, and validated - never randomly generated or arbitrarily chosen. This technique eliminates 'placeholder syndrome' where AI-generated sample data ships as production content. Every data point, every example, every configuration value should exist because someone decided it should, not because an AI needed to fill a field.",
+    "author": {
+        "@type": "Person",
+        "name": "Pete McKernan",
+        "url": "https://itsbroken.ai"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Cipher Circle",
+        "url": "https://itsbroken.ai"
+    },
+    "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0508.html",
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "F.O.R.G.E",
+        "url": "https://forged.itsbroken.ai"
     }
+}
     </script>
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Matrix", "item": "https://forged.itsbroken.ai/"},
-            {"@type": "ListItem", "position": 2, "name": "Execution", "item": "https://forged.itsbroken.ai/tactics/ft05.html"},
-            {"@type": "ListItem", "position": 3, "name": "FG-0508"}
-        ]
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Matrix",
+            "item": "https://forged.itsbroken.ai/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Execution",
+            "item": "https://forged.itsbroken.ai/tactics/ft05.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "FG-0508"
+        }
+    ]
+}
     </script>
 </body>
 </html>

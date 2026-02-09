@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FG-0702: Session Handoff Protocol | F.O.R.G.E</title>
-    <meta name="description" content="Define a structured format for transferring context between sessions. Every session end is a potential knowledge cliff - if context isn't captured, the next session starts from scratch. The Session Handoff Protocol creates a standardized 'shift change brief' that captures: what was accomplished, what's in progress, what decisions are pending, and what context the next session needs to continue seamlessly.">
+    <meta name="description" content="Define a structured format for transferring context between sessions. Every session end is a potential knowledge cliff - if context isn&#x27;t captured, the next session starts from scratch. The Session Handoff Protocol creates a standardized &#x27;shift change brief&#x27; that captures: what was accomplished, what&#x27;s in progress, what decisions are pending, and what context the next session needs to continue seamlessly.">
     <meta property="og:title" content="FG-0702: Session Handoff Protocol | F.O.R.G.E">
-    <meta property="og:description" content="Define a structured format for transferring context between sessions. Every session end is a potential knowledge cliff - if context isn't captured, the next session starts from scratch. The Session Handoff Protocol creates a standardized 'shift change brief' that captures: what was accomplished, what's in progress, what decisions are pending, and what context the next session needs to continue seamlessly.">
+    <meta property="og:description" content="Define a structured format for transferring context between sessions. Every session end is a potential knowledge cliff - if context isn&#x27;t captured, the next session starts from scratch. The Session Handoff Protocol creates a standardized &#x27;shift change brief&#x27; that captures: what was accomplished, what&#x27;s in progress, what decisions are pending, and what context the next session needs to continue seamlessly.">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://forged.itsbroken.ai/img/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -53,12 +53,12 @@
 
         <section class="technique-description">
             <h2>Description</h2>
-            <p>Define a structured format for transferring context between sessions. Every session end is a potential knowledge cliff - if context isn't captured, the next session starts from scratch. The Session Handoff Protocol creates a standardized 'shift change brief' that captures: what was accomplished, what's in progress, what decisions are pending, and what context the next session needs to continue seamlessly.</p>
+            <p>Define a structured format for transferring context between sessions. Every session end is a potential knowledge cliff - if context isn&#x27;t captured, the next session starts from scratch. The Session Handoff Protocol creates a standardized &#x27;shift change brief&#x27; that captures: what was accomplished, what&#x27;s in progress, what decisions are pending, and what context the next session needs to continue seamlessly.</p>
         </section>
 
         <section class="technique-implementation">
             <h2>Implementation</h2>
-            <p>Create a handoff template with 4-6 fields: Accomplished (what shipped), In Progress (what's partially done), Pending Decisions (what needs resolution), Context (what the next session needs to know), Blockers (what's preventing progress). Complete the handoff at every session end. Store handoffs where the next session will read them during context recovery.</p>
+            <p>Create a handoff template with 4-6 fields: Accomplished (what shipped), In Progress (what&#x27;s partially done), Pending Decisions (what needs resolution), Context (what the next session needs to know), Blockers (what&#x27;s preventing progress). Complete the handoff at every session end. Store handoffs where the next session will read them during context recovery.</p>
         </section>
 
         <div class="technique-grid">
@@ -76,10 +76,10 @@
             <section class="technique-failures">
                 <h2>Failure Modes</h2>
                 <ul class="failure-list">
-                    <li>Handoffs skipped under time pressure - exactly when they're most needed</li>
-<li>Handoffs too brief - next session can't reconstruct context</li>
+                    <li>Handoffs skipped under time pressure - exactly when they&#x27;re most needed</li>
+<li>Handoffs too brief - next session can&#x27;t reconstruct context</li>
 <li>Handoffs too verbose - next session spends more time reading than working</li>
-<li>Handoffs stored where the next session doesn't read them</li>
+<li>Handoffs stored where the next session doesn&#x27;t read them</li>
 
                 </ul>
             </section>
@@ -90,7 +90,7 @@
         
             <section class="war-story">
                 <h2>Field Report: The Shift Change</h2>
-                <div class="war-story-content">A team modeled their session handoff on military shift-change briefs: outgoing shift summarizes the situation and anything the incoming shift needs to know immediately. The format was deliberately terse. When a different agent continued work from the previous session, the handoff provided enough context to continue without interruption. The military parallel wasn't intentional - it was instinctive, and it worked because the underlying problem was identical.</div>
+                <div class="war-story-content">A team modeled their session handoff on military shift-change briefs: outgoing shift summarizes the situation and anything the incoming shift needs to know immediately. The format was deliberately terse. When a different agent continued work from the previous session, the handoff provided enough context to continue without interruption. The military parallel wasn&#x27;t intentional - it was instinctive, and it worked because the underlying problem was identical.</div>
             </section>
 
         <section class="technique-related">
@@ -111,39 +111,53 @@
         </div>
     </footer>
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "FG-0702: Session Handoff Protocol",
-        "description": "Define a structured format for transferring context between sessions. Every session end is a potential knowledge cliff - if context isn't captured, the next session starts from scratch. The Session Handoff Protocol creates a standardized 'shift change brief' that captures: what was accomplished, what's in progress, what decisions are pending, and what context the next session needs to continue seamlessly.",
-        "author": {
-            "@type": "Person",
-            "name": "Pete McKernan",
-            "url": "https://itsbroken.ai"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Cipher Circle",
-            "url": "https://itsbroken.ai"
-        },
-        "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0702.html",
-        "isPartOf": {
-            "@type": "WebSite",
-            "name": "F.O.R.G.E",
-            "url": "https://forged.itsbroken.ai"
-        }
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "FG-0702: Session Handoff Protocol",
+    "description": "Define a structured format for transferring context between sessions. Every session end is a potential knowledge cliff - if context isn't captured, the next session starts from scratch. The Session Handoff Protocol creates a standardized 'shift change brief' that captures: what was accomplished, what's in progress, what decisions are pending, and what context the next session needs to continue seamlessly.",
+    "author": {
+        "@type": "Person",
+        "name": "Pete McKernan",
+        "url": "https://itsbroken.ai"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Cipher Circle",
+        "url": "https://itsbroken.ai"
+    },
+    "mainEntityOfPage": "https://forged.itsbroken.ai/techniques/fg-0702.html",
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "F.O.R.G.E",
+        "url": "https://forged.itsbroken.ai"
     }
+}
     </script>
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Matrix", "item": "https://forged.itsbroken.ai/"},
-            {"@type": "ListItem", "position": 2, "name": "Knowledge", "item": "https://forged.itsbroken.ai/tactics/ft07.html"},
-            {"@type": "ListItem", "position": 3, "name": "FG-0702"}
-        ]
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Matrix",
+            "item": "https://forged.itsbroken.ai/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Knowledge",
+            "item": "https://forged.itsbroken.ai/tactics/ft07.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "FG-0702"
+        }
+    ]
+}
     </script>
 </body>
 </html>
