@@ -35,8 +35,8 @@ Browse the matrix, select the methods that apply to your work, and export them a
 
 F.O.R.G.E. grows from real experience. If you've found a pattern that works or a method that's missing, we want to hear about it.
 
-- **[Propose a sub-method](https://github.com/TheCipherCircle/forge/issues/new?template=sub-method-proposal.yml)** based on what you've learned
-- **[Propose a technique](https://github.com/TheCipherCircle/forge/issues/new?template=technique-proposal.yml)** for domains the framework doesn't cover yet
+- **[Propose a sub-method](https://github.com/itsbroken-ai/forge/issues/new?template=sub-method-proposal.yml)** based on what you've learned
+- **[Propose a technique](https://github.com/itsbroken-ai/forge/issues/new?template=technique-proposal.yml)** for domains the framework doesn't cover yet
 - Read **[CONTRIBUTING.md](CONTRIBUTING.md)** for the full process and standards
 
 ## License
