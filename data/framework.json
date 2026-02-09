@@ -724,8 +724,7 @@
       },
       "related_techniques": [
         "FG-0301",
-        "FG-0302",
-        "FG-0803"
+        "FG-0302"
       ],
       "added_version": "1.0"
     },
@@ -1718,8 +1717,7 @@
       },
       "related_techniques": [
         "FG-0405",
-        "FG-0701",
-        "FG-0803"
+        "FG-0701"
       ],
       "sub_methods": [
         {

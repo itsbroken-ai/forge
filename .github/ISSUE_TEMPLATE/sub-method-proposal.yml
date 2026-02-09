@@ -1,0 +1,61 @@
+name: Sub-Method Proposal
+description: Propose a new sub-method for an existing technique
+title: "[Sub-Method] "
+labels: ["sub-method", "proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Propose a sub-method for an existing F.O.R.G.E technique. Sub-methods are specific, actionable breakdowns of how to implement a technique.
+
+  - type: input
+    id: parent-technique
+    attributes:
+      label: Parent Technique
+      description: Which technique does this sub-method belong to?
+      placeholder: "FG-0501: Sprint Planning Integration"
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Sub-Method Name
+      description: Short, descriptive name (3-6 words)
+      placeholder: "AI Workload Balancing"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is it, why does it matter, how do you do it? (2-4 sentences)
+      placeholder: |
+        Describe the sub-method clearly enough that someone could implement it.
+        Focus on practical application, not theory.
+    validations:
+      required: true
+
+  - type: textarea
+    id: experience
+    attributes:
+      label: Your Experience
+      description: Have you used this method? What happened?
+      placeholder: |
+        Tell us where you applied this and what the results were.
+        Failure stories are just as valuable as success stories.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: Confidence Level
+      description: How battle-tested is this method?
+      options:
+        - "Proven: Used in production repeatedly"
+        - "Tested: Used at least once with good results"
+        - "Theoretical: Makes sense but haven't tried it yet"
+    validations:
+      required: true

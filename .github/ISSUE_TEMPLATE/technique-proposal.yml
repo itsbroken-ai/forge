@@ -1,0 +1,100 @@
+name: Technique Proposal
+description: Propose a new technique for the F.O.R.G.E framework
+title: "[Technique] "
+labels: ["technique", "proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Propose a new technique for F.O.R.G.E. Before submitting, check the [matrix](https://forged.itsbroken.ai) to make sure this isn't already covered by an existing technique or sub-method.
+
+  - type: dropdown
+    id: tactic
+    attributes:
+      label: Tactic
+      description: Which tactic pillar does this technique belong to?
+      options:
+        - "FT01: Foundation - Collaboration environment and principles"
+        - "FT02: Governance - Laws, authority, trust, security"
+        - "FT03: Team Design - Agent specialization and composition"
+        - "FT04: Invocation - Session start, context recovery, dispatch"
+        - "FT05: Execution - Building, creating, and shipping"
+        - "FT06: Quality - Testing, validation, review"
+        - "FT07: Knowledge - Memory, documentation, persistence"
+        - "FT08: Evolution - Learning, adapting, measuring"
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Technique Name
+      description: Short, descriptive name
+      placeholder: "Automated Context Recovery"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is this technique? Why does it matter? Write for someone who hasn't done this before.
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Implementation Guidance
+      description: Practical steps to implement this technique. "Do X, then Y" not "consider the implications of X."
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-indicators
+    attributes:
+      label: Success Indicators
+      description: Observable outcomes that tell you this is working (one per line)
+      placeholder: |
+        - Team can restore full context in under 2 minutes
+        - No repeated "remind me what we were doing" exchanges
+    validations:
+      required: true
+
+  - type: textarea
+    id: failure-modes
+    attributes:
+      label: Failure Modes
+      description: Real ways this goes wrong (one per line)
+      placeholder: |
+        - Over-automating context recovery leads to stale assumptions
+        - Recovering context without verifying it's still accurate
+    validations:
+      required: true
+
+  - type: textarea
+    id: experience
+    attributes:
+      label: Your Experience
+      description: Have you used this method? What happened? War stories welcome.
+    validations:
+      required: false
+
+  - type: textarea
+    id: sub-methods
+    attributes:
+      label: Sub-Methods (Optional)
+      description: If you have specific sub-methods, list them with name and 1-2 sentence description each.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: Confidence Level
+      options:
+        - "Proven: Used in production repeatedly"
+        - "Tested: Used at least once with good results"
+        - "Theoretical: Makes sense but haven't tried it yet"
+    validations:
+      required: true

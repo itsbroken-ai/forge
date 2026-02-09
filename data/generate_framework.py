@@ -668,7 +668,7 @@ techniques = [
             "title": "The Theatrics Dial",
             "content": "A team assigned three expressiveness levels across nine agents. The storyteller and artist operated at high theatrics - dramatic entrances, poetic speech. The architect and puzzle designer operated at medium - professional with personality. The tester, archivist, and analyst operated at low - direct, efficient, no flourish. The result was output that felt like reading communication from a real team with real personalities, not a monolithic AI voice."
         },
-        "related_techniques": ["FG-0301", "FG-0302", "FG-0803"],
+        "related_techniques": ["FG-0301", "FG-0302"],
         "added_version": "1.0"
     },
     {
@@ -1554,7 +1554,7 @@ techniques = [
             "title": "Insight Capture Automation",
             "content": "A team implemented a single-command insight capture mechanism that persisted conversation highlights to permanent storage on invocation. Over a 30-day period, the command was invoked 30+ times, producing a curated collection of insights, breakthrough moments, and contextual observations. This collection became primary source material for publications and presentations. Key metric: average capture time was under 5 seconds per invocation. Without the mechanism, equivalent insights were lost between sessions at an estimated rate of 3-5 per week."
         },
-        "related_techniques": ["FG-0405", "FG-0701", "FG-0803"],
+        "related_techniques": ["FG-0405", "FG-0701"],
         "sub_methods": [
             {
                 "id": "FG-0705.001",

@@ -1,0 +1,35 @@
+name: Validate Framework
+
+on:
+  pull_request:
+    paths:
+      - 'data/generate_framework.py'
+      - 'data/validate_framework.py'
+      - 'generator/**'
+      - 'theme/**'
+  push:
+    branches: [main]
+    paths:
+      - 'data/generate_framework.py'
+      - 'data/validate_framework.py'
+      - 'generator/**'
+      - 'theme/**'
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate framework.json
+        run: python3 data/generate_framework.py
+
+      - name: Validate framework data
+        run: python3 data/validate_framework.py
+
+      - name: Build site
+        run: python3 generator/build.py
