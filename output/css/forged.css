@@ -157,6 +157,15 @@ a:hover {
     border-bottom-color: var(--amber);
 }
 
+.nav-contribute {
+    color: var(--amber);
+    font-weight: 700;
+}
+
+.nav-contribute:hover {
+    color: var(--accent);
+}
+
 /* ============================================
    HERO
    ============================================ */
