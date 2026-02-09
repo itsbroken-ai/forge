@@ -89,6 +89,40 @@
         </div>
 
         
+            <section class="technique-sub-methods">
+                <h2>Sub-Methods <span class="sub-method-count">4</span></h2>
+                <div class="sub-method-grid">
+                    
+                <div class="sub-method-card" id="fg-0208-001" style="border-left: 3px solid #C65D07">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0208.001</span>
+                        <span class="sub-method-card-name">Perimeter Audit Protocol</span>
+                    </div>
+                    <p class="sub-method-desc">Systematic sweep of all exposed surfaces: DNS records, deployment endpoints, access policies, SSL certificates, redirect chains. Run on every new deployment and monthly thereafter. The audit answers one question: what can an unauthorized person reach? Document every finding and track remediation to closure.</p>
+                </div>
+                <div class="sub-method-card" id="fg-0208-002" style="border-left: 3px solid #C65D07">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0208.002</span>
+                        <span class="sub-method-card-name">Deployment Inventory</span>
+                    </div>
+                    <p class="sub-method-desc">Maintain a canonical list of what is deployed where, with access controls documented for each entry. Every deployment has a domain, a hosting provider, an access gate, and an owner. When the inventory is incomplete, shadow deployments accumulate: stale DNS records, forgotten subdomains, and bypass routes that no one monitors.</p>
+                </div>
+                <div class="sub-method-card" id="fg-0208-003" style="border-left: 3px solid #C65D07">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0208.003</span>
+                        <span class="sub-method-card-name">Runbook Creation</span>
+                    </div>
+                    <p class="sub-method-desc">Every security finding becomes a repeatable checklist. The first audit is investigative; every subsequent audit is a runbook execution. Document the exact steps: what to check, what tools to use, what a passing result looks like, what a failing result requires. Runbooks turn tribal knowledge into institutional capability.</p>
+                </div>
+                <div class="sub-method-card" id="fg-0208-004" style="border-left: 3px solid #C65D07">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0208.004</span>
+                        <span class="sub-method-card-name">Fix Verification</span>
+                    </div>
+                    <p class="sub-method-desc">Test fixes before declaring victory. DNS changes need propagation verification. Redirect rules need curl testing from outside the network. Access policies need unauthenticated probe attempts. The fix is not complete when the configuration is changed; the fix is complete when the verification proves the exposure is closed.</p>
+                </div>
+                </div>
+            </section>
 
         
             <section class="war-story">

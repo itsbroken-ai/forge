@@ -4,7 +4,7 @@
     "full_name": "Framework for Organized, Resilient, Governed Engineering and Development of Agentic AI",
     "version": "1.0",
     "last_updated": "2026-02-09",
-    "description": "Agentic AI Creation Framework. 56 methods across 8 tactical pillars for building, governing, and scaling AI agent systems at every level of application."
+    "description": "Agentic AI Creation Framework. 57 methods across 8 tactical pillars for building, governing, and scaling AI agent systems at every level of application."
   },
   "tactics": [
     {
@@ -80,7 +80,7 @@
         {
           "id": "FG-0101.001",
           "name": "Domain Expertise Mapping",
-          "description": "Formally document what the human brings to the collaboration: years of domain experience, judgment patterns, quality intuition, creative direction capability, and ethical oversight. This makes the human layer explicit rather than assumed, preventing the common failure where AI-generated volume obscures the absence of domain depth."
+          "description": "Formally document what the human brings to the collaboration: years of domain experience, judgment patterns, quality intuition, creative direction capability, ethical oversight, and domain vocabulary. The human's vocabulary is literally the API between their expertise and AI execution speed. Include a vocabulary inventory: what terms does the human know precisely, and where are the vocabulary gaps that will slow collaboration? This makes the human layer explicit rather than assumed, preventing the common failure where AI-generated volume obscures the absence of domain depth."
         },
         {
           "id": "FG-0101.002",
@@ -208,6 +208,23 @@
         "FG-0401",
         "FG-0702"
       ],
+      "sub_methods": [
+        {
+          "id": "FG-0105.001",
+          "name": "Transfer Identification",
+          "description": "Map which existing skills from your domain apply directly to the new domain. Military command structures become agent governance. QA testing pyramids become AI output validation. Red team adversarial thinking becomes security auditing. Identify these transfers explicitly so the team builds on proven patterns rather than inventing from scratch."
+        },
+        {
+          "id": "FG-0105.002",
+          "name": "Gap Analysis",
+          "description": "Identify where domain knowledge is absent and the transfer breaks down. Positive transfer accelerates work; negative transfer (assuming patterns apply when they do not) creates subtle failures. Map the friction zones where existing expertise does not translate and new learning is required. These gaps are where iteration loops live."
+        },
+        {
+          "id": "FG-0105.003",
+          "name": "Vocabulary Bridge",
+          "description": "Use existing domain vocabulary to learn new domain terms by analogy. 'Perimeter' in physical security maps to 'attack surface' in web security maps to 'exposed endpoints' in deployment infrastructure. Building vocabulary bridges between domains accelerates learning by anchoring new terms to familiar concepts. The bridge is the fastest path to naming precision in unfamiliar territory."
+        }
+      ],
       "added_version": "1.0"
     },
     {
@@ -237,6 +254,23 @@
         "FG-0701",
         "FG-0703"
       ],
+      "sub_methods": [
+        {
+          "id": "FG-0106.001",
+          "name": "Minimum Viable Vocabulary",
+          "description": "The smallest set of terms needed to ask good questions in a domain. For any new domain, there is a vocabulary threshold below which collaboration is inefficient and above which returns diminish. Identify this threshold: typically 20-30 terms that cover the core concepts. Invest in reaching it before starting production work."
+        },
+        {
+          "id": "FG-0106.002",
+          "name": "Learn-by-Doing Loops",
+          "description": "Build something, hit a wall, name the wall, learn the vocabulary for it, continue. This is the natural learning loop in AI collaboration: the wall is the teacher. Each failure point reveals a concept you need to name. Document the vocabulary you acquire through doing so it persists across sessions and team members."
+        },
+        {
+          "id": "FG-0106.003",
+          "name": "Failure Pattern Recognition",
+          "description": "When you are iterating without progress, cycling through attempts that do not converge, diagnose whether you are missing vocabulary rather than missing skill. The signal is unmistakable: you revert, retry with different words, and get the same wrong result. The fix is not more attempts, it is identifying and naming the concept you cannot currently articulate."
+        }
+      ],
       "added_version": "1.0"
     },
     {
@@ -265,6 +299,52 @@
         "FG-0506",
         "FG-0507",
         "FG-0801"
+      ],
+      "added_version": "1.0"
+    },
+    {
+      "id": "FG-0108",
+      "name": "Vocabulary-First Onboarding",
+      "tactic_id": "FT01",
+      "description": "Domain vocabulary is the API between human expertise and AI capability. You do not need to be an expert in a domain to collaborate with AI effectively in that domain. You need to know what things are called so you can ask for them precisely. When the human knows the correct terminology, AI executes instantly. When the human lacks vocabulary, every request becomes a guessing game of vague descriptions and iteration loops. The correlation is exact: vocabulary precision predicts collaboration speed.",
+      "implementation": "Before entering a new domain with AI, invest 30 minutes identifying the 20-30 key terms used by practitioners in that domain. You do not need to understand the concepts deeply, you need to know the names. Build a vocabulary bridge from your existing domain to the new one, mapping analogous concepts by name. When you hit iteration loops where progress stalls, diagnose whether the root cause is missing vocabulary rather than missing skill.",
+      "success_indicators": [
+        "New domain collaboration reaches productive speed within the first session",
+        "The human can name what they want, even if they cannot build it themselves",
+        "Iteration loops caused by vague requests decrease measurably",
+        "Vocabulary gaps are identified and filled proactively, not discovered through failure"
+      ],
+      "failure_modes": [
+        "Confusing vocabulary knowledge with domain mastery, leading to overconfidence in unfamiliar territory",
+        "Skipping vocabulary investment and relying on AI to interpret vague descriptions, creating 3x iteration overhead",
+        "Learning terms without understanding relationships between concepts, producing syntactically correct but semantically wrong requests",
+        "Vocabulary hoarding, treating domain terminology as gatekeeping rather than sharing it to accelerate the whole team"
+      ],
+      "war_story": {
+        "title": "The Rosetta Stone Session",
+        "content": "A practitioner with 20 years of security expertise entered a web development domain with zero experience. In security contexts, precise vocabulary (CORS, CSP, HSTS) produced instant AI execution. In web contexts, vague descriptions ('make it look right', 'fix the layout') produced iteration loops that ran 3x slower. Over 20 commits in 24 hours, the correlation was exact: tasks where the human knew the CSS property name completed in one pass; tasks where the human described the visual effect averaged three passes. The solution was not learning CSS, it was learning what CSS properties are called."
+      },
+      "related_techniques": [
+        "FG-0101",
+        "FG-0105",
+        "FG-0106"
+      ],
+      "sub_methods": [
+        {
+          "id": "FG-0108.001",
+          "name": "Domain Vocabulary Bootstrap",
+          "description": "Before entering an unfamiliar domain with AI, identify the 20-30 key terms practitioners use. Ask the AI to list the core vocabulary of the domain, then learn the names, not the implementations. This 30-minute investment prevents hours of iteration loops caused by imprecise requests."
+        },
+        {
+          "id": "FG-0108.002",
+          "name": "Concept-Level Sufficiency",
+          "description": "You need naming precision, not implementation depth. Knowing that 'flexbox' controls layout, 'margin' controls spacing, and 'z-index' controls layering is sufficient to direct AI execution effectively. You do not need to know how flexbox works internally. The threshold for effective collaboration is the ability to name the concept, not explain it."
+        },
+        {
+          "id": "FG-0108.003",
+          "name": "Vocabulary Gap Detection",
+          "description": "When collaboration speed drops and iteration loops increase, diagnose whether the root cause is a vocabulary gap rather than a skill gap. The signal: you know what you want but cannot name it precisely, so you describe the visual or behavioral effect instead. The fix: ask the AI what the correct term is for what you are describing, learn the name, then resume with precision."
+        }
       ],
       "added_version": "1.0"
     },
@@ -519,6 +599,28 @@
         "FG-0104",
         "FG-0204",
         "FG-0605"
+      ],
+      "sub_methods": [
+        {
+          "id": "FG-0208.001",
+          "name": "Perimeter Audit Protocol",
+          "description": "Systematic sweep of all exposed surfaces: DNS records, deployment endpoints, access policies, SSL certificates, redirect chains. Run on every new deployment and monthly thereafter. The audit answers one question: what can an unauthorized person reach? Document every finding and track remediation to closure."
+        },
+        {
+          "id": "FG-0208.002",
+          "name": "Deployment Inventory",
+          "description": "Maintain a canonical list of what is deployed where, with access controls documented for each entry. Every deployment has a domain, a hosting provider, an access gate, and an owner. When the inventory is incomplete, shadow deployments accumulate: stale DNS records, forgotten subdomains, and bypass routes that no one monitors."
+        },
+        {
+          "id": "FG-0208.003",
+          "name": "Runbook Creation",
+          "description": "Every security finding becomes a repeatable checklist. The first audit is investigative; every subsequent audit is a runbook execution. Document the exact steps: what to check, what tools to use, what a passing result looks like, what a failing result requires. Runbooks turn tribal knowledge into institutional capability."
+        },
+        {
+          "id": "FG-0208.004",
+          "name": "Fix Verification",
+          "description": "Test fixes before declaring victory. DNS changes need propagation verification. Redirect rules need curl testing from outside the network. Access policies need unauthenticated probe attempts. The fix is not complete when the configuration is changed; the fix is complete when the verification proves the exposure is closed."
+        }
       ],
       "added_version": "1.0"
     },
@@ -822,7 +924,7 @@
         {
           "id": "FG-0401.002",
           "name": "Progressive Context Depth",
-          "description": "Load context in layers of increasing detail: start with summaries and metadata (frontmatter scanning), then load full documents only when the summary indicates relevance. This prevents context window saturation from loading everything at maximum detail. Optimize for speed-to-productive over completeness."
+          "description": "Load context in layers of increasing detail: start with summaries and metadata (frontmatter scanning), then load full documents only when the summary indicates relevance. Use a breadcrumb system where each shallow file points to deeper context via traceable paths (STATUS.md points to active plans, active plans point to reference documents). This prevents context window saturation from loading everything at maximum detail. Optimize for speed-to-productive over completeness."
         },
         {
           "id": "FG-0401.003",
@@ -1362,6 +1464,23 @@
         "FG-0601",
         "FG-0706"
       ],
+      "sub_methods": [
+        {
+          "id": "FG-0512.001",
+          "name": "Escalation Timeout",
+          "description": "If an automated or AI-driven approach has not produced results within a defined time window, stop and reassess. The timeout prevents the sunk-cost trap where teams invest hours debugging an approach that should have been abandoned in minutes. Define timeouts per task type: 15 minutes for routine operations, 30 minutes for complex debugging, 60 minutes maximum before mandatory reassessment."
+        },
+        {
+          "id": "FG-0512.002",
+          "name": "Manual Fallback",
+          "description": "Sometimes the correct engineering answer is to do it by hand. When automation fails repeatedly, when the debugging time exceeds the manual execution time, when the edge case is genuinely unique, the manual fallback is not a failure of engineering. It is a recognition that not every problem justifies an automated solution. Document when and why you fell back to manual so the pattern is visible."
+        },
+        {
+          "id": "FG-0512.003",
+          "name": "Root Cause vs Workaround",
+          "description": "When recovering from an error, explicitly identify whether you are fixing the root cause or applying a workaround. Both are valid, but they have different implications. A root cause fix prevents recurrence. A workaround gets you moving but leaves the underlying issue intact. Document which one you chose and why. Workarounds that are not tracked become permanent technical debt."
+        }
+      ],
       "added_version": "1.0"
     },
     {
@@ -1793,6 +1912,23 @@
         "FG-0401",
         "FG-0701",
         "FG-0210"
+      ],
+      "sub_methods": [
+        {
+          "id": "FG-0707.001",
+          "name": "Shallow-First Loading",
+          "description": "Load YAML frontmatter and metadata before full document content. A shallow scan of 50 tokens per file can determine relevance before committing 5,000 tokens to the full document. This pattern applies to any context loading: read the index before reading the chapters, read the summary before reading the report, read the frontmatter before reading the post."
+        },
+        {
+          "id": "FG-0707.002",
+          "name": "Traceable Paths",
+          "description": "Every shallow reference must point to its deep context. When you load a summary, include the file path to the full document. When you load frontmatter, include the route to the complete content. Traceability means the agent can always go deeper when needed without having to search for where the detail lives."
+        },
+        {
+          "id": "FG-0707.003",
+          "name": "Context Budget",
+          "description": "Measure the token cost of your standard context loading and set a budget. If your context window is 200K tokens and your governance plus project state consumes 60K, you have 140K for task execution. Know this number. Track it. When loading decisions compete for budget, prioritize by task relevance. The budget is the constraint that forces prioritization."
+        }
       ],
       "added_version": "1.0"
     },

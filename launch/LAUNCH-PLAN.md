@@ -15,7 +15,7 @@ We release the methodology on February 6. We provide the mission briefing.
 
 **Steps:**
 - [ ] Initialize git repo in `/Projects/forged/`
-- [ ] Push to GitHub (TheCipherCircle org or new repo)
+- [x] Push to GitHub (itsbroken-ai org, transferred from TheCipherCircle 2026-02-09)
 - [ ] Connect repo to Vercel
 - [ ] Add custom domain `forged.itsbroken.ai` in Vercel project settings
 - [ ] Add DNS record in Cloudflare: `forged` CNAME → `cname.vercel-dns.com`

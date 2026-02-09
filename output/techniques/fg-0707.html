@@ -89,6 +89,33 @@
         </div>
 
         
+            <section class="technique-sub-methods">
+                <h2>Sub-Methods <span class="sub-method-count">3</span></h2>
+                <div class="sub-method-grid">
+                    
+                <div class="sub-method-card" id="fg-0707-001" style="border-left: 3px solid #c9a044">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0707.001</span>
+                        <span class="sub-method-card-name">Shallow-First Loading</span>
+                    </div>
+                    <p class="sub-method-desc">Load YAML frontmatter and metadata before full document content. A shallow scan of 50 tokens per file can determine relevance before committing 5,000 tokens to the full document. This pattern applies to any context loading: read the index before reading the chapters, read the summary before reading the report, read the frontmatter before reading the post.</p>
+                </div>
+                <div class="sub-method-card" id="fg-0707-002" style="border-left: 3px solid #c9a044">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0707.002</span>
+                        <span class="sub-method-card-name">Traceable Paths</span>
+                    </div>
+                    <p class="sub-method-desc">Every shallow reference must point to its deep context. When you load a summary, include the file path to the full document. When you load frontmatter, include the route to the complete content. Traceability means the agent can always go deeper when needed without having to search for where the detail lives.</p>
+                </div>
+                <div class="sub-method-card" id="fg-0707-003" style="border-left: 3px solid #c9a044">
+                    <div class="sub-method-header">
+                        <span class="sub-method-card-id">FG-0707.003</span>
+                        <span class="sub-method-card-name">Context Budget</span>
+                    </div>
+                    <p class="sub-method-desc">Measure the token cost of your standard context loading and set a budget. If your context window is 200K tokens and your governance plus project state consumes 60K, you have 140K for task execution. Know this number. Track it. When loading decisions compete for budget, prioritize by task relevance. The budget is the constraint that forces prioritization.</p>
+                </div>
+                </div>
+            </section>
 
         
             <section class="war-story">

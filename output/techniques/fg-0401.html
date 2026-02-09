@@ -105,7 +105,7 @@
                         <span class="sub-method-card-id">FG-0401.002</span>
                         <span class="sub-method-card-name">Progressive Context Depth</span>
                     </div>
-                    <p class="sub-method-desc">Load context in layers of increasing detail: start with summaries and metadata (frontmatter scanning), then load full documents only when the summary indicates relevance. This prevents context window saturation from loading everything at maximum detail. Optimize for speed-to-productive over completeness.</p>
+                    <p class="sub-method-desc">Load context in layers of increasing detail: start with summaries and metadata (frontmatter scanning), then load full documents only when the summary indicates relevance. Use a breadcrumb system where each shallow file points to deeper context via traceable paths (STATUS.md points to active plans, active plans point to reference documents). This prevents context window saturation from loading everything at maximum detail. Optimize for speed-to-productive over completeness.</p>
                 </div>
                 <div class="sub-method-card" id="fg-0401-003" style="border-left: 3px solid #ff6b35">
                     <div class="sub-method-header">
