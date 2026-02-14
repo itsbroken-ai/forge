@@ -3,6 +3,9 @@
 Validate framework.json for structural integrity.
 Catches broken references, missing fields, duplicate IDs, and format violations
 before they reach the build pipeline.
+
+Workshop Mode: drafts get relaxed validation (warnings instead of errors for
+missing implementation, success_indicators, failure_modes).
 """
 
 import json
@@ -17,10 +20,15 @@ TACTIC_ID_PATTERN = re.compile(r'^FT\d{2}$')
 TECHNIQUE_ID_PATTERN = re.compile(r'^FG-\d{4}$')
 SUB_METHOD_ID_PATTERN = re.compile(r'^FG-\d{4}\.\d{3}$')
 
+VALID_STATUSES = {"published", "draft"}
+
 REQUIRED_TECHNIQUE_FIELDS = [
     "id", "name", "tactic_id", "description", "implementation",
     "success_indicators", "failure_modes", "added_version"
 ]
+
+# Fields that are relaxed for draft techniques (warn instead of error)
+DRAFT_RELAXED_FIELDS = {"implementation", "success_indicators", "failure_modes", "added_version"}
 
 REQUIRED_SUB_METHOD_FIELDS = ["id", "name", "description"]
 
@@ -73,11 +81,30 @@ def validate_techniques(techniques, valid_tactic_ids):
 
     for i, tech in enumerate(techniques):
         tid = tech.get("id", f"<missing at index {i}>")
+        is_draft = tech.get("status") == "draft"
 
-        # Required fields
+        # Validate status field if present
+        status = tech.get("status")
+        if status is not None and status not in VALID_STATUSES:
+            error(f"technique '{tid}': status must be 'published' or 'draft', got '{status}'")
+
+        # Validate session_tags if present
+        session_tags = tech.get("session_tags")
+        if session_tags is not None:
+            if not isinstance(session_tags, list):
+                error(f"technique '{tid}': session_tags must be a list")
+            else:
+                for j, tag in enumerate(session_tags):
+                    if not isinstance(tag, str) or not tag.strip():
+                        error(f"technique '{tid}': session_tags[{j}] must be a non-empty string")
+
+        # Required fields (relaxed for drafts)
         for field in REQUIRED_TECHNIQUE_FIELDS:
             if field not in tech:
-                error(f"technique '{tid}': missing required field '{field}'")
+                if is_draft and field in DRAFT_RELAXED_FIELDS:
+                    warn(f"technique '{tid}' (draft): missing '{field}' (relaxed for drafts)")
+                else:
+                    error(f"technique '{tid}': missing required field '{field}'")
 
         # ID format
         if not TECHNIQUE_ID_PATTERN.match(tid):
@@ -99,21 +126,31 @@ def validate_techniques(techniques, valid_tactic_ids):
             if not tid.startswith(expected_prefix):
                 warn(f"technique '{tid}': ID prefix doesn't match tactic '{tactic_id}' (expected {expected_prefix}XX)")
 
-        # Content checks
+        # Content checks (relaxed for drafts)
         if not tech.get("name", "").strip():
             error(f"technique '{tid}': name is empty")
         if not tech.get("description", "").strip():
             error(f"technique '{tid}': description is empty")
+
         if not tech.get("implementation", "").strip():
-            error(f"technique '{tid}': implementation is empty")
+            if is_draft:
+                warn(f"technique '{tid}' (draft): implementation is empty")
+            else:
+                error(f"technique '{tid}': implementation is empty")
 
         indicators = tech.get("success_indicators", [])
         if not isinstance(indicators, list) or len(indicators) == 0:
-            error(f"technique '{tid}': success_indicators must be a non-empty list")
+            if is_draft:
+                warn(f"technique '{tid}' (draft): success_indicators missing or empty")
+            else:
+                error(f"technique '{tid}': success_indicators must be a non-empty list")
 
         failures = tech.get("failure_modes", [])
         if not isinstance(failures, list) or len(failures) == 0:
-            error(f"technique '{tid}': failure_modes must be a non-empty list")
+            if is_draft:
+                warn(f"technique '{tid}' (draft): failure_modes missing or empty")
+            else:
+                error(f"technique '{tid}': failure_modes must be a non-empty list")
 
         # Related techniques (optional but if present, must be valid)
         for rel_id in tech.get("related_techniques", []):
@@ -123,6 +160,11 @@ def validate_techniques(techniques, valid_tactic_ids):
         # Sub-methods
         for j, sub in enumerate(tech.get("sub_methods", [])):
             sub_id = sub.get("id", f"<missing at {tid}[{j}]>")
+
+            # Validate sub-method status if present
+            sub_status = sub.get("status")
+            if sub_status is not None and sub_status not in VALID_STATUSES:
+                error(f"sub-method '{sub_id}': status must be 'published' or 'draft', got '{sub_status}'")
 
             for field in REQUIRED_SUB_METHOD_FIELDS:
                 if field not in sub:
@@ -172,19 +214,31 @@ def main():
     with open(FRAMEWORK_FILE) as f:
         data = json.load(f)
 
+    techniques = data.get("techniques", [])
+
+    # Workshop mode stats
+    draft_techs = [t for t in techniques if t.get("status") == "draft"]
+    published_techs = [t for t in techniques if t.get("status", "published") == "published"]
+    draft_subs = sum(
+        1 for t in techniques for s in t.get("sub_methods", [])
+        if s.get("status") == "draft"
+    )
+
     print(f"\nValidating framework v{data['framework'].get('version', '?')}...")
     print(f"  Tactics: {len(data.get('tactics', []))}")
-    print(f"  Techniques: {len(data.get('techniques', []))}")
+    print(f"  Techniques: {len(techniques)} ({len(published_techs)} published, {len(draft_techs)} draft)")
 
     # Run validations
     validate_framework_meta(data["framework"])
     valid_tactic_ids = validate_tactics(data["tactics"])
-    valid_tech_ids = validate_techniques(data["techniques"], valid_tactic_ids)
-    validate_cross_references(data["techniques"], valid_tech_ids)
+    valid_tech_ids = validate_techniques(techniques, valid_tactic_ids)
+    validate_cross_references(techniques, valid_tech_ids)
 
     # Count sub-methods
-    total_subs = sum(len(t.get("sub_methods", [])) for t in data["techniques"])
+    total_subs = sum(len(t.get("sub_methods", [])) for t in techniques)
     print(f"  Sub-methods: {total_subs}")
+    if draft_subs:
+        print(f"  Draft sub-methods: {draft_subs}")
 
     # Report
     print()
