@@ -61,6 +61,14 @@ tactics = [
     }
 ]
 
+# Workshop Mode: Optional fields for techniques and sub-methods
+# ─────────────────────────────────────────────────────────────
+# "status": "published" | "draft"   (omitted = published, backward compatible)
+# "session_tags": ["tag1", "tag2"]  (optional, for Circle dogfooding)
+#
+# Drafts are hidden in production builds, shown with badges in preview builds.
+# Use FORGE_MODE=preview to see drafts locally.
+
 techniques = [
     # ═══════════════════════════════════════════════════════════════
     # FT01 - FOUNDATION (8 techniques)
@@ -1845,11 +1853,22 @@ def main():
     # Count by tactic
     from collections import Counter
     counts = Counter(t["tactic_id"] for t in techniques)
+
+    # Count draft vs published
+    draft_techs = [t for t in techniques if t.get("status") == "draft"]
+    published_techs = [t for t in techniques if t.get("status", "published") == "published"]
+    draft_subs = sum(
+        1 for t in techniques for s in t.get("sub_methods", [])
+        if s.get("status") == "draft"
+    )
+
     print("FORGED Framework Data Generator")
     print("=" * 50)
     print(f"Version: {VERSION}")
     print(f"Tactics: {len(tactics)}")
-    print(f"Techniques: {len(techniques)}")
+    print(f"Techniques: {len(techniques)} ({len(published_techs)} published, {len(draft_techs)} draft)")
+    if draft_subs:
+        print(f"Draft sub-methods: {draft_subs}")
     print()
     for tid in sorted(counts):
         tactic_name = next(t["name"] for t in tactics if t["id"] == tid)

@@ -51,7 +51,7 @@
                 <span class="technique-badge" style="background: #2a1d0d; color: #dbb95c; border: 1px solid #dbb95c">Execution</span>
                 <span class="technique-version">v1.0</span>
             </div>
-            <h1><span class="tech-id-large">FG-0512</span> Error Recovery Protocol</h1>
+            <h1><span class="tech-id-large">FG-0512</span> Error Recovery Protocol </h1>
         </header>
 
         <section class="technique-description">
@@ -122,6 +122,8 @@
                 <h2>Field Report: Cascading State Corruption</h2>
                 <div class="war-story-content">An agent executing a multi-file refactoring task introduced a naming inconsistency in file 3 of 12. Without intermediate checkpoints, the inconsistency propagated through files 4-12 before review. Recovery required reverting 10 files and re-executing from the checkpoint at file 3. Implementation of per-file verification checkpoints in subsequent tasks reduced cascading error incidents to zero. Time lost: 45 minutes. Estimated time saved by prevention in subsequent tasks: 6+ hours.</div>
             </section>
+
+        
 
         <section class="technique-related">
             <h2>Related Methods</h2>

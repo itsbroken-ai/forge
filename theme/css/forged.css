@@ -1321,6 +1321,70 @@ a:hover {
     border-color: var(--amber);
 }
 
+/* ============================================
+   WORKSHOP MODE (DRAFT BADGES & SESSION TAGS)
+   ============================================ */
+
+.draft-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: rgba(255, 107, 53, 0.15);
+    color: #ff6b35;
+    border: 1px solid rgba(255, 107, 53, 0.4);
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
+.draft-badge-lg {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+}
+
+.draft-badge-sm {
+    font-size: 0.55rem;
+    padding: 0.1rem 0.4rem;
+}
+
+.technique-cell-wrapper.draft {
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.technique-cell-wrapper.draft:hover {
+    opacity: 0.9;
+}
+
+.session-tags {
+    margin-bottom: 2rem;
+}
+
+.session-tags h2 {
+    font-size: 1rem;
+    font-family: var(--font-mono);
+    color: var(--amber);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.session-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--text-secondary);
+    margin-right: 0.375rem;
+    margin-bottom: 0.375rem;
+}
+
 /* Add bottom padding when export bar is visible */
 .select-mode-active .footer {
     margin-bottom: 3.5rem;

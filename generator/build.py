@@ -2,8 +2,12 @@
 """
 FORGED Static Site Generator
 Reads framework.json and generates an ATT&CK-style interactive matrix website.
+
+Workshop Mode: Set FORGE_MODE=preview to include draft techniques with badges.
+Default (production) filters out all drafts.
 """
 
+import copy
 import html as html_module
 import json
 import os
@@ -18,6 +22,9 @@ TEMPLATE_DIR = ROOT / "generator" / "templates"
 THEME_DIR = ROOT / "theme"
 OUTPUT_DIR = ROOT / "output"
 
+# Workshop mode: "production" (default) or "preview"
+FORGE_MODE = os.environ.get("FORGE_MODE", "production")
+
 # Tactic colors (itsbroken.ai standard accent palette — amber spectrum)
 TACTIC_COLORS = {
     "FT01": {"bg": "#2a1f0a", "border": "#D4A84B", "text": "#D4A84B", "label": "Foundation"},
@@ -29,6 +36,35 @@ TACTIC_COLORS = {
     "FT07": {"bg": "#2a1c0c", "border": "#c9a044", "text": "#c9a044", "label": "Knowledge"},
     "FT08": {"bg": "#2a120a", "border": "#e07828", "text": "#e07828", "label": "Evolution"},
 }
+
+
+def is_draft(item):
+    """Check if a technique or sub-method is a draft."""
+    return item.get("status") == "draft"
+
+
+def filter_framework(data):
+    """Remove draft techniques and draft sub-methods for production builds.
+
+    Returns a deep copy with drafts stripped out. Original data is untouched.
+    """
+    filtered = copy.deepcopy(data)
+
+    # Remove draft techniques entirely
+    filtered["techniques"] = [
+        t for t in filtered["techniques"]
+        if not is_draft(t)
+    ]
+
+    # Remove draft sub-methods from remaining techniques
+    for tech in filtered["techniques"]:
+        if "sub_methods" in tech:
+            tech["sub_methods"] = [
+                s for s in tech["sub_methods"]
+                if not is_draft(s)
+            ]
+
+    return filtered
 
 
 def esc(text):
@@ -133,10 +169,43 @@ def slugify(text):
     return text.lower().replace(" ", "-").replace("/", "-").replace("&", "and")
 
 
+def draft_badge_html(size="sm"):
+    """Generate draft badge HTML for preview mode."""
+    if FORGE_MODE != "preview":
+        return ""
+    return f'<span class="draft-badge draft-badge-{size}">DRAFT</span>'
+
+
+def session_tags_html(tech):
+    """Generate session tags HTML for preview mode."""
+    if FORGE_MODE != "preview":
+        return ""
+    tags = tech.get("session_tags", [])
+    if not tags:
+        return ""
+    tag_items = "".join(f'<span class="session-tag">{esc(tag)}</span>' for tag in tags)
+    return f'''
+        <section class="session-tags">
+            <h2>Session Tags</h2>
+            <div>{tag_items}</div>
+        </section>'''
+
+
 def build_technique_card(tech, tactic_color):
     """Build HTML for a single technique card in the matrix."""
     sub_methods = tech.get("sub_methods", [])
     sub_count = len(sub_methods)
+    tech_is_draft = is_draft(tech)
+
+    # Draft class for dimmed opacity
+    wrapper_class = "technique-cell-wrapper"
+    if tech_is_draft and FORGE_MODE == "preview":
+        wrapper_class += " draft"
+
+    # Draft badge in preview mode
+    draft_badge = ""
+    if tech_is_draft and FORGE_MODE == "preview":
+        draft_badge = f' <span class="draft-badge draft-badge-sm">DRAFT</span>'
 
     # Sub-method indicator badge
     sub_badge = ""
@@ -148,16 +217,19 @@ def build_technique_card(tech, tactic_color):
     if sub_count > 0:
         sub_items = ""
         for sub in sub_methods:
+            sub_draft_badge = ""
+            if is_draft(sub) and FORGE_MODE == "preview":
+                sub_draft_badge = ' <span class="draft-badge draft-badge-sm">DRAFT</span>'
             sub_items += f'''<a href="techniques/{esc(tech['id'].lower())}.html#{esc(sub['id'].lower().replace('.', '-'))}" class="sub-method-row" style="border-left: 3px solid {tactic_color['border']}">
                 <span class="sub-method-id">{esc(sub['id'])}</span>
-                <span class="sub-method-name">{esc(sub['name'])}</span>
+                <span class="sub-method-name">{esc(sub['name'])}{sub_draft_badge}</span>
             </a>'''
         sub_rows = f'''<div class="sub-method-list" data-parent="{esc(tech['id'])}">{sub_items}</div>'''
 
-    return f'''<div class="technique-cell-wrapper">
+    return f'''<div class="{wrapper_class}">
         <a href="techniques/{esc(tech['id'].lower())}.html" class="technique-cell" style="border-left: 3px solid {tactic_color['border']}" data-has-subs="{sub_count > 0}">
             <span class="technique-id">{esc(tech['id'])}</span>
-            <span class="technique-name">{esc(tech['name'])}</span>
+            <span class="technique-name">{esc(tech['name'])}{draft_badge}</span>
             {sub_badge}
         </a>
         {sub_rows}
@@ -248,6 +320,14 @@ def build_technique_pages(data):
         tactic = tactics_map[tech["tactic_id"]]
         color = TACTIC_COLORS[tech["tactic_id"]]
 
+        # Draft indicator for technique header
+        draft_indicator = ""
+        if is_draft(tech) and FORGE_MODE == "preview":
+            draft_indicator = draft_badge_html("lg")
+
+        # Session tags
+        session_tags = session_tags_html(tech)
+
         # Build success indicators list
         indicators_html = ""
         for ind in tech.get("success_indicators", []):
@@ -272,11 +352,14 @@ def build_technique_pages(data):
             sub_items = ""
             for sub in sub_methods:
                 anchor = esc(sub['id'].lower().replace('.', '-'))
+                sub_draft = ""
+                if is_draft(sub) and FORGE_MODE == "preview":
+                    sub_draft = f' {draft_badge_html("sm")}'
                 sub_items += f'''
                 <div class="sub-method-card" id="{anchor}" style="border-left: 3px solid {color['border']}">
                     <div class="sub-method-header">
                         <span class="sub-method-card-id">{esc(sub['id'])}</span>
-                        <span class="sub-method-card-name">{esc(sub['name'])}</span>
+                        <span class="sub-method-card-name">{esc(sub['name'])}{sub_draft}</span>
                     </div>
                     <p class="sub-method-desc">{esc(sub['description'])}</p>
                 </div>'''
@@ -335,6 +418,8 @@ def build_technique_pages(data):
         html = html.replace("{{SUB_METHODS}}", sub_methods_html)
         html = html.replace("{{WAR_STORY}}", war_story_html)
         html = html.replace("{{VERSION}}", esc(tech.get("added_version", "1.0")))
+        html = html.replace("{{DRAFT_INDICATOR}}", draft_indicator)
+        html = html.replace("{{SESSION_TAGS}}", session_tags)
         html = html.replace("{{LD_JSON}}", ld_json_article + "\n    " + ld_json_breadcrumb)
 
         filename = f"{tech['id'].lower()}.html"
@@ -358,10 +443,13 @@ def build_tactic_pages(data):
         for tech in tactic_techs:
             sub_count = len(tech.get("sub_methods", []))
             sub_indicator = f' <span class="sub-method-badge-sm">{sub_count}</span>' if sub_count > 0 else ""
+            draft_indicator = ""
+            if is_draft(tech) and FORGE_MODE == "preview":
+                draft_indicator = f' {draft_badge_html("sm")}'
             table_rows += f'''
             <tr>
                 <td><a href="../techniques/{esc(tech['id'].lower())}.html">{esc(tech['id'])}</a></td>
-                <td><a href="../techniques/{esc(tech['id'].lower())}.html">{esc(tech['name'])}{sub_indicator}</a></td>
+                <td><a href="../techniques/{esc(tech['id'].lower())}.html">{esc(tech['name'])}{sub_indicator}{draft_indicator}</a></td>
                 <td>{esc(tech.get('description', ''))}</td>
             </tr>'''
 
@@ -440,12 +528,13 @@ def build_sitemap(data):
             today, 'monthly', '0.8'
         ))
 
-    # Technique pages
+    # Technique pages (only published in sitemap, even in preview mode)
     for tech in data["techniques"]:
-        urls.append((
-            f'https://forged.itsbroken.ai/techniques/{esc(tech["id"].lower())}.html',
-            today, 'monthly', '0.6'
-        ))
+        if not is_draft(tech):
+            urls.append((
+                f'https://forged.itsbroken.ai/techniques/{esc(tech["id"].lower())}.html',
+                today, 'monthly', '0.6'
+            ))
 
     xml_entries = ""
     for loc, lastmod, freq, pri in urls:
@@ -471,18 +560,34 @@ def build_sitemap(data):
 def main():
     print("FORGED Static Site Generator")
     print("=" * 50)
+    print(f"  Mode: {FORGE_MODE}")
 
     print("\nLoading framework data...")
-    data = load_framework()
-    fw = data["framework"]
-    print(f"  Framework: {fw['name']} v{fw['version']}")
-    print(f"  Tactics: {len(data['tactics'])}")
-    print(f"  Techniques: {len(data['techniques'])}")
+    raw_data = load_framework()
+    fw = raw_data["framework"]
 
-    print("\nPreparing output directory...")
+    # Count drafts before filtering
+    all_techs = raw_data["techniques"]
+    draft_count = sum(1 for t in all_techs if is_draft(t))
+    published_count = len(all_techs) - draft_count
+
+    print(f"  Framework: {fw['name']} v{fw['version']}")
+    print(f"  Tactics: {len(raw_data['tactics'])}")
+    print(f"  Techniques: {len(all_techs)} total ({published_count} published, {draft_count} draft)")
+
+    # Apply workshop mode filter
+    if FORGE_MODE == "production" and draft_count > 0:
+        data = filter_framework(raw_data)
+        print(f"  Production mode: {draft_count} draft(s) filtered out")
+    else:
+        data = raw_data
+        if FORGE_MODE == "preview" and draft_count > 0:
+            print(f"  Preview mode: {draft_count} draft(s) included with badges")
+
+    print(f"\nPreparing output directory...")
     ensure_output_dirs()
 
-    print("\nCopying theme assets...")
+    print("Copying theme assets...")
     copy_theme_assets()
 
     print("\nGenerating pages...")
