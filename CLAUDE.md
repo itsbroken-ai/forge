@@ -46,9 +46,9 @@ forged/
 3. Preview: `./preview.sh`
 4. Deploy: `./deploy.sh`
 
-- **F.O.R.G.E.d (this repo):** Public framework. Technique IDs `FG-XNNN`. Open contribution via GitHub issues.
+## Scope
 
-
+This repo contains the public F.O.R.G.E.d framework only. Technique IDs follow the `FG-XNNN` format. Open contribution via GitHub issues.
 
 ## Commit Attribution
 
