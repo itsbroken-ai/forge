@@ -11,24 +11,24 @@
    ============================================ */
 
 :root {
-    /* Backgrounds: light default */
-    --bg-0: #f4f6f8;
+    /* Backgrounds: warm light (itsbroken palette) */
+    --bg-0: #faf8f5;
     --bg-1: #ffffff;
     --bg-2: #ffffff;
-    --bg-3: #eef1f5;
-    --bg-4: #e4e9ef;
-    --bg-hover: #eef2f6;
+    --bg-3: #f0ece5;
+    --bg-4: #e8e2d8;
+    --bg-hover: #f0ece5;
 
-    /* Text hierarchy */
-    --text-0: #14181d;
-    --text-1: #2b313a;
-    --text-2: #5a626d;
-    --text-3: #8a929d;
+    /* Text hierarchy (warm) */
+    --text-0: #2a2218;
+    --text-1: #43392a;
+    --text-2: #5a4e3a;
+    --text-3: #8a7e6a;
 
-    /* Borders */
-    --border-0: rgba(20,25,33,0.09);
-    --border-1: rgba(20,25,33,0.13);
-    --border-2: rgba(20,25,33,0.20);
+    /* Borders (warm) */
+    --border-0: rgba(42,34,24,0.10);
+    --border-1: rgba(42,34,24,0.15);
+    --border-2: rgba(42,34,24,0.22);
 
     /* Brand amber */
     --amber: #D4A84B;            /* bright brand: used as a background fill */
@@ -61,17 +61,17 @@
 
 /* Dark theme: explicit toggle, and system preference */
 :root[data-theme="dark"], :root[data-theme="system"] {
-    --bg-0: #08090a; --bg-1: #0e1013; --bg-2: #14161a; --bg-3: #1b1e23; --bg-4: #22262c; --bg-hover: #1a1d22;
-    --text-0: #eaedf2; --text-1: #b8bec8; --text-2: #7d8590; --text-3: #4b5260;
-    --border-0: rgba(255,255,255,0.06); --border-1: rgba(255,255,255,0.10); --border-2: rgba(255,255,255,0.15);
+    --bg-0: #0a0a0a; --bg-1: #111111; --bg-2: #151515; --bg-3: #1a1a1a; --bg-4: #22201a; --bg-hover: #1a1a1a;
+    --text-0: #e0d5c0; --text-1: #c9bb9d; --text-2: #b8a88a; --text-3: #6b5e4a;
+    --border-0: rgba(230,222,205,0.07); --border-1: rgba(230,222,205,0.11); --border-2: rgba(230,222,205,0.17);
     --amber-text: #D4A84B; --amber-glow: rgba(212, 168, 75, 0.06);
 }
 /* System set to light: restore light tokens */
 @media (prefers-color-scheme: light) {
     :root[data-theme="system"] {
-        --bg-0: #f4f6f8; --bg-1: #ffffff; --bg-2: #ffffff; --bg-3: #eef1f5; --bg-4: #e4e9ef; --bg-hover: #eef2f6;
-        --text-0: #14181d; --text-1: #2b313a; --text-2: #5a626d; --text-3: #8a929d;
-        --border-0: rgba(20,25,33,0.09); --border-1: rgba(20,25,33,0.13); --border-2: rgba(20,25,33,0.20);
+        --bg-0: #faf8f5; --bg-1: #ffffff; --bg-2: #ffffff; --bg-3: #f0ece5; --bg-4: #e8e2d8; --bg-hover: #f0ece5;
+        --text-0: #2a2218; --text-1: #43392a; --text-2: #5a4e3a; --text-3: #8a7e6a;
+        --border-0: rgba(42,34,24,0.10); --border-1: rgba(42,34,24,0.15); --border-2: rgba(42,34,24,0.22);
         --amber-text: #8a6212; --amber-glow: rgba(212, 168, 75, 0.12);
     }
 }
