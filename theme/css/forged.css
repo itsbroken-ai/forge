@@ -465,10 +465,9 @@ body { transition: background 0.2s ease, color 0.2s ease; }
    ============================================ */
 
 .matrix {
-    display: grid;
-    grid-template-columns: repeat(8, minmax(158px, 1fr));
+    display: flex;
     gap: 0.625rem;
-    align-items: start;
+    align-items: flex-start;
     overflow-x: auto;
     overflow-y: visible;
     padding-bottom: 0.75rem;
@@ -480,6 +479,20 @@ body { transition: background 0.2s ease, color 0.2s ease; }
     flex-direction: column;
     gap: 0.5rem;
     background: transparent;
+    flex: 1 0 158px;
+    min-width: 158px;
+}
+
+/* Wide pillars (>12 methods): double width, two-column body */
+.tactic-column--wide {
+    flex: 2 0 332px;
+    min-width: 332px;
+}
+.tactic-column--wide .technique-list--split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.375rem;
+    align-content: start;
 }
 
 /* Tactic header — colored, authoritative */

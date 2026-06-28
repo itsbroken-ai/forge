@@ -258,14 +258,18 @@ def build_matrix_page(data):
 
         tech_cards = "\n".join(build_technique_card(t, color) for t in techs)
 
+        wide = len(techs) > 12
+        col_cls = "tactic-column tactic-column--wide" if wide else "tactic-column"
+        list_cls = "technique-list technique-list--split" if wide else "technique-list"
+
         columns_html += f'''
-        <div class="tactic-column">
+        <div class="{col_cls}">
             <a href="tactics/{esc(tid.lower())}.html" class="tactic-header" style="--pc: {color['border']}">
                 <span class="tactic-id">{esc(tid)}</span>
                 <span class="tactic-name">{esc(tactic['name'])}</span>
                 <span class="tactic-count">{len(techs)} methods</span>
             </a>
-            <div class="technique-list">
+            <div class="{list_cls}">
                 {tech_cards}
             </div>
         </div>'''
