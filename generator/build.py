@@ -260,7 +260,7 @@ def build_matrix_page(data):
 
         columns_html += f'''
         <div class="tactic-column">
-            <a href="tactics/{esc(tid.lower())}.html" class="tactic-header" style="background: {color['bg']}; border: 1px solid {color['border']}; color: {color['text']}">
+            <a href="tactics/{esc(tid.lower())}.html" class="tactic-header" style="--pc: {color['border']}">
                 <span class="tactic-id">{esc(tid)}</span>
                 <span class="tactic-name">{esc(tactic['name'])}</span>
                 <span class="tactic-count">{len(techs)} methods</span>

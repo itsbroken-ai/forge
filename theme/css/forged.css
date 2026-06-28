@@ -2,8 +2,8 @@
    F.O.R.G.E. — Agentic AI Creation Framework
    forge.itsbroken.ai · Cipher Circle
 
-   Production stylesheet. MITRE ATT&CK-grade visual authority.
-   Dark theme. Distinct tactic colors. Conference-ready.
+   Production stylesheet. Clean, themeable (light / dark / system).
+   Distinct tactic colors. Conference-ready.
    ═══════════════════════════════════════════════════════════════ */
 
 /* ============================================
@@ -11,26 +11,34 @@
    ============================================ */
 
 :root {
-    /* Backgrounds — cool dark gradient */
-    --bg-0: #08090a;
-    --bg-1: #0e1013;
-    --bg-2: #14161a;
-    --bg-3: #1b1e23;
-    --bg-4: #22262c;
-    --bg-hover: #1a1d22;
+    /* Backgrounds: light default */
+    --bg-0: #f4f6f8;
+    --bg-1: #ffffff;
+    --bg-2: #ffffff;
+    --bg-3: #eef1f5;
+    --bg-4: #e4e9ef;
+    --bg-hover: #eef2f6;
 
     /* Text hierarchy */
-    --text-0: #eaedf2;
-    --text-1: #b8bec8;
-    --text-2: #7d8590;
-    --text-3: #4b5260;
+    --text-0: #14181d;
+    --text-1: #2b313a;
+    --text-2: #5a626d;
+    --text-3: #8a929d;
+
+    /* Borders */
+    --border-0: rgba(20,25,33,0.09);
+    --border-1: rgba(20,25,33,0.13);
+    --border-2: rgba(20,25,33,0.20);
 
     /* Brand amber */
-    --amber: #D4A84B;
-    --amber-dim: rgba(212, 168, 75, 0.4);
-    --amber-glow: rgba(212, 168, 75, 0.06);
+    --amber: #D4A84B;            /* bright brand: used as a background fill */
+    --amber-line: #D4A84B;       /* graphic accents (rules, ticks) */
+    --amber-text: #8a6212;       /* readable amber for text on light */
+    --amber-dim: rgba(212, 168, 75, 0.40);
+    --amber-glow: rgba(212, 168, 75, 0.12);
+    --on-amber: #1a1408;         /* dark text that sits on amber fills */
 
-    /* Tactic palette — 8 distinct colors */
+    /* Tactic palette: 8 distinct colors (theme-independent) */
     --t-ft01: #5B8DEF;
     --t-ft02: #9B72CF;
     --t-ft03: #2CC9A3;
@@ -40,19 +48,32 @@
     --t-ft07: #3BA8D8;
     --t-ft08: #D46B9B;
 
-    /* Borders */
-    --border-0: rgba(255,255,255,0.06);
-    --border-1: rgba(255,255,255,0.10);
-    --border-2: rgba(255,255,255,0.15);
-
     /* Layout */
     --max-w: 1600px;
     --r: 4px;
     --r-lg: 8px;
 
-    /* Typography */
-    --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-mono: 'Fira Code', 'SF Mono', 'Cascadia Code', monospace;
+    /* Typography: itsbroken.ai brand fonts */
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'Space Mono', 'SF Mono', 'Cascadia Code', monospace;
+}
+
+/* Dark theme: explicit toggle, and system preference */
+:root[data-theme="dark"], :root[data-theme="system"] {
+    --bg-0: #08090a; --bg-1: #0e1013; --bg-2: #14161a; --bg-3: #1b1e23; --bg-4: #22262c; --bg-hover: #1a1d22;
+    --text-0: #eaedf2; --text-1: #b8bec8; --text-2: #7d8590; --text-3: #4b5260;
+    --border-0: rgba(255,255,255,0.06); --border-1: rgba(255,255,255,0.10); --border-2: rgba(255,255,255,0.15);
+    --amber-text: #D4A84B; --amber-glow: rgba(212, 168, 75, 0.06);
+}
+/* System set to light: restore light tokens */
+@media (prefers-color-scheme: light) {
+    :root[data-theme="system"] {
+        --bg-0: #f4f6f8; --bg-1: #ffffff; --bg-2: #ffffff; --bg-3: #eef1f5; --bg-4: #e4e9ef; --bg-hover: #eef2f6;
+        --text-0: #14181d; --text-1: #2b313a; --text-2: #5a626d; --text-3: #8a929d;
+        --border-0: rgba(20,25,33,0.09); --border-1: rgba(20,25,33,0.13); --border-2: rgba(20,25,33,0.20);
+        --amber-text: #8a6212; --amber-glow: rgba(212, 168, 75, 0.12);
+    }
 }
 
 /* ============================================
@@ -75,13 +96,13 @@ html {
 body {
     background: var(--bg-0);
     color: var(--text-1);
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     line-height: 1.6;
     min-height: 100vh;
 }
 
 a {
-    color: var(--amber);
+    color: var(--amber-text);
     text-decoration: none;
     transition: color 0.15s ease;
 }
@@ -104,7 +125,7 @@ a:hover {
     top: -100%;
     left: 0;
     background: var(--amber);
-    color: var(--bg-0);
+    color: var(--on-amber);
     padding: 0.5rem 1rem;
     z-index: 1000;
     font-family: var(--font-mono);
@@ -165,7 +186,7 @@ a:hover {
     font-weight: 600;
     font-size: 0.875rem;
     letter-spacing: 0.15em;
-    color: var(--amber);
+    color: var(--amber-text);
     text-transform: uppercase;
 }
 
@@ -195,7 +216,7 @@ a:hover {
 }
 
 .nav-contribute {
-    color: var(--amber) !important;
+    color: var(--amber-text) !important;
     font-weight: 600;
 }
 
@@ -266,7 +287,7 @@ a:hover {
     font-family: var(--font-mono);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--amber);
+    color: var(--amber-text);
 }
 
 .stat-label {
@@ -290,6 +311,64 @@ a:hover {
 
 .tactic-stripe-segment {
     flex: 1;
+}
+
+/* ============================================
+   THEME TOGGLE + REDESIGNED HERO
+   ============================================ */
+
+body { transition: background 0.2s ease, color 0.2s ease; }
+
+.theme-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    margin-left: 0.5rem;
+    padding: 0;
+    line-height: 1;
+    font-size: 0.95rem;
+    color: var(--amber-text);
+    background: var(--bg-3);
+    border: 1px solid var(--border-1);
+    border-radius: var(--r);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.theme-btn:hover { background: var(--bg-4); border-color: var(--border-2); }
+
+/* Hero: stacked acronym + lede, two columns */
+.hero-head {
+    display: flex;
+    gap: 3.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+.forge-acro { display: flex; flex-direction: column; line-height: 1.06; }
+.forge-word {
+    font-family: var(--font-display);
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: var(--text-0);
+}
+.forge-word b { color: var(--amber-text); font-weight: 700; }
+.hero-lede {
+    flex: 1;
+    min-width: 300px;
+    max-width: 560px;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--text-2);
+}
+.hero-lede b { color: var(--text-0); font-weight: 600; }
+
+@media (max-width: 768px) {
+    .hero-head { gap: 1.5rem; }
+    .forge-word { font-size: 1.6rem; }
 }
 
 /* ============================================
@@ -335,7 +414,7 @@ a:hover {
 }
 
 .search-input:focus {
-    border-color: var(--amber);
+    border-color: var(--amber-text);
     box-shadow: 0 0 0 3px rgba(212, 168, 75, 0.1);
 }
 
@@ -377,7 +456,7 @@ a:hover {
 
 .layout-btn.active {
     background: var(--bg-4);
-    color: var(--amber);
+    color: var(--amber-text);
     border-color: var(--amber-dim);
 }
 
@@ -388,68 +467,69 @@ a:hover {
 .matrix {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    gap: 1px;
+    gap: 0.625rem;
     align-items: start;
-    background: var(--border-0);
-    border-radius: var(--r-lg);
-    overflow: hidden;
 }
 
 .tactic-column {
     display: flex;
     flex-direction: column;
-    background: var(--bg-0);
+    gap: 0.5rem;
+    background: transparent;
 }
 
 /* Tactic header — colored, authoritative */
 .tactic-header {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 0.625rem;
-    text-align: center;
+    align-items: flex-start;
+    gap: 0.25rem;
+    padding: 0.75rem 0.875rem;
+    text-align: left;
     text-decoration: none;
-    transition: filter 0.15s ease;
-    min-height: 80px;
-    border: none !important;
+    color: var(--text-1);
+    background: var(--bg-3);
+    border: 1px solid var(--border-0);
+    border-top: 3px solid var(--pc, var(--amber-line));
+    border-radius: var(--r-lg);
+    transition: background 0.15s ease, border-color 0.15s ease;
 }
 
 .tactic-header:hover {
-    filter: brightness(1.2);
+    background: var(--bg-4);
 }
 
 .tactic-id {
     font-family: var(--font-mono);
     font-size: 0.625rem;
-    font-weight: 500;
-    opacity: 0.65;
+    font-weight: 600;
+    color: var(--text-3);
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 
 .tactic-name {
     font-family: var(--font-display);
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     font-weight: 700;
-    letter-spacing: 0.02em;
-    margin: 0.25rem 0;
+    color: var(--text-0);
+    letter-spacing: 0.01em;
     line-height: 1.2;
 }
 
 .tactic-count {
     font-family: var(--font-mono);
     font-size: 0.625rem;
-    opacity: 0.5;
-    font-weight: 400;
+    color: var(--text-2);
+    font-weight: 500;
 }
 
 /* Technique list under each tactic */
 .technique-list {
     display: flex;
     flex-direction: column;
-    padding: 0.25rem;
-    gap: 1px;
+    padding: 0;
+    gap: 0.375rem;
 }
 
 /* Technique cell — compact, clean */
@@ -461,19 +541,23 @@ a:hover {
 .technique-cell {
     display: flex;
     flex-direction: column;
-    gap: 0.125rem;
-    padding: 0.5rem 0.5rem;
-    background: var(--bg-0);
+    gap: 0.1875rem;
+    padding: 0.5rem 0.625rem;
+    background: var(--bg-2);
     text-decoration: none;
     color: var(--text-1);
-    transition: background 0.12s ease;
+    border: 1px solid var(--border-0);
     border-left: 3px solid transparent;
-    border-radius: 0;
+    border-radius: var(--r);
+    box-shadow: 0 1px 2px rgba(20,25,33,0.05);
+    transition: transform 0.1s ease, border-color 0.12s ease, box-shadow 0.12s ease;
 }
 
 .technique-cell:hover {
-    background: var(--bg-2);
     color: var(--text-0);
+    transform: translateY(-1px);
+    border-color: var(--border-2);
+    box-shadow: 0 4px 12px rgba(20,25,33,0.09);
 }
 
 .technique-cell .technique-id {
@@ -658,7 +742,7 @@ a:hover {
 
 #select-mode-btn.active {
     background: var(--bg-4);
-    color: var(--amber);
+    color: var(--amber-text);
     border-color: var(--amber-dim);
 }
 
@@ -680,7 +764,7 @@ a:hover {
 
 .technique-checkbox:checked {
     background: var(--amber);
-    border-color: var(--amber);
+    border-color: var(--amber-text);
 }
 
 .technique-checkbox:checked::after {
@@ -689,7 +773,7 @@ a:hover {
     text-align: center;
     font-size: 0.625rem;
     line-height: 0.875rem;
-    color: var(--bg-0);
+    color: var(--on-amber);
     font-weight: 700;
 }
 
@@ -709,7 +793,7 @@ a:hover {
 
 .sub-method-checkbox:checked {
     background: var(--amber);
-    border-color: var(--amber);
+    border-color: var(--amber-text);
 }
 
 .sub-method-checkbox:checked::after {
@@ -718,7 +802,7 @@ a:hover {
     text-align: center;
     font-size: 0.5rem;
     line-height: 0.75rem;
-    color: var(--bg-0);
+    color: var(--on-amber);
     font-weight: 700;
 }
 
@@ -767,7 +851,7 @@ a:hover {
 .export-generate-btn {
     padding: 0.4375rem 1rem;
     background: var(--amber);
-    color: var(--bg-0);
+    color: var(--on-amber);
     border: none;
     border-radius: var(--r);
     font-family: var(--font-mono);
@@ -821,7 +905,7 @@ a:hover {
 .export-modal-header h2 {
     font-family: var(--font-mono);
     font-size: 0.875rem;
-    color: var(--amber);
+    color: var(--amber-text);
     letter-spacing: 0.05em;
     font-weight: 600;
 }
@@ -878,14 +962,14 @@ a:hover {
 }
 
 .export-btn:hover {
-    border-color: var(--amber);
-    color: var(--amber);
+    border-color: var(--amber-text);
+    color: var(--amber-text);
 }
 
 .export-btn.copied {
     background: var(--amber);
-    color: var(--bg-0);
-    border-color: var(--amber);
+    color: var(--on-amber);
+    border-color: var(--amber-text);
 }
 
 /* ============================================
@@ -910,7 +994,7 @@ a:hover {
 }
 
 .breadcrumb a:hover {
-    color: var(--amber);
+    color: var(--amber-text);
 }
 
 .breadcrumb-sep {
@@ -969,7 +1053,7 @@ a:hover {
 .technique-page h2 {
     font-size: 0.875rem;
     font-family: var(--font-mono);
-    color: var(--amber);
+    color: var(--amber-text);
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 0.75rem;
@@ -1130,8 +1214,8 @@ a:hover {
 }
 
 .related-link:hover {
-    border-color: var(--amber);
-    color: var(--amber);
+    border-color: var(--amber-text);
+    color: var(--amber-text);
 }
 
 /* ============================================
@@ -1186,7 +1270,7 @@ a:hover {
 .technique-table th {
     font-family: var(--font-mono);
     font-size: 0.6875rem;
-    color: var(--amber);
+    color: var(--amber-text);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-align: left;
@@ -1272,7 +1356,7 @@ a:hover {
 }
 
 .content-section em {
-    color: var(--amber);
+    color: var(--amber-text);
     font-style: italic;
 }
 
@@ -1287,7 +1371,7 @@ a:hover {
 .tier-table th {
     font-family: var(--font-mono);
     font-size: 0.6875rem;
-    color: var(--amber);
+    color: var(--amber-text);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-align: left;
@@ -1330,7 +1414,7 @@ a:hover {
 }
 
 .footer a:hover {
-    color: var(--amber);
+    color: var(--amber-text);
 }
 
 /* ============================================
@@ -1376,7 +1460,7 @@ a:hover {
 .session-tags h2 {
     font-size: 0.875rem;
     font-family: var(--font-mono);
-    color: var(--amber);
+    color: var(--amber-text);
     letter-spacing: 0.05em;
     text-transform: uppercase;
     margin-bottom: 0.75rem;

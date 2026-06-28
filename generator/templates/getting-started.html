@@ -16,7 +16,17 @@
     <link rel="canonical" href="https://forge.itsbroken.ai/getting-started.html">
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
     <link rel="stylesheet" href="css/forged.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+    (function(){var K='forge-theme',O=['light','dark','system'],
+    I={light:'☀',dark:'☾',system:'◐'},L={light:'Light',dark:'Dark',system:'System'};
+    document.documentElement.setAttribute('data-theme',localStorage.getItem(K)||'light');
+    function ap(v){document.documentElement.setAttribute('data-theme',v);localStorage.setItem(K,v);
+    var b=document.getElementById('theme-btn');if(b){b.textContent=I[v];b.title='Theme: '+L[v]+' (click to change)';}}
+    document.addEventListener('DOMContentLoaded',function(){ap(localStorage.getItem(K)||'light');
+    var b=document.getElementById('theme-btn');if(b)b.addEventListener('click',function(){
+    var c=document.documentElement.getAttribute('data-theme');ap(O[(O.indexOf(c)+1)%O.length]);});});})();
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to content</a>
@@ -24,13 +34,14 @@
         <div class="nav-inner">
             <a href="https://itsbroken.ai" class="nav-brand">
                 <img src="img/itsbroken-logo.png" alt="itsbroken.ai" class="nav-icon" width="28" height="28">
-                <span class="nav-title">ItsBroken.ai</span>
+                <span class="nav-title">F.O.R.G.E.</span>
             </a>
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Matrix</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="getting-started.html" class="nav-link active">Getting Started</a>
                 <a href="https://github.com/itsbroken-ai/forge" class="nav-link nav-contribute">Contribute</a>
+                <button id="theme-btn" class="theme-btn" type="button" title="Theme" aria-label="Toggle color theme">☀</button>
             </div>
         </div>
     </nav>
