@@ -590,12 +590,25 @@ def main():
     build_getting_started_page(data)
     build_terms_page(data)
     build_sitemap(data)
+    asset_ver = add_asset_versions()
+    print(f"  Asset cache-bust: {asset_ver}")
 
     print("\n" + "=" * 50)
     print(f"Site generated at: {OUTPUT_DIR}")
     total_files = sum(1 for _ in OUTPUT_DIR.rglob("*.html"))
     print(f"Total HTML files: {total_files}")
     print("Done.")
+
+
+def add_asset_versions():
+    """Append a content hash to the stylesheet URL so returning visitors get fresh CSS."""
+    import hashlib
+    ver = hashlib.sha1((OUTPUT_DIR / "css" / "forged.css").read_bytes()).hexdigest()[:8]
+    for f in OUTPUT_DIR.rglob("*.html"):
+        t = f.read_text()
+        if 'css/forged.css"' in t:
+            f.write_text(t.replace('css/forged.css"', f'css/forged.css?v={ver}"'))
+    return ver
 
 
 if __name__ == "__main__":

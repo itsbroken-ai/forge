@@ -466,9 +466,13 @@ body { transition: background 0.2s ease, color 0.2s ease; }
 
 .matrix {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(8, minmax(158px, 1fr));
     gap: 0.625rem;
     align-items: start;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-bottom: 0.75rem;
+    scrollbar-width: thin;
 }
 
 .tactic-column {
@@ -1489,17 +1493,7 @@ body { transition: background 0.2s ease, color 0.2s ease; }
    RESPONSIVE
    ============================================ */
 
-@media (max-width: 1200px) {
-    .matrix {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
 @media (max-width: 768px) {
-    .matrix {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .hero-title {
         font-size: 1.5rem;
     }
@@ -1544,10 +1538,6 @@ body { transition: background 0.2s ease, color 0.2s ease; }
 }
 
 @media (max-width: 480px) {
-    .matrix {
-        grid-template-columns: 1fr;
-    }
-
     .hero-stats {
         flex-wrap: wrap;
         gap: 1rem;
