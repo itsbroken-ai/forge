@@ -175,10 +175,9 @@ a:hover {
 }
 
 .nav-icon {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     image-rendering: pixelated;
-    filter: sepia(1) saturate(2) hue-rotate(10deg) brightness(0.9);
 }
 
 .nav-title {
