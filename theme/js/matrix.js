@@ -108,11 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // SELECTION MODE & EXPORT
     // ==========================================
 
-    // Plausible custom events (no-op if Plausible not loaded)
-    function track(event, props) {
-        if (window.plausible) window.plausible(event, {props: props});
-    }
-
     const selectBtn = document.getElementById('select-mode-btn');
     const exportBar = document.getElementById('export-bar');
     const exportCount = document.getElementById('export-count');
@@ -137,7 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
         matrix.classList.toggle('select-mode', selectMode);
         document.body.classList.toggle('select-mode-active', selectMode);
 
-        track('Select Mode', {action: selectMode ? 'on' : 'off'});
 
         if (selectMode) {
             injectCheckboxes();
@@ -257,7 +251,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let lastBlobUrl = null;
     exportGenerate.addEventListener('click', function() {
         const ids = Array.from(selectedTechniques).sort();
-        track('Export Generated', {count: ids.length, techniques: ids.join(',')});
 
         const md = generateMarkdown();
         exportOutput.textContent = md;
@@ -282,14 +275,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     exportDownload.addEventListener('click', function() {
-        track('Export Downloaded');
     });
 
     // Copy to clipboard
     exportCopy.addEventListener('click', function() {
         const btn = this;
         const text = exportOutput.textContent;
-        track('Export Copied');
         navigator.clipboard.writeText(text).then(() => {
             btn.textContent = 'Copied!';
             btn.classList.add('copied');
