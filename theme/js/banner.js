@@ -1,6 +1,6 @@
 // ═══════════════════════════════════════════════════════════════
 //  FORGED BANNER — ASCII Glitch Animator
-//  forged.itsbroken.ai / Cipher Circle
+//  forge.itsbroken.ai / Cipher Circle
 //  Based on the itsbroken.ai BrokenCover engine
 // ═══════════════════════════════════════════════════════════════
 

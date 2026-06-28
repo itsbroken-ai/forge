@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Build markdown
         let md = '# F.O.R.G.E. — Selected Methods\n\n';
         md += '> ' + fw.full_name + '\n';
-        md += '> Source: https://forged.itsbroken.ai | Version ' + fw.version + '\n\n';
+        md += '> Source: https://forge.itsbroken.ai | Version ' + fw.version + '\n\n';
         md += '---\n';
 
         // Iterate tactics in order

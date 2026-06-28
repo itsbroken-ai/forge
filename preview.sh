@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # F.O.R.G.E Workshop Preview
-# Generates the site with draft techniques visible, then serves locally.
+# Builds the site from data/framework.json (preview mode shows drafts), then serves locally.
+# Source of truth is data/framework.json — edit it directly. (Matches deploy.sh.)
 set -euo pipefail
 
 cd "$(dirname "$0")"
@@ -8,15 +9,11 @@ cd "$(dirname "$0")"
 echo "=== F.O.R.G.E Workshop Preview ==="
 echo ""
 
-echo "[1/3] Generating framework data..."
-python3 data/generate_framework.py
-echo ""
-
-echo "[2/3] Validating framework..."
+echo "[1/2] Validating framework..."
 python3 data/validate_framework.py
 echo ""
 
-echo "[3/3] Building site (preview mode)..."
+echo "[2/2] Building site (preview mode)..."
 FORGE_MODE=preview python3 generator/build.py
 echo ""
 

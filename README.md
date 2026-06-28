@@ -4,7 +4,7 @@
 
 An Agentic AI Creation Framework. 58 methods across 8 tactical pillars for building, governing, and scaling AI agent systems.
 
-**[Browse the Matrix](https://forged.itsbroken.ai)** | **[Getting Started](https://forged.itsbroken.ai/getting-started.html)** | **[About](https://forged.itsbroken.ai/about.html)**
+**[Browse the Matrix](https://forge.itsbroken.ai)** | **[Getting Started](https://forge.itsbroken.ai/getting-started.html)** | **[About](https://forge.itsbroken.ai/about.html)**
 
 ---
 
@@ -41,7 +41,7 @@ F.O.R.G.E. grows from real experience. If you've found a pattern that works or a
 
 ## License
 
-F.O.R.G.E. is the intellectual property of Pete McKernan and the Cipher Circle. See [Terms of Use](https://forged.itsbroken.ai/terms.html) for permitted use, attribution requirements, and licensing.
+F.O.R.G.E. is the intellectual property of Pete McKernan and the Cipher Circle. See [Terms of Use](https://forge.itsbroken.ai/terms.html) for permitted use, attribution requirements, and licensing.
 
 ---
 

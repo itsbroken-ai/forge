@@ -25,16 +25,16 @@ OUTPUT_DIR = ROOT / "output"
 # Workshop mode: "production" (default) or "preview"
 FORGE_MODE = os.environ.get("FORGE_MODE", "production")
 
-# Tactic colors (itsbroken.ai standard accent palette — amber spectrum)
+# Tactic colors — distinct per pillar, matched to CSS variables
 TACTIC_COLORS = {
-    "FT01": {"bg": "#2a1f0a", "border": "#D4A84B", "text": "#D4A84B", "label": "Foundation"},
-    "FT02": {"bg": "#2a150a", "border": "#C65D07", "text": "#C65D07", "label": "Governance"},
-    "FT03": {"bg": "#2a1a0a", "border": "#e8963a", "text": "#e8963a", "label": "Team Design"},
-    "FT04": {"bg": "#2a100a", "border": "#ff6b35", "text": "#ff6b35", "label": "Invocation"},
-    "FT05": {"bg": "#2a1d0d", "border": "#dbb95c", "text": "#dbb95c", "label": "Execution"},
-    "FT06": {"bg": "#2a1808", "border": "#d48a3b", "text": "#d48a3b", "label": "Quality"},
-    "FT07": {"bg": "#2a1c0c", "border": "#c9a044", "text": "#c9a044", "label": "Knowledge"},
-    "FT08": {"bg": "#2a120a", "border": "#e07828", "text": "#e07828", "label": "Evolution"},
+    "FT01": {"bg": "#0d1525", "border": "#5B8DEF", "text": "#5B8DEF", "label": "Foundation"},
+    "FT02": {"bg": "#150d25", "border": "#9B72CF", "text": "#9B72CF", "label": "Governance"},
+    "FT03": {"bg": "#0d2520", "border": "#2CC9A3", "text": "#2CC9A3", "label": "Team Design"},
+    "FT04": {"bg": "#1f180a", "border": "#D4A84B", "text": "#D4A84B", "label": "Invocation"},
+    "FT05": {"bg": "#250d0d", "border": "#E8635A", "text": "#E8635A", "label": "Execution"},
+    "FT06": {"bg": "#0d2515", "border": "#3ABF7C", "text": "#3ABF7C", "label": "Quality"},
+    "FT07": {"bg": "#0d1a25", "border": "#3BA8D8", "text": "#3BA8D8", "label": "Knowledge"},
+    "FT08": {"bg": "#250d1a", "border": "#D46B9B", "text": "#D46B9B", "label": "Evolution"},
 }
 
 
@@ -283,7 +283,7 @@ def build_matrix_page(data):
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "F.O.R.G.E - Agentic AI Creation Framework",
-        "url": "https://forged.itsbroken.ai",
+        "url": "https://forge.itsbroken.ai",
         "description": data["framework"]["description"],
         "author": {"@type": "Person", "name": "Pete McKernan", "url": "https://itsbroken.ai"},
         "publisher": {"@type": "Organization", "name": "Cipher Circle", "url": "https://itsbroken.ai"},
@@ -371,16 +371,8 @@ def build_technique_pages(data):
                 </div>
             </section>'''
 
-        # War story
-        war_story = tech.get("war_story", {})
+        # War story / Field Report — removed from public output
         war_story_html = ""
-        if war_story and war_story.get("content"):
-            war_title = ': ' + esc(war_story.get('title', '')) if war_story.get('title') else ''
-            war_story_html = f'''
-            <section class="war-story">
-                <h2>Field Report{war_title}</h2>
-                <div class="war-story-content">{esc(war_story['content'])}</div>
-            </section>'''
 
         # Build ld+json blocks programmatically (safe JSON escaping)
         ld_json_article = build_ld_json({
@@ -390,15 +382,15 @@ def build_technique_pages(data):
             "description": tech.get("description", ""),
             "author": {"@type": "Person", "name": "Pete McKernan", "url": "https://itsbroken.ai"},
             "publisher": {"@type": "Organization", "name": "Cipher Circle", "url": "https://itsbroken.ai"},
-            "mainEntityOfPage": f"https://forged.itsbroken.ai/techniques/{tech['id'].lower()}.html",
-            "isPartOf": {"@type": "WebSite", "name": "F.O.R.G.E", "url": "https://forged.itsbroken.ai"}
+            "mainEntityOfPage": f"https://forge.itsbroken.ai/techniques/{tech['id'].lower()}.html",
+            "isPartOf": {"@type": "WebSite", "name": "F.O.R.G.E", "url": "https://forge.itsbroken.ai"}
         })
         ld_json_breadcrumb = build_ld_json({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "Matrix", "item": "https://forged.itsbroken.ai/"},
-                {"@type": "ListItem", "position": 2, "name": tactic["name"], "item": f"https://forged.itsbroken.ai/tactics/{tech['tactic_id'].lower()}.html"},
+                {"@type": "ListItem", "position": 1, "name": "Matrix", "item": "https://forge.itsbroken.ai/"},
+                {"@type": "ListItem", "position": 2, "name": tactic["name"], "item": f"https://forge.itsbroken.ai/tactics/{tech['tactic_id'].lower()}.html"},
                 {"@type": "ListItem", "position": 3, "name": tech["id"]}
             ]
         })
@@ -511,7 +503,7 @@ def build_sitemap(data):
     urls = []
 
     # Homepage
-    urls.append(('https://forged.itsbroken.ai/', today, 'weekly', '1.0'))
+    urls.append(('https://forge.itsbroken.ai/', today, 'weekly', '1.0'))
 
     # Static pages
     for page, freq, pri in [
@@ -519,12 +511,12 @@ def build_sitemap(data):
         ('getting-started.html', 'monthly', '0.7'),
         ('terms.html', 'yearly', '0.3'),
     ]:
-        urls.append((f'https://forged.itsbroken.ai/{page}', today, freq, pri))
+        urls.append((f'https://forge.itsbroken.ai/{page}', today, freq, pri))
 
     # Tactic pages
     for tactic in data["tactics"]:
         urls.append((
-            f'https://forged.itsbroken.ai/tactics/{esc(tactic["id"].lower())}.html',
+            f'https://forge.itsbroken.ai/tactics/{esc(tactic["id"].lower())}.html',
             today, 'monthly', '0.8'
         ))
 
@@ -532,7 +524,7 @@ def build_sitemap(data):
     for tech in data["techniques"]:
         if not is_draft(tech):
             urls.append((
-                f'https://forged.itsbroken.ai/techniques/{esc(tech["id"].lower())}.html',
+                f'https://forge.itsbroken.ai/techniques/{esc(tech["id"].lower())}.html',
                 today, 'monthly', '0.6'
             ))
 

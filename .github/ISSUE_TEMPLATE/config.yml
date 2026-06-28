@@ -1,10 +1,10 @@
 blank_issues_enabled: false
 contact_links:
   - name: Browse the Matrix
-    url: https://forged.itsbroken.ai
+    url: https://forge.itsbroken.ai
     about: Check existing techniques before proposing new ones
   - name: Getting Started Guide
-    url: https://forged.itsbroken.ai/getting-started.html
+    url: https://forge.itsbroken.ai/getting-started.html
     about: New to F.O.R.G.E? Start here
   - name: About itsbroken.ai
     url: https://itsbroken.ai

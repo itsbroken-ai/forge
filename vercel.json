@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "public": true,
   "buildCommand": null,
   "outputDirectory": "output",
   "installCommand": null,
@@ -10,10 +9,10 @@
       "has": [
         {
           "type": "host",
-          "value": "(?!forged\\.itsbroken\\.ai|localhost).*"
+          "value": "(?!forge\\.itsbroken\\.ai|localhost).*"
         }
       ],
-      "destination": "https://forged.itsbroken.ai/$1",
+      "destination": "https://forge.itsbroken.ai/$1",
       "permanent": true
     }
   ],

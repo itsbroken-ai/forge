@@ -8,15 +8,11 @@ cd "$(dirname "$0")"
 echo "=== F.O.R.G.E Production Deploy ==="
 echo ""
 
-echo "[1/3] Generating framework data..."
-python3 data/generate_framework.py
-echo ""
-
-echo "[2/3] Validating framework..."
+echo "[1/2] Validating framework..."
 python3 data/validate_framework.py
 echo ""
 
-echo "[3/3] Building site (production mode)..."
+echo "[2/2] Building site (production mode)..."
 python3 generator/build.py
 echo ""
 

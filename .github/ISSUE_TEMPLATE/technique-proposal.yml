@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Propose a new technique for F.O.R.G.E. Before submitting, check the [matrix](https://forged.itsbroken.ai) to make sure this isn't already covered by an existing technique or sub-method.
+        Propose a new technique for F.O.R.G.E. Before submitting, check the [matrix](https://forge.itsbroken.ai) to make sure this isn't already covered by an existing technique or sub-method.
 
   - type: dropdown
     id: tactic

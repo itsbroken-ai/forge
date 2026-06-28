@@ -1,17 +1,98 @@
-/* FORGED Framework - Stylesheet
-   Amber on dark. Professional. Serious. */
+/* ═══════════════════════════════════════════════════════════════
+   F.O.R.G.E. — Agentic AI Creation Framework
+   forge.itsbroken.ai · Cipher Circle
+
+   Production stylesheet. MITRE ATT&CK-grade visual authority.
+   Dark theme. Distinct tactic colors. Conference-ready.
+   ═══════════════════════════════════════════════════════════════ */
 
 /* ============================================
-   CUSTOM FONTS
+   DESIGN TOKENS
    ============================================ */
 
-@font-face {
-    font-family: 'GlitchPixelated';
-    src: url('../fonts/glitch-regular-webfont.woff2') format('woff2'),
-         url('../fonts/glitch-regular-webfont.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+:root {
+    /* Backgrounds — cool dark gradient */
+    --bg-0: #08090a;
+    --bg-1: #0e1013;
+    --bg-2: #14161a;
+    --bg-3: #1b1e23;
+    --bg-4: #22262c;
+    --bg-hover: #1a1d22;
+
+    /* Text hierarchy */
+    --text-0: #eaedf2;
+    --text-1: #b8bec8;
+    --text-2: #7d8590;
+    --text-3: #4b5260;
+
+    /* Brand amber */
+    --amber: #D4A84B;
+    --amber-dim: rgba(212, 168, 75, 0.4);
+    --amber-glow: rgba(212, 168, 75, 0.06);
+
+    /* Tactic palette — 8 distinct colors */
+    --t-ft01: #5B8DEF;
+    --t-ft02: #9B72CF;
+    --t-ft03: #2CC9A3;
+    --t-ft04: #D4A84B;
+    --t-ft05: #E8635A;
+    --t-ft06: #3ABF7C;
+    --t-ft07: #3BA8D8;
+    --t-ft08: #D46B9B;
+
+    /* Borders */
+    --border-0: rgba(255,255,255,0.06);
+    --border-1: rgba(255,255,255,0.10);
+    --border-2: rgba(255,255,255,0.15);
+
+    /* Layout */
+    --max-w: 1600px;
+    --r: 4px;
+    --r-lg: 8px;
+
+    /* Typography */
+    --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'Fira Code', 'SF Mono', 'Cascadia Code', monospace;
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-0);
+    color: var(--text-1);
+    font-family: var(--font-display);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--amber);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+a:hover {
+    color: #e8c06a;
+}
+
+::selection {
+    background: rgba(212, 168, 75, 0.25);
+    color: var(--text-0);
 }
 
 /* ============================================
@@ -23,11 +104,11 @@
     top: -100%;
     left: 0;
     background: var(--amber);
-    color: var(--bg-primary);
+    color: var(--bg-0);
     padding: 0.5rem 1rem;
     z-index: 1000;
-    font-family: 'Space Mono', monospace;
-    font-weight: 700;
+    font-family: var(--font-mono);
+    font-weight: 600;
     text-decoration: none;
 }
 
@@ -41,250 +122,144 @@
 }
 
 /* ============================================
-   RESET & BASE
-   ============================================ */
-
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-:root {
-    --bg-primary: #0a0a0a;
-    --bg-secondary: #111111;
-    --bg-tertiary: #1a1a1a;
-    --bg-card: #141414;
-    --text-primary: #e0e0e0;
-    --text-secondary: #999999;
-    --text-muted: #666666;
-    --amber: #D4A84B;
-    --amber-dim: #8a6e30;
-    --amber-glow: rgba(212, 168, 75, 0.1);
-    --border: #2a2a2a;
-    --border-light: #333333;
-    --font-glitch: 'GlitchPixelated', 'Space Mono', monospace;
-    --font-mono: 'Space Mono', monospace;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --max-width: 1400px;
-    --radius: 4px;
-}
-
-html {
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-}
-
-body {
-    background: var(--bg-primary);
-    color: var(--text-primary);
-    font-family: var(--font-body);
-    line-height: 1.6;
-    min-height: 100vh;
-}
-
-a {
-    color: var(--amber);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-a:hover {
-    color: #e8c06a;
-}
-
-/* ============================================
    NAVIGATION
    ============================================ */
 
 .nav {
-    background: var(--bg-secondary);
-    border-bottom: 1px solid var(--border);
+    background: var(--bg-1);
+    border-bottom: 1px solid var(--border-0);
     position: sticky;
     top: 0;
     z-index: 100;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .nav-inner {
-    max-width: var(--max-width);
+    max-width: var(--max-w);
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 56px;
+    height: 52px;
 }
 
 .nav-brand {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    color: var(--text-primary);
+    gap: 0.625rem;
+    color: var(--text-0);
+    text-decoration: none;
 }
 
 .nav-icon {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     image-rendering: pixelated;
     filter: sepia(1) saturate(2) hue-rotate(10deg) brightness(0.9);
 }
 
 .nav-title {
-    font-family: var(--font-glitch);
-    font-weight: 400;
-    font-size: 1.1rem;
-    letter-spacing: 0.2em;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.15em;
     color: var(--amber);
+    text-transform: uppercase;
 }
 
 .nav-links {
     display: flex;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 0.25rem;
 }
 
 .nav-link {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
+    font-size: 0.8125rem;
     font-weight: 500;
-    padding: 0.25rem 0;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s;
+    color: var(--text-2);
+    padding: 0.375rem 0.75rem;
+    border-radius: var(--r);
+    transition: all 0.15s ease;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+    color: var(--text-0);
+    background: var(--bg-3);
+}
+
 .nav-link.active {
-    color: var(--text-primary);
-    border-bottom-color: var(--amber);
+    color: var(--text-0);
+    background: var(--bg-3);
 }
 
 .nav-contribute {
-    color: var(--amber);
-    font-weight: 700;
-}
-
-.nav-contribute:hover {
-    color: var(--accent);
+    color: var(--amber) !important;
+    font-weight: 600;
 }
 
 /* ============================================
-   HERO
+   HERO — Clean, authoritative header
    ============================================ */
 
 .hero {
-    background: var(--bg-secondary);
-    border-bottom: 1px solid var(--border);
-    padding: 3rem 2rem;
+    background: var(--bg-1);
+    border-bottom: 1px solid var(--border-0);
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-inner {
-    max-width: var(--max-width);
+    max-width: var(--max-w);
     margin: 0 auto;
-    text-align: center;
+    padding: 2.5rem 2rem 0;
 }
 
+/* Optional ASCII banner — hidden by default in pro mode */
 .hero-banner {
-    text-align: left;
-}
-
-.hero-title {
-    font-family: var(--font-glitch);
-    font-size: 4rem;
-    font-weight: 400;
-    letter-spacing: 0.3em;
-    color: var(--amber);
-    margin-bottom: 0.5rem;
-    text-shadow: 0 0 20px rgba(212, 168, 75, 0.3);
-}
-
-/* Animated ASCII banner */
-.hero-banner {
-    position: relative;
-    margin-bottom: 1.5rem;
+    display: none;
 }
 
 #forged-banner {
-    font-family: var(--font-mono);
-    font-size: 0.5rem;
-    line-height: 1.15;
-    color: var(--amber);
-    white-space: pre;
-    text-align: left;
-    display: inline-block;
-    letter-spacing: 0.05em;
-    text-shadow: 0 0 8px rgba(212, 168, 75, 0.3);
+    display: none;
 }
 
 .hero-scanlines {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        rgba(0,0,0,0.12) 2px,
-        rgba(0,0,0,0.12) 4px
-    );
-    pointer-events: none;
+    display: none;
 }
 
-@keyframes flicker {
-    0%, 100% { opacity: 1; }
-    92% { opacity: 1; }
-    93% { opacity: 0.88; }
-    94% { opacity: 1; }
-}
-
-#forged-banner {
-    animation: flicker 4s infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    #forged-banner { animation: none; }
-}
-
-/* itsbroken.ai attribution link */
-.hero-attribution {
+.hero-title {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    letter-spacing: 0.1em;
-    margin-top: 0.5rem;
-}
-
-.hero-attribution a {
-    color: var(--amber-dim);
-    transition: color 0.2s;
-}
-
-.hero-attribution a:hover {
-    color: var(--amber);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    color: var(--text-0);
+    margin-bottom: 0.375rem;
 }
 
 .hero-subtitle {
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: var(--text-2);
     font-weight: 400;
-    letter-spacing: 0.05em;
-    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.25rem;
 }
 
 .hero-desc {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    max-width: 700px;
-    margin: 0 auto 1.5rem;
+    display: none;
 }
 
 .hero-stats {
     display: flex;
-    justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .stat {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: baseline;
+    gap: 0.5rem;
 }
 
 .stat-value {
@@ -296,30 +271,76 @@ a:hover {
 
 .stat-label {
     font-size: 0.75rem;
-    color: var(--text-muted);
+    color: var(--text-3);
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+.hero-attribution {
+    display: none;
+}
+
+/* Tactic color stripe — visual signature */
+.tactic-stripe {
+    display: flex;
+    height: 3px;
+    margin: 0 -2rem;
+}
+
+.tactic-stripe-segment {
+    flex: 1;
 }
 
 /* ============================================
-   MATRIX
+   MATRIX TOOLBAR
    ============================================ */
 
 .matrix-container {
-    max-width: var(--max-width);
+    max-width: var(--max-w);
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1.25rem 2rem 2rem;
 }
 
 .matrix-controls {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 52px;
+    z-index: 50;
+    background: var(--bg-0);
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-0);
 }
 
 .matrix-controls-row {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
     flex-wrap: wrap;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 0.5rem 0.875rem;
+    background: var(--bg-2);
+    border: 1px solid var(--border-1);
+    border-radius: var(--r);
+    color: var(--text-0);
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.search-input:focus {
+    border-color: var(--amber);
+    box-shadow: 0 0 0 3px rgba(212, 168, 75, 0.1);
+}
+
+.search-input::placeholder {
+    color: var(--text-3);
 }
 
 .layout-controls {
@@ -328,58 +349,271 @@ a:hover {
 }
 
 .layout-btn {
-    padding: 0.5rem 1rem;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    color: var(--text-muted);
+    padding: 0.5rem 0.875rem;
+    background: var(--bg-2);
+    border: 1px solid var(--border-1);
+    color: var(--text-3);
     font-family: var(--font-mono);
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.15s ease;
     white-space: nowrap;
+    letter-spacing: 0.02em;
 }
 
 .layout-btn:first-child {
-    border-radius: var(--radius) 0 0 var(--radius);
+    border-radius: var(--r) 0 0 var(--r);
 }
 
 .layout-btn:last-child {
-    border-radius: 0 var(--radius) var(--radius) 0;
+    border-radius: 0 var(--r) var(--r) 0;
     border-left: none;
 }
 
 .layout-btn:hover {
-    color: var(--text-primary);
-    border-color: var(--border-light);
+    color: var(--text-1);
+    background: var(--bg-3);
 }
 
 .layout-btn.active {
-    background: var(--bg-tertiary);
+    background: var(--bg-4);
     color: var(--amber);
     border-color: var(--amber-dim);
 }
 
-/* Flat layout mode */
+/* ============================================
+   MATRIX GRID — The core framework display
+   ============================================ */
+
+.matrix {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1px;
+    align-items: start;
+    background: var(--border-0);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+}
+
+.tactic-column {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-0);
+}
+
+/* Tactic header — colored, authoritative */
+.tactic-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0.625rem;
+    text-align: center;
+    text-decoration: none;
+    transition: filter 0.15s ease;
+    min-height: 80px;
+    border: none !important;
+}
+
+.tactic-header:hover {
+    filter: brightness(1.2);
+}
+
+.tactic-id {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-weight: 500;
+    opacity: 0.65;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.tactic-name {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin: 0.25rem 0;
+    line-height: 1.2;
+}
+
+.tactic-count {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+/* Technique list under each tactic */
+.technique-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0.25rem;
+    gap: 1px;
+}
+
+/* Technique cell — compact, clean */
+.technique-cell-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.technique-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    padding: 0.5rem 0.5rem;
+    background: var(--bg-0);
+    text-decoration: none;
+    color: var(--text-1);
+    transition: background 0.12s ease;
+    border-left: 3px solid transparent;
+    border-radius: 0;
+}
+
+.technique-cell:hover {
+    background: var(--bg-2);
+    color: var(--text-0);
+}
+
+.technique-cell .technique-id {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    color: var(--text-3);
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.technique-cell .technique-name {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--text-1);
+}
+
+.technique-cell:hover .technique-name {
+    color: var(--text-0);
+}
+
+/* Row layout variant for technique-cell-wrapper */
+.technique-cell-wrapper .technique-cell {
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.technique-cell-wrapper .technique-cell .technique-id {
+    flex-shrink: 0;
+}
+
+.technique-cell-wrapper .technique-cell .technique-name {
+    flex: 1;
+}
+
+/* Sub-method badge */
+.sub-method-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-3);
+    color: var(--text-3);
+    font-family: var(--font-mono);
+    font-size: 0.5625rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 1px solid var(--border-1);
+    margin-top: 0.125rem;
+    align-self: flex-start;
+}
+
+.sub-method-badge-sm {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-3);
+    color: var(--text-3);
+    font-family: var(--font-mono);
+    font-size: 0.5625rem;
+    padding: 0.0625rem 0.3125rem;
+    border-radius: var(--r);
+    border: 1px solid var(--border-1);
+    margin-left: 0.375rem;
+    vertical-align: middle;
+}
+
+/* Sub-method expandable rows */
+.sub-method-list {
+    display: none;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    gap: 1px;
+    margin-top: 1px;
+}
+
+.sub-method-list.expanded {
+    display: flex;
+}
+
+.sub-method-row {
+    display: flex;
+    flex-direction: column;
+    padding: 0.3125rem 0.5rem;
+    background: var(--bg-1);
+    text-decoration: none;
+    color: var(--text-2);
+    transition: all 0.12s ease;
+    border-left: 2px solid transparent;
+}
+
+.sub-method-row:hover {
+    background: var(--bg-2);
+    color: var(--text-0);
+}
+
+.sub-method-id {
+    font-family: var(--font-mono);
+    font-size: 0.5625rem;
+    color: var(--text-3);
+    letter-spacing: 0.05em;
+}
+
+.sub-method-name {
+    font-size: 0.6875rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* ============================================
+   FLAT LAYOUT MODE
+   ============================================ */
+
 .matrix--flat {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.5rem;
+    background: transparent;
+    border-radius: 0;
 }
 
 .matrix--flat .tactic-column {
     display: block;
+    background: transparent;
 }
 
 .matrix--flat .tactic-header {
     flex-direction: row;
     justify-content: flex-start;
-    gap: 1rem;
-    padding: 0.75rem 1rem;
-    margin-bottom: 0.5rem;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 1rem;
+    margin-bottom: 0.375rem;
+    min-height: auto;
+    border-radius: var(--r);
+    text-align: left;
 }
 
 .matrix--flat .tactic-header .tactic-id {
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
 }
 
 .matrix--flat .tactic-header .tactic-name {
@@ -392,212 +626,270 @@ a:hover {
 
 .matrix--flat .technique-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 0.5rem;
-}
-
-.search-input {
-    width: 100%;
-    max-width: 400px;
-    padding: 0.625rem 1rem;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    color: var(--text-primary);
-    font-family: var(--font-mono);
-    font-size: 0.875rem;
-    outline: none;
-    transition: border-color 0.2s;
-}
-
-.search-input:focus {
-    border-color: var(--amber);
-}
-
-.search-input::placeholder {
-    color: var(--text-muted);
-}
-
-.matrix {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 0.75rem;
-    align-items: start;
-}
-
-.tactic-column {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.tactic-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 0.5rem;
-    border-radius: var(--radius);
-    text-align: center;
-    transition: all 0.2s;
-    text-decoration: none;
-}
-
-.tactic-header:hover {
-    filter: brightness(1.2);
-}
-
-.tactic-id {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    opacity: 0.6;
-    letter-spacing: 0.1em;
-}
-
-.tactic-name {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    margin: 0.25rem 0;
-}
-
-.tactic-count {
-    font-size: 0.65rem;
-    opacity: 0.5;
-}
-
-.technique-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.375rem;
-}
-
-.technique-cell {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem 0.625rem;
-    background: var(--bg-card);
-    border-radius: var(--radius);
-    transition: all 0.2s;
-    text-decoration: none;
-    color: var(--text-primary);
-}
-
-.technique-cell:hover {
-    background: var(--bg-tertiary);
-    transform: translateX(2px);
-    color: var(--text-primary);
-}
-
-.technique-cell .technique-id {
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    color: var(--text-muted);
-    letter-spacing: 0.05em;
-}
-
-.technique-cell .technique-name {
-    font-size: 0.75rem;
-    font-weight: 500;
-    line-height: 1.3;
-}
-
-/* Sub-method badge (count indicator on matrix cards) */
-.sub-method-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg-tertiary);
-    color: var(--text-muted);
-    font-family: var(--font-mono);
-    font-size: 0.55rem;
-    width: 1.1rem;
-    height: 1.1rem;
-    border-radius: 50%;
-    border: 1px solid var(--border);
-    margin-left: auto;
-    flex-shrink: 0;
-}
-
-.sub-method-badge-sm {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg-tertiary);
-    color: var(--text-muted);
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    padding: 0.1rem 0.35rem;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    margin-left: 0.5rem;
-    vertical-align: middle;
-}
-
-/* Sub-method expandable rows in matrix */
-.technique-cell-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-.technique-cell-wrapper .technique-cell {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.375rem;
-}
-
-.technique-cell-wrapper .technique-cell .technique-id {
-    flex-shrink: 0;
-}
-
-.technique-cell-wrapper .technique-cell .technique-name {
-    flex: 1;
-}
-
-.sub-method-list {
-    display: none;
-    flex-direction: column;
-    padding-left: 0.75rem;
-    gap: 0.125rem;
-    margin-top: 0.125rem;
-}
-
-.sub-method-list.expanded {
-    display: flex;
-}
-
-.sub-method-row {
-    display: flex;
-    flex-direction: column;
-    padding: 0.25rem 0.5rem;
-    background: var(--bg-tertiary);
-    border-radius: var(--radius);
-    text-decoration: none;
-    color: var(--text-secondary);
-    transition: all 0.2s;
-}
-
-.sub-method-row:hover {
-    background: var(--bg-card);
-    color: var(--text-primary);
-}
-
-.sub-method-id {
-    font-family: var(--font-mono);
-    font-size: 0.55rem;
-    color: var(--text-muted);
-    letter-spacing: 0.05em;
-}
-
-.sub-method-name {
-    font-size: 0.65rem;
-    font-weight: 400;
-    line-height: 1.3;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1px;
+    padding: 0;
+    background: var(--border-0);
+    border-radius: var(--r);
+    overflow: hidden;
 }
 
 /* ============================================
-   TECHNIQUE PAGE
+   SEARCH & FILTER STATES
+   ============================================ */
+
+.technique-cell.hidden,
+.technique-cell-wrapper.hidden {
+    display: none;
+}
+
+.technique-cell.highlight {
+    background: var(--amber-glow);
+}
+
+/* ============================================
+   SELECTION MODE & EXPORT
+   ============================================ */
+
+#select-mode-btn {
+    border-radius: var(--r);
+    margin-left: 0.25rem;
+}
+
+#select-mode-btn.active {
+    background: var(--bg-4);
+    color: var(--amber);
+    border-color: var(--amber-dim);
+}
+
+.technique-checkbox {
+    position: absolute;
+    top: 0.3125rem;
+    right: 0.3125rem;
+    width: 0.875rem;
+    height: 0.875rem;
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--bg-2);
+    border: 1px solid var(--border-2);
+    border-radius: 2px;
+    cursor: pointer;
+    display: none;
+    z-index: 2;
+}
+
+.technique-checkbox:checked {
+    background: var(--amber);
+    border-color: var(--amber);
+}
+
+.technique-checkbox:checked::after {
+    content: "\2713";
+    display: block;
+    text-align: center;
+    font-size: 0.625rem;
+    line-height: 0.875rem;
+    color: var(--bg-0);
+    font-weight: 700;
+}
+
+.sub-method-checkbox {
+    width: 0.75rem;
+    height: 0.75rem;
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--bg-2);
+    border: 1px solid var(--border-2);
+    border-radius: 2px;
+    cursor: pointer;
+    display: none;
+    flex-shrink: 0;
+    margin-right: 0.25rem;
+}
+
+.sub-method-checkbox:checked {
+    background: var(--amber);
+    border-color: var(--amber);
+}
+
+.sub-method-checkbox:checked::after {
+    content: "\2713";
+    display: block;
+    text-align: center;
+    font-size: 0.5rem;
+    line-height: 0.75rem;
+    color: var(--bg-0);
+    font-weight: 700;
+}
+
+.select-mode .technique-checkbox,
+.select-mode .sub-method-checkbox {
+    display: block;
+}
+
+.select-mode .technique-cell-wrapper {
+    position: relative;
+}
+
+.select-mode .technique-cell-wrapper.selected > .technique-cell {
+    background: var(--amber-glow);
+    box-shadow: inset 0 0 0 1px var(--amber-dim);
+}
+
+.select-mode .technique-cell-wrapper.selected > .sub-method-list {
+    display: flex;
+}
+
+/* Export bar */
+.export-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-1);
+    border-top: 1px solid var(--amber-dim);
+    padding: 0.625rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    z-index: 200;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--text-2);
+    backdrop-filter: blur(12px);
+}
+
+.export-bar.hidden {
+    display: none;
+}
+
+.export-generate-btn {
+    padding: 0.4375rem 1rem;
+    background: var(--amber);
+    color: var(--bg-0);
+    border: none;
+    border-radius: var(--r);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter 0.15s ease;
+}
+
+.export-generate-btn:hover {
+    filter: brightness(1.15);
+}
+
+/* Export modal */
+.export-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    backdrop-filter: blur(4px);
+}
+
+.export-modal.hidden {
+    display: none;
+}
+
+.export-modal-inner {
+    background: var(--bg-1);
+    border: 1px solid var(--border-1);
+    border-radius: var(--r-lg);
+    width: 100%;
+    max-width: 800px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 24px 48px rgba(0,0,0,0.5);
+}
+
+.export-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-0);
+}
+
+.export-modal-header h2 {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--amber);
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.export-close {
+    background: none;
+    border: none;
+    color: var(--text-3);
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.25rem;
+    border-radius: var(--r);
+    transition: color 0.15s ease;
+}
+
+.export-close:hover {
+    color: var(--text-0);
+}
+
+.export-output {
+    flex: 1;
+    overflow: auto;
+    padding: 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: var(--text-1);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: var(--bg-0);
+    margin: 0;
+}
+
+.export-actions {
+    display: flex;
+    gap: 0.625rem;
+    padding: 0.875rem 1.25rem;
+    border-top: 1px solid var(--border-0);
+}
+
+.export-btn {
+    padding: 0.4375rem 1rem;
+    background: var(--bg-3);
+    border: 1px solid var(--border-1);
+    border-radius: var(--r);
+    color: var(--text-1);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.export-btn:hover {
+    border-color: var(--amber);
+    color: var(--amber);
+}
+
+.export-btn.copied {
+    background: var(--amber);
+    color: var(--bg-0);
+    border-color: var(--amber);
+}
+
+/* ============================================
+   TECHNIQUE DETAIL PAGE
    ============================================ */
 
 .technique-page {
@@ -607,14 +899,18 @@ a:hover {
 }
 
 .breadcrumb {
-    font-size: 0.8rem;
-    color: var(--text-muted);
+    font-size: 0.75rem;
+    color: var(--text-3);
     margin-bottom: 1.5rem;
     font-family: var(--font-mono);
 }
 
 .breadcrumb a {
-    color: var(--text-secondary);
+    color: var(--text-2);
+}
+
+.breadcrumb a:hover {
+    color: var(--amber);
 }
 
 .breadcrumb-sep {
@@ -624,9 +920,10 @@ a:hover {
 
 .technique-header {
     padding: 1.5rem;
-    background: var(--bg-secondary);
-    border-radius: var(--radius);
+    background: var(--bg-1);
+    border-radius: var(--r-lg);
     margin-bottom: 2rem;
+    border: 1px solid var(--border-0);
 }
 
 .technique-meta {
@@ -638,28 +935,30 @@ a:hover {
 
 .technique-badge {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
-    padding: 0.2rem 0.6rem;
-    border-radius: 2px;
-    font-weight: 700;
+    font-size: 0.6875rem;
+    padding: 0.1875rem 0.5rem;
+    border-radius: var(--r);
+    font-weight: 600;
     letter-spacing: 0.05em;
 }
 
 .technique-version {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: var(--text-muted);
+    font-size: 0.6875rem;
+    color: var(--text-3);
 }
 
 .technique-header h1 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
+    font-weight: 700;
     line-height: 1.3;
+    color: var(--text-0);
 }
 
 .tech-id-large {
     font-family: var(--font-mono);
-    color: var(--text-muted);
-    font-weight: 400;
+    color: var(--text-3);
+    font-weight: 500;
     margin-right: 0.5rem;
 }
 
@@ -668,19 +967,21 @@ a:hover {
 }
 
 .technique-page h2 {
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-family: var(--font-mono);
     color: var(--amber);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 0.75rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border-0);
+    font-weight: 600;
 }
 
 .technique-page p {
-    color: var(--text-primary);
+    color: var(--text-1);
     line-height: 1.7;
+    font-size: 0.9375rem;
 }
 
 .technique-grid {
@@ -699,16 +1000,16 @@ a:hover {
     padding: 0.5rem 0;
     padding-left: 1.25rem;
     position: relative;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    border-bottom: 1px solid var(--border);
+    font-size: 0.875rem;
+    color: var(--text-2);
+    border-bottom: 1px solid var(--border-0);
 }
 
 .indicator-list li::before {
     content: "+";
     position: absolute;
     left: 0;
-    color: var(--amber);
+    color: var(--t-ft06);
     font-family: var(--font-mono);
     font-weight: 700;
 }
@@ -717,12 +1018,12 @@ a:hover {
     content: "!";
     position: absolute;
     left: 0;
-    color: #ff6b35;
+    color: var(--t-ft05);
     font-family: var(--font-mono);
     font-weight: 700;
 }
 
-/* Sub-methods section on technique detail page */
+/* Sub-methods on technique detail page */
 .technique-sub-methods {
     margin-top: 2rem;
 }
@@ -737,65 +1038,65 @@ a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-tertiary);
-    color: var(--text-muted);
+    background: var(--bg-3);
+    color: var(--text-3);
     font-family: var(--font-mono);
-    font-size: 0.7rem;
-    padding: 0.1rem 0.5rem;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
+    font-size: 0.6875rem;
+    padding: 0.0625rem 0.4375rem;
+    border-radius: var(--r);
+    border: 1px solid var(--border-1);
     font-weight: 400;
 }
 
 .sub-method-grid {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.5rem;
 }
 
 .sub-method-card {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1rem 1.25rem;
-    transition: border-color 0.2s;
+    background: var(--bg-1);
+    border: 1px solid var(--border-0);
+    border-radius: var(--r);
+    padding: 1rem 1.125rem;
+    transition: border-color 0.15s ease;
 }
 
 .sub-method-card:hover {
-    border-color: var(--amber-dim);
+    border-color: var(--border-2);
 }
 
 .sub-method-header {
     display: flex;
     align-items: baseline;
     gap: 0.75rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.375rem;
 }
 
 .sub-method-card-id {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: var(--text-muted);
+    font-size: 0.6875rem;
+    color: var(--text-3);
     letter-spacing: 0.05em;
     flex-shrink: 0;
 }
 
 .sub-method-card-name {
-    font-size: 0.95rem;
+    font-size: 0.9375rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--text-0);
 }
 
 .sub-method-desc {
-    color: var(--text-secondary);
-    font-size: 0.85rem;
+    color: var(--text-2);
+    font-size: 0.8125rem;
     line-height: 1.6;
 }
 
 .war-story {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
+    background: var(--bg-1);
+    border: 1px solid var(--border-0);
+    border-radius: var(--r-lg);
     padding: 1.5rem;
 }
 
@@ -805,27 +1106,27 @@ a:hover {
 }
 
 .war-story-content {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
+    color: var(--text-2);
+    font-size: 0.875rem;
     line-height: 1.7;
 }
 
 .related-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.375rem;
 }
 
 .related-link {
     display: inline-block;
-    padding: 0.375rem 0.75rem;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
+    padding: 0.3125rem 0.625rem;
+    background: var(--bg-2);
+    border: 1px solid var(--border-0);
+    border-radius: var(--r);
     font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    transition: all 0.2s;
+    font-size: 0.6875rem;
+    color: var(--text-2);
+    transition: all 0.15s ease;
 }
 
 .related-link:hover {
@@ -834,7 +1135,7 @@ a:hover {
 }
 
 /* ============================================
-   TACTIC PAGE
+   TACTIC DETAIL PAGE
    ============================================ */
 
 .tactic-page {
@@ -843,36 +1144,38 @@ a:hover {
     padding: 2rem;
 }
 
-.tactic-header {
+.tactic-page > .tactic-header {
     padding: 2rem;
-    border-radius: var(--radius);
+    border-radius: var(--r-lg);
     margin-bottom: 2rem;
+    min-height: auto;
 }
 
 .tactic-id-large {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    opacity: 0.7;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    opacity: 0.65;
 }
 
-.tactic-header h1 {
-    font-family: var(--font-mono);
-    font-size: 2rem;
-    letter-spacing: 0.1em;
+.tactic-page > .tactic-header h1 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
     margin: 0.5rem 0;
 }
 
 .tactic-desc {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
+    color: var(--text-2);
+    font-size: 0.9375rem;
     margin-bottom: 0.5rem;
 }
 
 .tactic-stat {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
-    opacity: 0.6;
+    font-size: 0.75rem;
+    opacity: 0.5;
 }
 
 .technique-table {
@@ -882,42 +1185,44 @@ a:hover {
 
 .technique-table th {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     color: var(--amber);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-align: left;
-    padding: 0.75rem 1rem;
-    border-bottom: 2px solid var(--border);
+    padding: 0.625rem 1rem;
+    border-bottom: 2px solid var(--border-1);
+    font-weight: 600;
 }
 
 .technique-table td {
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid var(--border);
-    font-size: 0.875rem;
-    color: var(--text-secondary);
+    padding: 0.625rem 1rem;
+    border-bottom: 1px solid var(--border-0);
+    font-size: 0.8125rem;
+    color: var(--text-2);
     vertical-align: top;
 }
 
 .technique-table td:first-child {
     font-family: var(--font-mono);
-    color: var(--text-muted);
+    color: var(--text-3);
     white-space: nowrap;
     width: 80px;
+    font-size: 0.75rem;
 }
 
 .technique-table td:nth-child(2) {
     font-weight: 500;
-    color: var(--text-primary);
+    color: var(--text-0);
     width: 200px;
 }
 
 .technique-table tr:hover td {
-    background: var(--bg-tertiary);
+    background: var(--bg-2);
 }
 
 /* ============================================
-   CONTENT PAGES
+   CONTENT PAGES (About, Getting Started, Terms)
    ============================================ */
 
 .content-page {
@@ -928,10 +1233,11 @@ a:hover {
 
 .content-page h1 {
     font-family: var(--font-mono);
-    font-size: 2rem;
-    color: var(--amber);
+    font-size: 1.75rem;
+    color: var(--text-0);
     letter-spacing: 0.1em;
     margin-bottom: 2rem;
+    font-weight: 700;
 }
 
 .content-section {
@@ -939,22 +1245,23 @@ a:hover {
 }
 
 .content-section h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-family: var(--font-mono);
-    color: var(--text-primary);
+    color: var(--text-0);
     margin-bottom: 0.75rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border-0);
+    font-weight: 600;
 }
 
 .content-section p {
-    color: var(--text-secondary);
+    color: var(--text-2);
     margin-bottom: 0.75rem;
     line-height: 1.7;
 }
 
 .content-section ul {
-    color: var(--text-secondary);
+    color: var(--text-2);
     margin-left: 1.5rem;
     margin-bottom: 0.75rem;
 }
@@ -979,21 +1286,21 @@ a:hover {
 .version-table th,
 .tier-table th {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     color: var(--amber);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-align: left;
-    padding: 0.75rem 1rem;
-    border-bottom: 2px solid var(--border);
+    padding: 0.625rem 1rem;
+    border-bottom: 2px solid var(--border-1);
 }
 
 .version-table td,
 .tier-table td {
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid var(--border);
-    font-size: 0.875rem;
-    color: var(--text-secondary);
+    padding: 0.625rem 1rem;
+    border-bottom: 1px solid var(--border-0);
+    font-size: 0.8125rem;
+    color: var(--text-2);
 }
 
 /* ============================================
@@ -1002,19 +1309,96 @@ a:hover {
 
 .footer {
     margin-top: 4rem;
-    padding: 2rem;
-    border-top: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--border-0);
     text-align: center;
 }
 
 .footer-inner {
-    max-width: var(--max-width);
+    max-width: var(--max-w);
     margin: 0 auto;
 }
 
 .footer p {
-    font-size: 0.8rem;
-    color: var(--text-muted);
+    font-size: 0.75rem;
+    color: var(--text-3);
+    line-height: 1.8;
+}
+
+.footer a {
+    color: var(--text-3);
+}
+
+.footer a:hover {
+    color: var(--amber);
+}
+
+/* ============================================
+   WORKSHOP MODE (DRAFT BADGES)
+   ============================================ */
+
+.draft-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: rgba(232, 99, 90, 0.12);
+    color: var(--t-ft05);
+    border: 1px solid rgba(232, 99, 90, 0.3);
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
+.draft-badge-lg {
+    font-size: 0.6875rem;
+    padding: 0.1875rem 0.5rem;
+}
+
+.draft-badge-sm {
+    font-size: 0.5625rem;
+    padding: 0.0625rem 0.3125rem;
+}
+
+.technique-cell-wrapper.draft {
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+}
+
+.technique-cell-wrapper.draft:hover {
+    opacity: 0.85;
+}
+
+.session-tags {
+    margin-bottom: 2rem;
+}
+
+.session-tags h2 {
+    font-size: 0.875rem;
+    font-family: var(--font-mono);
+    color: var(--amber);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-0);
+}
+
+.session-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    padding: 0.1875rem 0.5rem;
+    background: var(--bg-3);
+    border: 1px solid var(--border-1);
+    border-radius: var(--r);
+    color: var(--text-2);
+    margin-right: 0.3125rem;
+    margin-bottom: 0.3125rem;
+}
+
+.select-mode-active .footer {
+    margin-bottom: 3.5rem;
 }
 
 /* ============================================
@@ -1033,11 +1417,15 @@ a:hover {
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .hero-stats {
-        gap: 1.5rem;
+        gap: 1.25rem;
+    }
+
+    .stat-value {
+        font-size: 1.25rem;
     }
 
     .technique-grid {
@@ -1049,11 +1437,25 @@ a:hover {
     }
 
     .nav-links {
-        gap: 1rem;
+        gap: 0.125rem;
     }
 
     .nav-link {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        padding: 0.3125rem 0.5rem;
+    }
+
+    .matrix-container {
+        padding: 1rem;
+    }
+
+    .matrix-controls-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-input {
+        max-width: 100%;
     }
 }
 
@@ -1062,330 +1464,23 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
-    .tactic-column {
-        margin-bottom: 1rem;
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        display: none;
     }
 }
 
 /* ============================================
-   SEARCH HIGHLIGHT
+   REDUCED MOTION
    ============================================ */
 
-.technique-cell.hidden {
-    display: none;
-}
-
-.technique-cell.highlight {
-    background: var(--amber-glow);
-    border-color: var(--amber);
-}
-
-/* ============================================
-   SELECTION MODE & EXPORT
-   ============================================ */
-
-#select-mode-btn {
-    border-radius: var(--radius);
-    margin-left: 0.5rem;
-}
-
-#select-mode-btn.active {
-    background: var(--bg-tertiary);
-    color: var(--amber);
-    border-color: var(--amber-dim);
-}
-
-/* Checkboxes on technique cards */
-.technique-checkbox {
-    position: absolute;
-    top: 0.375rem;
-    right: 0.375rem;
-    width: 1rem;
-    height: 1rem;
-    appearance: none;
-    -webkit-appearance: none;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-light);
-    border-radius: 2px;
-    cursor: pointer;
-    display: none;
-    z-index: 2;
-}
-
-.technique-checkbox:checked {
-    background: var(--amber);
-    border-color: var(--amber);
-}
-
-.technique-checkbox:checked::after {
-    content: "\2713";
-    display: block;
-    text-align: center;
-    font-size: 0.7rem;
-    line-height: 1rem;
-    color: var(--bg-primary);
-    font-weight: 700;
-}
-
-/* Sub-method row checkbox */
-.sub-method-checkbox {
-    width: 0.875rem;
-    height: 0.875rem;
-    appearance: none;
-    -webkit-appearance: none;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-light);
-    border-radius: 2px;
-    cursor: pointer;
-    display: none;
-    flex-shrink: 0;
-    margin-right: 0.375rem;
-}
-
-.sub-method-checkbox:checked {
-    background: var(--amber);
-    border-color: var(--amber);
-}
-
-.sub-method-checkbox:checked::after {
-    content: "\2713";
-    display: block;
-    text-align: center;
-    font-size: 0.6rem;
-    line-height: 0.875rem;
-    color: var(--bg-primary);
-    font-weight: 700;
-}
-
-/* Show checkboxes in select mode */
-.select-mode .technique-checkbox,
-.select-mode .sub-method-checkbox {
-    display: block;
-}
-
-/* Make wrappers position relative for checkbox placement */
-.select-mode .technique-cell-wrapper {
-    position: relative;
-}
-
-/* Selected card highlight */
-.select-mode .technique-cell-wrapper.selected > .technique-cell {
-    background: rgba(212, 168, 75, 0.08);
-    box-shadow: inset 0 0 0 1px var(--amber-dim);
-}
-
-/* Expand sub-methods in select mode when parent is selected */
-.select-mode .technique-cell-wrapper.selected > .sub-method-list {
-    display: flex;
-}
-
-/* Export bar */
-.export-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: var(--bg-secondary);
-    border-top: 1px solid var(--amber-dim);
-    padding: 0.75rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    z-index: 200;
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-}
-
-.export-bar.hidden {
-    display: none;
-}
-
-.export-generate-btn {
-    padding: 0.5rem 1.25rem;
-    background: var(--amber);
-    color: var(--bg-primary);
-    border: none;
-    border-radius: var(--radius);
-    font-family: var(--font-mono);
-    font-size: 0.8125rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.export-generate-btn:hover {
-    filter: brightness(1.15);
-}
-
-/* Export modal */
-.export-modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.85);
-    z-index: 300;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-}
-
-.export-modal.hidden {
-    display: none;
-}
-
-.export-modal-inner {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius);
-    width: 100%;
-    max-width: 800px;
-    max-height: 85vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.export-modal-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid var(--border);
-}
-
-.export-modal-header h2 {
-    font-family: var(--font-mono);
-    font-size: 1rem;
-    color: var(--amber);
-    letter-spacing: 0.05em;
-}
-
-.export-close {
-    background: none;
-    border: none;
-    color: var(--text-muted);
-    font-size: 1.5rem;
-    cursor: pointer;
-    line-height: 1;
-    padding: 0.25rem;
-}
-
-.export-close:hover {
-    color: var(--text-primary);
-}
-
-.export-output {
-    flex: 1;
-    overflow: auto;
-    padding: 1.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    line-height: 1.6;
-    color: var(--text-primary);
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    background: var(--bg-primary);
-    margin: 0;
-}
-
-.export-actions {
-    display: flex;
-    gap: 0.75rem;
-    padding: 1rem 1.5rem;
-    border-top: 1px solid var(--border);
-}
-
-.export-btn {
-    padding: 0.5rem 1.25rem;
-    background: var(--bg-tertiary);
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius);
-    color: var(--text-primary);
-    font-family: var(--font-mono);
-    font-size: 0.8125rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-decoration: none;
-    text-align: center;
-}
-
-.export-btn:hover {
-    border-color: var(--amber);
-    color: var(--amber);
-}
-
-.export-btn.copied {
-    background: var(--amber);
-    color: var(--bg-primary);
-    border-color: var(--amber);
-}
-
-/* ============================================
-   WORKSHOP MODE (DRAFT BADGES & SESSION TAGS)
-   ============================================ */
-
-.draft-badge {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    background: rgba(255, 107, 53, 0.15);
-    color: #ff6b35;
-    border: 1px solid rgba(255, 107, 53, 0.4);
-    border-radius: 2px;
-    vertical-align: middle;
-}
-
-.draft-badge-lg {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.6rem;
-}
-
-.draft-badge-sm {
-    font-size: 0.55rem;
-    padding: 0.1rem 0.4rem;
-}
-
-.technique-cell-wrapper.draft {
-    opacity: 0.6;
-    transition: opacity 0.2s;
-}
-
-.technique-cell-wrapper.draft:hover {
-    opacity: 0.9;
-}
-
-.session-tags {
-    margin-bottom: 2rem;
-}
-
-.session-tags h2 {
-    font-size: 1rem;
-    font-family: var(--font-mono);
-    color: var(--amber);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border);
-}
-
-.session-tag {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    padding: 0.2rem 0.6rem;
-    background: var(--bg-tertiary);
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    color: var(--text-secondary);
-    margin-right: 0.375rem;
-    margin-bottom: 0.375rem;
-}
-
-/* Add bottom padding when export bar is visible */
-.select-mode-active .footer {
-    margin-bottom: 3.5rem;
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
 }
